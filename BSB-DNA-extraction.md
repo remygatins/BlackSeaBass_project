@@ -1,6 +1,7 @@
 ## Black Sea Bass Genomics Project 
 
 First round of DNA extractions (Feb 2020):
+(*we are hoping to collect more fish from New England and Maine in Summer 2020 for a second round of genomcis*)
 
 Sample selection criteria: total lenght of fish < than 30cm (except those from ME).
 
@@ -13,15 +14,10 @@ Sample selection criteria: total lenght of fish < than 30cm (except those from M
 |Southern New England, SN | 4 | selected 4 out of 7 pick smallest; all < 30cm |
 | **Total** | **64** | *Goal = 64 samples; multiples of 8 are easier to work with*|
 
-![firstroundsamples](../first-round-selected-samples.png)
+![firstroundsamples](https://github.com/thais-neu/BSBproject.md/blob/master/first-round-selected-samples.png)
 
 
 
-
-
-
-
-We are hoping to collect more fish from New England and Maine in Summer 2020.
 
 
 
