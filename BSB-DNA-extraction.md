@@ -63,7 +63,7 @@ From E-Z 96 tissue DNA kit (D1196-01 Omega)
 
 Use lysis plates or spin tubes for this first step:
 
-* Lysis plates: pour TL in a sterile weigh boat and use multi-channel to load plate wells. Tips should not touch side of wells, if they do, replace tips.
+* Lysis plates: pour TL buffer in a sterile weigh boat and use multi-channel to load plate wells. Tips should not touch side of wells, if they do, replace tips.
 
 * Spin tubes: pipette TL buffer directly into each 1.5 mL tube.
 
@@ -111,6 +111,8 @@ Q FOR SARA: KIT MANUAL SAYS TO ADD RNASE A - DID YOU DO THAT?
 6. Add to volumes (~450 uL) of BL buffer to each sample, then vortex samples for 1 min. *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
 
 7. Spin down for 4 min at top speed (because we have large pieces of tissue that won’t settle if just briefly spun, as described in the kit manual; also don’t want to spin too long because DNA will settle too and could be lost).
+
+Q FOR SARA - DID YOU DO THE OPTIONAL COLUMN EQUILIBRATION PROTOCOL (ADDING 3M NAOH)
 
 8. Place E-Z 96 DNA plate (extraction columns) on top of a 96-well square-well plate - tape them together.
 
