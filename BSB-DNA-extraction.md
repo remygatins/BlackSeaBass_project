@@ -59,7 +59,7 @@ From E-Z 96 tissue DNA kit (D1196-01 Omega)
 
 ------------------------------------------
 ### Procedure
-------------------------------------
+
 #### Digestion - step 1, day 1 (the following corresponds to setps 1-4, page 8-9, in the kit manual)
 
 Use lysis plates or spin tubes for this first step:
@@ -159,8 +159,7 @@ Q TO SARA - DID YOU DO THE ABOVE OPTIONAL STEP?
 
 25. Seal the 96-racked microtubes with their caps and store at -20oC.
 
-
-
+------------------------------------------------
 -----------------------------------------------
 
 ### Gel to check extraction worked
