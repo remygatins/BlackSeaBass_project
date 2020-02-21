@@ -23,8 +23,11 @@ Sample selection criteria: total lenght of fish < than 30cm (except those from M
 Samples are in the -80oC freezer, except SN (-20oc freezer).
 
 Samples in EtOH: none
+
 Samples in RNAlater: ME, SN
+
 Samples in OGL buffer: from NC, MD and NJ.
+
 ------------------------------------------------
 --------------------------------------------------------------------
 ## DNA extraction from fish fin clips.
@@ -44,10 +47,14 @@ Samples in OGL buffer: from NC, MD and NJ.
 * kimwipes
 
 From E-Z 96 tissue DNA kit (D1196-01 Omega)
-* lysis plate and plate seal paper
+* lysis plate
+* plate seal paper
 * TL buffer - 200 uL per sample
 * protease solution 25 uL per sample
 * BL, HBC and DNA wash buffers
+* E-Z 96 DNA plate (columns)
+* 96-well square-well plates
+* 96-well racked microtubes and their caps
 
 ------------------------------------------
 ### Procedure
@@ -155,7 +162,7 @@ Q TO SARA - DID YOU DO THE ABOVE OPTIONAL STEP?
 
 ### Gel to check extraction worked
 
-Agarose 1.5% (in 70 mL TBE buffer)
+Agarose 1.5% (in 70 mL TBE buffer) (1.05 g agarose in 70mL for a small gel plate; 3.15 g in 210mL for a medium gel plate).
 
 Melt and add 7uL GelRed (1X final, stock is 10,000X)
 
@@ -167,4 +174,6 @@ Sample: 4uL + uL Loading buffer
 
 Voltage: 100 V
 
-Time: 45-60 min
+Time: 45-60 min 
+
+*Note: from previous experience, run gels a little longer and/or higher voltage (110-120) when running medium size gels.
