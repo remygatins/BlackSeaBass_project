@@ -159,7 +159,7 @@ Q TO SARA - DID YOU DO THE ABOVE OPTIONAL STEP?
 
 25. Seal the 96-racked microtubes with their caps and store at -20oC.
 
-------------------------------------------------
+
 -----------------------------------------------
 
 ### Gel to check extraction worked
