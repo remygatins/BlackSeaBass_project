@@ -2,8 +2,8 @@
 --------------------
 -------------------
 ### Sample selection
-First round of DNA extractions (Feb 2020):
-(*we are hoping to collect more fish from New England and Maine in Summer 2020 for a second round of genomcis*)
+First round of DNA extractions (Feb 2020)
+(*we are hoping to collect more fish from New England and Maine in Summer 2020 for a second round of genomcis*):
 
 Sample selection **criteria**: total lenght of fish < than 30cm (except those from ME).
 
@@ -47,7 +47,7 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 * weigh paper - one per sample
 * kimwipes
 * autoclaved pipette tips
-* 1.5mL autoclaved centrifuge tubes (2x per sample)
+* 1.5mL autoclaved eppendorf tubes (2x per sample)
 
 From E-Z 96 tissue DNA kit (D1196-01, Omega) - when using plates (P):
 * lysis plate
@@ -55,16 +55,16 @@ From E-Z 96 tissue DNA kit (D1196-01, Omega) - when using plates (P):
 * TL buffer - 200 uL per sample
 * protease solution 25 uL per sample
 * BL, HBC and DNA wash buffers
-* E-Z 96 DNA plate (columns)
+* E-Z 96 DNA plate (mini-columns plate)
 * 96-well square-well plates
-* 96-well racked microtubes and their caps
+* 96-well racked microtubes and caps
 
 From E.Z.N.A tissue DNA kit (D3396-02, Omega) - when using tubes (T):
 * 2mL collection tubes (2x per sample)
 * TL buffer - 200 uL per sample
 * protease solution 25 uL per sample
 * BL, HBC and DNA wash buffers
-* E-Z HiBind DNA Mini columns
+* E-Z HiBind DNA mini columns (individual)
 
 
 ------------------------------------------
@@ -72,15 +72,15 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - when using tubes (T):
 
 #### Digestion - step 1, day 1 (the following corresponds to setps 1-4, page 8-9 in the kit manual (P), or quick guide (T))
 
-Use lysis plates or spin tubes for this first step:
+1. Prep plate or tubes:
 
 * Lysis plates (P): pour TL buffer in a sterile weigh boat and use multi-channel to load plate wells. Tips should not touch side of wells, if they do, replace tips.
 
-* Spin tubes (T): pipette TL buffer directly into each 1.5 mL tube.
+* Spin tubes (T): pipette TL buffer directly into each 1.5 mL autoclaved eppendorf tube.
 
 **Q FOR SARA: ADD PROTEASE TO THE BUFFER AT THIS POINT OR AFTER SAMPLES ARE IN?**
 
-1. Take 4-8 samples out of the freezer at the time; keep them on ice or cold beads.
+2. Take 4-8 samples out of the freezer at the time; keep them on ice or cold beads.
 
 * Wipe bench with EtOH and gloved hands (between samples).
 
@@ -94,13 +94,13 @@ Use lysis plates or spin tubes for this first step:
 
 * Remove the weigh paper with fin from balance and cut up fin in smaller pieces.
 
-2. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
+3. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
 
-3. Repeat until all samples are in buffer.
+* Repeat until all samples are in buffer.
 
 *Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated.*
 
-4. Place all tubes in thermomixer overnight at 60oC and SPEED? **Q FOR SARA - WHAT SPEED?**
+4. Place plate (cover with silicone mat) or tubes in thermomixer overnight at 60oC and SPEED? **Q FOR SARA - WHAT SPEED?**
 
 
 #### Purification - step 2, day 2 (the following corresponds to steps 5-25 in the kit manual, page 9-11, with few modifications for plates (P) and the E.Z.N.A Tissue DNA kit quick guide for tubes (T)).
@@ -113,23 +113,23 @@ Use lysis plates or spin tubes for this first step:
 
 > *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
-   **USING PLATES**
+   **USING PLATES** *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
 
-5. (P) Shake or vortex the plate vigorously (holding the mat) and ensure the lysate is completely homogeneous after shaking (if not further digestion is required. 
+5. (P) Shake or vortex the plate vigorously (holding the silicone cover mat) and ensure the lysate is completely homogeneous after shaking (if not further digestion is required). 
 
+**Q FOR SARA: DID YOU DO THE OPTIONAL STEP "ADD RNASE"?**
 
-**Q FOR SARA: KIT MANUAL SAYS TO ADD RNASE A - DID YOU DO THAT?**
+6. (P) Add two volumes (~450 uL) of BL buffer to each sample, then vortex samples for 1 min. 
 
-6. (P) Add to volumes (~450 uL) of BL buffer to each sample, then vortex samples for 1 min. *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
-
+**Q FOR SARA - IS BL BUFFER ADDED ON TOP OF THE TL BUFFER? OR AM I MISSING A STEP HERE? IN THE 'TUBES' PROTOCOL, THE SAMPLE IS CENTRIFUGED FIRST AND SUPERNATANT IS ISOLATED, AND THEN WE ADD BL BUFFER**
 
 7. (P) Spin down for 4 min at top speed (because we have large pieces of tissue that won’t settle if just briefly spun, as described in the kit manual; also don’t want to spin too long because DNA will settle too and could be lost).
 
 **Q FOR SARA - DID YOU DO THE OPTIONAL COLUMN EQUILIBRATION PROTOCOL (ADDING 3M NAOH)**
 
-8. (P) Place E-Z 96 DNA plate (extraction columns) on top of a 96-well square-well plate - tape them together.
+8. (P) Place E-Z 96 DNA plate (mini-columns plate) on top of a 96-well square-well plate - tape them together.
 
-9. (P) Pipette supernatant carefully out of lysis plate wells/tubes into the spin columns (discard the pellet) – large pieces of poorly digested tissue are likely to clog the tips and make it difficult to transfer.
+9. (P) Pipette supernatant carefully out of lysis plate wells and into the mini-columns plate (discard the pellet) – large pieces of poorly digested tissue are likely to clog the tips and make it difficult to transfer.
 
 **Q FOR SARA - IN THE PROTOCOL FOR SPIN TUBES, THE BL BUFFER IS ADDED AFTER THE SUPERNATANT IS ISOLATED? IN THE PLATE PROTOCOL, THE BL BUFFER IS ADDED BEFORE THE SUPERNATANT IS ISOLATED. DO YOU THINK THAT MATTERS?**
 
@@ -139,7 +139,7 @@ Use lysis plates or spin tubes for this first step:
 
 12. (P) Remove and discard the aeraseal film.
 
-13. (P) Add 500 ul of HBC buffer (previously diluted) into to each well and seal the plate with new aeraseal film.
+13. (P) Add 500 ul of HBC buffer (previously diluted) into to each mini-column and seal the plate with new aeraseal film.
 
 14. (P) Centriguge 4,000xg for 5 min. then discard filtrate and reause the square-well plate.
 
@@ -147,15 +147,15 @@ Use lysis plates or spin tubes for this first step:
 
 16. (P) Add 600ul DNA wash buffer (diluted) to each well, seal the plate with new aeraseal film.
 
-17. (P) Centrifuge 4000xg for 5 min, discard filtrate and re-attach/reuse the square-well plate.
+17. (P) Centrifuge 4000xg for 5 min, discard filtrate and re-tape/reuse the square-well plate.
 
-18. (P) Repete steps 15-17 for a second DNA wash step.
+18. (P) Repeat steps 15-17 for a second DNA wash step.
 
 19. (P) Centrifuge the empty plate at 4000 g for 15 min. Discard the filtrate and the square-well plate.
 
 **Q FOR SARA - THE MANUAL MENTIONS AN OPTION STEP TO DRY SAMPLES AT 70oC - DID YOU DO THAT? IF SO, FOR HOW LONG?**
 
-20. (P) Transfer the E-Z DNA plate to a set of 96-well racked microtubes (from kit).
+20. (P) Transfer the mini-column plate to a set of 96-well racked microtubes (from kit).
 
 21. (P) Remove and discard the aeraseal film.
 
@@ -167,7 +167,7 @@ Use lysis plates or spin tubes for this first step:
 
 24. (P) Centrifuge at 4000g for 5 min.
 
-optional to repeate stps 21-24 for a second elution step - increases DNA yield but decreases DNA concentration. If higher concentration is desired, the second elutin can be done with 200uL eluate frm first eluti, reheated to 70oC
+optional to repeate stps 21-24 for a second elution step - increases DNA yield but decreases DNA concentration. If higher concentration is desired, the second elutin can be done with 200uL eluate from first elution, reheated to 70oC
 
 **Q TO SARA - DID YOU DO THE ABOVE OPTIONAL STEP?**
 
@@ -195,7 +195,7 @@ optional to repeate stps 21-24 for a second elution step - increases DNA yield b
 
 13. (T) Add 500uL HBC buffer (previously diluted).
 
-14. (T) Centrifuge at max speed for 30 sec, discard friltrate and collection tubes. 
+14. (T) Centrifuge at max speed for 30 sec, discard filtrate and collection tubes. 
 
 15. (T) Insert the used column into a new collection tube.
 
@@ -203,9 +203,9 @@ optional to repeate stps 21-24 for a second elution step - increases DNA yield b
 
 17. (T) Repeat steps 16 for a second DNA wash step.
 
-18. Centrifuge the empty column at max speed for 2 min to dry the column - this step is critical to remove trace ethanol that will interfer with downstream applications.
+18. (T) Centrifuge the empty column at max speed for 2 min to dry the column - this step is critical to remove trace ethanol that will interfer with downstream applications.
 
-19. Transfer the column into a nuclease-free 1.5 mL microcentrifuge tube. 
+19. (T) Transfer the column into a new nuclease-free 1.5 mL microcentrifuge tube. 
 
 20. (T) Add 100-200uL Elution Buffer (or miliQ water?) heated to 70oC, let it sit for 2 min. Centrifuge at max speed for 1 min.
 
