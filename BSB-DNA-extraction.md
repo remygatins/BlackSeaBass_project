@@ -98,7 +98,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - when using tubes (T):
 
 *Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated.*
 
-4. Place plate (cover with silicone mat) or tubes in thermomixer overnight at 60oC and SPEED? **Q FOR SARA - WHAT SPEED?**
+4. Place plate (cover with silicone mat) or tubes in thermomixer overnight at 60oC and 450RPM? 
 
 
 #### Purification - step 2, day 2 (the following corresponds to steps 5-25 in the kit manual, page 9-11, with few modifications for plates (P) and the E.Z.N.A Tissue DNA kit quick guide for tubes (T)).
