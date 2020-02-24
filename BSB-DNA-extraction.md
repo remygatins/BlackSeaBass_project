@@ -35,8 +35,8 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 ----------------------------------------
 ### Bench prep and materials
 
-* 1st bleach entire benchtop
-* 2nd EtOH entire benchtop
+* 1st (10%) bleach entire benchtop
+* 2nd (70-90%) EtOH entire benchtop
 * gloves
 * beaker with ~50mL 90% EtOH
 * ligther
@@ -46,8 +46,10 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 * scale
 * weigh paper - one per sample
 * kimwipes
+* autoclaved pipette tips
+* 1.5mL autoclaved centrifuge tubes (2x per sample)
 
-From E-Z 96 tissue DNA kit (D1196-01 Omega)
+From E-Z 96 tissue DNA kit (D1196-01, Omega) - when using plates (P):
 * lysis plate
 * plate seal paper
 * TL buffer - 200 uL per sample
@@ -57,10 +59,18 @@ From E-Z 96 tissue DNA kit (D1196-01 Omega)
 * 96-well square-well plates
 * 96-well racked microtubes and their caps
 
+From E.Z.N.A Tiddue DNA kit (D3396-02, Omega) - when using tubes (T):
+* 2mL collection tubes (2x per sample)
+* TL buffer - 200 uL per sample
+* protease solution 25 uL per sample
+* BL, HBC and DNA wash buffers
+* E-Z HiBind DNA Mini columns
+
+
 ------------------------------------------
 ### Procedure
 
-#### Digestion - step 1, day 1 (the following corresponds to setps 1-4, page 8-9, in the kit manual)
+#### Digestion - step 1, day 1 (the following corresponds to setps 1-4, page 8-9 in the kit manual (P), or quick guide (T))
 
 Use lysis plates or spin tubes for this first step:
 
