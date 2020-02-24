@@ -59,7 +59,7 @@ From E-Z 96 tissue DNA kit (D1196-01, Omega) - when using plates (P):
 * 96-well square-well plates
 * 96-well racked microtubes and their caps
 
-From E.Z.N.A Tiddue DNA kit (D3396-02, Omega) - when using tubes (T):
+From E.Z.N.A tissue DNA kit (D3396-02, Omega) - when using tubes (T):
 * 2mL collection tubes (2x per sample)
 * TL buffer - 200 uL per sample
 * protease solution 25 uL per sample
@@ -100,20 +100,18 @@ Use lysis plates or spin tubes for this first step:
 
 *Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated.*
 
-4. Place all tubes in thermomixer overnight at 60oC and SPEED?
-
-**Q FOR SARA - WHAT SPEED?**
+4. Place all tubes in thermomixer overnight at 60oC and SPEED? **Q FOR SARA - WHAT SPEED?**
 
 
 #### Purification - step 2, day 2 (the following corresponds to steps 5-25 in the kit manual, page 9-11, with few modifications for plates (P) and the E.Z.N.A Tissue DNA kit quick guide for tubes (T)).
 
-*Buffer order: BL, HBC and DNA wash buffer - all stored at room temperature; elution buffer is not used, we elute in miliQ water at 60 – 70oC (ASK KATIE)*
+> *Buffer order: BL, HBC and DNA wash buffer - all stored at room temperature; elution buffer is not used, we elute in miliQ water at 60 – 70oC (ASK KATIE)*
 
-*Dilute **BL** buffer with 100% **ethanol** before use; volume of EtOH to add varies depending on which kit you have (kit ID D1196-00, add 25mL; D1196-01, add 100mL; D1196-02, add 500mL) - this is done once, mark cap of bottle once you've done it.*
+> *Dilute **BL** buffer with 100% **ethanol** before use; volume of EtOH to add varies depending on which kit you have (kit ID D1196-00, add 25mL; D1196-01, add 100mL; D1196-02, add 500mL) - this is done once, mark cap of bottle once you've done it.*
 
-*Dilute **HBC** buffer with 100% **isopropanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 16mL; D1196-01, add 78mL; D1196-02, add 109mL per bottle) - this is done once, mark cap of bottle once you've done it.*
+> *Dilute **HBC** buffer with 100% **isopropanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 16mL; D1196-01, add 78mL; D1196-02, add 109mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
-*Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
+> *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
    **using plates**
 
