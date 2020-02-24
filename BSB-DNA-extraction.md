@@ -38,7 +38,7 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 * 1st bleach entire benchtop
 * 2nd EtOH entire benchtop
 * gloves
-* beaker with ~50mL EtOH
+* beaker with ~50mL 90% EtOH
 * ligther
 * blades - one per sample
 * sharps container
