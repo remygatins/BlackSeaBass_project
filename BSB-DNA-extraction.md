@@ -113,7 +113,7 @@ Use lysis plates or spin tubes for this first step:
 
 > *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
-   **using plates**
+   **USING PLATES**
 
 5. (P) Shake or vortex the plate vigorously (holding the mat) and ensure the lysate is completely homogeneous after shaking (if not further digestion is required. 
 
@@ -129,23 +129,25 @@ Use lysis plates or spin tubes for this first step:
 
 8. (P) Place E-Z 96 DNA plate (extraction columns) on top of a 96-well square-well plate - tape them together.
 
-9. (P) Pipette sample carefully out of lysis plate wells/tubes into the spin columns – large pieces of poorly digested tissue are likely to clog the tips and make it difficult to transfer.
+9. (P) Pipette supernatant carefully out of lysis plate wells/tubes into the spin columns (discard the pellet) – large pieces of poorly digested tissue are likely to clog the tips and make it difficult to transfer.
+
+**Q FOR SARA - IN THE PROTOCOL FOR SPIN TUBES, THE BL BUFFER IS ADDED AFTER THE SUPERNATANT IS ISOLATED? IN THE PLATE PROTOCOL, THE BL BUFFER IS ADDED BEFORE THE SUPERNATANT IS ISOLATED. DO YOU THINK THAT MATTERS?**
 
 10. (P) Seal the E-Z 96 DENA Plate with aeraSeal film.
 
-11. (P) Centrifuge at 4000g for 10 min. Then confirm that each sample has passed through the membrane in each well of the E-Z 96 DNA plate and into the square-well plate.
+11. (P) Centrifuge at 4,000xg for 10 min. Then confirm that each sample has passed through the membrane in each well of the E-Z 96 DNA plate and into the square-well plate.
 
 12. (P) Remove and discard the aeraseal film.
 
 13. (P) Add 500 ul of HBC buffer (previously diluted) into to each well and seal the plate with new aeraseal film.
 
-14. (P) Centriguge 4000 g for 5 min. then discard filtrate and reause the square-well plate.
+14. (P) Centriguge 4,000xg for 5 min. then discard filtrate and reause the square-well plate.
 
 15. (P) Remove and discard aeraseal film
 
 16. (P) Add 600ul DNA wash buffer (diluted) to each well, seal the plate with new aeraseal film.
 
-17. (P) Centrifuge 4000 g for 5 min, discard filtrate and re-attach/reuse the square-well plate.
+17. (P) Centrifuge 4000xg for 5 min, discard filtrate and re-attach/reuse the square-well plate.
 
 18. (P) Repete steps 15-17 for a second DNA wash step.
 
@@ -159,7 +161,7 @@ Use lysis plates or spin tubes for this first step:
 
 22. (P) Add 200uL Elution buffer (or water, ask katie)
 
- Q FOR SARA - MQ WATER? AUTOCLAVED?
+ **Q FOR SARA - SHOULD I USE MQ WATER? IF SO, AUTOCLAVED?**
  
 23. (P) Let it sit for 2-5 minutes.
 
@@ -171,13 +173,13 @@ optional to repeate stps 21-24 for a second elution step - increases DNA yield b
 
 25. (P) Seal the 96-racked microtubes with their caps and store at -20oC.
 
-**using tubes:
+**USING TUBES**:
 
 5. (T) Take tubes out of thermomixer, centrifuge at >10,000 for 5 min. 
 
 6. (T) Transfer the supernatant to a sterile 1.5 mL microcentrifuge tube. Do not disturbe or transfer any of the insoluble pellet.
 
-**Q to SARA - DISCARD PELLET?**
+**Q to SARA - DISCARD or SAVE PELLET?**
 
 7. (T) Add 220 uL BL buffer (adjust volume based on amount of starting material, if needed). Vortex to mix (a wispy precipitate may form upon addition of BL, ignore it).
 
