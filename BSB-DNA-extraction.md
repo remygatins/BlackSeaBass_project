@@ -1,7 +1,7 @@
 # Black Sea Bass Genomics Project 
 --------------------
 -------------------
-### Sample selection
+## Sample selection
 First round of DNA extractions (Feb 2020)
 (*we are hoping to collect more fish from New England and Maine in Summer 2020 for a second round of genomcis*):
 
@@ -19,7 +19,7 @@ Sample selection **criteria**: total lenght of fish < than 30cm (except those fr
 ![firstroundsamples](https://github.com/thais-neu/BSBproject.md/blob/master/first-round-selected-samples.png)
 
 ----------------------------------------------
-### Sample preservation method
+## Sample preservation method
 
 Samples are in the -80oC freezer, except SN (-20oc freezer).
 
@@ -74,29 +74,29 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - when using tubes (T):
 
 1. Prep plate or tubes:
 
-* Lysis plates (P): pour TL buffer in a sterile weigh boat and use multi-channel to load plate wells. Tips should not touch side of wells, if they do, replace tips.
+    * Lysis plates (P): pour TL buffer in a sterile weigh boat and use multi-channel to load plate wells. Tips should not touch side of wells, if they do, replace tips.
 
-* Spin tubes (T): pipette TL buffer directly into each 1.5 mL autoclaved eppendorf tube.
+    * Spin tubes (T): pipette TL buffer directly into each 1.5 mL autoclaved eppendorf tube.
 
 **Q FOR SARA: ADD PROTEASE TO THE BUFFER AT THIS POINT OR AFTER SAMPLES ARE IN?**
 
 2. Take 4-8 samples out of the freezer at the time; keep them on ice or cold beads.
 
- * Wipe bench with EtOH and gloved hands (between samples).
+    * Wipe bench with EtOH and gloved hands (between samples).
 
- * Flame tweezers (between samples) and blade (use one per sample).
+    * Flame tweezers (between samples) and blade (use one per sample).
 
- * Set weigh paper (use one per sample) onto scale and tare.
+    * Set weigh paper (use one per sample) onto scale and tare.
 
- * Take out a fin clip from first sample tube and place on a fresh kimwipe and squeeze with tweezers and blade to dry it out/get rid of liquid, to get accurate weight.
+    * Take out a fin clip from first sample tube and place on a fresh kimwipe and squeeze with tweezers and blade to dry it out/get rid of liquid, to get accurate weight.
 
- * Cut a piece of the fin and weigh it – aim for 15 to 20 mg. Save the leftover sample, put back in sample tube.
+    * Cut a piece of the fin and weigh it – aim for 15 to 20 mg. Save the leftover sample, put back in sample tube.
 
- * Remove the weigh paper with fin from balance and cut up fin in smaller pieces.
+    * Remove the weigh paper with fin from balance and cut up fin in smaller pieces.
 
 3. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
 
- * Repeat until all samples are in buffer.
+    * Repeat until all samples are in buffer.
 
 *Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated.*
 
@@ -113,7 +113,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - when using tubes (T):
 
 > *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
-   **USING PLATES** *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
+   ##### **USING PLATES** *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
 
 5. (P) Shake or vortex the plate vigorously (holding the silicone cover mat) and ensure the lysate is completely homogeneous after shaking (if not further digestion is required). 
 
@@ -173,7 +173,7 @@ optional to repeate stps 21-24 for a second elution step - increases DNA yield b
 
 25. (P) Seal the 96-racked microtubes with their caps and store at -20oC.
 
-**USING TUBES**:
+##### **USING TUBES**:
 
 5. (T) Take tubes out of thermomixer, centrifuge at >10,000 for 5 min. 
 
