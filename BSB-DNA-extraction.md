@@ -92,11 +92,9 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - when using tubes (T):
 
     * Cut a piece of the fin and weigh it – aim for 15 to 20 mg. Save the leftover sample, put back in sample tube.
 
-    * Remove the weigh paper with fin from balance and cut up fin in smaller pieces.
+3.  Remove the weigh paper with fin from balance and cut up fin in smaller pieces. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
 
-3. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
-
-    * Repeat until all samples are in buffer.
+    * Repeat steps 2-3 until all samples are in buffer.
 
 *Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated.*
 
