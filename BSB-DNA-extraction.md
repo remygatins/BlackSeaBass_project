@@ -35,8 +35,8 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 ----------------------------------------
 ### Bench prep and materials
 
-* 1st bleach entire benchtop..
-* 2nd EtOH entire benchtop..
+* 1st bleach entire benchtop
+* 2nd EtOH entire benchtop
 * gloves
 * beaker with ~50mL EtOH
 * ligther
@@ -70,7 +70,7 @@ Use lysis plates or spin tubes for this first step:
 
 **Q FOR SARA: ADD PROTEASE TO THE BUFFER AT THIS POINT OR AFTER SAMPLES ARE IN?**
 
-Take 4-8 samples out of the freezer at the time; keep them on ice or cold beads.
+1. Take 4-8 samples out of the freezer at the time; keep them on ice or cold beads.
 
 Wipe bench with EtOH and gloved hands (between samples).
 
@@ -84,13 +84,13 @@ Cut a piece of the fin and weigh it – aim for 15 to 20 mg. Save the leftover s
 
 Remove the weigh paper with fin from balance and cut up fin in smaller pieces.
 
-Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
+2. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
 
-Repeat until all samples are in buffer.
+3. Repeat until all samples are in buffer.
 
-Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease.
+Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated. 
 
-Place all tubes in thermomixer overnight at 60oC and SPEED?
+4. Place all tubes in thermomixer overnight at 60oC and SPEED?
 
 **Q FOR SARA - WHAT SPEED?**
 
@@ -105,77 +105,79 @@ Place all tubes in thermomixer overnight at 60oC and SPEED?
 
 *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
-...**using plates**
+   **using plates**
 
-5. Shake or vortex the plate vigorously (holding the mat) and ensure the lysate is completely homogeneous after shaking (if not further digestion is required. 
+5. (P) Shake or vortex the plate vigorously (holding the mat) and ensure the lysate is completely homogeneous after shaking (if not further digestion is required. 
 
 
 **Q FOR SARA: KIT MANUAL SAYS TO ADD RNASE A - DID YOU DO THAT?**
 
-6. Add to volumes (~450 uL) of BL buffer to each sample, then vortex samples for 1 min. *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
+6. (P) Add to volumes (~450 uL) of BL buffer to each sample, then vortex samples for 1 min. *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
 
 
-7. Spin down for 4 min at top speed (because we have large pieces of tissue that won’t settle if just briefly spun, as described in the kit manual; also don’t want to spin too long because DNA will settle too and could be lost).
+7. (P) Spin down for 4 min at top speed (because we have large pieces of tissue that won’t settle if just briefly spun, as described in the kit manual; also don’t want to spin too long because DNA will settle too and could be lost).
 
 **Q FOR SARA - DID YOU DO THE OPTIONAL COLUMN EQUILIBRATION PROTOCOL (ADDING 3M NAOH)**
 
-8. Place E-Z 96 DNA plate (extraction columns) on top of a 96-well square-well plate - tape them together.
+8. (P) Place E-Z 96 DNA plate (extraction columns) on top of a 96-well square-well plate - tape them together.
 
-9. Pipette sample carefully out of lysis plate wells/tubes into the spin columns – large pieces of poorly digested tissue are likely to clog the tips and make it difficult to transfer.
+9. (P) Pipette sample carefully out of lysis plate wells/tubes into the spin columns – large pieces of poorly digested tissue are likely to clog the tips and make it difficult to transfer.
 
-10. Seal the E-Z 96 DENA Plate with aeraSeal film.
+10. (P) Seal the E-Z 96 DENA Plate with aeraSeal film.
 
-11. Centrifuge at 4000g for 10 min. Then confirm that each sample has passed through the membrane in each well of the E-Z 96 DNA plate and into the square-well plate.
+11. (P) Centrifuge at 4000g for 10 min. Then confirm that each sample has passed through the membrane in each well of the E-Z 96 DNA plate and into the square-well plate.
 
-12. Remove and discard the aeraseal film.
+12. (P) Remove and discard the aeraseal film.
 
-13. Add 500 ul of HBC buffer (previously diluted) into to each well and seal the plate with new aeraseal film.
+13. (P) Add 500 ul of HBC buffer (previously diluted) into to each well and seal the plate with new aeraseal film.
 
-14. Centriguge 4000 g for 5 min. then discard filtrate and reause the square-well plate.
+14. (P) Centriguge 4000 g for 5 min. then discard filtrate and reause the square-well plate.
 
-15. Remove and discard aeraseal film
+15. (P) Remove and discard aeraseal film
 
-16. Add 600ul DNA wash buffer (diluted) to each well, seal the plate with new aeraseal film.
+16. (P) Add 600ul DNA wash buffer (diluted) to each well, seal the plate with new aeraseal film.
 
-17. Centrifuge 4000 g for 5 min, discard filtrate and re-attach/reuse the square-well plate.
+17. (P) Centrifuge 4000 g for 5 min, discard filtrate and re-attach/reuse the square-well plate.
 
-18. Repeta steps 15-17 for a second DNA wash step.
+18. (P) Repete steps 15-17 for a second DNA wash step.
 
-19. Centrifuge the empty plate at 4000 g for 15 min. Discard the filtrate and the square-well plate.
+19. (P) Centrifuge the empty plate at 4000 g for 15 min. Discard the filtrate and the square-well plate.
 
 **Q FOR SARA - THE MANUAL MENTIONS AN OPTION STEP TO DRY SAMPLES AT 70oC - DID YOU DO THAT? IF SO, FOR HOW LONG?**
 
-20. Transfer the E-Z DNA plate to a set of 96-well racked microtubes (from kit).
+20. (P) Transfer the E-Z DNA plate to a set of 96-well racked microtubes (from kit).
 
-21. Remove and discard the aeraseal film.
+21. (P) Remove and discard the aeraseal film.
 
-22. Add 200uL Elution buffer (or water, ask katie)
+22. (P) Add 200uL Elution buffer (or water, ask katie)
 
  Q FOR SARA - MQ WATER? AUTOCLAVED?
  
-23. Let it sit for 2-5 minutes.
+23. (P) Let it sit for 2-5 minutes.
 
-24. Centrifuge at 4000g for 5 min.
+24. (P) Centrifuge at 4000g for 5 min.
 
 optional to repeate stps 21-24 for a second elution step - increases DNA yield but decreases DNA concentration. If higher concentration is desired, the second elutin can be done with 200uL eluate frm first eluti, reheated to 70oC
 
 **Q TO SARA - DID YOU DO THE ABOVE OPTIONAL STEP?**
 
-25. Seal the 96-racked microtubes with their caps and store at -20oC.
+25. (P) Seal the 96-racked microtubes with their caps and store at -20oC.
 
 **using tubes:
 
-5. (T) Centrifuge at >10,000 for 5 min. 
+5. (T) Take tubes out of thermomixer, centrifuge at >10,000 for 5 min. 
 
-6. (T) transfer the supernatant to a sterile 1.5 mL microcentrifuge tube. 
+6. (T) Transfer the supernatant to a sterile 1.5 mL microcentrifuge tube. Do not disturbe or transfer any of the insoluble pellet.
 
-7. (T) Add 220 uL BL buffer. Do not disturbe or transfer any of the insoluble pellet. Vortex to mix (a wispy precipitate may form upon addition of BL, ignore it).
+**Q to SARA - DISCARD PELLET?**
+
+7. (T) Add 220 uL BL buffer (adjust volume based on amount of starting material, if needed). Vortex to mix (a wispy precipitate may form upon addition of BL, ignore it).
 
 8. (T) Incubate at 70oC for 10 min.
 
-9. (T) Add 220 uL 100% ethanol. Ajust this volume based on starting material if needed. Vortex to mix.
+9. (T) Add 220 uL 100% ethanol (adjust this volume based on amount of starting material if needed). Vortex to mix.
 
-10. Insert a HiBind DNA Mini Column into a 2 mL Collection tube.
+10. (T) Insert a HiBind DNA Mini Column into a 2 mL Collection tube.
 
 11. (T) Transfer the entire sample from setp 9 to the column including any precipitates that may have formed.
 
