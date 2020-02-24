@@ -40,7 +40,7 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 * gloves
 * beaker with ~50mL 90% EtOH
 * ligther
-*   blades - one per sample
+  *   blades - one per sample
 * sharps container
 * trash bin
 * scale
