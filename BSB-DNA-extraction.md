@@ -72,23 +72,23 @@ Use lysis plates or spin tubes for this first step:
 
 1. Take 4-8 samples out of the freezer at the time; keep them on ice or cold beads.
 
-Wipe bench with EtOH and gloved hands (between samples).
+* Wipe bench with EtOH and gloved hands (between samples).
 
-Flame tweezers (between samples) and blade (use one per sample).
+* Flame tweezers (between samples) and blade (use one per sample).
 
-Set weigh paper (use one per sample) onto scale and tare.
+* Set weigh paper (use one per sample) onto scale and tare.
 
-Take out a fin clip from first sample tube and place on a fresh kimwipe and squeeze with tweezers and blade to dry it out/get rid of liquid, to get accurate weight.
+* Take out a fin clip from first sample tube and place on a fresh kimwipe and squeeze with tweezers and blade to dry it out/get rid of liquid, to get accurate weight.
 
-Cut a piece of the fin and weigh it – aim for 15 to 20 mg. Save the leftover sample, put back in sample tube.
+* Cut a piece of the fin and weigh it – aim for 15 to 20 mg. Save the leftover sample, put back in sample tube.
 
-Remove the weigh paper with fin from balance and cut up fin in smaller pieces.
+* Remove the weigh paper with fin from balance and cut up fin in smaller pieces.
 
 2. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
 
 3. Repeat until all samples are in buffer.
 
-Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated. 
+*Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated.*
 
 4. Place all tubes in thermomixer overnight at 60oC and SPEED?
 
