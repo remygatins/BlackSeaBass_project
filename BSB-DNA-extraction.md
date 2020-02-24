@@ -5,7 +5,7 @@
 First round of DNA extractions (Feb 2020):
 (*we are hoping to collect more fish from New England and Maine in Summer 2020 for a second round of genomcis*)
 
-Sample selection criteria: total lenght of fish < than 30cm (except those from ME).
+Sample selection **criteria**: total lenght of fish < than 30cm (except those from ME).
 
 | Location | Number of individuals | Notes |
 |----------|:-----------------------:|-------|
@@ -23,11 +23,11 @@ Sample selection criteria: total lenght of fish < than 30cm (except those from M
 
 Samples are in the -80oC freezer, except SN (-20oc freezer).
 
-Samples in EtOH: none
+**Samples in EtOH**: none
 
-Samples in RNAlater: ME, SN
+**Samples in RNAlater**: ME, SN
 
-Samples in OGL buffer: from NC, MD and NJ.
+**Samples in OGL buffer**: from NC, MD and NJ.
 
 ------------------------------------------------
 --------------------------------------------------------------------
