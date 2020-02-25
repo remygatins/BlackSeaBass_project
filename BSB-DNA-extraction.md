@@ -34,7 +34,7 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 ## DNA extraction from fish fin clips.
 ----------------------------------------
 ### Bench prep and materials
-
+---------------------------
 * 1st (10%) bleach entire benchtop
 * 2nd (70-90%) EtOH entire benchtop
 * gloves
@@ -69,7 +69,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 > *Note: there are some small differences between the methods: when using plates, the BL buffer is added right after the time in thermomixer, on top of the TL buffer, and then the samples are centrifuged to eliminate extra tissue and so the supernatant is comprised of unpurified DNA in a mixture of TL and BL buffers; when using tubes, the sample is centrifuged right out of the thermomixer, the supernatant (unpurified DNA in TL buffer) is transfered out and then we add BL buffer. It is just a matter of logistics that have to do with spinning a plate versus spinning a tube. Shouldn't give any more or less yield.
 ------------------------------------------
 ### Procedure
-
+-----------------------------
 #### Digestion - step 1, day 1 (the following corresponds to setps 1-4, page 8-9 in the kit manual (P), or quick guide (T))
 
 1. Prep plate or tubes:
@@ -100,7 +100,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 
 4. Place plate (cover with silicone mat) or tubes in thermomixer overnight at 60oC and 450RPM? 
 
-
+------------------------------------------
 #### Purification - step 2, day 2 (the following corresponds to steps 5-25 in the kit manual, page 9-11, with few modifications for plates (P) and the E.Z.N.A Tissue DNA kit quick guide for tubes (T)).
 
 > *Buffer order: BL, HBC and DNA wash buffer - all stored at room temperature; elution buffer is not used, we elute in miliQ water at 60 – 70oC (ASK KATIE)*
@@ -110,8 +110,9 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 > *Dilute **HBC** buffer with 100% **isopropanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 16mL; D1196-01, add 78mL; D1196-02, add 109mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
 > *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
-
-   ##### **USING PLATES** *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
+---------------------------------------------------------
+   ##### **PURIFICATION USING PLATES** (cheaper per sample):
+   > *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
 
 5. (P) Shake or vortex the plate vigorously (holding the silicone cover mat) and ensure the lysate is completely homogeneous after shaking (if not further digestion is required). 
 
@@ -162,8 +163,8 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
       * we do the following optional step "repeate steps 21-24 for a second elution step" (increases DNA yield but decreases DNA concentration. If higher concentration is desired, the second elution can be done with 200uL eluate from first elution, reheated to 70oC); collect the second eluate into the same tube used for the first elution.
 
 25. (P) Seal the 96-racked microtubes with their caps and store at -20oC.
-
-##### **USING TUBES**:
+------------------------------------------------------
+##### **PURIFICATION USING TUBES** (more expensive per sample):
 
 5. (T) Take tubes out of thermomixer, centrifuge at >10,000 for 5 min. 
 
