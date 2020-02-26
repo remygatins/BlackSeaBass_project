@@ -74,9 +74,9 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 
 1. Prep plate or tubes:
 
-    * Lysis plates (P): pour TL buffer in a sterile weigh boat and use multi-channel to load plate wells. Tips should not touch side of wells, if they do, replace tips.
+    * Lysis plates (P): pour TL buffer in a sterile weigh boat and use multi-channel to load plate wells with **200 uL of TL buffer per well**. Tips should not touch side of wells, if they do, replace tips.
 
-    * Spin tubes (T): pipette TL buffer directly into each 1.5 mL autoclaved eppendorf tube.
+    * Spin tubes (T): pipette **200 uL of TL buffer** directly into each 1.5 mL autoclaved eppendorf tube.
 
 2. Take 4-8 samples out of the freezer at the time; keep them on ice or cold beads.
 
@@ -88,7 +88,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 
     * Take out a fin clip from first sample tube and place on a fresh kimwipe and squeeze with tweezers and blade to dry it out/get rid of liquid, to get accurate weight.
 
-    * Cut a piece of the fin and weigh it – aim for 15 to 20 mg. Save the leftover sample, put back in sample tube.
+    * Cut a piece of the fin and weigh it – aim for **15 to 20 mg**. Save the leftover sample, put back in sample tube.
     
     * Remove the weigh paper with fin from balance and cut up fin in smaller pieces. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
     
