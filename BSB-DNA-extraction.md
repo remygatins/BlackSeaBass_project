@@ -231,6 +231,7 @@ Time: 45-60 min
 
 *Note: upon thawing samples for extraction, I noticed that samples from NC and NJ have very small amount of tissue. Sara recommends not using them in the first round of extraction (practice more before dealing with such small tissues)*
 
+Solutions used: buffer 1, protease 1.
 
 Samples selected for 1st round of extraction, plate method:
 
