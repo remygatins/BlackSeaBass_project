@@ -23,9 +23,9 @@ Sample selection **criteria**: total lenght of fish < than 30cm (except those fr
 
 Samples are in the -80oC freezer, except SN (-20oc freezer).
 
-**Samples in EtOH**: none
+**Samples in EtOH**: ME, SN (assuming, since liquid is not frozen)
 
-**Samples in RNAlater**: ME, SN
+**Samples in RNAlater**: none
 
 **Samples in OGL buffer**: from NC, MD and NJ.
 
@@ -47,7 +47,7 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 * weigh paper - one per sample
 * kimwipes
 * autoclaved or filtered/sterile pipette tips
-* 1.5mL autoclaved eppendorf tubes (2x per sample, tubes method)
+* 1.5mL autoclaved eppendorf tubes (2x per sample, tubes method-only)
 
 From E-Z 96 tissue DNA kit (D1196-01, Omega) - plates (P) method:
 * lysis plate
