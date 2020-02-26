@@ -224,3 +224,25 @@ Voltage: 100 V
 Time: 45-60 min 
 
 *Note: from previous experience, run gels a little longer and/or higher voltage (110-120) when running medium size gels.
+
+---------------------------------------------------
+
+26-Feb-2020
+
+*Note: upon thawing samples for extraction, I noticed that samples from NC and NJ have very small amount of tissue. Sara recommends not using them in the first round of extraction (practice more before dealing with such small tissues)*
+
+
+Samples selected for 1st round of extraction, plate method:
+
+| Location | UniqueID | Fin_clip_vial_ID|
+|:---------|:--------:|:--------------:|
+| MD | Cs_MD_139 | Cs_MD_064 |
+| MD | Cs_MD_143 | Cs_MD_068 |
+| ME | Cs_ME_165 | 103116 |
+| MD | Cs_MD_150 | Cs_MD_076 |
+| MD | Cs_MD_140 | Cs_MD_065 |
+| MD | Cs_MD_162 | Cs_MD_088 |
+| SN | Cs_SN_179 | 79 |
+| NEG| NA | NA |
+
+*NEG = negative control, extraction solutions only, no tissue.*
