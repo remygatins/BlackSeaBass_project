@@ -46,8 +46,8 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 * scale
 * weigh paper - one per sample
 * kimwipes
-* autoclaved pipette tips
-* 1.5mL autoclaved eppendorf tubes (2x per sample)
+* autoclaved or filtered/sterile pipette tips
+* 1.5mL autoclaved eppendorf tubes (2x per sample, tubes method)
 
 From E-Z 96 tissue DNA kit (D1196-01, Omega) - plates (P) method:
 * lysis plate
@@ -92,13 +92,13 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
     
     * Remove the weigh paper with fin from balance and cut up fin in smaller pieces. Place cut up sample into corresponding plate well or spin tube using tweezers (if a piece falls out or touches any other surface, discard).
     
-    * Repeat steps 2-3 until all samples are in buffer.
+    * Repeat step 2 until all samples are in buffer.
 
 3.  Add 25uL of OB protease solution into each well/tube
 
     *Note: make sure samples are completely submersed in buffer - if not, add more buffer + protease and adjust volume of buffer in the following steps accordingly, as indicated.*
 
-4. Place plate (cover with silicone mat) or tubes in thermomixer overnight at 60oC and 450RPM? 
+4. Place plate (cover with silicone mat) or tubes in thermomixer overnight at 60oC and 450 RPM
 
 ------------------------------------------
 #### Purification - step 2, day 2 (the following corresponds to steps 5-25 in the kit manual, page 9-11, with few modifications for plates (P) and the E.Z.N.A Tissue DNA kit quick guide for tubes (T)).
@@ -227,7 +227,7 @@ Time: 45-60 min
 
 ---------------------------------------------------
 
-26-Feb-2020
+### 26-Feb-2020
 
 *Note: upon thawing samples for extraction, I noticed that samples from NC and NJ have very small amount of tissue. Sara recommends not using them in the first round of extraction (practice more before dealing with such small tissues)*
 
@@ -246,3 +246,5 @@ Samples selected for 1st round of extraction, plate method:
 | NEG| NA | NA |
 
 *NEG = negative control, extraction solutions only, no tissue.*
+
+This took ~3h but including the time it takes to thaw out samples in OGL buffer; processing took ~1.5h.
