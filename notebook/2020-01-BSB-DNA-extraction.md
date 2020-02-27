@@ -273,7 +273,7 @@ Most samples didn't work. Could be proteinase 1 is too old, or final DNA was too
 
 Testing enzyme and eluate volume in round 2 of extrations.
 
-Samples selected for 2nd round of extractions, plate meethod:
+Samples selected for 2nd round of extractions, plate method:
 
 | Location | UniqueID | Fin_clip_vial_ID|enzyme|note|
 |:---------|:--------:|:--------------:|-------|----|
@@ -284,6 +284,12 @@ Samples selected for 2nd round of extractions, plate meethod:
 | SN | Cs_SN_179 | 79 | Lotterhos lab "1" | didn't work in round 1|
 | NEG| NA | NA |
 
-Testing the enzyme: samples #24 and #136 are run side by side with Lotterhos enzyme 2 (not used in round 1) and enzyme from Hughes lab (newer kit).
-Testing the elution volume: all samples are going to be eluted tomorrow in a final volume of 100uL (2x 50uL); using enzyme 1 (same used in round 1) with sample #79 (didn't work in round 1) - if this one works, it means enzyme "1" works, but elution vol needs to be lower.
+Testing the enzymes: samples #24 and #136 are run side by side with Lotterhos enzyme 2 (**not** used in round 1) and enzyme from Hughes lab (newer kit, should work). 
+> If enzyme 1 (used in round 1) was bad, these 4 samples will work; if enzyme 2 is also bad, only samples digested with enzyme from Hughes lab will work.
+
+Testing the elution volume: all samples are going to be eluted tomorrow in a final volume of 100uL (2x 50uL).
+> If they all work, all enzymes are working, including enzyme 1, and we just need to elute in less water.
+> If all but #79 works, enzyme 1 is bad regardless of how much elution water we use.
+
+
 
