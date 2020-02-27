@@ -271,9 +271,9 @@ Most samples didn't work. Could be proteinase 1 is too old, or final DNA was too
 
 **Troubleshooting**
 
-Testing enzyme and eluate volume in round 2 of extrations.
+Problem could be that enzyme 1 is too old/not working (expiration date: 28-Mar-2020) and/or final elution volume (400uL) was too high, diluting the extracted DNA too much.
 
-Samples selected for 2nd round of extractions, plate method:
+Samples selected for 2nd round of extractions (troubleshooting round), plate method:
 
 | Location | UniqueID | Fin_clip_vial_ID|enzyme|note|
 |:---------|:--------:|:--------------:|-------|----|
