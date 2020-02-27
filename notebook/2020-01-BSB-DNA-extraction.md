@@ -265,7 +265,7 @@ Gel to check, from left to right: ladder, #139, #143, #165, #150, #140, #162, #1
 
 Ran for 105V, 60min.
 
-![gelimageBSBround1]
+![gelimageBSBround1](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-02-27-BSBgel1.jpg)
 
 Most samples didn't work. Could be proteinase 1 is too old, or final DNA was too diluted in 400uL.
 
