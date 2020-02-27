@@ -265,7 +265,7 @@ Gel to check, from left to right: ladder, #139, #143, #165, #150, #140, #162, #1
 
 Ran for 105V, 60min.
 
-[!gelimageBSBround1]
+![gelimageBSBround1] (https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-02-27%20BSB%20gel1.jpg)
 
 Most samples didn't work. Could be proteinase 1 is too old, or final DNA was too diluted in 400uL.
 
@@ -276,7 +276,7 @@ Testing enzyme and eluate volume in round 2 of extrations.
 Samples selected for 2nd round of extractions, plate meethod:
 
 | Location | UniqueID | Fin_clip_vial_ID|enzyme|note|
-|:---------|:--------:|:--------------:|-------|
+|:---------|:--------:|:--------------:|-------|----|
 | Sara's Iceland cod sample | NA | #24 | Lotterhos lab "2"| positive ctrl |
 | Sara's Iceland cod sample | NA | #24 | Hughes lab | positive ctrl |
 | MD | Cs_MD_136 | Cs_MD_061 | Lotterhos lab "2"| didnt run in round 1|
