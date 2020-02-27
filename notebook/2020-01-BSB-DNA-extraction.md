@@ -229,9 +229,13 @@ Time: 45-60 min
 
 ### 26-Feb-2020
 
+### BSB DNA extractions, round 1.
+
 *Note: upon thawing samples for extraction, I noticed that samples from NC and NJ have very small amount of tissue. Sara recommends not using them in the first round of extraction (practice more before dealing with such small tissues)*
 
-Solutions used: buffer 1, protease 1.
+Digestion
+
+Solutions used: buffer "1", protease "1" (we have two kits in the lab, randomly labelling kits "1" and "2" just to keep track of which ones I'm using for which samples).
 
 Samples selected for 1st round of extraction, plate method:
 
@@ -249,3 +253,37 @@ Samples selected for 1st round of extraction, plate method:
 *NEG = negative control, extraction solutions only, no tissue.*
 
 This took ~3h but including the time it takes to thaw out samples in OGL buffer; processing took ~1.5h.
+
+----------------------
+### 27-Feb-2020
+
+Purification
+
+Final volume was 400 uL (in MG water), visible pellets in the eluate (normal, but maybe too big).
+
+Gel to check, from left to right: ladder, #139, #143, #165, #150, #140, #162, #179, NEG (all 4uL,except #143 and #150, 6uL).
+
+Ran for 105V, 60min.
+
+[!gelimageBSBround1]
+
+Most samples didn't work. Could be proteinase 1 is too old, or final DNA was too diluted in 400uL.
+
+**Troubleshooting**
+
+Testing enzyme and eluate volume in round 2 of extrations.
+
+Samples selected for 2nd round of extractions, plate meethod:
+
+| Location | UniqueID | Fin_clip_vial_ID|enzyme|note|
+|:---------|:--------:|:--------------:|-------|
+| Sara's Iceland cod sample | NA | #24 | Lotterhos lab "2"| positive ctrl |
+| Sara's Iceland cod sample | NA | #24 | Hughes lab | positive ctrl |
+| MD | Cs_MD_136 | Cs_MD_061 | Lotterhos lab "2"| didnt run in round 1|
+| MD | Cs_MD_136 | Cs_MD_061 | Hughes lab | didn't run in round 1|
+| SN | Cs_SN_179 | 79 | Lotterhos lab "1" | didn't work in round 1|
+| NEG| NA | NA |
+
+Testing the enzyme: samples #24 and #136 are run side by side with Lotterhos enzyme 2 (not used in round 1) and enzyme from Hughes lab (newer kit).
+Testing the elution volume: all samples are going to be eluted tomorrow in a final volume of 100uL (2x 50uL); using enzyme 1 (same used in round 1) with sample #79 (didn't work in round 1) - if this one works, it means enzyme "1" works, but elution vol needs to be lower.
+
