@@ -144,9 +144,13 @@ From left to right: ladder, +ctrl Lotterhos 2 (L2) enzyme, +ctrl Hughes (H) enzy
 * sample #136 (from MD) did not work at all with either enzyme (L2 and H) so the sample is the problem. Why:
    * sample #136 is in OGLfix but so is +ctrl, could it be that BSB DNA is harder to extract from finclips (compared to cod DNA)?
    * finclips from #136 (as well as all others from MD in both rounds) and #179 (and #165 round 1) look different from one another; finclips from MD seem to have no cartilage, just the 'soft' tissue - could that be a problem? 
-   * the tissue pellet remaining in lysis plate after extraction is bigger and darker in samples that didn't extract well - see below (all from MD in rounds 1 and 2). Could the DNA be trapped there?
+   * the tissue pellet remaining in lysis plate after extraction is bigger and darker in samples that didn't extract well (all from MD in rounds 1 and 2). Could the DNA be trapped there?
       * extract for longer?
       * use more than 25uL enzyme?
       * higher temperature?
 
-![lysisplateimage] 
+**Image below is from left over tissue pellet in lysis plate** (order matches that of gels)**:**
+
+Solid black pellets correspond to samples that didn't extract well.
+
+![lysisplateimage](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-02-28-BSBlysisplate.jpg) 
