@@ -141,6 +141,10 @@ From left to right: ladder, +ctrl Lotterhos 2 (L2) enzyme, +ctrl Hughes (H) enzy
 
 * +ctrl worked with both L2 and H enzymes, so both these enzymes are working;
 * sample #179 worked with L1 enzyme, eluted in 100uL (not in 400uL from round 1), so L1 enzyme works and **final elution volume needs to be 100uL (as opposed to 400uL)**
-* sample #136 did not work at all with either enzyme (L2 and H) so the sample is the problem. Why:
+* sample #136 (from MD) did not work at all with either enzyme (L2 and H) so the sample is the problem. Why:
    * sample #136 is in OGLfix but so is +ctrl, could it be that BSB DNA is harder to extract from finclips (compared to cod DNA)?
-   * finclips from #136 and #179 look different from one another #136 seems to have no cartilage, just the 'soft' tissue - could that be a problem? Also, pellet of left over tissue after extraction is bigger in #136.
+   * finclips from #136 and #179 look different from one another #136 seems to have no cartilage, just the 'soft' tissue - could that be a problem? 
+   * the tissue pellet remaining in lysis plate after extraction is bigger and darker in samples that didn't extract well (all from MD in rounds 1 and 2). Could the DNA be trapped there?
+      * extract for longer?
+      * use more than 25uL enzyme?
+      * higher temperature?
