@@ -126,7 +126,7 @@ Testing the elution volume: all samples are going to be eluted tomorrow in a fin
 > If they all work, all enzymes are working, including enzyme 1, and we just need to elute in less water.
 > If all but #79 works, enzyme 1 is bad regardless of how much elution water we use.
 
-
+-------------------------------------------------
 ### 28-Feb-2020
 
 **Round 2 - purification and gel**
@@ -154,3 +154,7 @@ From left to right: ladder, +ctrl Lotterhos 2 (L2) enzyme, +ctrl Hughes (H) enzy
 Solid black pellets correspond to samples that didn't extract well.
 
 ![lysisplateimage](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-02-28-BSBlysisplate.jpg) 
+
+Plan for next week:
+* troubleshoot extraction using a MD sample of fish >30cm - one that does **not** meet the selection criteria.
+* get advice from Katie on how to tweak digestion.
