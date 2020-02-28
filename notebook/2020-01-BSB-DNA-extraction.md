@@ -34,7 +34,7 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 ## DNA extraction from fish fin clips.
 ----------------------------------------
 
-DNA extraction done according to (https://github.com/thais-neu/BSBproject.md/blob/master/protocols/DNA-extraction.md).
+DNA extraction and gel check done according to (https://github.com/thais-neu/BSBproject.md/blob/master/protocols/DNA-extraction.md).
 
 Method used: plates
 
@@ -45,12 +45,16 @@ Modifications from the above method:
 
 -----------------------------------------------
 
-### Gel to check extraction worked
+### Gel prep cheatsheet
 
-Agarose 1.5%, in 70 mL TBE buffer (small gel) and GelRed.
+Agarose 1.5%
+> 1.05 g in 70 mL TBE buffer (small gel) a
+> 3.15 g in 210 mL TBE buffer (medium gel)
+
+7uL GelRed.
 
 Ladder/sample: ~4uL + 2uL loading dye.
-
+Run at 100V for 60min.
 
 ---------------------------------------------------
 
@@ -84,7 +88,7 @@ This took ~3h but including the time it takes to thaw out samples in OGL buffer;
 ----------------------
 ### 27-Feb-2020
 
-**Round 1 - purification and gel.**
+**Round 1 - purification and gel**
 
 Final volume was 400 uL (in MG water), visible pellets in the eluate (normal, but maybe too big).
 
@@ -125,7 +129,7 @@ Testing the elution volume: all samples are going to be eluted tomorrow in a fin
 
 ### 28-Feb-2020
 
-**Round 2, purification and gel**
+**Round 2 - purification and gel**
 
 Final elution volume = 100uL
 
