@@ -233,7 +233,7 @@ Time: 45-60 min
 
 *Note: upon thawing samples for extraction, I noticed that samples from NC and NJ have very small amount of tissue. Sara recommends not using them in the first round of extraction (practice more before dealing with such small tissues)*
 
-Digestion
+**Round 1 - digestion**
 
 Solutions used: buffer "1", protease "1" (we have two kits in the lab, randomly labelling kits "1" and "2" just to keep track of which ones I'm using for which samples).
 
@@ -257,23 +257,27 @@ This took ~3h but including the time it takes to thaw out samples in OGL buffer;
 ----------------------
 ### 27-Feb-2020
 
-Purification
+**Round 1 - purification and gel.**
 
 Final volume was 400 uL (in MG water), visible pellets in the eluate (normal, but maybe too big).
 
-Gel to check, from left to right: ladder, #139, #143, #165, #150, #140, #162, #179, NEG (all 4uL,except #143 and #150, 6uL).
+Gel to check, ran at 105V, for 60min.
 
-Ran for 105V, 60min.
+From left to right: ladder, #139, #143, #165, #150, #140, #162, #179, NEG (all 4uL,except #143 and #150, 6uL).
 
 ![gelimageBSBround1](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-02-27-BSBgel1.jpg)
 
 Most samples didn't work. Could be proteinase 1 is too old, or final DNA was too diluted in 400uL.
 
+Sample #165 is the only one that worked - finclip looks different than the others, has 'cartilage', maybe that is where DNA come from as oppose to the 'soft' tissue of the fin?
+
 **Troubleshooting**
 
 Problem could be that enzyme 1 is too old/not working (expiration date: 28-Mar-2020) and/or final elution volume (400uL) was too high, diluting the extracted DNA too much.
 
-Samples selected for 2nd round of extractions (troubleshooting round), plate method:
+**Round 2 - digestion**
+
+Samples selected for 2nd round of digestion (troubleshooting round), plate method:
 
 | Location | UniqueID | Fin_clip_vial_ID|enzyme|note|
 |:---------|:--------:|:--------------:|-------|----|
@@ -292,4 +296,20 @@ Testing the elution volume: all samples are going to be eluted tomorrow in a fin
 > If all but #79 works, enzyme 1 is bad regardless of how much elution water we use.
 
 
+### 28-Feb-2020
 
+**Round 2, purification and gel**
+
+Final elution volume = 100uL
+
+From left to right: ladder, +ctrl Lotterhos 2 (L2) enzyme, +ctrl Hughes (H) enzyme, #136 MD sample L2 enzyme, #136 MD sample H enzyme, #179 SN sample L1 enzyme, -ctrl, +ctrl Lotterhos 2 (L2) enzyme (repeat).
+
+![gelimageBSBround2](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-02-28-BSBgel2.jpg)
+
+**Notes from round 2 gel results:**
+
+* +ctrl worked with both L2 and H enzymes, so both these enzymes are working;
+* sample #179 worked with L1 enzyme, eluted in 100uL (not in 400uL from round 1), so L1 enzyme works and **final elution volume needs to be 100uL (as opposed to 400uL)**
+* sample #136 did not work at all with either enzyme (L2 and H) so the sample is the problem. Why:
+   * sample #136 is in OGLfix but so is +ctrl, could it be that BSB DNA is harder to extract from finclips (compared to cod DNA)?
+   * finclips from #136 and #179 look different from one another #136 seems to have no cartilage, just the 'soft' tissue - could that be a problem? Also, pellet of left over tissue after extraction is bigger in #136.
