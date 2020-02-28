@@ -113,7 +113,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 
 18. (P) Repeat steps 15-17 for a second DNA wash step.
 
-19. (P) Centrifuge the empty plate at 4000 g for 15 min. Discard the filtrate and the square-well plate.
+19. (P) Centrifuge the empty plate at 4000xg for 15 min. Discard the filtrate and the square-well plate.
 
       * skip the optional step "Dry samples at 70oC".
 
@@ -121,11 +121,11 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 
 21. (P) Remove and discard the aeraseal film.
 
-22. (P) Add 200uL ~~Elution buffer~~ - we are using Molecular Grade water instead.
+22. (P) Add 50-200uL (**optimal volume may vary**)  ~~Elution buffer~~ - we are using Molecular Grade water instead.
 
 23. (P) Let it sit for 2-5 minutes.
 
-24. (P) Centrifuge at 4000g for 5 min.
+24. (P) Centrifuge at 4000xg for 5 min.
 
       * we do the following optional step "repeate steps 21-24 for a second elution step" (increases DNA yield but decreases DNA concentration. If higher concentration is desired, the second elution can be done with 200uL eluate from first elution, reheated to 70oC); collect the second eluate into the same tube used for the first elution.
 
@@ -137,7 +137,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 
 6. (T) Transfer the supernatant to a sterile 1.5 mL microcentrifuge tube. Do not disturbe or transfer any of the insoluble pellet. Discard pellet.
 
-7. (T) Add 220 uL BL buffer (adjust volume based on amount of starting material, if needed). Vortex to mix (a wispy precipitate may form upon addition of BL, ignore it).
+7. (T) Add 220uL BL buffer (adjust volume based on amount of starting material, if needed). Vortex to mix (a wispy precipitate may form upon addition of BL, ignore it).
 
 8. (T) Incubate at 70oC for 10 min.
 
