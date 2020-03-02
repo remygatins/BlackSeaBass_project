@@ -184,9 +184,9 @@ This is how small a fin clip we have from NJ (and NC); couldn't get a weigh usin
 Samples selected for round 3 of extractions (testing small finclips), ++tube++ method:
 
 | Location | UniqueID | Fin_clip_vial_ID|note|
-|:---------|:--------:|:--------------:|
+|:---------|:--------:|:---------------:|----|
 | Sara's Iceland cod | NA | #24 |used 5mg|
-| NJ | Cs_NJ_107 | Cs_NJ_002 ||
+| NJ | Cs_NJ_107 | Cs_NJ_002 | |
 
 Solutions used: Protease "1", Buffer "1" 
 
