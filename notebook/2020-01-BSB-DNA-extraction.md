@@ -188,6 +188,6 @@ Samples selected for round 3 of extractions (testing small finclips), ++tube++ m
 | Sara's Iceland cod | NA | #24 |used 5mg|
 | NJ | Cs_NJ_107 | Cs_NJ_002 | |
 
-Solutions used: Protease "1", Buffer "1" 
+Solutions used: Protease "1", Buffer "2" 
 
 -----------------------------------------
