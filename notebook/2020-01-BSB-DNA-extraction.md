@@ -112,8 +112,8 @@ Samples selected for 2nd round of digestion (troubleshooting round), plate metho
 
 | Location | UniqueID | Fin_clip_vial_ID|enzyme|note|
 |:---------|:--------:|:--------------:|-------|----|
-| Sara's Iceland cod sample | NA | #24 | Lotterhos lab "2"| positive ctrl |
-| Sara's Iceland cod sample | NA | #24 | Hughes lab | positive ctrl |
+| Sara's Iceland cod | NA | #24 | Lotterhos lab "2"| positive ctrl |
+| Sara's Iceland cod | NA | #24 | Hughes lab | positive ctrl |
 | MD | Cs_MD_136 | Cs_MD_061 | Lotterhos lab "2"| didnt run in round 1|
 | MD | Cs_MD_136 | Cs_MD_061 | Hughes lab | didn't run in round 1|
 | SN | Cs_SN_179 | 79 | Lotterhos lab "1" | didn't work in round 1|
@@ -158,3 +158,31 @@ Solid black pellets correspond to samples that didn't extract well.
 Plan for next week:
 * troubleshoot extraction using a MD sample of fish >30cm - one that does **not** meet the selection criteria.
 * get advice from Katie on how to tweak digestion.
+
+-----------------------
+### 2-March-2020
+
+Summary results from last week: 
+* enzymes work;
+* positive control (cod sample) and samples from ME and SN worked (eluting in 100uL);
+* samples from MD didn't work regardless of enzyme used or elution volume.
+
+*Notes from meeting with Katie: samples from MD that didn't extract are probable the issue; we traced them back and found that those fish were collected in 2016, kept frozen (likely at -20oC), thawed out to collect fin clip in Oct 2019 - this probably led to DNA degradation of the finclips sent to us. We will quantify the DNA in the extracts using Nanodrop and depending on results, contact the sequencing facility to see if it is usable. If so, we extract the remaining MD samples. If not, we drop the MD sample set.*
+
+Next steps:
+* Measure DNA concentration of extracted samples using OGL's Nanodrop.
+* Move on with extracting the other samples - for the small fin clips (samples from NJ and NC), do a test with a NJ sample that is outside of our selection criteria (fish >30cm) and a positive control (cod) to test if the tubes method of extraction work with these small fin clips.
+
+
+**Round 3 - digestion**
+
+Samples selected for round 3 of extractions (testing small finclips), tubes method:
+
+| Location | UniqueID | Fin_clip_vial_ID|
+|:---------|:--------:|:--------------:|
+| Sara's Iceland cod | NA | #24 |
+| NJ | Cs_NJ_107 | Cs_NJ_002 |
+
+Solutions used: Protease "1", Buffer "1" 
+
+-----------------------------------------
