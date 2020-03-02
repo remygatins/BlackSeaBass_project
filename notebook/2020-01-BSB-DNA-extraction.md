@@ -177,7 +177,7 @@ Next steps:
 
 This is how small a fin clip we have from NJ (and NC); couldn't get a weigh using our scale.
 
-![example_NJfinclip]
+![example_NJfinclip](https://github.com/thais-neu/BSBproject.md/blob/master/img/NJ-finclip-example.jpg)
 
 **Round 3 - digestion**
 
