@@ -45,15 +45,17 @@ Modifications from the above method:
 
 -----------------------------------------------
 
-### Gel prep cheatsheet
+### Gel prep quick reference
 
 Agarose 1.5%
-> 1.05 g in 70 mL TBE buffer (small gel) a
+> 1.05 g in 70 mL TBE buffer (small gel)
+
 > 3.15 g in 210 mL TBE buffer (medium gel)
 
-7uL GelRed.
+Add 7uL GelRed.
 
 Ladder/sample: ~4uL + 2uL loading dye.
+
 Run at 100V for 60min.
 
 ---------------------------------------------------
@@ -68,7 +70,7 @@ Run at 100V for 60min.
 
 Solutions used: buffer "1", protease "1" (we have two kits in the lab, randomly labelling kits "1" and "2" just to keep track of which ones I'm using for which samples).
 
-Samples selected for 1st round of extraction, plate method:
+Samples selected for 1st round of extraction, ++plate++ method:
 
 | Location | UniqueID | Fin_clip_vial_ID|
 |:---------|:--------:|:--------------:|
@@ -108,7 +110,7 @@ Problem could be that enzyme 1 is too old/not working (expiration date: 28-Mar-2
 
 **Round 2 - digestion**
 
-Samples selected for 2nd round of digestion (troubleshooting round), plate method:
+Samples selected for 2nd round of digestion (troubleshooting round), ++plate++ method:
 
 | Location | UniqueID | Fin_clip_vial_ID|enzyme|note|
 |:---------|:--------:|:--------------:|-------|----|
@@ -176,7 +178,7 @@ Next steps:
 
 **Round 3 - digestion**
 
-Samples selected for round 3 of extractions (testing small finclips), tubes method:
+Samples selected for round 3 of extractions (testing small finclips), ++tube++ method:
 
 | Location | UniqueID | Fin_clip_vial_ID|
 |:---------|:--------:|:--------------:|
