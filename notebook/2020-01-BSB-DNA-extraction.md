@@ -175,15 +175,18 @@ Next steps:
 * Measure DNA concentration of extracted samples using OGL's Nanodrop.
 * Move on with extracting the other samples - for the small fin clips (samples from NJ and NC), do a test with a NJ sample that is outside of our selection criteria (fish >30cm) and a positive control (cod) to test if the tubes method of extraction work with these small fin clips.
 
+This is how small a fin clip we have from NJ (and NC); couldn't get a weigh using our scale.
+
+![example_NJfinclip]
 
 **Round 3 - digestion**
 
 Samples selected for round 3 of extractions (testing small finclips), ++tube++ method:
 
-| Location | UniqueID | Fin_clip_vial_ID|
+| Location | UniqueID | Fin_clip_vial_ID|note|
 |:---------|:--------:|:--------------:|
-| Sara's Iceland cod | NA | #24 |
-| NJ | Cs_NJ_107 | Cs_NJ_002 |
+| Sara's Iceland cod | NA | #24 |used 5mg|
+| NJ | Cs_NJ_107 | Cs_NJ_002 ||
 
 Solutions used: Protease "1", Buffer "1" 
 
