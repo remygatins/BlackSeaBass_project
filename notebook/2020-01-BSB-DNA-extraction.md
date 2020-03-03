@@ -191,3 +191,13 @@ Samples selected for round 3 of extractions (testing small finclips), ++tube++ m
 Solutions used: Protease "1", Buffer "2" 
 
 -----------------------------------------
+
+### 3-March-2020
+
+**Round 3 - purification** using tubes method, eluted in 100uL.
+
+Nanodrop quantification of extracts (rounds 1, 2 and 3). 
+
+![Nanodrop_results](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-03-03-resultssummary.jpg)
+
+The dotted line is the threshold for 'good quality' DNA (= high DNA to contaminant ratio).
