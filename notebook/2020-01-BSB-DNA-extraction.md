@@ -36,10 +36,10 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 
 DNA extraction and gel check done according to (https://github.com/thais-neu/BSBproject.md/blob/master/protocols/DNA-extraction.md).
 
-Method used: plates
+Method used: sample-dependent.
 
 Modifications from the above method: 
-   * elution volume 100uL (except round 1, 400uL).
+   * elution volume 100uL, final (2x 50uL) (except round 1, 400uL, final).
    * elution is done in molecular grade water, not buffer from kit.
 
 
