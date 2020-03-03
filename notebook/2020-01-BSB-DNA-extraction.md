@@ -200,9 +200,9 @@ Nanodrop quantification of extracts (rounds 1, 2 and 3; the dotted line is the t
 
 ![Nanodrop_results](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-03-03-resultssummary.jpg)
 
-* Round 1 = most samples eluted in 400uL are too diluted;
+* Round 1 = most samples eluted in 400uL are too diluted or extraction didn't work;
 * Round 2 = first positive ctrl is surprisingly low concentration, given there's a clear band on the gel;
 * Round 2 = concentrations of both #136 is surprisingly high, given no bands on the gel;
 * Round 3 = tubes method worked reasonably well for the tiny fin clip (#107); 
-* Round 3 = I expected the positive ctrl to be higher than the #107, given that the start material was higher. 
+* Round 3 = I expected the positive ctrl to be at higher concentration, given that the start material was higher. 
 
