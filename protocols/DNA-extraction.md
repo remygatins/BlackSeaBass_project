@@ -133,7 +133,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 ------------------------------------------------------
 ##### **PURIFICATION USING TUBES** (more expensive per sample):
 
-5. (T) Take tubes out of thermomixer, centrifuge at >10,000 for 5 min. 
+5. (T) Take tubes out of thermomixer, centrifuge at >10,000xg for 5 min. 
 
 6. (T) Transfer the supernatant to a sterile 1.5 mL microcentrifuge tube. Do not disturbe or transfer any of the insoluble pellet. Discard pellet.
 
