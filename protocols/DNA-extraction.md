@@ -141,7 +141,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 
 8. (T) Incubate at 70oC for 10 min.
 
-9. (T) Add 220 uL 100% ethanol (adjust this volume based on amount of starting material if needed). Vortex to mix.
+9. (T) Add 220uL 100% ethanol (adjust this volume based on amount of starting material if needed). Vortex to mix.
 
 10. (T) Insert a HiBind DNA Mini Column into a 2 mL Collection tube.
 
@@ -163,7 +163,7 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 
 19. (T) Transfer the column into a new nuclease-free 1.5 mL microcentrifuge tube. 
 
-20. (T) Add 100-200uL Elution Buffer (or miliQ water?) heated to 70oC, let it sit for 2 min. Centrifuge at max speed for 1 min.
+20. (T) Add 100-200uL (*this volume may vary*) Elution Buffer (*we use molecular grade water*) heated to 70oC, let it sit for 2 min. Centrifuge at max speed for 1 min.
 
 21. (T) Repeat step 20 for a second elution step.
 
