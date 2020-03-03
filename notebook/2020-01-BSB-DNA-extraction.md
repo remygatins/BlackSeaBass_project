@@ -196,8 +196,13 @@ Solutions used: Protease "1", Buffer "2"
 
 **Round 3 - purification** using tubes method, eluted in 100uL.
 
-Nanodrop quantification of extracts (rounds 1, 2 and 3). 
+Nanodrop quantification of extracts (rounds 1, 2 and 3; the dotted line is the threshold for 'good quality' DNA (= high DNA to contaminant ratio)).
 
 ![Nanodrop_results](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-03-03-resultssummary.jpg)
 
-The dotted line is the threshold for 'good quality' DNA (= high DNA to contaminant ratio).
+* Round 1 = most samples eluted in 400uL are too diluted;
+* Round 2 = first positive ctrl is surprisingly low concentration, given there's a clear band on the gel;
+* Round 2 = concentrations of both #136 is surprisingly high, given no bands on the gel;
+* Round 3 = tubes method worked reasonably well for the tiny fin clip (#107); 
+* Round 3 = I expected the positive ctrl to be higher than the #107, given that the start material was higher. 
+
