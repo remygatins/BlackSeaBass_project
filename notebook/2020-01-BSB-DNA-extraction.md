@@ -206,3 +206,13 @@ Nanodrop quantification of extracts (rounds 1, 2 and 3; the dotted line is the t
 * Round 3 = tubes method worked reasonably well for the tiny fin clip (#107); 
 * Round 3 = I expected the positive ctrl to be at higher concentration, given that the start material was higher. 
 
+-----------------------------------------------
+
+### 4-March-2020
+
+Checking Nanodrop results agains Qubit quantification of samples extracted in round 2 (except NEG) and round 3.
+
+Blue = Nanodrop, Red = Qubit
+
+![qubit_results](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-03-04-qubitresults.jpg)
+
