@@ -210,7 +210,7 @@ Nanodrop quantification of extracts (rounds 1, 2 and 3; the dotted line is the t
 
 ### 4-March-2020
 
-Checking Nanodrop results agains Qubit quantification of samples extracted in round 2 (except NEG) and round 3.
+Checking Nanodrop results against Qubit quantification of samples extracted in round 2 (except NEG) and round 3.
 
 Blue = Nanodrop, Red = Qubit
 
