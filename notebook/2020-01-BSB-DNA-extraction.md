@@ -227,6 +227,8 @@ Our library prep rate includes an initial Picogreen QC step, and we can still at
 Plan for next week:
 * use another positive control (ask Alan for oyster tissue, flash frozen/kept at -80oC); ask Sara for a fin clip that has been kept in EtOH and at -80oC). Positive controls used so far are cod fin clip kept in OGL fix **at room temp** so maybe that's why the extraction yield is low.
 * run another 'practice' round with new positive controls.
-* when running the samples, elute first round in 30uL and second in 70uL and store the two elutions **separately**. Quantify the first one using Qubit - if >25ng/ul, great; if not, we can concentrate the second elution and add to the first one to increase yield.
+* ran a quick test today and it seems like I need at least 30uL elution vol to coat the entire membrane in the extractin column (less volume might not be enough to collect all DNA from the membrane); so when running the samples, elute first round in 30uL and second in 70uL and store the two elutions **separately**. Quantify the first one using Qubit - if >25ng/ul, great; if not, we can concentrate the second elution and add to the first one to increase yield.
+
+-------------------
 
 --------------------------------
