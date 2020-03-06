@@ -216,3 +216,17 @@ Blue = Nanodrop, Red = Qubit
 
 ![qubit_results](https://github.com/thais-neu/BSBproject.md/blob/master/img/2020-03-04-qubitresults.jpg)
 
+--------------------------------
+### 6-March-2020
+
+From the sequencing facility: 
+> "We request DNA to be sent with volumes >20 ul and concentrations >25 ng/ul as measured by Picogreen or Qubit since Nanodrop will tend to overestimate the amount of double stranded DNA available.  However, we input 10 ul of DNA at 10 ng/ul into our GBS library preparation, so DNA >10 ng/ul as measured by Picogreen or Qubit is acceptable. I’ve attached our sample submission form that outlines DNA requirements in more detail.
+
+Our library prep rate includes an initial Picogreen QC step, and we can still attempt library prep on sequencing on samples with concentrations <10 ng/ul. We have successfully sequenced samples with initial concentrations <5 ng/ul, however, the results are more variable and we cannot guarantee that the samples will be successful."
+
+Plan for next week:
+* use another positive control (ask Alan for oyster tissue, flash frozen/kept at -80oC); ask Sara for a fin clip that has been kept in EtOH and at -80oC). Positive controls used so far are cod fin clip kept in OGL fix **at room temp** so maybe that's why the extraction yield is low.
+* run another 'practice' round with new positive controls.
+* when running the samples, elute first round in 30uL and second in 70uL and store the two elutions **separately**. Quantify the first one using Qubit - if >25ng/ul, great; if not, we can concentrate the second elution and add to the first one to increase yield.
+
+--------------------------------
