@@ -36,12 +36,13 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 
 Detailed protocol here: (https://github.com/thais-neu/BSBproject.md/blob/master/protocols/DNA-extraction-kits.md)
 
-Method used: sample-dependent.
+Method used: sample-dependent, noted in each round.
 
 Modifications from the above method: 
-   * elution volume 100uL, final (2x 50uL) (except round 1, 400uL, final).
+   * elution volume varied, see notes on each round of extraction.
    * elution is done in molecular grade water, not buffer from kit.
-
+   
+Initial amount of tissue: 15 to 20 mg, unless otherwise noted.
 
 -----------------------------------------------
 
@@ -94,7 +95,7 @@ This took ~3h but including the time it takes to thaw out samples in OGL buffer;
 
 **Round 1 - purification and gel**
 
-Final volume was 400 uL (in MG water), visible pellets in the eluate (normal, but maybe too big).
+Final elution volume: 400 uL (2x 200uL, combined), visible pellets in the eluate (normal, but maybe too big).
 
 Gel to check, ran at 105V, for 60min.
 
@@ -135,7 +136,7 @@ Testing the elution volume: all samples are going to be eluted tomorrow in a fin
 
 **Round 2 - purification and gel**
 
-Final elution volume = 100uL
+Final elution volume = 100uL (2x 50uL, combined).
 
 From left to right: ladder, +ctrl Lotterhos 2 (L2) enzyme, +ctrl Hughes (H) enzyme, #136 MD sample L2 enzyme, #136 MD sample H enzyme, #179 SN sample L1 enzyme, -ctrl, +ctrl Lotterhos 2 (L2) enzyme (repeat).
 
@@ -188,7 +189,7 @@ Samples selected for round 3 of extractions (testing small finclips), ++tube++ m
 | Location | UniqueID | Fin_clip_vial_ID|note|
 |:---------|:--------:|:---------------:|----|
 | Sara's Iceland cod | NA | #24 |used 5mg|
-| NJ | Cs_NJ_107 | Cs_NJ_002 | |
+| NJ | Cs_NJ_107 | Cs_NJ_002 | weigh did not register, fin too small |
 
 Solutions used: Protease "1", Buffer "2" 
 
@@ -196,7 +197,9 @@ Solutions used: Protease "1", Buffer "2"
 
 ### 3-March-2020
 
-**Round 3 - purification** using tubes method, eluted in 100uL.
+**Round 3 - purification**
+
+Final elution volume: 100uL (2x 50uL, combined).
 
 Nanodrop quantification of extracts (rounds 1, 2 and 3; the dotted line is the threshold for 'good quality' DNA (= high DNA to contaminant ratio)).
 
@@ -234,16 +237,21 @@ Plan for next week:
 
 ### 11-March-2020
 
+Positive control used in rounds 2 and 3 was a cod tissue sample kept in OGLfix at room temperature. Perhaps room temp wasn't enough to preserve DNA? In round 4, I'm using positive controls kept at -80oC.
+
 Positive controls to work with from now on are 
 * (1) cod fin clip tissue preserved in EtOH at -80oC (from Sara), sample ID 17_267 092617 (Box 80_41), concentration in Sara's extract was 91 ng/uL. = **POS_A**
 * (2) oyster tissue preserved dry (frozen tissue, no liquid) at -80oC (from Alan), sample ID 221_RNA_Mantle 080116. = **POS_B**
 
 **Round 4 - digestion**
 
-Samples selected for round 4, troubleshooting low yield extractions from previous rounds. Positive control used in rounds 2 and 3 was a cod tissue sample kept in OGLfix at room temperature. Perhaps room temp wasn't enough to preserve DNA. In round 4, I'm using positive controls kept at -80oC.
+Samples selected for round 4 of extraction (troubleshooting low yield extractions from previous rounds) ++tubes method++: 
+
 
 | Location | UniqueID | Fin_clip_vial_ID|note|
 |:---------|:--------:|:---------------:|----|
 | Sara's Gulf of Maine Cod fin | POS_A | #267 |preserved in EtOH, -80oC|
 | Alan's Oyster mantle | POS_B | #221 | preserved dry at -80oC | 
-| NJ | Cs_NJ_111 | Cs_NJ_006 | |
+| NJ | Cs_NJ_111 | Cs_NJ_006 | used 8mg |
+
+Solutions used: buffer "2", protease "1"
