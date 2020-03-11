@@ -45,7 +45,8 @@ Modifications from the above method:
 
 -----------------------------------------------
 
-### Gel prep quick reference
+### Gel prep quick reference 
+![agarosegel full protocol](https://github.com/thais-neu/BSBproject.md/blob/master/protocols/agarose-gel.md)
 
 Agarose 1.5%
 > 1.05 g in 70 mL TBE buffer (small gel)
