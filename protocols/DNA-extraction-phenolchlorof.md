@@ -1,4 +1,5 @@
-DNA extraction
+## DNA extraction
+
 -----------------------------
 ### Bench prep and materials
 -----------------------------
@@ -26,7 +27,7 @@ From tissue DNA extraction kit (E-Z 96 D1196-01, Omega or Qiagen kit):
 ### Procedure
 ------------------------
 
-*Digestion - step 1, day 1*
+**Digestion - step 1, day 1**
 
 1.	Prep tubes:
   * Spin tubes: pipette 180 uL of TL (Omega kit) or ATL (Qiagen kit) buffer directly into each 1.5 mL autoclaved eppendorf tube.
