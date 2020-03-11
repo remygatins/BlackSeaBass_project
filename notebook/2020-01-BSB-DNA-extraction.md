@@ -34,7 +34,7 @@ Samples are in the -80oC freezer, except SN (-20oc freezer).
 ## DNA extraction from fish fin clips.
 ----------------------------------------
 
-DNA extraction and gel check done according to (https://github.com/thais-neu/BSBproject.md/blob/master/protocols/DNA-extraction.md).
+DNA extraction and gel check done according to (https://github.com/thais-neu/BSBproject.md/blob/master/protocols/DNA-extraction-kits.md).
 
 Method used: sample-dependent.
 
@@ -46,7 +46,8 @@ Modifications from the above method:
 -----------------------------------------------
 
 ### Gel prep quick reference 
-![agarosegel full protocol](https://github.com/thais-neu/BSBproject.md/blob/master/protocols/agarose-gel.md)
+
+Full protocol here: (https://github.com/thais-neu/BSBproject.md/blob/master/protocols/agarose-gel.md)
 
 Agarose 1.5%
 > 1.05 g in 70 mL TBE buffer (small gel)
