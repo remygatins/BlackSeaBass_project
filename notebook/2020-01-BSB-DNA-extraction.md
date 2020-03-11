@@ -229,3 +229,12 @@ Plan for next week:
 
 
 --------------------------------
+
+### 11-March-2020
+
+Positive controls to work with from now on are 
+* (1) oyster tissue preserved in XXX at -80oC (from Alan), sample ID XXX and
+* (2) cod fin clip tissue preserved in EtOH at -80oC (from Sara), sample ID 17_267 (Box 80_41), concentration in Sara's extract was 91 ng/uL.
+
+
+
