@@ -235,8 +235,8 @@ Plan for next week:
 ### 11-March-2020
 
 Positive controls to work with from now on are 
-* (1) oyster tissue preserved dry (frozen tissue, no liquid) at -80oC (from Alan), sample ID 221_RNA_Mantle 080116 and
-* (2) cod fin clip tissue preserved in EtOH at -80oC (from Sara), sample ID 17_267 092617 (Box 80_41), concentration in Sara's extract was 91 ng/uL.
+* (1) cod fin clip tissue preserved in EtOH at -80oC (from Sara), sample ID 17_267 092617 (Box 80_41), concentration in Sara's extract was 91 ng/uL. = **POS_A**
+* (2) oyster tissue preserved dry (frozen tissue, no liquid) at -80oC (from Alan), sample ID 221_RNA_Mantle 080116. = **POS_B**
 
 **Round 4 - digestion**
 
