@@ -246,4 +246,4 @@ Samples selected for round 4, troubleshooting low yield extractions from previou
 |:---------|:--------:|:---------------:|----|
 | Sara's Gulf of Maine Cod fin | POS_A | #267 |preserved in EtOH, -80oC|
 | Alan's Oyster mantle | POS_B | #221 | preserved dry at -80oC | 
-| NJ | Cs_NJ_110 | Cs_NJ_005 | |
+| NJ | Cs_NJ_111 | Cs_NJ_006 | |
