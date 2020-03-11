@@ -116,8 +116,8 @@ Samples selected for 2nd round of digestion (troubleshooting round), ++plate++ m
 
 | Location | UniqueID | Fin_clip_vial_ID|enzyme|note|
 |:---------|:--------:|:--------------:|-------|----|
-| Sara's Iceland cod | NA | #24 | Lotterhos lab "2"| positive ctrl |
-| Sara's Iceland cod | NA | #24 | Hughes lab | positive ctrl |
+| Sara's Iceland cod | NA | #24 | Lotterhos lab "2"| positive ctrl in OGL buffer, at room temp |
+| Sara's Iceland cod | NA | #24 | Hughes lab | positive ctrl, in OGL buffer, at room temp |
 | MD | Cs_MD_136 | Cs_MD_061 | Lotterhos lab "2"| didnt run in round 1|
 | MD | Cs_MD_136 | Cs_MD_061 | Hughes lab | didn't run in round 1|
 | SN | Cs_SN_179 | 79 | Lotterhos lab "1" | didn't work in round 1|
@@ -235,8 +235,15 @@ Plan for next week:
 ### 11-March-2020
 
 Positive controls to work with from now on are 
-* (1) oyster tissue preserved in XXX at -80oC (from Alan), sample ID XXX and
-* (2) cod fin clip tissue preserved in EtOH at -80oC (from Sara), sample ID 17_267 (Box 80_41), concentration in Sara's extract was 91 ng/uL.
+* (1) oyster tissue preserved dry (frozen tissue, no liquid) at -80oC (from Alan), sample ID 221_RNA_Mantle 080116 and
+* (2) cod fin clip tissue preserved in EtOH at -80oC (from Sara), sample ID 17_267 092617 (Box 80_41), concentration in Sara's extract was 91 ng/uL.
 
+**Round 4 - digestion**
 
+Samples selected for round 4, troubleshooting low yield extractions from previous rounds. Positive control used in rounds 2 and 3 was a cod tissue sample kept in OGLfix at room temperature. Perhaps room temp wasn't enough to preserve DNA. In round 4, I'm using positive controls kept at -80oC.
 
+| Location | UniqueID | Fin_clip_vial_ID|note|
+|:---------|:--------:|:---------------:|----|
+| Sara's Gulf of Maine Cod fin | POS_A | #267 |preserved in EtOH, -80oC|
+| Alan's Oyster mantle | POS_B | #221 | preserved dry at -80oC | 
+| NJ | Cs_NJ_110 | Cs_NJ_005 | |
