@@ -1,6 +1,6 @@
 ## DNA extraction from fish fin clips.
 ----------------------------------------
-### Bench prep and materials
+### Bench and materials prep
 ---------------------------
 * 1st (10%) bleach entire benchtop
 * 2nd (70-90%) EtOH entire benchtop
@@ -31,7 +31,24 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 * TL buffer - 200 uL per sample
 * protease solution 25 uL per sample
 * BL, HBC and DNA wash buffers
+> *Buffer order: BL, HBC and DNA wash buffer - all stored at room temperature; elution buffer is not used, we elute in miliQ water at 60 – 70oC*
 * E-Z HiBind DNA mini columns (individual)
+
+Day before you start - check list:
+
+* Calculate how many samples you have in total (including neg and/or pos controls), then decide whether to use plates or tubes.
+* Decide how many samples per batch, remember to leave room for controls.
+* Calculate supplies and volumes needed, and check if you have enough or need to order new.
+* Autoclave materials not provided in the kit (tubes and tips (if not sterile/filtered) and tweezers).
+* Check/set oven at Hughes lab to 70oC 
+* Reserve plate centrifuge in Hughes lab if using plates
+* Make sure buffers are diluted as follows:
+
+> *Dilute **BL** buffer with 100% **ethanol** before use; volume of EtOH to add varies depending on which kit you have (kit ID D1196-00, add 25mL; D1196-01, add 100mL; D1196-02, add 500mL) - this is done once, mark cap of bottle once you've done it.*
+
+> *Dilute **HBC** buffer with 100% **isopropanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 16mL; D1196-01, add 78mL; D1196-02, add 109mL per bottle) - this is done once, mark cap of bottle once you've done it.*
+
+> *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
 > *Note: there are some small differences between the methods: when using plates, the BL buffer is added right after the time in thermomixer, on top of the TL buffer, and then the samples are centrifuged to eliminate extra tissue and so the supernatant is comprised of unpurified DNA in a mixture of TL and BL buffers; when using tubes, the sample is centrifuged right out of the thermomixer, the supernatant (unpurified DNA in TL buffer) is transfered out and then we add BL buffer. It is just a matter of logistics that have to do with spinning a plate versus spinning a tube. Shouldn't give any more or less yield.
 ------------------------------------------
@@ -70,13 +87,10 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 ------------------------------------------
 #### Purification - step 2, day 2 (the following corresponds to steps 5-25 in the kit manual, page 9-11, with few modifications for plates (P) and the E.Z.N.A Tissue DNA kit quick guide for tubes (T)).
 
-> *Buffer order: BL, HBC and DNA wash buffer - all stored at room temperature; elution buffer is not used, we elute in miliQ water at 60 – 70oC (ASK KATIE)*
+> Before you start: place the MG water in the oven at 70oC.
+> Prepare an aliquot of 100% EtOH if using tubes method.
 
-> *Dilute **BL** buffer with 100% **ethanol** before use; volume of EtOH to add varies depending on which kit you have (kit ID D1196-00, add 25mL; D1196-01, add 100mL; D1196-02, add 500mL) - this is done once, mark cap of bottle once you've done it.*
 
-> *Dilute **HBC** buffer with 100% **isopropanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 16mL; D1196-01, add 78mL; D1196-02, add 109mL per bottle) - this is done once, mark cap of bottle once you've done it.*
-
-> *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 ---------------------------------------------------------
    ##### **PURIFICATION USING PLATES** (cheaper per sample):
    > *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
@@ -132,6 +146,8 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 25. (P) Seal the 96-racked microtubes with their caps and store at -20oC.
 ------------------------------------------------------
 ##### **PURIFICATION USING TUBES** (more expensive per sample):
+
+> Prepare an aliquot of 100% EtOH before you start.
 
 5. (T) Take tubes out of thermomixer, centrifuge at >10,000xg for 5 min. 
 
