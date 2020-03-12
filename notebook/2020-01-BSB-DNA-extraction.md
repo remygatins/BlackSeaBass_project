@@ -273,6 +273,6 @@ Qubit results:
 
 **Notes on Round 4 results:**
 
-Positive controls kept at -80oc yielded much higher concentrations, so stick with those when troubleshooting. 
+Positive controls from samples stored at -80oc yielded much higher concentrations than those kept in OGLfix room temp. Sara's previous extraction of POS_A was 91 ng/uL in 100uL elution and Alan says he typically gets 50-100 in 100uL elution (ethanol precipitation method), so stick with those samples as positive controls when troubleshooting. 
 
 NJ sample, although starting material was lower than what is typically considered ideal, yielded enough DNA to meet sequencing facility requirements.
