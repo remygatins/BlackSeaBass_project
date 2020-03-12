@@ -269,3 +269,10 @@ Qubit results:
 | Sara's Gulf of Maine Cod fin | POS_A | #267 |preserved in EtOH, -80oC| 160 in 50 | NA |
 | Alan's Oyster mantle | POS_B | #221 | preserved dry, -80oC | 108 in 50 | NA |
 | NJ | Cs_NJ_111 | Cs_NJ_006 | preserved in OGLfix, -80oC, used 8mg | 57.0 in 30 | 4.12 in 70 |
+
+
+**Notes on Round 4 results:**
+
+Positive controls kept at -80oc yielded much higher concentrations, so stick with those when troubleshooting. 
+
+NJ sample, although starting material was lower than what is typically considered ideal, yielded enough DNA to meet sequencing facility requirements.
