@@ -30,9 +30,10 @@ From E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method:
 * 2mL collection tubes (2x per sample)
 * TL buffer - 200 uL per sample
 * protease solution 25 uL per sample
+* E-Z HiBind DNA mini columns (individual)
 * BL, HBC and DNA wash buffers
 > *Buffer order: BL, HBC and DNA wash buffer - all stored at room temperature; elution buffer is not used, we elute in miliQ water at 60 – 70oC*
-* E-Z HiBind DNA mini columns (individual)
+
 
 Day before you start - check list:
 
@@ -148,7 +149,7 @@ Day before you start - check list:
 ------------------------------------------------------
 ##### **PURIFICATION USING TUBES** (more expensive per sample):
 
-> Prepare an aliquot of 100% EtOH before you start.
+> Before you start: prepare an aliquot of 100% EtOH.
 
 5. (T) Take tubes out of thermomixer, centrifuge at >10,000xg for 5 min. 
 
