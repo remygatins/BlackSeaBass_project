@@ -50,7 +50,8 @@ Day before you start - check list:
 
 > *Dilute **DNA wash buffer** buffer with 100% **ethanol** before use; volume of isopropanol to add varies depending on which kit you have (kit ID D1196-00, add 100mL; D1196-01, add 400mL; D1196-02, add 800mL per bottle) - this is done once, mark cap of bottle once you've done it.*
 
-> *Note: there are some small differences between the methods: when using plates, the BL buffer is added right after the time in thermomixer, on top of the TL buffer, and then the samples are centrifuged to eliminate extra tissue and so the supernatant is comprised of unpurified DNA in a mixture of TL and BL buffers; when using tubes, the sample is centrifuged right out of the thermomixer, the supernatant (unpurified DNA in TL buffer) is transfered out and then we add BL buffer. It is just a matter of logistics that have to do with spinning a plate versus spinning a tube. Shouldn't give any more or less yield.
+*Note: there are some small differences between the methods: when using plates, the BL buffer is added right after the time in thermomixer, on top of the TL buffer, and then the samples are centrifuged to eliminate extra tissue and so the supernatant is comprised of unpurified DNA in a mixture of TL and BL buffers; when using tubes, the sample is centrifuged right out of the thermomixer, the supernatant (unpurified DNA in TL buffer) is transfered out and then we add BL buffer. It is just a matter of logistics that have to do with spinning a plate versus spinning a tube. Shouldn't give any more or less yield.*
+
 ------------------------------------------
 ### Procedure
 -----------------------------
@@ -135,7 +136,7 @@ Day before you start - check list:
 
 21. (P) Remove and discard the aeraseal film.
 
-22. (P) Add 50-200uL (**optimal volume may vary**)  ~~Elution buffer~~ - we are using Molecular Grade water instead.
+22. (P) Add 30-200uL (**optimal volume may vary**)  ~~Elution buffer~~ - we are using Molecular Grade water **heated to 70oC** instead.
 
 23. (P) Let it sit for 2-5 minutes.
 
@@ -179,7 +180,7 @@ Day before you start - check list:
 
 19. (T) Transfer the column into a new nuclease-free 1.5 mL microcentrifuge tube. 
 
-20. (T) Add 100-200uL (*this volume may vary*) Elution Buffer (*we use molecular grade water*) heated to 70oC, let it sit for 2 min. Centrifuge at max speed for 1 min.
+20. (T) Add 30-200uL (**optimal volume may vary**)  ~~Elution buffer~~ - we are using Molecular Grade water **heated to 70oC** instead. Let it sit for 2 min. Centrifuge at max speed for 1 min.
 
 21. (T) Repeat step 20 for a second elution step.
 
