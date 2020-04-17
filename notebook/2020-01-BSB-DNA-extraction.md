@@ -294,7 +294,7 @@ Quantification via Qubit: tried 1uL from first sample, TOO HIGH (outside of dete
 
 Round 5 sample info and DNA concentration results:
 
-| Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for library prep/sequencing? |
+| Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? |
 |:---------|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
 | NJ| Cs_NJ_106 | Cs_NJ_001 | 1 | 2 | 62.4 | 124.8 | 28 | yes |
 | NJ| Cs_NJ_108 | Cs_NJ_003 | 2 | 1 | 51.8 | 103.6 | 29 | yes |
