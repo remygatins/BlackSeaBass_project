@@ -270,9 +270,56 @@ Qubit results:
 | Alan's Oyster mantle | POS_B | #221 | preserved dry, -80oC | 108 in 50 | NA |
 | NJ | Cs_NJ_111 | Cs_NJ_006 | preserved in OGLfix, -80oC, used 8mg | 57.0 in 30 | 4.12 in 70 |
 
-
 **Notes on Round 4 results:**
 
 Positive controls from samples stored at -80oC yielded much higher concentrations than those kept in OGLfix room temp. Sara's previous extraction of POS_A was 91 ng/uL in 100uL elution and Alan says he typically gets 50-100 in 100uL elution (ethanol precipitation method). So stick with those samples as positive controls when troubleshooting. 
 
 NJ sample, although starting material was lower than what is typically considered ideal, yielded enough DNA to meet sequencing facility requirements.
+
+### 14-April-2020 ###
+
+**Round 5 - digestion**
+
+Extracting 20 samples from NJ.
+
+Solutins used: Buffer "2", Protease "1".
+
+### 15-April-2020 ###
+
+**Round 5 - purification**
+
+Two elutions, 1st elution in 30uL, 2nd elution in 70uL, stored separately at -80oC.
+
+Quantification via Qubit: tried 1uL from first sample, TOO HIGH (outside of detection limit); then all samples were quantified using 1uL of sample  diluted 1:1 with 70oC molecular grade water (dilution factor 2x); all samples quantified are from 1st elution; 2nd elution not quantified.
+
+Round 5 sample info and DNA concentration results:
+
+| Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for library prep/sequencing? |
+|:---------|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
+| NJ| Cs_NJ_106 | Cs_NJ_001 | 1 | 2 | 62.4 | 124.8 | 28 | yes |
+| NJ| Cs_NJ_108 | Cs_NJ_003 | 2 | 1 | 51.8 | 103.6 | 29 | yes |
+| NJ| Cs_NJ_109 | Cs_NJ_004 | 3 | 2 | 79.0 | 158.0 | 29 | yes |
+| NJ| Cs_NJ_112 | Cs_NJ_007 | 4 | <1 | 24.4 | 48.8 | 29 | yes |
+| NJ| Cs_NJ_113 | Cs_NJ_008 | 5 | 4 | 64.6 | 129.2 | 29 | yes |
+| NJ| Cs_NJ_114 | Cs_NJ_009 | 6 | <1 | 16.8 | 33.6 | 29 | yes |
+| NJ | Cs_NJ_115 | Cs_NJ_010 | 7 | <1 | 4.42 | 8.84 | 29 | **no** |
+| NJ | Cs_NJ_118 | Cs_NJ_013 | 8 | 2 | 60.8 | 121.6 | 29 | yes |
+| NJ | Cs_NJ_119 | Cs_NJ_014 | 9 | 1 | 56.0 | 112.0 | 29 | yes |
+| NJ | Cs_NJ_121 | Cs_NJ_016 | 10 | <1 | 25.0 | 50.0 | 29 | yes |
+| NJ | Cs_NJ_122 | Cs_NJ_017 | 11 | 1 | 42.4 | 84.8 | 29 | yes |
+| NJ | Cs_NJ_124 | Cs_NJ_019 | 12 | <1 | 27.8 | 55.6 | 29 | yes |
+| NJ | Cs_NJ_128 | Cs_NJ_023 | 13 | 2 | 53.8 | 107.6 | 29 | yes |
+| NJ | Cs_NJ_129 | Cs_NJ_024 | 14 | 2 | 68.0 | 136.0 | 29 | yes |
+| NJ | Cs_NJ_130 | Cs_NJ_025 | 15 | <1 | 29.4 | 58.8 | 29 | yes |
+| NJ | Cs_NJ_131 | Cs_NJ_026 | 16 | <1 | 22.0 | 44.0 | 29 | yes |
+| NJ | Cs_NJ_132 | Cs_NJ_027 | 17 | 2 | 44.6 | 89.2 | 29 | yes |
+| NJ | Cs_NJ_133 | Cs_NJ_028 | 18 | <1 | 35.2 | 70.4 | 29 | yes |
+| NJ | Cs_NJ_134 | Cs_NJ_029 | 19 | <1 | 4.26 | 8.52 | 29 | **no** |
+| NJ | Cs_NJ_135 | Cs_NJ_030 | 20 | <1 | 3.14 | 6.28 | 29 | **no** |
+| NA | NA | NA | blank | NA | TOO LOW | NA | NA | NA |
+
+> <1mg = fins were so small, no weight registered on the scale
+
+> blank = the water used for elution and dilution of samples for Qubit quantification; not a proper NEG control
+
+> standard 1 (low): 60.53; standard 2 (high): 20355.80
