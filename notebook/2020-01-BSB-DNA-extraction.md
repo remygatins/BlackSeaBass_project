@@ -282,7 +282,7 @@ NJ sample, although starting material was lower than what is typically considere
 
 Extracting 20 samples from NJ.
 
-Solutins used: Buffer "2", Protease "1".
+Solutions used: Buffer "2", Protease "1".
 
 ### 15-April-2020 ###
 
@@ -302,21 +302,21 @@ Round 5 sample info and DNA concentration results:
 | NJ| Cs_NJ_112 | Cs_NJ_007 | 4 | <1 | 24.4 | 48.8 | 29 | yes |
 | NJ| Cs_NJ_113 | Cs_NJ_008 | 5 | 4 | 64.6 | 129.2 | 29 | yes |
 | NJ| Cs_NJ_114 | Cs_NJ_009 | 6 | <1 | 16.8 | 33.6 | 29 | yes |
-| NJ | Cs_NJ_115 | Cs_NJ_010 | 7 | <1 | 4.42 | 8.84 | 29 | **no** |
-| NJ | Cs_NJ_118 | Cs_NJ_013 | 8 | 2 | 60.8 | 121.6 | 29 | yes |
-| NJ | Cs_NJ_119 | Cs_NJ_014 | 9 | 1 | 56.0 | 112.0 | 29 | yes |
-| NJ | Cs_NJ_121 | Cs_NJ_016 | 10 | <1 | 25.0 | 50.0 | 29 | yes |
-| NJ | Cs_NJ_122 | Cs_NJ_017 | 11 | 1 | 42.4 | 84.8 | 29 | yes |
-| NJ | Cs_NJ_124 | Cs_NJ_019 | 12 | <1 | 27.8 | 55.6 | 29 | yes |
-| NJ | Cs_NJ_128 | Cs_NJ_023 | 13 | 2 | 53.8 | 107.6 | 29 | yes |
-| NJ | Cs_NJ_129 | Cs_NJ_024 | 14 | 2 | 68.0 | 136.0 | 29 | yes |
-| NJ | Cs_NJ_130 | Cs_NJ_025 | 15 | <1 | 29.4 | 58.8 | 29 | yes |
-| NJ | Cs_NJ_131 | Cs_NJ_026 | 16 | <1 | 22.0 | 44.0 | 29 | yes |
-| NJ | Cs_NJ_132 | Cs_NJ_027 | 17 | 2 | 44.6 | 89.2 | 29 | yes |
-| NJ | Cs_NJ_133 | Cs_NJ_028 | 18 | <1 | 35.2 | 70.4 | 29 | yes |
-| NJ | Cs_NJ_134 | Cs_NJ_029 | 19 | <1 | 4.26 | 8.52 | 29 | **no** |
-| NJ | Cs_NJ_135 | Cs_NJ_030 | 20 | <1 | 3.14 | 6.28 | 29 | **no** |
-| NA | NA | NA | blank | NA | TOO LOW | NA | NA | NA |
+| NJ| Cs_NJ_115 | Cs_NJ_010 | 7 | <1 | 4.42 | 8.84 | 29 | **no** |
+| NJ| Cs_NJ_118 | Cs_NJ_013 | 8 | 2 | 60.8 | 121.6 | 29 | yes |
+| NJ| Cs_NJ_119 | Cs_NJ_014 | 9 | 1 | 56.0 | 112.0 | 29 | yes |
+| NJ| Cs_NJ_121 | Cs_NJ_016 | 10 | <1 | 25.0 | 50.0 | 29 | yes |
+| NJ| Cs_NJ_122 | Cs_NJ_017 | 11 | 1 | 42.4 | 84.8 | 29 | yes |
+| NJ| Cs_NJ_124 | Cs_NJ_019 | 12 | <1 | 27.8 | 55.6 | 29 | yes |
+| NJ| Cs_NJ_128 | Cs_NJ_023 | 13 | 2 | 53.8 | 107.6 | 29 | yes |
+| NJ| Cs_NJ_129 | Cs_NJ_024 | 14 | 2 | 68.0 | 136.0 | 29 | yes |
+| NJ| Cs_NJ_130 | Cs_NJ_025 | 15 | <1 | 29.4 | 58.8 | 29 | yes |
+| NJ| Cs_NJ_131 | Cs_NJ_026 | 16 | <1 | 22.0 | 44.0 | 29 | yes |
+| NJ| Cs_NJ_132 | Cs_NJ_027 | 17 | 2 | 44.6 | 89.2 | 29 | yes |
+| NJ| Cs_NJ_133 | Cs_NJ_028 | 18 | <1 | 35.2 | 70.4 | 29 | yes |
+| NJ| Cs_NJ_134 | Cs_NJ_029 | 19 | <1 | 4.26 | 8.52 | 29 | **no** |
+| NJ| Cs_NJ_135 | Cs_NJ_030 | 20 | <1 | 3.14 | 6.28 | 29 | **no** |
+| NA| NA | NA | blank | NA | TOO LOW | NA | NA | NA |
 
 > <1mg = fins were so small, no weight registered on the scale
 
