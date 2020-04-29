@@ -323,3 +323,53 @@ Round 5 sample info and DNA concentration results:
 > blank = the water used for elution and dilution of samples for Qubit quantification; not a proper NEG control
 
 > standard 1 (low): 60.53; standard 2 (high): 20355.80
+
+### 28-April-2020 ###
+
+**Round 6 - digestion**
+
+Extracting 24 samples, 2 from ME, 7 from SN, and 15 from NC.
+
+Solutions used: Buffer "2", Protease "1".
+
+### 29-April-2020 ###
+
+**Round 6 - purification**
+
+Two elutions, 1st elution in 
+
+Quantification via Qubit: 
+
+Round 6 sample info and DNA concentration results:
+
+| Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? |
+|:---------|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
+| ME| Cs_ME_ |  | 21 |  |  ||||
+| ME| Cs_ME_ |  | 22 |  |  ||||
+| SN| Cs_SN_ |  | 23 |  |  ||||
+| SN| Cs_SN_ |  | 24 |  |  ||||
+| SN| Cs_SN_ |  | 25 |  |  ||||
+| SN| Cs_SN_ |  | 26 |  |  ||||
+| SN| Cs_SN_ |  | 27 |  |  ||||
+| SN| Cs_SN_ |  | 28 |  |  ||||
+| SN| Cs_SN_ |  | 29 |  |  ||||
+| NC| Cs_NC_ |  | 31 |  |  ||||
+| NC| Cs_NC_ |  | 31 |  |  ||||
+| NC| Cs_NC_ |  | 32 |  |  ||||
+| NC| Cs_NC_ |  | 33 |  |  ||||
+| NC| Cs_NC_ |  | 34 |  |  ||||
+| NC| Cs_NC_ |  | 35 |  |  ||||
+| NC| Cs_NC_ |  | 36 |  |  ||||
+| NC| Cs_NC_ |  | 37 |  |  ||||
+| NC| Cs_NC_ |  | 38 |  |  ||||
+| NC| Cs_NC_ |  | 39 |  |  ||||
+| NC| Cs_NC_ |  | 41 |  |  ||||
+| NC| Cs_NC_ |  | 42 |  |  ||||
+| NC| Cs_NC_ |  | 43 |  |  ||||
+| NC| Cs_NC_ |  | 44 |  |  ||||
+| NA| NA | NA | blank | NA |  |  |  |  |
+
+> blank = the water used for elution and dilution of samples for Qubit quantification; not a proper NEG control
+
+> standard 1 (low): ; standard 2 (high):
+
