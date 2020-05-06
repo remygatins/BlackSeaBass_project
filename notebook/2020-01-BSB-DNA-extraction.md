@@ -332,7 +332,7 @@ Extracting 24 samples, 2 from ME, 7 from SN, and 15 from NC.
 
 Solutions used: Buffer "2", Protease "1".
 
-*Surprise: when I defrosted the tubes, I see that the samples for NC are muscle tissue, not fin. Consulted with Sara Schaal and she says it is ok to extract with the same protocol. Double-checked with Jon Grabowski to make sure it is from Black Sea Bass, he confirmed. So I moved on with the extractions, exacly as with the fin samples.*
+***Surprise**: when I defrosted the tubes, I see that the samples for NC are muscle tissue, not fin. Consulted with Sara Schaal and she said it is ok to extract with the same protocol. Double-checked with Jon Grabowski to make sure it is from Black Sea Bass, he confirmed. So I moved on with the extractions, exacly as with the fin samples.*
 
 ### 29-April-2020 ###
 
