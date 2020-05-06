@@ -340,7 +340,7 @@ Solutions used: Buffer "2", Protease "1".
 
 Two elutions, 1st elution in 30uL, 2nd elution in 70uL, stored separately at -80oC.
 
-Quantification via Qubit: tried with 1uL of sample first, it worked for all except two samples - #22 (too high) and #33 (too low). I repeated these two, #22 I used 1uL sample + 1uL MGwater (dil factor 2x) and #33 I used 2uL sample.
+Quantification via Qubit: tried with 1uL of sample first, it worked for all except two samples - #22 (too high) and #33 (too low). I repeated these two, #22 using 1uL sample + 1uL MGwater (dil factor 2x) and #33 using 2uL sample.
 
 Round 6 sample info and DNA concentration results:
 
@@ -355,20 +355,20 @@ Round 6 sample info and DNA concentration results:
 | SN| Cs_SN_ | 58 | 27 | 0.020 | 88.4 |NA|29|yes|
 | SN| Cs_SN_ | 4 | 28 | 0.017 | 79.6 |NA|29|yes|
 | SN| Cs_SN_ | Cs_C_009_DNA | 29 | 0.015 | 100.0 |NA|29|yes|
-| NC| Cs_NC_31 | Cs_NC_233 | 30 | 0.019 | 9.50 |NA|29|no|
-| NC| Cs_NC_32 | Cs_NC_234 | 31 | 0.018 | 13.3 |NA|29|borderline|
-| NC| Cs_NC_33 | Cs_NC_235 | 32 | 0.018 | 10.1 |NA|29|borderline|
-| NC| Cs_NC_34 | Cs_NC_236 | 33 | 0.019 | 0.102 |NA|27|no|
-| NC| Cs_NC_35 | Cs_NC_237 | 34 | 0.018 | 4.82 |NA|29|no|
-| NC| Cs_NC_36 | Cs_NC_238 | 35 | 0.019 | 4.92 |NA|29|no|
-| NC| Cs_NC_37 | Cs_NC_239 | 36 | 0.020 | 4.94 |NA|29|no|
-| NC| Cs_NC_38 | Cs_NC_240 | 37 | 0.019 | 8.50 |NA|29|no|
-| NC| Cs_NC_39 | Cs_NC_241 | 38 | 0.019 | 3.22 |NA|29|no|
-| NC| Cs_NC_40 | Cs_NC_242 | 39 | 0.018 | 6.36 |NA|29|no|
-| NC| Cs_NC_41 | Cs_NC_243 | 40 | 0.018 | 4.54 |NA|29|no|
-| NC| Cs_NC_42 | Cs_NC_244 | 41 | 0.019 | 0.864 |NA|29|no|
-| NC| Cs_NC_43 | Cs_NC_245 | 42 | 0.020 | 5.58 |NA|29|no|
-| NC| Cs_NC_44 | Cs_NC_246 | 43 | 0.019 | 4.44 |NA|29|no|
+| NC| Cs_NC_31 | Cs_NC_233 | 30 | 0.019 | 9.50 |NA|29|**no**|
+| NC| Cs_NC_32 | Cs_NC_234 | 31 | 0.018 | 13.3 |NA|29|**borderline**|
+| NC| Cs_NC_33 | Cs_NC_235 | 32 | 0.018 | 10.1 |NA|29|**borderline**|
+| NC| Cs_NC_34 | Cs_NC_236 | 33 | 0.019 | 0.102 |NA|27|**no**|
+| NC| Cs_NC_35 | Cs_NC_237 | 34 | 0.018 | 4.82 |NA|29|**no**|
+| NC| Cs_NC_36 | Cs_NC_238 | 35 | 0.019 | 4.92 |NA|29|**no**|
+| NC| Cs_NC_37 | Cs_NC_239 | 36 | 0.020 | 4.94 |NA|29|**no**|
+| NC| Cs_NC_38 | Cs_NC_240 | 37 | 0.019 | 8.50 |NA|29|**no**|
+| NC| Cs_NC_39 | Cs_NC_241 | 38 | 0.019 | 3.22 |NA|29|**no**|
+| NC| Cs_NC_40 | Cs_NC_242 | 39 | 0.018 | 6.36 |NA|29|**no**|
+| NC| Cs_NC_41 | Cs_NC_243 | 40 | 0.018 | 4.54 |NA|29|**no**|
+| NC| Cs_NC_42 | Cs_NC_244 | 41 | 0.019 | 0.864 |NA|29|**no**|
+| NC| Cs_NC_43 | Cs_NC_245 | 42 | 0.020 | 5.58 |NA|29|**no**|
+| NC| Cs_NC_44 | Cs_NC_246 | 43 | 0.019 | 4.44 |NA|29|**no**|
 
 > samples from NC are muscle tissue, not fin tissue; sample #38 (exraction tube ID) looked a little slimy, degraded, and had less OGLfix liquid in the tube.
 
