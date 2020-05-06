@@ -332,44 +332,46 @@ Extracting 24 samples, 2 from ME, 7 from SN, and 15 from NC.
 
 Solutions used: Buffer "2", Protease "1".
 
+*Surprise: when I defrosted the tubes, I see that the samples for NC are muscle tissue, not fin. Consulted with Sara Schaal and she says it is ok to extract with the same protocol. Double-checked with Jon Grabowski to make sure it is from Black Sea Bass, he confirmed. So I moved on with the extractions, exacly as with the fin samples.*
+
 ### 29-April-2020 ###
 
 **Round 6 - purification**
 
-Two elutions, 1st elution in 
+Two elutions, 1st elution in 30uL, 2nd elution in 70uL, stored separately at -80oC.
 
-Quantification via Qubit: 
+Quantification via Qubit: tried with 1uL of sample first, it worked for all except two samples - #22 (too high) and #33 (too low). I repeated these two, #22 I used 1uL sample + 1uL MGwater (dil factor 2x) and #33 I used 2uL sample.
 
 Round 6 sample info and DNA concentration results:
 
 | Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? |
 |:---------|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
-| ME| Cs_ME_ |  | 21 |  |  ||||
-| ME| Cs_ME_ |  | 22 |  |  ||||
-| SN| Cs_SN_ |  | 23 |  |  ||||
-| SN| Cs_SN_ |  | 24 |  |  ||||
-| SN| Cs_SN_ |  | 25 |  |  ||||
-| SN| Cs_SN_ |  | 26 |  |  ||||
-| SN| Cs_SN_ |  | 27 |  |  ||||
-| SN| Cs_SN_ |  | 28 |  |  ||||
-| SN| Cs_SN_ |  | 29 |  |  ||||
-| NC| Cs_NC_ |  | 31 |  |  ||||
-| NC| Cs_NC_ |  | 31 |  |  ||||
-| NC| Cs_NC_ |  | 32 |  |  ||||
-| NC| Cs_NC_ |  | 33 |  |  ||||
-| NC| Cs_NC_ |  | 34 |  |  ||||
-| NC| Cs_NC_ |  | 35 |  |  ||||
-| NC| Cs_NC_ |  | 36 |  |  ||||
-| NC| Cs_NC_ |  | 37 |  |  ||||
-| NC| Cs_NC_ |  | 38 |  |  ||||
-| NC| Cs_NC_ |  | 39 |  |  ||||
-| NC| Cs_NC_ |  | 41 |  |  ||||
-| NC| Cs_NC_ |  | 42 |  |  ||||
-| NC| Cs_NC_ |  | 43 |  |  ||||
-| NC| Cs_NC_ |  | 44 |  |  ||||
-| NA| NA | NA | blank | NA |  |  |  |  |
+| ME| Cs_ME_164 | 1027162 | 21 | 0.018 | 120 |NA|29|yes|
+| ME| Cs_ME_165 | 103116 | 22 | 0.019 | 120 | 240 |28|yes|
+| SN| Cs_SN_ | 79 | 23 | 0.020 | 108 |NA|29|yes|
+| SN| Cs_SN_ | 15 | 24 | 0.017 | 88.6 |NA|29|yes|
+| SN| Cs_SN_ | 87 | 25 | 0.018 | 98.6 |NA|29|yes|
+| SN| Cs_SN_ | 47 | 26 | 0.016 | 86.6 |NA|29|yes|
+| SN| Cs_SN_ | 58 | 27 | 0.020 | 88.4 |NA|29|yes|
+| SN| Cs_SN_ | 4 | 28 | 0.017 | 79.6 |NA|29|yes|
+| SN| Cs_SN_ | Cs_C_009_DNA | 29 | 0.015 | 100.0 |NA|29|yes|
+| NC| Cs_NC_31 | Cs_NC_233 | 30 | 0.019 | 9.50 |NA|29|no|
+| NC| Cs_NC_32 | Cs_NC_234 | 31 | 0.018 | 13.3 |NA|29|borderline|
+| NC| Cs_NC_33 | Cs_NC_235 | 32 | 0.018 | 10.1 |NA|29|borderline|
+| NC| Cs_NC_34 | Cs_NC_236 | 33 | 0.019 | 0.102 |NA|27|no|
+| NC| Cs_NC_35 | Cs_NC_237 | 34 | 0.018 | 4.82 |NA|29|no|
+| NC| Cs_NC_36 | Cs_NC_238 | 35 | 0.019 | 4.92 |NA|29|no|
+| NC| Cs_NC_37 | Cs_NC_239 | 36 | 0.020 | 4.94 |NA|29|no|
+| NC| Cs_NC_38 | Cs_NC_240 | 37 | 0.019 | 8.50 |NA|29|no|
+| NC| Cs_NC_39 | Cs_NC_241 | 38 | 0.019 | 3.22 |NA|29|no|
+| NC| Cs_NC_40 | Cs_NC_242 | 39 | 0.018 | 6.36 |NA|29|no|
+| NC| Cs_NC_41 | Cs_NC_243 | 40 | 0.018 | 4.54 |NA|29|no|
+| NC| Cs_NC_42 | Cs_NC_244 | 41 | 0.019 | 0.864 |NA|29|no|
+| NC| Cs_NC_43 | Cs_NC_245 | 42 | 0.020 | 5.58 |NA|29|no|
+| NC| Cs_NC_44 | Cs_NC_246 | 43 | 0.019 | 4.44 |NA|29|no|
 
-> blank = the water used for elution and dilution of samples for Qubit quantification; not a proper NEG control
+> samples from NC are muscle tissue, not fin tissue; sample #38 (exraction tube ID) looked a little slimy, degraded, and had less OGLfix liquid in the tube.
 
-> standard 1 (low): ; standard 2 (high):
+> standard 1 (low): 67.94 ; standard 2 (high): 22828.89
 
+Muscle tissue samples did not extract well. There is a lot of material left for a second attempt.
