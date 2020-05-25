@@ -392,7 +392,7 @@ Solutions used: Buffer "2", Protease "1".
 
 **Round 7 - purification**
 
-> Due to the extra volume of TL and protease needed in the digestion of some of these samples, the first steps of purification resulted in greater volumes than the microcentrifuge tubes and the spin columns could handle in one round. This volume was divided into 3 aliquots. Consequently, steps 7-12, corresponding to DNA binding, were done in three rounds to concentrate all 3 aliquots into a single spin column per sample. Remaining steps were not adjusted.
+> Due to the extra volume of TL and protease needed in the digestion of some of these samples, the samples came out of the thremomixer at a volume of ~1200 uL. After the centrifugation to remove the insoluble pellet, each sample was divided into 3 aliquots of equal (~400uL) volumes. This was needed because equal volumes of BL buffer and 100% ethanol must be added to the sample, which adds up to 1200 uL and the volume of the microcentrifuge tube is 1500 uL. That means that for steps 7-12, corresponding to DNA binding, several rounds of centrifugation were needed to concentrate all 3 aliquots plus the added BL buffer and ethanol into a single spin column per sample. Remaining steps were not adjusted.
 
 Three elutions, 1st elution in 30uL, 2nd elution in 70uL, 3rd elution in 100 uL, stored separately at -80oC.
 
@@ -420,7 +420,6 @@ Round 7 sample info and DNA concentration results:
 | NC| Cs_NC_43 | Cs_NC_245 | 59 | 0.097 | 95.6 |191.2|28|yes|
 | NC| Cs_NC_44 | Cs_NC_246 | 60 | 0.140 | 56.2 |NA|29|yes|
 | NC| Cs_NC_45 | Cs_NC_247 | 61 | 0.041 | 7.94 |NA|29|**no**|
-
 | MD| Cs_NC_61 | Cs_NC_136 | 62 | 0.094 | 98.4 |NA|29|yes|
 | MD| Cs_NC_64 | Cs_NC_139 | 63 | 0.177 | 114.0 |NA|29|yes|
 
@@ -433,6 +432,7 @@ Round 7 sample info and DNA concentration results:
 > standard 1 (low): 62.31 ; standard 2 (high): 22262.95
 
 **Notes on Round 7**
+
 BL buffer from another kit was used for samples 63 (all 3 aliquots) and 62 (2 out of 3 aliquots).
 DNA Wash from another kit was used for samples 62 and 63 and wash #1 and all samples in wash #2.
 
@@ -451,5 +451,5 @@ Solutions used: Buffer "2", Protease "1" (extraction ID 64, 65, 66) and Protease
 
 **Round 8 - purification**
 
-> Due to the extra volume of TL and protease needed in the digestion of these samples, the first steps of purification resulted in greater volumes than the microcentrifuge tubes and the spin columns could handle in one round. This volume was divided into 3 aliquots. Consequently, steps 7-12, corresponding to DNA binding, were done in three rounds to concentrate all 3 aliquots into a single spin column per sample. Remaining steps were not adjusted.
+> Due to the extra volume of TL and protease needed in the digestion of these samples, the samples came out of the thremomixer at a volume of ~1200 uL. After the centrifugation to remove the insoluble pellet, each sample was divided into 3 aliquots of equal (~400uL) volumes. This was needed because equal volumes of BL buffer and 100% ethanol must be added to the sample, which adds up to 1200 uL and the volume of the microcentrifuge tube is 1500 uL. That means that for steps 7-12, corresponding to DNA binding, several rounds of centrifugation were needed to concentrate all 3 aliquots plus the added BL buffer and ethanol into a single spin column per sample. Remaining steps were not adjusted.
 
