@@ -374,4 +374,82 @@ Round 6 sample info and DNA concentration results:
 
 > standard 1 (low): 67.94 ; standard 2 (high): 22828.89
 
+**Notes on Round 6**
+
 Muscle tissue samples did not extract well. There is a lot of material left for a second attempt.
+
+### 19-May-2020 ###
+
+**Round 7 - digestion**
+
+Extracting 20 samples, 3 from ME, 15 from NC, and 2 from MD.
+
+Solutions used: Buffer "2", Protease "1".
+
+> For samples from NC and MD, I used all the leftover muscle (NC) and fin (MD) tissue, given that using 15-20mg of tissue did not yield enough DNA in round 6; volumes for TL buffer and OB protease were adjusted to 1000 uL and 125 uL per tube, respectively. Typically, these volumes are 200 uL and 25 uL, respectively. 
+
+### 20-May-2020 ###
+
+**Round 7 - purification**
+
+> Due to the extra volume of TL and protease needed in the digestion of some of these samples, the first steps of purification resulted in greater volumes than the microcentrifuge tubes and the spin columns could handle in one round. This volume was divided into 3 aliquots. Consequently, steps 7-12, corresponding to DNA binding, were done in three rounds to concentrate all 3 aliquots into a single spin column per sample. Remaining steps were not adjusted.
+
+Three elutions, 1st elution in 30uL, 2nd elution in 70uL, 3rd elution in 100 uL, stored separately at -80oC.
+
+Quantification via Qubit: tried with 1uL of sample first, it worked for all except five samples - #44, #45, #46, #54 and #59 (too high). I repeated these five using 1uL sample + 1uL MGwater (dil factor 2x). Randomly selected a sample #55 to quantify 2nd and 3rd elutions.
+
+Round 7 sample info and DNA concentration results:
+
+| Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? |
+|:---------|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
+| ME| Cs_ME_166 | 102016 | 44 | 0.019 | 98.4 |196.8 | 28 |yes|
+| ME| Cs_ME_167 | 1027161 | 45 | 0.021 | 106.0 | 212.0 | 29 |yes|
+| ME| Cs_ME_176 | 630 | 46 | 0.018 | 8.12 | 16.24 |29| **borderline** |
+| NC| Cs_NC_31 | Cs_NC_233 | 47 | 0.288 | 108.0 |NA|29|yes|
+| NC| Cs_NC_32 | Cs_NC_234 | 48 | 0.132 | 38.4 |NA|29|yes|
+| NC| Cs_NC_33 | Cs_NC_235 | 49 | 0.194 | 71.2 |NA|29|yes|
+| NC| Cs_NC_34 | Cs_NC_236 | 50 | 0.182 | 0.280 |NA|27|**no**|
+| NC| Cs_NC_35 | Cs_NC_237 | 51 | 0.300 | 116.0 |NA|29|yes|
+| NC| Cs_NC_36 | Cs_NC_238 | 52 | 0.136 | 32.0 |NA|29|yes|
+| NC| Cs_NC_37 | Cs_NC_239 | 53 | 0.258 | 108.0 |NA|29|yes|
+| NC| Cs_NC_38 | Cs_NC_240 | 54 | 0.193 | 61.0 | 122.0 |28|yes|
+| NC| Cs_NC_39 | Cs_NC_241 | 55 | 0.087 | 30.6 |NA|29|yes|
+| NC| Cs_NC_40 | Cs_NC_242 | 56 | 0.176 | 89.6 |NA|29|yes|
+| NC| Cs_NC_41 | Cs_NC_243 | 57 | 0.309 | 106.0 |NA|29|yes|
+| NC| Cs_NC_42 | Cs_NC_244 | 58 | 0.344 | 50.4 |NA|29|yes|
+| NC| Cs_NC_43 | Cs_NC_245 | 59 | 0.097 | 95.6 |191.2|28|yes|
+| NC| Cs_NC_44 | Cs_NC_246 | 60 | 0.140 | 56.2 |NA|29|yes|
+| NC| Cs_NC_45 | Cs_NC_247 | 61 | 0.041 | 7.94 |NA|29|**no**|
+
+| MD| Cs_NC_61 | Cs_NC_136 | 62 | 0.094 | 98.4 |NA|29|yes|
+| MD| Cs_NC_64 | Cs_NC_139 | 63 | 0.177 | 114.0 |NA|29|yes|
+
+2nd and 3rd elution, extraction tube ID #55
+|Elution | Unique ID | Vial ID | Extraction ID | Qubit DNA concentration ug/uL |
+|:--------:|:-----------:|:---------:|:---------------:|:------:|
+| 2nd | Cs_NC_39 | Cs_NC_241 | 55 | 1.82 | 
+| 3rd | Cs_NC_39 | Cs_NC_241 | 55 | 0.170 |
+
+> standard 1 (low): 62.31 ; standard 2 (high): 22262.95
+
+**Notes on Round 7**
+BL buffer from another kit was used for samples 63 (all 3 aliquots) and 62 (2 out of 3 aliquots).
+DNA Wash from another kit was used for samples 62 and 63 and wash #1 and all samples in wash #2.
+
+
+### 25-May-2020 ###
+
+**Round 8 - digestion**
+
+Extracting 19 samples, 18 from MD and 1 from ME (repeat from round 7).
+
+Solutions used: Buffer "2", Protease "1" (extraction ID 64, 65, 66) and Protease "2" (all others).
+
+> For all samples in this round, I used ~0.100-0.150 fin tissue, given that this amount yielded good amounts of DNA in previous rounds form MD samples. ME samples are precious, so I repeated the ME sample that did not in round 7. Volumes for TL buffer and OB protease were adjusted to 1000 uL and 125 uL per tube, respectively. Typically, these volumes are 200 uL and 25 uL, respectively.  
+
+### 26-May-2020 ###
+
+**Round 8 - purification**
+
+> Due to the extra volume of TL and protease needed in the digestion of these samples, the first steps of purification resulted in greater volumes than the microcentrifuge tubes and the spin columns could handle in one round. This volume was divided into 3 aliquots. Consequently, steps 7-12, corresponding to DNA binding, were done in three rounds to concentrate all 3 aliquots into a single spin column per sample. Remaining steps were not adjusted.
+
