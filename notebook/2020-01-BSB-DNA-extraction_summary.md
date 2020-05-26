@@ -1,7 +1,7 @@
 ## This is a summary of all Black Sea Bass samples extracted for ddRAD library prep and sequencing (April-May 2020).
 
 
-From the sequencing facility:
+**From the sequencing facility:**
 
 "We request DNA to be sent with volumes >20 ul and concentrations >25 ng/ul as measured by Picogreen or Qubit since Nanodrop will tend to overestimate the amount of double stranded DNA available. However, we input 10 ul of DNA at 10 ng/ul into our GBS library preparation, so DNA >10 ng/ul as measured by Picogreen or Qubit is acceptable. Our library prep rate includes an initial Picogreen QC step, and we can still attempt library prep on sequencing on samples with concentrations <10 ng/ul. We have successfully sequenced samples with initial concentrations <5 ng/ul, however, the results are more variable and we cannot guarantee that the samples will be successful."
 
@@ -11,7 +11,7 @@ From the sequencing facility:
 > Samples that yielded anything less than 'plenty' (<25uL) were re-extracted when there was enough tissue left for another round of extractions and are noted as 'repeated' below; those that could not be re-extracted because there was no more tissue left were marked as 'no tissue left'. All re-extracted samples yielded higher DNA ('plenty') except two samples from NC (unique IDs: Cs_NC_236, 'no', and Cs_NC_247, 'attempt'). The exceptions are MD samples that were in the 'acceptable' category for which re-extraction was not done, although there is enough tissue left to re-extract; those are marked as 'could retry'. 
 >> *I do not think we need to re-extract MD 'acceptable' samples - the quality of these sequences might be low anyways because of how the fin tissue was collected (from frozen fish, not fresh); I only re-extracted the NC 'acceptable' samples because I needed to re-extract the entire NC batch anyways, because their are muscle tissue and that did not yield much in the first round.*
 
-> 'Plenty' + 'acceptable, could retry' sampless = 62 samples for ddRAD (we had originally aimed for 64 samples).
+**'Plenty' + 'acceptable, could retry' sampless = 62 samples for ddRAD (we had originally aimed for 64 samples).**
 
 | Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? |
 |:---------|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
