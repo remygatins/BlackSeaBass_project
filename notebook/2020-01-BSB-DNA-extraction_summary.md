@@ -12,6 +12,7 @@
 >> *I do not think we need to re-extract MD 'acceptable' samples - the quality of these sequences might be low anyways because of how the fin tissue was collected (from frozen fish, not fresh); I only re-extracted the NC 'acceptable' samples because I needed to re-extract the entire NC batch anyways, because their are muscle tissue and did not yield much in the first round.*
 
 **Note on leftover tissue:**
+
 There is no tissue left for samples from NC and NJ. All other locations have some tissue left, stored at -80oC.
 
 
