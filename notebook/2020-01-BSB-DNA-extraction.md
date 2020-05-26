@@ -431,7 +431,7 @@ Round 7 sample info and DNA concentration results:
 
 > standard 1 (low): 62.31 ; standard 2 (high): 22262.95
 
-**Notes on Round 7**
+**Notes on Round 7 reagents**
 
 BL buffer from another kit was used for samples 63 (all 3 aliquots) and 62 (2 out of 3 aliquots).
 DNA Wash from another kit was used for samples 62 and 63 and wash #1 and all samples in wash #2.
@@ -453,3 +453,44 @@ Solutions used: Buffer "2", Protease "1" (extraction ID 64, 65, 66) and Protease
 
 > Due to the extra volume of TL and protease needed in the digestion of these samples, the samples came out of the thremomixer at a volume of ~1200 uL. After the centrifugation to remove the insoluble pellet, each sample was divided into 3 aliquots of equal (~400uL) volumes. This was needed because equal volumes of BL buffer and 100% ethanol must be added to the sample, which adds up to 1200 uL and the volume of the microcentrifuge tube is 1500 uL. That means that for steps 7-12, corresponding to DNA binding, several rounds of centrifugation were needed to concentrate all 3 aliquots plus the added BL buffer and ethanol into a single spin column per sample. Remaining steps were not adjusted.
 
+Three elutions, 1st elution in 30uL, 2nd elution in 70uL, 3rd elution in 100 uL, stored separately at -80oC.
+
+Quantification via Qubit: tried with 1uL of sample first, it worked for all except 1 samples - #82 which was diluted 2x, 3x, 4x, all yielding too high. Sample #82 was used to quantify 2nd and 3rd elutions.
+
+Round 8 sample info and DNA concentration results:
+
+| Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? |
+|:---------:|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
+| MD| Cs_MD_62 | Cs_MD_137 | 64 | 0.128 | 74.8 |NA| 29 |yes|
+| MD| Cs_MD_63 | Cs_MD_138 | 65 | 0.135 | 96.8 |NA| 29 |yes|
+| MD| Cs_MD_65 | Cs_MD_140 | 66 | 0.114 | 24.0 |NA| 29 |yes|
+| MD| Cs_MD_66 | Cs_MD_141 | 67 | 0.136 | 82.2 |NA| 29 |yes|
+| MD| Cs_MD_67 | Cs_MD_142 | 68 | 0.136 | 32.0 |NA| 29 |yes|
+| MD| Cs_MD_68 | Cs_MD_143 | 69 | 0.121 | 28.4 |NA| 29 |yes|
+| MD| Cs_MD_71 | Cs_MD_145 | 70 | 0.108 | 30.6 |NA| 29 |yes|
+| MD| Cs_MD_75 | Cs_MD_149 | 71 | 0.155 | 32.0 |NA| 29 |yes|
+| MD| Cs_MD_76 | Cs_MD_150 | 72 | 0.097 | 26.2 |NA| 29 |yes|
+| MD| Cs_MD_77 | Cs_MD_151 | 73 | 0.148 | 33.2 |NA| 29 |yes|
+| MD| Cs_MD_78 | Cs_MD_152 | 74 | 0.146 | 19.9 |NA| 29 |borderline|
+| MD| Cs_MD_80 | Cs_MD_154 | 75 | 0.153 | 38.8 |NA| 29 |yes|
+| MD| Cs_MD_84 | Cs_MD_158 | 76 | 0.153 | 14.8 |NA| 29 |borderline|
+| MD| Cs_MD_85 | Cs_MD_159 | 77 | 0.142 | 19.5 |NA| 29 |borderline|
+| MD| Cs_MD_86 | Cs_MD_160 | 78 | 0.132 | 45.8 |NA| 29 |yes|
+| MD| Cs_MD_87 | Cs_MD_161 | 79 | 0.151 | 22.0 |NA| 29 |yes|
+| MD| Cs_MD_88 | Cs_MD_162 | 80 | 0.108 | 46.4 |NA| 29 |yes|
+| MD| Cs_MD_89 | Cs_MD_163 | 81 | 0.125 | 13.8 |NA| 29 |borderline|
+| ME| Cs_ME_176 | 630      | 82 | 0.129 | 51.0 | 510.0 |  49*  | yes |
+
+2nd and 3rd elution, extraction tube ID #82
+|Elution | Unique ID | Vial ID | Extraction ID | Qubit DNA concentration ug/uL |
+|:--------:|:-----------:|:---------:|:---------------:|:------:|
+| 2nd | Cs_ME_176 | 630 | 82 | too high | 
+| 3rd | Cs_ME_176 | 630 | 82 | 14.5 |
+
+> standard 1 (low): 66.79 ; standard 2 (high): 21501.22
+
+> *this sample had really high concentration, and I needed 5uL of volume to finally get a value within the calibration range, bringing the volume down from 30ul to 25uL. So I added 25uL of Molecular Grade Water to the elution tube and measured one more time, for a leftover volume of 49uL.
+
+**Notes on Round 8 reagents**
+
+HBC buffer from another kit was used for all samples.
