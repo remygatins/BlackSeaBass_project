@@ -5,6 +5,10 @@ From the sequencing facility:
 
 **Based on the above note from the sequencing facility, I classified the samples as 'plenty' (>25 ug/uL), 'acceptable' (<25 and >10 ug/uL), 'attempt' (<10 and >5 ug/uL), '??' (<5 and >1 ug/uL) and 'no' (<1 ug/uL).**
 
+> Samples that yielded anything less than 'plenty' (<25uL) were re-extracted when there was enough tissue left for another round of extractions and are noted as 'repeated' below; those that could not be re-extracted because there was no more tissue left were marked as 'no tissue left'. All re-extracted samples yielded higher DNA ('plenty') except two samples from NC (unique IDs: Cs_NC_233 and Cs_NC_247). The exceptions are MD samples that were in the 'acceptable' category for re-extraction was not attempted, but there is enough tissue left to re-extract; those are marked as 'could retry'.
+
+> Samples 'plenty' and 'acceptable, could retry' = 62 samples (we had originally aimed for 64 samples).
+
 | Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? |
 |:---------|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
 | NJ| Cs_NJ_106 | Cs_NJ_001      | 1  | 2     | 62.4  | 124.8 | 28 | plenty |
@@ -63,12 +67,12 @@ From the sequencing facility:
 | MD| Cs_MD_86  | Cs_MD_160      | 78 | 0.132 | 45.8  | NA    | 29 | plenty |
 | MD| Cs_MD_88  | Cs_MD_162      | 80 | 0.108 | 46.4  | NA    | 29 | plenty |
 | ME| Cs_ME_176 | 630            | 82 | 0.129 | 51.0  | 510.0 | 49*| plenty |
-| MD| Cs_MD_65  | Cs_MD_140      | 66 | 0.114 | 24.0  | NA    | 29 | acceptable |
-| MD| Cs_MD_78  | Cs_MD_152      | 74 | 0.146 | 19.9  | NA    | 29 | acceptable |
-| MD| Cs_MD_84  | Cs_MD_158      | 76 | 0.153 | 14.8  | NA    | 29 | acceptable |
-| MD| Cs_MD_85  | Cs_MD_159      | 77 | 0.142 | 19.5  | NA    | 29 | acceptable |
-| MD| Cs_MD_87  | Cs_MD_161      | 79 | 0.151 | 22.0  | NA    | 29 | acceptable |
-| MD| Cs_MD_89  | Cs_MD_163      | 81 | 0.125 | 13.8  | NA    | 29 | acceptable |
+| MD| Cs_MD_65  | Cs_MD_140      | 66 | 0.114 | 24.0  | NA    | 29 | acceptable, could retry |
+| MD| Cs_MD_78  | Cs_MD_152      | 74 | 0.146 | 19.9  | NA    | 29 | acceptable, could retry |
+| MD| Cs_MD_84  | Cs_MD_158      | 76 | 0.153 | 14.8  | NA    | 29 | acceptable, could retry |
+| MD| Cs_MD_85  | Cs_MD_159      | 77 | 0.142 | 19.5  | NA    | 29 | acceptable, could retry |
+| MD| Cs_MD_87  | Cs_MD_161      | 79 | 0.151 | 22.0  | NA    | 29 | acceptable, could retry |
+| MD| Cs_MD_89  | Cs_MD_163      | 81 | 0.125 | 13.8  | NA    | 29 | acceptable, could retry |
 | NC| Cs_NC_32  | Cs_NC_234      | 31 | 0.018 | 13.3  | NA    | 29 | acceptable, repeated |
 | NC| Cs_NC_33  | Cs_NC_235      | 32 | 0.018 | 10.1  | NA    | 29 | acceptable, repeated |
 | ME| Cs_ME_176 | 630            | 46 | 0.018 | 8.12  | 16.24 | 29 | acceptable, repeated |
