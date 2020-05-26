@@ -16,6 +16,8 @@ Sample selection **criteria**: total lenght of fish < than 30cm (except those fr
 |Southern New England, SN | 4 | selected 4 out of 7 pick smallest; all < 30cm |
 | **Total** | **64** | *Goal = 64 samples; multiples of 8 are easier to work with*|
 
+**PS: note that this graph has been updated based on which samples were extracted successfully!!!!!**
+
 ![firstroundsamples](https://github.com/thais-neu/BSBproject.md/blob/master/first-round-selected-samples.png)
 
 ----------------------------------------------
