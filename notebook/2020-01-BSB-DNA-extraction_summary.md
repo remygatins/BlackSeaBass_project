@@ -9,7 +9,11 @@
 **Based on the above note from the sequencing facility, I classified the samples as 'plenty' (>25 ug/uL), 'acceptable' (<25 and >10 ug/uL), 'attempt' (<10 and >5 ug/uL), '??' (<5 and >1 ug/uL) and 'no' (<1 ug/uL).**
 
 > Samples that yielded anything less than 'plenty' (<25uL) were re-extracted when there was enough tissue left for another round of extractions and are noted as 'repeated' below; those that could not be re-extracted because there was no more tissue left were marked as 'no tissue left'. All re-extracted samples yielded higher DNA ('plenty') except two samples from NC (unique IDs: Cs_NC_236, 'no', and Cs_NC_247, 'attempt'). The exceptions are MD samples that were in the 'acceptable' category for which re-extraction was not done, although there is enough tissue left to re-extract; those are marked as 'could retry'. 
->> *I do not think we need to re-extract MD 'acceptable' samples - the quality of these sequences might be low anyways because of how the fin tissue was collected (from frozen fish, not fresh); I only re-extracted the NC 'acceptable' samples because I needed to re-extract the entire NC batch anyways, because their are muscle tissue and that did not yield much in the first round.*
+>> *I do not think we need to re-extract MD 'acceptable' samples - the quality of these sequences might be low anyways because of how the fin tissue was collected (from frozen fish, not fresh); I only re-extracted the NC 'acceptable' samples because I needed to re-extract the entire NC batch anyways, because their are muscle tissue and did not yield much in the first round.*
+
+**Note on leftover tissue:**
+There is no tissue left for samples from NC and NJ. All other locations have some tissue left, stored at -80oC.
+
 
 **'Plenty' + 'acceptable, could retry' sampless = 62 samples for ddRAD (we had originally aimed for 64 samples).**
 
@@ -97,3 +101,5 @@
 | NC| Cs_NC_34  | Cs_NC_236      | 33 | 0.019 | 0.102 | NA    | 27 | no, repeated |
 | NC| Cs_NC_42  | Cs_NC_244      | 41 | 0.019 | 0.864 | NA    | 29 | no, repeated |
 | NC| Cs_NC_34  | Cs_NC_236      | 50 | 0.182 | 0.280 | NA    | 27 | no, no tissue left|
+
+
