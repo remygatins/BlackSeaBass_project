@@ -27,6 +27,28 @@ From the sequencing facility:
 | NJ| Cs_NJ_133 | Cs_NJ_028 | 18 | <1 | 35.2 | 70.4  | 29 | plenty |
 | NJ| Cs_NJ_134 | Cs_NJ_029 | 19 | <1 | 4.26 | 8.52  | 29 | attempt |
 | NJ| Cs_NJ_135 | Cs_NJ_030 | 20 | <1 | 3.14 | 6.28  | 29 | attempt |
-
+| ME| Cs_ME_164 | 1027162  | 21 | 0.018 | 120   |NA |29|plenty|
+| ME| Cs_ME_165 | 103116   | 22 | 0.019 | 120   |240|28|plenty|
+| SN| Cs_SN_179 | 79       | 23 | 0.020 | 108   |NA |29|plenty|
+| SN| Cs_SN_182 | 15       | 24 | 0.017 | 88.6  |NA |29|plenty|
+| SN| Cs_SN_185 | 87       | 25 | 0.018 | 98.6  |NA |29|plenty|
+| SN| Cs_SN_190 | 47       | 26 | 0.016 | 86.6  |NA |29|plenty|
+| SN| Cs_SN_191 | 58       | 27 | 0.020 | 88.4  |NA |29|plenty|
+| SN| Cs_SN_189 | 4        | 28 | 0.017 | 79.6  |NA |29|plenty|
+| SN| Cs_SN_009 | Cs_C_009_DNA | 29 | 0.015 | 100.0 |NA|29|plenty|
+| NC| Cs_NC_31 | Cs_NC_233 | 30 | 0.019 | 9.50  |NA |29|maybe|
+| NC| Cs_NC_32 | Cs_NC_234 | 31 | 0.018 | 13.3  |NA |29|acceptable|
+| NC| Cs_NC_33 | Cs_NC_235 | 32 | 0.018 | 10.1  |NA |29|acceptable|
+| NC| Cs_NC_34 | Cs_NC_236 | 33 | 0.019 | 0.102 |NA |27| no |
+| NC| Cs_NC_35 | Cs_NC_237 | 34 | 0.018 | 4.82  |NA |29| ?? |
+| NC| Cs_NC_36 | Cs_NC_238 | 35 | 0.019 | 4.92  |NA |29| ?? |
+| NC| Cs_NC_37 | Cs_NC_239 | 36 | 0.020 | 4.94  |NA |29| ?? |
+| NC| Cs_NC_38 | Cs_NC_240 | 37 | 0.019 | 8.50  |NA |29| attempt |
+| NC| Cs_NC_39 | Cs_NC_241 | 38 | 0.019 | 3.22  |NA |29| attempt |
+| NC| Cs_NC_40 | Cs_NC_242 | 39 | 0.018 | 6.36  |NA |29| attempt |
+| NC| Cs_NC_41 | Cs_NC_243 | 40 | 0.018 | 4.54  |NA |29| ?? |
+| NC| Cs_NC_42 | Cs_NC_244 | 41 | 0.019 | 0.864 |NA |29| no |
+| NC| Cs_NC_43 | Cs_NC_245 | 42 | 0.020 | 5.58  |NA |29| attemtp |
+| NC| Cs_NC_44 | Cs_NC_246 | 43 | 0.019 | 4.44  |NA |29| ?? |
 
 
