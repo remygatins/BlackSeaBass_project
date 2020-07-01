@@ -148,7 +148,7 @@ Day before you start - check list:
 
 25. (P) Seal the 96-racked microtubes with their caps and store at -20oC.
 ------------------------------------------------------
-##### **PURIFICATION USING TUBES** (more expensive per sample):
+##### **PURIFICATION USING TUBES** (cheaper per sample):
 
 > Before you start: prepare an aliquot of 100% EtOH.
 
