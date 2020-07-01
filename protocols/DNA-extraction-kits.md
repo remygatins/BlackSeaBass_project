@@ -41,7 +41,6 @@ Day before you start - check list:
 * Decide how many samples per batch, remember to leave room for controls.
 * Calculate supplies and volumes needed, and check if you have enough or need to order new.
 * Autoclave materials not provided in the kit (tubes and tips (if not sterile/filtered) and tweezers).
-* Check/set oven at Hughes lab to 70oC 
 * Reserve plate centrifuge in Hughes lab if using plates
 * Make sure buffers are diluted as follows:
 
@@ -65,6 +64,8 @@ Day before you start - check list:
     * Spin tubes (T): pipette **200 uL of TL buffer** directly into each 1.5 mL autoclaved eppendorf tube.
 
 2. Take 4-8 samples out of the freezer at the time; keep them on ice or cold beads.
+
+    * Heat up thermomixer (60oC and 450 RPM).
 
     * Wipe bench with EtOH and gloved hands (between samples).
 
@@ -94,7 +95,7 @@ Day before you start - check list:
 
 
 ---------------------------------------------------------
-   ##### **PURIFICATION USING PLATES** (cheaper per sample):
+   ##### **PURIFICATION USING PLATES** (more expensive per sample):
    > *hint: if using the 300 uL multichannel pipette, do not load more than 250 uL (it gets too close to the top of the pipettor and could contaminate)*
 
 5. (P) Shake or vortex the plate vigorously (holding the silicone cover mat) and ensure the lysate is completely homogeneous after shaking (if not further digestion is required). 
