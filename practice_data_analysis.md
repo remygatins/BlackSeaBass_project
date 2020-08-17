@@ -76,7 +76,7 @@ Tbittar
 
 Password
 
-This will get you to “File Manager” in Globus. 
+> This will get you to “File Manager” in Globus. 
 
 In File Manager, top right corner, select the 2-panel icon. This is so you can open 2 collections (= folders), 1 to determine the origin folder and 1 to determine the destination folder.
 
