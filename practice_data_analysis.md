@@ -86,9 +86,9 @@ On the second panel, in the search box, find your endpoint computer and on the P
 
 With the origin and destination folders open in each panel, drag and drop the files or folder that you want to transfer.
 
-Tip: it is best to use the scratch folder than the home folder on Discovery because you have more space there to work when you are creating a lot of large intermediate files. However, the scratch folder is not backed up, so transfer the output files or any other files you want to keep safe to the home directory on Discovery.
+**Tip:** it is best to use the scratch folder than the home folder on Discovery because you have more space there to work when you are creating a lot of large intermediate files. However, the scratch folder is not backed up, so transfer the output files or any other files you want to keep safe to the home directory on Discovery.
 
-Tip: Look at “Activity” (left menu) or hit “refresh list” (on the panel corresponding to destination folder) to check progress of transfer.
+**Tip:** Look at “Activity” (left menu) or hit “refresh list” (on the panel corresponding to destination folder) to check progress of transfer.
 
 **Now that all SRA files are at the destination folder, you can close the origin panel, and you will use the SRA toolkit to extract the FASTQ files.**
 
@@ -108,7 +108,7 @@ Check which packages are available in the Lotterhos module:
 
 module show lotterhos/2020-07-21 
 
-> this will show you a list of available packages
+> This will show you a list of available packages
 
 then load the one you need to use:
 
@@ -138,4 +138,4 @@ Load the module where Ddocent is nested:
 
 Module load anaconda3/L2020-03
 
-> Here we are assuming that the barcoding and adapters are already stripped off. Since it was a ddRAD library prep, we should be left with the DNA sequence of interest and the overhang sequence corresponding to the recognition sequence where the enzymes attached. In this study, they used EcoRI as one of the enzymes and MspI as the second enzyme. “EcoRI is a restriction enzyme that creates 4 nucleotide sticky ends with 5' end overhangs of AATT. The nucleic acid recognition sequence where the enzyme cuts is G/AATTC, which has a palindromic, complementary sequence of CTTAA/G. The / in the sequence indicates which phosphodiester bond the enzyme will break in the DNA molecule.” MspI overhang sequence is C/CGG and the palindromic complementary sequence is GGC/C.
+> Here we are assuming that the barcoding and adapters are already stripped off for this specific practice dataset. Since it was a ddRAD library prep, we should be left with the DNA sequence of interest and the overhang sequence corresponding to the recognition sequence where the enzymes attached. In this study, the two enzymes they used were EcoRI and MspI. “EcoRI is a restriction enzyme that creates 4 nucleotide sticky ends with 5' end overhangs of AATT. The nucleic acid recognition sequence where the enzyme cuts is G/AATTC, which has a palindromic, complementary sequence of CTTAA/G. The / in the sequence indicates which phosphodiester bond the enzyme will break in the DNA molecule.” MspI overhang sequence is C/CGG and the palindromic complementary sequence is GGC/C.
