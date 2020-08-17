@@ -128,7 +128,7 @@ Fasterq-dump –split-files \*.sra
 
 **Now that we have the FASTQ files, we will start using the pipeline described in Ddocent to process the data.**
 
-# 4. Use Ddocent pipeline on discovery
+# 4. Use Ddocent pipeline on Discovery
 
 In the Lotterhos lab module, ddocent-2.7.8 was added to the conda environment “lotterhos-py38” within the anaconda3/L2020-03 module.
 
