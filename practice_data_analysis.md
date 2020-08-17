@@ -1,4 +1,4 @@
-# Discovery cluster 
+# Practice ddRAD data analysis using Ddocent on Discovery cluster 
 
 Black Sea Bass practice data using dataset published by Zhao et al Marine Biotechnology 2018 doi 10.1007/s10126-017-9786-0
 
