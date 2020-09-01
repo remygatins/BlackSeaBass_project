@@ -158,7 +158,7 @@ Module load anaconda3/L2020-03
 
 **From here on, I will be following the Reference Assembly Tutorial at ddocent.com/assembly/**
 
-We will skip blocks 1, 2 and 3 of code - those are used to download and extract the test dataset - because we have our own practice dataset. 
+We will skip blocks 1, 2 and 3 of code - those are used to download and extract the test dataset - because we have our own practice dataset so no need to download and extract. 
 
 We will skip blocks 4-11 of code - those are to demultiplex the data (separate individuals by barcode) - because our practice dataset is already demultiplexed (see notes above).
 
@@ -184,7 +184,7 @@ Here is the block - the line numbers in bold are not part of the code, I just ad
 
 **(line 9)** cat namelist | parallel --no-notice -j 8 "paste -d '-' {}.forward {}.reverse | mawk '$AWK3' | sed 's/-/NNNNNNNNNN/' | perl -e '$PERLT' > {}.uniq.seqs"
 
-In lines 1 and 2 above, note the names of the set of files used to create namelist - .F.fq.gz. The F denotes the file contains the forward sequences, fq means it is a fastq file and gz means it is compressed. These files are from the test dataset used in the tutorial. We are using our practice files, so the equivalent files are sra_1.fastq (for forward sequences, fastq files - not compressed). So we are editing lines 1 and 2 as follows (note that all \ are just there to escape * and _ in lines 1 and 2; also ignore the underline in line 2) to adjust to our file name format:
+In lines 1 and 2 above, note the names of the set of files used to create namelist - .F.fq.gz. The F denotes the file contains the forward sequences, fq means it is a fastq file and gz means the file is compressed. These files are from the test dataset used in the tutorial. We are using our practice files, so the equivalent files are sra_1.fastq (for forward sequences, fastq files - not compressed). So we are editing lines 1 and 2 as follows to adjust to our file name format (note that all \ are just there to escape * and _ in lines 1 and 2; also ignore the underline in line 2):
 
 ls \*\_1.fastq > namelist
 
