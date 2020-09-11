@@ -202,6 +202,8 @@ gzip < "$name" > "$prefix$name.fq.gz"
 
 done 
 
+**Tip:** Keep the scratch folder open in Globus and double-check that the file names are changing as expected and that the files are not empty.
+
 ## Login and load the module where Ddocent is nested.
 
 Load the module where Ddocent is nested:
