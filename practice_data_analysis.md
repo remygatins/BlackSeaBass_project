@@ -178,13 +178,15 @@ srun -p debug -N1 --pty /bin/bash
 
 **I could only come up with a two-step code (two for-loops) to batch-rename the files:**
 
-**1st step** - this will replace the extension .sra_1.fastq with an F and the extension .sra_2.fastq with an R.
+**1st step** - this will replace the extension .sra_1.fastq with an F and the extension .sra_2.fastq with an R:
 
-for f in *.sra_1.fastq; do mv "$f" "${f%.sra_1.fastq}.F"; done
+for f in *.sra_1.fastq; do 
+
+mv "$f" "${f%.sra_1.fastq}.F"; done
 
 for f in *.sra_2.fastq; do mv "$f" "${f%.sra_2.fastq}.R"; done
 
-**2nd step** - this will add Pop1_ as a prefix to all file names; compress the file with gzip; and add the .fq as the extension.
+**2nd step** - this will add Pop1_ as a prefix to all file names; compress the file with gzip; and add the .fq as the extension:
 
 prefix=Pop1_
 
