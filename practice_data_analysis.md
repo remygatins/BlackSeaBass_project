@@ -166,7 +166,9 @@ They need to be in the following format: PopID_SRRxxxxxxxx.F.fq.gz (forward read
 
 To batch-rename the files:
 
-Login to Discovery and navigate to where your working fastq files are /scratch/tbittar/
+In terminal, login to Discovery and navigate to where your working fastq files are:
+
+cd /scratch/tbittar/
 
 Type the following code to get access to resources: 
 
@@ -174,11 +176,7 @@ srun -p debug -N1 --pty /bin/bash
 
 > This will give you 20 mins to work. Retype when needed.
 
-Navigate to the scratch folder (assuming your working fastq files are there), type:
-
-cd /scratch/tbittar/
-
-> I could only come up with a two-step code (two for-loops) to batch-rename the files:
+**I could only come up with a two-step code (two for-loops) to batch-rename the files:**
 
 **1st step** - this will replace the extension .sra_1.fastq with an F and the extension .sra_2.fastq with an R.
 
