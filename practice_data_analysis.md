@@ -174,10 +174,6 @@ srun -p debug -N1 --pty /bin/bash
 
 > This will give you 20 mins to work. Retype when needed.
 
-## Login and load the module where Ddocent is nested.
-
-In terminal, login to Discovery if you haven’t yet.
-
 Navigate to the scratch folder (assuming your working fastq files are there), type:
 
 cd /scratch/tbittar/
@@ -200,7 +196,7 @@ gzip < "$name" > "$prefix$name.fq.gz"
 
 done 
 
-
+## Login and load the module where Ddocent is nested.
 
 Load the module where Ddocent is nested:
 
