@@ -86,17 +86,17 @@ Password
 
 In File Manager, top right corner, select the 2-panel icon. This is so you can open 2 collections (= folders), 1 to determine the origin folder and 1 to determine the destination folder.
 
-On the first panel, in the box Collection search box, find northeastern#discovery (you might have to login/authenticate), then on the Path box type or select /scratch/tbittar (or your own scratch folder) – this is your **destination folder**.
+On the first panel, in the box Collection search box, find northeastern#discovery (you might have to login/authenticate), then on the Path box type /~/ or select from you bookmarks northeastern#discovery /~/ (your home folder) – this is your **destination folder**.
 
 On the second panel, in the search box, find your endpoint computer and on the Path box, go to the folder where your files are – this is the **origin folder**.
 
 With the origin and destination folders open in each panel, drag and drop the files or folder that you want to transfer.
 
-**Tip:** it is best to use the scratch folder than the home folder on Discovery because you have more space there to work when you are creating a lot of large intermediate files. However, the scratch folder is not backed up, so transfer the output files or any other files you want to keep safe to the home directory on Discovery.
+**Tip:** Files that need to be kept on backup (such as the original SRA and FASTQ files) should be stored in your home directory. When working on those files, it is best to use the scratch folder than the home folder on Discovery because you have more space there to work when you are creating a lot of large intermediate files. However, the scratch folder is not backed up, so transfer the output files or any other files you want to keep safe to the home directory on Discovery.
 
 **Tip:** Look at “Activity” (left menu) or hit “refresh list” (on the panel corresponding to destination folder) to check progress of transfer.
 
-**Now that all SRA files are at the destination folder, you can close the origin panel, and you will use the SRA toolkit to extract the FASTQ files.**
+**Now that all SRA files are in the destination folder, you can close the origin panel, and you will use the SRA toolkit to extract the FASTQ files.**
 
 # 3. Extracting the FASTQ files
 
@@ -132,9 +132,19 @@ To extract one file. Or to extract all sra files, type:
 
 Fasterq-dump –split-files \*.sra
 
-> This will create two FASTQ files for each SRA file (because the sequencing was pair-ended, so you get the forward and the reverse reads in two separate FASTQ files, labeled FASTQ1 and FASTQ2).
+> This will create two FASTQ files for each SRA file (because the sequencing was pair-ended, so you get the forward and the reverse reads in two separate FASTQ files, labeled FASTQ1 and FASTQ2). For each file name, you will end up with 3 files: the 'original' SRA file, one .sra_1.fastq and one .sra_2.fastq file.
 
 **Now that we have the FASTQ files, we will start using the pipeline described in Ddocent to process the data.**
+
+As mentioned before, it is best to work from the scratch folder. So copy the fastq files from the home folder to the scratch folder. In Globus > File Manager, open two panels again:
+
+one for the home folder where the fastq files are located: click the search box and select northeastern#discovery (you might need to re-authenticate) and in the path box type /~/ (the home folder), then navigate to where fastq files are; 
+
+and one for your scratch folder: click the search box and select northeastern#discovery (you might need to re-authenticate) and in the path box, type /scratch/tbittar/ (the scratch folder), then naviate to where you will copy the fastq files to.
+
+Drag and drop the fastq files from home to scratch.
+
+**Tip**: Bookmark these folders to make it easier to find them from Globus > Bookmarks list (left side panel).
 
 # 4. Use Ddocent pipeline on Discovery
 
@@ -144,61 +154,43 @@ Fasterq-dump –split-files \*.sra
 
 > Note: In the Lotterhos lab module, ddocent-2.7.8 was added to the conda environment “lotterhos-py38” within the anaconda3/L2020-03 module.
 
+## Check that the fastq file names comply with the naming convention required by dDocent.
+
+My fastq files came out of NCBI in the following format: SRRxxxxxxxx.sra_1.fastq (forward reads) and SRRxxxxxxxx.sra_2.fastq (reverse reads).
+
+They need to be in the following format: PopID_SRRxxxxxxxx.F.fq.gz (forward reads) and PopID_SRRxxxxxxxx.R.fq.gz (reverse reads).
+
+> Note: We do not have information on the Pop ID so we will call them all Pop1. 
+
+> Note: gz means the file is compressed.
+
+To batch-rename the files:
+
+Login to Discovery and navigate to where your working fastq files are /scratch/tbittar/
+
+Type the following code to get access to resources: 
+
+srun -p debug -N1 --pty /bin/bash
+
+> This will give you 20 mins to work. Retype when needed.
+
 ## Login and load the module where Ddocent is nested.
 
 In terminal, login to Discovery if you haven’t yet.
 
-Navigate to the scratch folder (or the folder where your working files are), type:
+Navigate to the scratch folder (assuming your working fastq files are there), type:
 
 cd /scratch/tbittar/
 
-Load the module where Ddocent is nested:
+> I could only come up with a two-step code (two for-loops) to batch-rename the files:
 
-Module load anaconda3/L2020-03
-
-**From here on, I will be following the Reference Assembly Tutorial at ddocent.com/assembly/**
-
-We will skip blocks 1, 2 and 3 of code - those are used to download and extract the test dataset - because we have our own practice dataset so no need to download and extract. 
-
-We will skip blocks 4-11 of code - those are to demultiplex the data (separate individuals by barcode) - because our practice dataset is already demultiplexed (see notes above).
-
-So we are starting at "Let's start by examining how the dDocent pipeline assembles RAD data; First we are going to create a set of unique reads with counts for each individual"
-
-Here is the block - the line numbers in bold are not part of the code, I just added them here to help refer to them later: 
-
-**(line 1)** ls \*.F.fq.gz > namelist
-
-**(line 2)** sed -i'' -e 's/.F.fq.gz//g' namelist
-
-**(line 3)** AWK1='BEGIN{P=1}{if(P==1||P==2){gsub(/^[@]/,">");print}; if(P==4)P=0; P++}'
-
-**(line 4)** AWK2='!/>/'
-
-**(line 5)** AWK3='!/NNN/'
-
-**(line 6)** PERLT='while (<>) {chomp; $z{$_}++;} while(($k,$v) = each(%z)) {print "$v\t$k\n";}'
-
-**(line 7)** cat namelist | parallel --no-notice -j 8 "zcat {}.F.fq.gz | mawk '$AWK1' | mawk '$AWK2' > {}.forward"
-
-**(line 8)** cat namelist | parallel --no-notice -j 8 "zcat {}.R.fq.gz | mawk '$AWK1' | mawk '$AWK2' > {}.reverse"
-
-**(line 9)** cat namelist | parallel --no-notice -j 8 "paste -d '-' {}.forward {}.reverse | mawk '$AWK3' | sed 's/-/NNNNNNNNNN/' | perl -e '$PERLT' > {}.uniq.seqs"
-
-In lines 1 and 2 above, note the names of the set of files used to create namelist - .F.fq.gz. The F denotes the file contains the forward sequences, fq means it is a fastq file and gz means the file is compressed. These files are from the test dataset used in the tutorial. We are using our practice files, so the equivalent files are sra_1.fastq (for forward sequences, fastq files - not compressed). So we are editing lines 1 and 2 as follows to adjust to our file name format (note that all \ are just there to escape * and _ in lines 1 and 2; also ignore the underline in line 2):
-
-ls \*\_1.fastq > namelist
-
-sed -i'' -e 's/.\_1.fastq//g' namelist
-
-Then lines 3-6 run without editing.
-
-In line 7 - gnu-parallel is not installed - I am stuck here until it gets installed in Discovery (need to open a ticket).
-
-#! /bin/batch
+**1st step** - this will replace the extension .sra_1.fastq with an F and the extension .sra_2.fastq with an R.
 
 for f in *.sra_1.fastq; do mv "$f" "${f%.sra_1.fastq}.F"; done
 
 for f in *.sra_2.fastq; do mv "$f" "${f%.sra_2.fastq}.R"; done
+
+**2nd step** - this will add Pop1_ as a prefix to all file names; compress the file with gzip; and add the .fq as the extension.
 
 prefix=Pop1_
 
@@ -208,3 +200,8 @@ gzip < "$name" > "$prefix$name.fq.gz"
 
 done 
 
+
+
+Load the module where Ddocent is nested:
+
+Module load anaconda3/L2020-03
