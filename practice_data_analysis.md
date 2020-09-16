@@ -228,9 +228,39 @@ Load the module where Ddocent is nested and activate dDocent:
 
 `source activate ddocent2`
 
-Start dDocent
+Start dDocent, type:
 
 `ddocent`
+
+The interactive part:
+
+Confirm # of individuals - yes/no
+
+Choose # of processors - 3
+
+Limit memory use - 1
+
+Quality trim? yes
+
+Perform assembly? yes
+
+What type of assembly? PE
+
+New c-parameter? no
+
+Map reads? yes
+
+Adjust -A -B -O; new parameters? no
+
+Use FreeBayes to call SNPs? yes
+
+Enter email address to get a message when done - will this work on Discovery?
+
+If all works, you get a plot of Unique Sequences vs Coverage; based on this graph, choose the data cutoff.
+
+You get another plot of Unique Sequences vs Individuals, choose the data cutoff.
+
+From here on, the pipeline will run on its own. 
 
 
 
