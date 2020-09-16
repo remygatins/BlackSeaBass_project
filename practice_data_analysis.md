@@ -230,7 +230,7 @@ Load the module where Ddocent is nested and activate dDocent:
 
 Start dDocent, type:
 
-`ddocent`
+`dDocent`
 
 The interactive part:
 
