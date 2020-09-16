@@ -68,7 +68,7 @@ You will need: a Discovery account, a Globus account and an endpoint computer.
 
 In Terminal, login to discovery:
 
-ssh tbittar@login.discovery.neu.edu 
+`ssh tbittar@login.discovery.neu.edu`
 
 then enter your password
 
@@ -114,23 +114,23 @@ In terminal, login if you have not yet.
 
 Check which packages are available in the Lotterhos module: 
 
-module show lotterhos/2020-07-21 
+`module show lotterhos/2020-07-21`
 
 > This will show you a list of available packages
 
 then load the one you need to use:
 
-module load sratoolkit/2.10.8
+`module load sratoolkit/2.10.8`
 
 If the toolkit has not been configured, you will get a message in terminal to do so. Follow the instructions to configure (they are the same instructions as the one you followed to configure the toolkit on your local computer) – github.com/ncbi/sra-tools/wiki/03.-Qiocl-Toolkit-Configuration
 
 Once configured, go to terminal and type: 
 
-Fasterq-dump –split-files filename.sra
+`Fasterq-dump –split-files filename.sra`
 
 To extract one file. Or to extract all sra files, type:
 
-Fasterq-dump –split-files \*.sra
+`Fasterq-dump –split-files \*.sra`
 
 > This will create two FASTQ files for each SRA file (because the sequencing was pair-ended, so you get the forward and the reverse reads in two separate FASTQ files, labeled FASTQ1 and FASTQ2). For each file name, you will end up with 3 files: the 'original' SRA file, one .sra_1.fastq and one .sra_2.fastq file.
 
@@ -144,9 +144,9 @@ and one for your scratch folder: click the search box and select northeastern#di
 
 Drag and drop the fastq files from home to scratch.
 
-**Tip**: Bookmark these folders to make it easier to find them from Globus > Bookmarks list (left side panel).
+**Tip**: Bookmark these folders to make it easier to find them in the future in Globus > Bookmarks list (left side panel).
 
-# 4. Use Ddocent pipeline on Discovery
+# 4. Use dDocent pipeline on Discovery
 
 > Note: Here we are assuming that the barcoding and adapters are already stripped off for this specific practice dataset. Since it was a ddRAD library prep, we should be left with the DNA sequence of interest and the overhang sequence corresponding to the recognition sequence where the enzymes attached. In this study, the two enzymes they used were EcoRI and MspI. “EcoRI is a restriction enzyme that creates 4 nucleotide sticky ends with 5' end overhangs of AATT. The nucleic acid recognition sequence where the enzyme cuts is G/AATTC, which has a palindromic, complementary sequence of CTTAA/G. The / in the sequence indicates which phosphodiester bond the enzyme will break in the DNA molecule.” MspI overhang sequence is C/CGG and the palindromic complementary sequence is GGC/C. 
 
@@ -154,29 +154,41 @@ Drag and drop the fastq files from home to scratch.
 
 > Note: In the Lotterhos lab module, ddocent-2.7.8 was added to the conda environment “lotterhos-py38” within the anaconda3/L2020-03 module.
 
-## Check that the fastq file names comply with the naming convention required by dDocent.
+## The files need to be in the following format: PopID_filename.F.fq.gz and PopID_filename.R.fq.gz
 
-My fastq files came out of NCBI in the following format: SRRxxxxxxxx.sra_1.fastq (forward reads) and SRRxxxxxxxx.sra_2.fastq (reverse reads).
+# 4.1 Rename files to comply with the above naming convention required:
 
-They need to be in the following format: PopID_SRRxxxxxxxx.F.fq.gz (forward reads) and PopID_SRRxxxxxxxx.R.fq.gz (reverse reads).
+> My fastq files came out of NCBI in the following format: SRRxxxxxxxx.sra_1.fastq (forward reads) and SRRxxxxxxxx.sra_2.fastq (reverse reads).
 
-> Note: We do not have information on the Pop ID so we will call them all Pop1. 
+> They need to be in the following format: PopID_SRRxxxxxxxx.F.fq.gz (forward reads) and PopID_SRRxxxxxxxx.R.fq.gz (reverse reads).
+
+> Note: We do not have information on the Pop ID in this study so we will call them all Pop1. 
 
 > Note: gz means the file is compressed.
 
-To batch-rename the files:
+You will need: request resources in Discovery and a code to batch-rename the files.
+
+## Request Discovery resources
 
 In terminal, login to Discovery and navigate to where your working fastq files are:
 
-cd /scratch/tbittar/
+`cd /scratch/tbittar/`
 
-Type the following code to get access to resources: 
+Type one fo the the following codes to get access to resources: 
 
-srun -p debug -N1 --pty /bin/bash
+`srun -p debug -N1 --pty /bin/bash`
 
-> This will give you 20 mins to work. Retype when needed.
+> This will give you 20 mins to work. Retype when needed. Use this to check your code is working on 1-2 files.
 
-**I could only come up with a two-step code (two for-loops) to batch-rename the files:**
+`srun -p lotterhos -N 1 --pty /bin/bash`
+
+> This will give you 24h to work. Use this if 20 min is not enough to rename and compress all files. 
+
+*To use Lotterhos Lab resources, you need to ask Dr. L to be added as a user ahead of time. To check if you are a user type `groups $USER`. If you are successfully added to the group, you will see:
+
+tbittar : users lotterhos 
+
+## Script to batch-rename files (I could only come up with a two-step code (two for-loops) to batch-rename the files):
 
 **1st step** - this will replace the extension .sra_1.fastq with an .F and the extension .sra_2.fastq with an .R in all files in the folder:
 
@@ -202,10 +214,26 @@ gzip < "$name" > "$prefix$name.fq.gz"
 
 done 
 
-**Tip:** Keep the scratch folder open in Globus and use Refresh List to double-check that the file names are changing as expected and that the files are not empty.
+**Tip:** Keep the scratch folder open in Globus and use Refresh List to double-check that the file names are changing as expected and that the new files are smaller in size (because they are now compressed).
 
-## Login and load the module where Ddocent is nested.
+# 4.2 Load the module where dDocent is nested.
 
-Load the module where Ddocent is nested:
+Login to Discovery and request resources using the lotterhos partition.
 
-Module load anaconda3/L2020-03
+`srun -p lotterhos -N 1 --pty /bin/bash`
+
+Load the module where Ddocent is nested and activate dDocent:
+
+`module load loyyrthod/2020-08-24`
+
+`source activate ddocent2`
+
+Start dDocent
+
+`ddocent`
+
+
+
+
+
+
