@@ -262,7 +262,9 @@ You get another plot of Unique Sequences vs Individuals, choose the data cutoff.
 
 From here on, the pipeline should run on its own.
 
+# Attempts at running the pipeline.
 
+---
 ## 16-Sept-2020
 
 **Attempt #1 - all settings as listed above under "4.2 the interactive part":**
