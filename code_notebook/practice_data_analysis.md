@@ -224,7 +224,7 @@ Login to Discovery and request resources using the lotterhos partition.
 
 Load the module where Ddocent is nested and activate dDocent:
 
-`module load loyyrthod/2020-08-24`
+`module load lotterhos/2020-08-24`
 
 `source activate ddocent2`
 
@@ -263,7 +263,114 @@ You get another plot of Unique Sequences vs Individuals, choose the data cutoff.
 From here on, the pipeline will run on its own. 
 
 
+## 16-Sept-2020
+
+**Attempt #1 - all settings as listed above under "the interactive part"**
+
+Running dDocent on all 56 files (28 individuals) for which I have fastq files.
+* cutoff chosen for unique seq vs coverage = 6
+* cutoff chosen for unique seq vs #individuals = 6
+
+ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS. 
+ 
+**Attempt #2 - same as above, but changed "Limit memory use" to 10Gb.**
+
+SAME ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS. 
+
+**Attempt #3 - same as above, but changed "Limit memory use" to 0GB (based on dDocent user guide).**
+
+SAME ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS. 
 
 
+## 17-Sept-2020
+
+Meeting with Katie - use seff to check memory usage and run less files to test the pipeline.
+
+Running `seff JOBID` on yesterday's jobs tells me the job is using ~2Gb of memory.
+
+**Attempt #4, same settings as above, except:**
+* 10 files/5 individuals
+* Choose # of processors - 5
+* Limit memory use - 10Gb
+* cutoff chosen for unique seq vs coverage = 6
+* cutoff chosen for unique seq vs #individuals = 3
 
 
+SAME ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS. 
+Seff: tells me the job is using ~2Gb of memory.
+
+**Attempt #5, same settings as above, except:**
+* 4 files/2 individuals
+* Choose # of processors - 3
+* Limit memory use - 0Gb
+* cutoff chosen for unique seq vs coverage = 6
+* cutoff chosen for unique seq vs #individuals = 2
+
+THIS WORKS and the pipeline runs all the way.
+Seff: tells me memory utilized was 0Gb
+
+## 18-Sept-2020
+
+From here on, I'm incrementally increasing the number of files/individuals to see if/when I get the memory error.
+
+**Attempt #6, same settings as above, except:**
+* 8 files/4 individuals
+* Choose # of processors - 3
+* Limit memory use - 0Gb
+* cutoff chosen for unique seq vs coverage = 6
+* cutoff chosen for unique seq vs #individuals = 3
+
+THIS WORKS and the pipeline runs all the way.
+Seff: tells me memory utilized was 0Gb
+
+**Attempt #7, same settings as above, except:**
+* 16 files/8 individuals
+* Choose # of processors - 3
+* Limit memory use - 0Gb
+* cutoff chosen for unique seq vs coverage = 6
+* cutoff chosen for unique seq vs #individuals = 5
+
+THIS WORKS and the pipeline runs all the way.
+Seff: tells me memory utilized was 0Gb
+
+**Attempt #8, same settings as above, except:**
+* 32 files/16 individuals
+* Choose # of processors - 3
+* Limit memory use - 0Gb
+* cutoff chosen for unique seq vs coverage = 6
+* cutoff chosen for unique seq vs #individuals = 5
+
+ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS.
+Seff: tells me memory utilized was 2.17Gb
+
+
+## 21-Sept-2020
+
+**Attempt #9, same settings as above, except:**
+* 20 files/10 individuals
+* Choose # of processors - 3
+* Limit memory use - 0Gb
+* cutoff chosen for unique seq vs coverage = 6
+* cutoff chosen for unique seq vs #individuals = 5
+
+ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS.
+Seff: tells me memory utilized was 1.97Gb out of 1.95Gb
+
+**Attempt #10, same settings as above, except:**
+* 18 files/9 individuals
+* Choose # of processors - 3
+* Limit memory use - 0Gb
+* cutoff chosen for unique seq vs coverage = 6
+* cutoff chosen for unique seq vs #individuals = 5
+
+THIS WORKS and the pipeline runs all the way.
+Seff: tells me memory utilized was 0Gb.
+
+---
+Based on the 10 attempts listed above, it looks like the partition can handle 18 files (9 individuals)
+* how much data does that correspond to?
+
+It appears that there is a 2Gb memory limit in the partition.
+
+Next steps, create a settings file for the interactive part of the pipeline and try to submit as a job so more memory is available.
+---
