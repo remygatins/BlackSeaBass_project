@@ -373,7 +373,7 @@ Seff: tells me memory utilized was 0Gb.
 Based on the 10 attempts listed above, it looks like the partition can handle 18 files (9 individuals)
 * how much data does that correspond to?
 
-It appears that there is a 2Gb memory limit in the partition.
+There is a 2Gb memory limit in the partition.
 
-Next steps, create a settings file for the interactive part of the pipeline and try to submit as a job so more memory is available.
+Next steps: create a settings file for the interactive part of the pipeline and try to submit as a job so more memory is available.
 ---
