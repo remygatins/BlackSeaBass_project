@@ -232,7 +232,7 @@ Start dDocent, type:
 
 `dDocent`
 
-The interactive part:
+**The interactive part:**
 
 Confirm # of individuals - yes/no
 
@@ -260,12 +260,12 @@ If all works, you get a plot of Unique Sequences vs Coverage; based on this grap
 
 You get another plot of Unique Sequences vs Individuals, choose the data cutoff.
 
-From here on, the pipeline will run on its own. 
+From here on, the pipeline should run on its own.
 
 
 ## 16-Sept-2020
 
-**Attempt #1 - all settings as listed above under "the interactive part"**
+**Attempt #1 - all settings as listed above under "4.2 the interactive part":**
 
 Running dDocent on all 56 files (28 individuals) for which I have fastq files.
 * cutoff chosen for unique seq vs coverage = 6
@@ -273,15 +273,15 @@ Running dDocent on all 56 files (28 individuals) for which I have fastq files.
 
 ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS. 
  
-**Attempt #2 - same as above, but changed "Limit memory use" to 10Gb.**
+**Attempt #2 - same as above, but changed "Limit memory use" to 10Gb:**
 
 SAME ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS. 
 
-**Attempt #3 - same as above, but changed "Limit memory use" to 0GB (based on dDocent user guide).**
+**Attempt #3 - same as above, but changed "Limit memory use" to 0GB (based on dDocent user guide):**
 
 SAME ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS. 
 
-
+---
 ## 17-Sept-2020
 
 Meeting with Katie - use seff to check memory usage and run less files to test the pipeline.
@@ -309,6 +309,7 @@ Seff: tells me the job is using ~2Gb of memory.
 THIS WORKS and the pipeline runs all the way.
 Seff: tells me memory utilized was 0Gb
 
+---
 ## 18-Sept-2020
 
 From here on, I'm incrementally increasing the number of files/individuals to see if/when I get the memory error.
@@ -343,7 +344,7 @@ Seff: tells me memory utilized was 0Gb
 ERROR: EXCEEDED JOB MEMORY LIMIT AT BWA TO MAP READS.
 Seff: tells me memory utilized was 2.17Gb
 
-
+---
 ## 21-Sept-2020
 
 **Attempt #9, same settings as above, except:**
