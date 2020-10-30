@@ -370,10 +370,14 @@ THIS WORKS and the pipeline runs all the way.
 Seff: tells me memory utilized was 0Gb.
 
 ---
-Based on the 10 attempts listed above, it looks like the partition can handle 18 files (9 individuals)
+
+**Attempts 5-7 worked and the pipeline ran all the way through!!!!!!!!!!!!! :) - but with limited number of files**
+
+Based on the 10 attempts listed above, it looks like the memory available in partition can handle 18 files (9 individuals) 
 * how much data does that correspond to?
 
-There is a 2Gb memory limit in the partition.
+**There is a 2Gb memory limit in the partition, - or maybe it is a glitch and we should be able to request more memory?**
 
-Next steps: create a settings file for the interactive part of the pipeline and try to submit as a job so more memory is available.
+**Next steps: create a settings file for the interactive part of the pipeline and try to submit as a job so more memory is available.**
+
 ---
