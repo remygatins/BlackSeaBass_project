@@ -46,6 +46,8 @@ Thais' notebook BSB genomics
     * Get remaining finclips and data from ME - Marissa
     * Quotes from sequencing facility
     * Data quality control
+        * thais entered vial IDs for Maine samples, because she setn to Marissa
+        * thais entered vial IDs for RI/MA samples, because she setn to Jon
  
  * Thais: Go through data in this [spreadsheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-01-BSB-DNA-extraction_summary.md) and transfer to the [Black sea bass shared datasheet](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=0).
    * Thais will move this data into the [database](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=690341558)
