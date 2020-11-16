@@ -36,8 +36,8 @@ Thais' notebook BSB genomics
    * May need to purchase another kit (~$1000)
    * E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method
    * if we use plates, may need to go to Randall's lab
-   * Use elution volume less of what they tell you to do (~30uL instead of 100uL for first elution and 70uL out of second elution)
-      *  Sara used to use 1/2 the elution volume for her samples
+   * Use elution volume less of what they tell you to do (~30uL instead of 100uL for first elution and 70uL out of second elution), stored separately and not combined. Thais checked 2nd elution and not much there.
+      *  Sara used to use 1/2 the elution volume for her samples, then she combined them
  
  TO DO:
  
@@ -45,7 +45,7 @@ Thais' notebook BSB genomics
     * Confirm all samples with Jon
     * Get remaining finclips and data from ME - Marissa
     * Quotes from sequencing facility
-    * Data quality control
+    * Data quality control - we're not sure if these data are entered yet
         * thais entered vial IDs for Maine samples, because she setn to Marissa
         * thais entered vial IDs for RI/MA samples, because she setn to Jon
  
