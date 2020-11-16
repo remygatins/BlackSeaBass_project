@@ -28,22 +28,37 @@ Thais' notebook BSB genomics
 
 * Sequencing facility contact info: 
     * "We request DNA to be sent with volumes >20 ul and concentrations >25 ng/ul as measured by Picogreen or Qubit since Nanodrop will tend to overestimate the amount of double stranded DNA available. However, we input 10 ul of DNA at 10 ng/ul into our GBS library preparation, so DNA >10 ng/ul as measured by Picogreen or Qubit is acceptable. Our library prep rate includes an initial Picogreen QC step, and we can still attempt library prep on sequencing on samples with concentrations <10 ng/ul. We have successfully sequenced samples with initial concentrations <5 ng/ul, however, the results are more variable and we cannot guarantee that the samples will be successful."
-    * Email?
+    * Email: Evan Forsberg    GBS Service Manager    1-202 NHH    312 Church St SE    Minneapolis, MN 55455    (612) 624-3177    GBS@umn.edu
+    * Thais will forward correspondence to Katie and Alan
+    * Budget: ~$7000-$9000
 
-* Extraction protocol
-  * 
+* [Extraction protocol](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_protocols/DNA-extraction-kits.md)
+   * May need to purchase another kit (~$1000)
+   * E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method
+   * if we use plates, may need to go to Randall's lab
+   * Use elution volume less of what they tell you to do (~30uL instead of 100uL for first elution and 70uL out of second elution)
+      *  Sara used to use 1/2 the elution volume for her samples
  
  TO DO:
  
- * Confirm all samples with Jon
- * Get remaining finclips and data from ME - Marissa
- * Go through data in this [spreadsheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-01-BSB-DNA-extraction_summary.md) and transfer to the [Black sea bass shared datasheet](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=0).
+ * Katie
+    * Confirm all samples with Jon
+    * Get remaining finclips and data from ME - Marissa
+    * Quotes from sequencing facility
+    * Data quality control
+ 
+ * Thais: Go through data in this [spreadsheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-01-BSB-DNA-extraction_summary.md) and transfer to the [Black sea bass shared datasheet](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=0).
    * Thais will move this data into the [database](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=690341558)
    * Thais thinks we can sequence all of them
    * Notes in right column are based on concentration and volume:
      * plenty: for all samples which we have quantity from Sequencing facility
      * acceptable, could retry: we have enough, but the concentrations are greater than 5 and less than 25ng/uL
      * `repeated` had to extract twice,  some samples we have less than 5
- 
- - 
+ * Alan: extractions 
+    * extract remaining samples
+    * quantify all samples we plan to send to sequencing on plate reader
+    * prepare for sequencing requried by sequencing facility
+    * help with shipping to sequencing facility
+    
+
  
