@@ -44,7 +44,7 @@ Thais' notebook BSB genomics
  * Katie
     * Confirm all samples with Jon
     * Get remaining finclips and data from ME - Marissa
-    * Quotes from sequencing facility
+    * Quotes from sequencing facility `quote ddRAD library prep and sequencing` email thread
     * Data quality control - we're not sure if these data are entered yet
         * thais entered vial IDs for Maine samples, because she setn to Marissa
         * thais entered vial IDs for RI/MA samples, because she setn to Jon
