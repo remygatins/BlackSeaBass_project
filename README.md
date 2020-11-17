@@ -42,7 +42,7 @@ Thais' notebook BSB genomics
  TO DO:
  
  * Sample summary
-    * RI samples - data not organized
+    * RI samples (southern new england) - data not organized
         * Sample location is our freezer
         * 22 to extract/sequence
     * MA samples from Sept 2020 - where are these stored?
