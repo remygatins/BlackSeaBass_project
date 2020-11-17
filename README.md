@@ -41,6 +41,15 @@ Thais' notebook BSB genomics
  
  TO DO:
  
+ * Sample summary
+    * RI samples - data not organized
+        * Sample location is our freezer
+    * MA samples from Sept 2020 - where are these stored?
+    * NJ "conflict" - no date?
+    * NC samples - no date?
+    * ME list - this is a list of vials that Thais sent to Marissa, but never sent back to us
+
+ 
  * Katie
     * Confirm all samples with Jon
     * Get remaining finclips and data from ME - Marissa
