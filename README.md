@@ -44,11 +44,29 @@ Thais' notebook BSB genomics
  * Sample summary
     * RI samples - data not organized
         * Sample location is our freezer
+        * 22 to extract/sequence
     * MA samples from Sept 2020 - where are these stored?
-    * NJ "conflict" - no date?
-    * NC samples - no date?
+        * Thais gave EtOH vials to them
+        * Tommy and Jonathon collected and processed them on the boat
+        * In door of standing -20C freezer in Grabowski Lab
+        * 20-30: extract as many as we can that are less than 30
+    * NJ "conflict" - no date? Fixed with Jon/thais
+        * thais has a spreadsheet that came with these samples
+        * 
+    * NC samples - no date? Fixed with Jon/thais
     * ME list - this is a list of vials that Thais sent to Marissa, but never sent back to us
+        * Thais says that Marissa didn't enter information to big spreadsheet - Thais made a separate one
+        * thais will enter details - June and Nov 2020
+        * 15 samples, 9 are smaller than 30cM and 2 marked as YOY
+        * Jon will get Marissa to send the finclips
 
+ * Sample summary extracted by Thais (62 samples)
+    * NJ 17
+    * MD 20
+    * Seouthern NE 7
+    * ME 5
+    * NC 13
+    
  
  * Katie
     * Confirm all samples with Jon
