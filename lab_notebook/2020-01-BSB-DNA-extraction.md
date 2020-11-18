@@ -423,8 +423,8 @@ Round 7 sample info and DNA concentration results:
 | NC| Cs_NC_43 | Cs_NC_245 | 59 | 0.097 | 95.6  |191.2  | 28 |plenty|
 | NC| Cs_NC_44 | Cs_NC_246 | 60 | 0.140 | 56.2  |NA     | 29 |plenty|
 | NC| Cs_NC_45 | Cs_NC_247 | 61 | 0.041 | 7.94  |NA     | 29 |attempt|
-| MD| Cs_NC_61 | Cs_NC_136 | 62 | 0.094 | 98.4  |NA     | 29 |plenty|
-| MD| Cs_NC_64 | Cs_NC_139 | 63 | 0.177 | 114.0 |NA     | 29 |plenty|
+| MD| Cs_MD_61 | Cs_MD_136 | 62 | 0.094 | 98.4  |NA     | 29 |plenty|
+| MD| Cs_MD_64 | Cs_MD_139 | 63 | 0.177 | 114.0 |NA     | 29 |plenty|
 
 2nd and 3rd elution, extraction tube ID #55
 |Elution | Unique ID | Vial ID | Extraction ID | Qubit DNA concentration ug/uL |
