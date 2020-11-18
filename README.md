@@ -36,6 +36,7 @@ Thais' notebook BSB genomics
 
 * [Extraction protocol](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_protocols/DNA-extraction-kits.md)
    * May need to purchase another kit (~$1000)
+   * May also needd to purchase quantification kits (Qubit or Picogreen)
    * E.Z.N.A tissue DNA kit (D3396-02, Omega) - tubes (T) method
    * if we use plates, may need to go to Randall's lab
    * Use elution volume less of what they tell you to do (~30uL instead of 100uL for first elution and 70uL out of second elution), stored separately and not combined. Thais checked 2nd elution and not much there.
