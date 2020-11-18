@@ -99,17 +99,15 @@ There is no tissue left for samples from NC and NJ. All other locations have som
 
 |Extraction date| Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in g)|Qubit reading|Dilution factor|Qubit DNA concentration (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? | leftover tissue?|
 |:--------------|:---------|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:------:|:--------------:|:-----:|:-----:|
-|20200428| NC| Cs_NC_234 | Cs_NC_32       | 31 | 0.018 | 13.3  |NA| 13.3  | 29 | acceptable, repeated | NO |
-|20200428| NC| Cs_NC_235 | Cs_NC_33       | 32 | 0.018 | 10.1  |NA| 10.1  | 29 | acceptable, repeated | NO |
-|20200519| ME| Cs_ME_176 | 630            | 46 | 0.018 | 8.12  |2x| 16.24 | 29 | acceptable, repeated | YES|
 |20200414| NJ| Cs_NJ_115 | Cs_NJ_010      | 7  |<0.001 | 4.42  |2x| 8.84  | 29 | attempt, no tissue left | NO |
 |20200414| NJ| Cs_NJ_134 | Cs_NJ_029      | 19 |<0.001 | 4.26  |2x| 8.52  | 29 | attempt, no tissue left | NO |
 |20200414| NJ| Cs_NJ_135 | Cs_NJ_030      | 20 |<0.001 | 3.14  |2x| 6.28  | 29 | attempt, no tissue left | NO |
+|20200428| NC| Cs_NC_234 | Cs_NC_32       | 31 | 0.018 | 13.3  |NA| 13.3  | 29 | acceptable, repeated | NO |
+|20200428| NC| Cs_NC_235 | Cs_NC_33       | 32 | 0.018 | 10.1  |NA| 10.1  | 29 | acceptable, repeated | NO |
 |20200428| NC| Cs_NC_233 | Cs_NC_31       | 30 | 0.019 | 9.50  |NA| 9.50  | 29 | attempt, repeated | NO |
 |20200428| NC| Cs_NC_240 | Cs_NC_38       | 37 | 0.019 | 8.50  |NA| 8.50  | 29 | attempt, repeated | NO |
 |20200428| NC| Cs_NC_242 | Cs_NC_40       | 39 | 0.018 | 6.36  |NA| 6.36  | 29 | attempt, repeated | NO |
 |20200428| NC| Cs_NC_245 | Cs_NC_43       | 42 | 0.020 | 5.58  |NA| 5.58  | 29 | attemtp, repeated | NO |
-|20200519| NC| Cs_NC_247 | Cs_NC_45       | 61 | 0.041 | 7.94  |NA| 7.94  | 29 | attempt, no tissue left | NO |
 |20200428| NC| Cs_NC_237 | Cs_NC_35       | 34 | 0.018 | 4.82  |NA| 4.82  | 29 | ??, repeated | NO |
 |20200428| NC| Cs_NC_238 | Cs_NC_36       | 35 | 0.019 | 4.92  |NA| 4.92  | 29 | ??, repeated | NO |
 |20200428| NC| Cs_NC_239 | Cs_NC_37       | 36 | 0.020 | 4.94  |NA| 4.94  | 29 | ??, repeated | NO |
@@ -118,6 +116,8 @@ There is no tissue left for samples from NC and NJ. All other locations have som
 |20200428| NC| Cs_NC_246 | Cs_NC_44       | 43 | 0.019 | 4.44  |NA| 4.44  | 29 | ??, repeated | NO |
 |20200428| NC| Cs_NC_236 | Cs_NC_34       | 33 | 0.019 | 0.102 |NA| 0.102 | 27 | no, repeated | NO |
 |20200428| NC| Cs_NC_244 | Cs_NC_42       | 41 | 0.019 | 0.864 |NA| 0.864 | 29 | no, repeated | NO |
+|20200519| ME| Cs_ME_176 | 630            | 46 | 0.018 | 8.12  |2x| 16.24 | 29 | acceptable, repeated | YES|
+|20200519| NC| Cs_NC_247 | Cs_NC_45       | 61 | 0.041 | 7.94  |NA| 7.94  | 29 | attempt, no tissue left | NO |
 |20200519| NC| Cs_NC_236 | Cs_NC_34       | 50 | 0.182 | 0.280 |NA| 0.280 | 27 | no, no tissue left| NO |
 
 
