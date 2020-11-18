@@ -25,12 +25,13 @@ Thais' notebook BSB genomics
 * [Notebook](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-01-BSB-DNA-extraction.md)
     * Up to March 12, was troubleshooting 
     * Unique_ID is what is used to match to datasheet
-    * Thais made some changes to the entry 2020-01-BSB-DNA-extraction_summary.md to clarify dilution factors used to measure sample concentrations using Qubit and to provide a separate table listing the 62 extracted samples to be sent out to sequencing facility.
+    * 20201118 Thais made some changes to the entry 2020-01-BSB-DNA-extraction_summary.md to clarify dilution factors used to measure sample concentrations using Qubit and to provide a separate table listing the 62 extracted samples to be sent out to sequencing facility.
+    * 20201118 Thais fixes some typos in the notebooks (diddn't change anything regarding number of samples or DNA quants).
 
 * Sequencing facility contact info: 
     * "We request DNA to be sent with volumes >20 ul and concentrations >25 ng/ul as measured by Picogreen or Qubit since Nanodrop will tend to overestimate the amount of double stranded DNA available. However, we input 10 ul of DNA at 10 ng/ul into our GBS library preparation, so DNA >10 ng/ul as measured by Picogreen or Qubit is acceptable. Our library prep rate includes an initial Picogreen QC step, and we can still attempt library prep on sequencing on samples with concentrations <10 ng/ul. We have successfully sequenced samples with initial concentrations <5 ng/ul, however, the results are more variable and we cannot guarantee that the samples will be successful."
     * Email: Evan Forsberg    GBS Service Manager    1-202 NHH    312 Church St SE    Minneapolis, MN 55455    (612) 624-3177    GBS@umn.edu
-    * Thais will forward correspondence to Katie and Alan
+    * Thais will forward correspondence to Katie and Alan - DONE (TB).
     * Budget: ~$7000-$9000
 
 * [Extraction protocol](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_protocols/DNA-extraction-kits.md)
@@ -77,9 +78,9 @@ Thais' notebook BSB genomics
         * thais entered vial IDs for Maine samples, because she setn to Marissa
         * thais entered vial IDs for RI/MA samples, because she setn to Jon
  
- * Thais: Go through data in this [spreadsheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-01-BSB-DNA-extraction_summary.md) and transfer to the [Black sea bass shared datasheet](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=0).
+ * Thais: Go through data in this [spreadsheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-01-BSB-DNA-extraction_summary.md) and transfer to the [Black sea bass shared datasheet](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=0). DONE (TB)
    * Thais will move this data into the [database](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=690341558)
-   * Thais thinks we can sequence all of them
+   * Thais thinks we can sequence all of them (all 62 listed above, TB)
    * Notes in right column are based on concentration and volume:
      * plenty: for all samples which we have quantity from Sequencing facility
      * acceptable, could retry: we have enough, but the concentrations are greater than 5 and less than 25ng/uL
