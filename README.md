@@ -25,6 +25,7 @@ Thais' notebook BSB genomics
 * [Notebook](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-01-BSB-DNA-extraction.md)
     * Up to March 12, was troubleshooting 
     * Unique_ID is what is used to match to datasheet
+    * Thais made some changes to the entry 2020-01-BSB-DNA-extraction_summary.md to clarify dilution factors used to measure sample concentrations using Qubit and to provide a separate table listing the 62 extracted samples to be sent out to sequencing facility.
 
 * Sequencing facility contact info: 
     * "We request DNA to be sent with volumes >20 ul and concentrations >25 ng/ul as measured by Picogreen or Qubit since Nanodrop will tend to overestimate the amount of double stranded DNA available. However, we input 10 ul of DNA at 10 ng/ul into our GBS library preparation, so DNA >10 ng/ul as measured by Picogreen or Qubit is acceptable. Our library prep rate includes an initial Picogreen QC step, and we can still attempt library prep on sequencing on samples with concentrations <10 ng/ul. We have successfully sequenced samples with initial concentrations <5 ng/ul, however, the results are more variable and we cannot guarantee that the samples will be successful."
