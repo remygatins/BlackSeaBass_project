@@ -358,20 +358,20 @@ Round 6 sample info and DNA concentration results:
 | SN| Cs_SN_191 | 58       | 27 | 0.020 | 88.4  |NA |29|plenty|
 | SN| Cs_SN_189 | 4        | 28 | 0.017 | 79.6  |NA |29|plenty|
 | SN| Cs_SN_009 | Cs_C_009_DNA | 29 | 0.015 | 100.0 |NA|29|plenty|
-| NC| Cs_NC_31 | Cs_NC_233 | 30 | 0.019 | 9.50  |NA |29|maybe|
-| NC| Cs_NC_32 | Cs_NC_234 | 31 | 0.018 | 13.3  |NA |29|acceptable|
-| NC| Cs_NC_33 | Cs_NC_235 | 32 | 0.018 | 10.1  |NA |29|acceptable|
-| NC| Cs_NC_34 | Cs_NC_236 | 33 | 0.019 | 0.102 |NA |27| no |
-| NC| Cs_NC_35 | Cs_NC_237 | 34 | 0.018 | 4.82  |NA |29| ?? |
-| NC| Cs_NC_36 | Cs_NC_238 | 35 | 0.019 | 4.92  |NA |29| ?? |
-| NC| Cs_NC_37 | Cs_NC_239 | 36 | 0.020 | 4.94  |NA |29| ?? |
-| NC| Cs_NC_38 | Cs_NC_240 | 37 | 0.019 | 8.50  |NA |29| attempt |
-| NC| Cs_NC_39 | Cs_NC_241 | 38 | 0.019 | 3.22  |NA |29| attempt |
-| NC| Cs_NC_40 | Cs_NC_242 | 39 | 0.018 | 6.36  |NA |29| attempt |
-| NC| Cs_NC_41 | Cs_NC_243 | 40 | 0.018 | 4.54  |NA |29| ?? |
-| NC| Cs_NC_42 | Cs_NC_244 | 41 | 0.019 | 0.864 |NA |29| no |
-| NC| Cs_NC_43 | Cs_NC_245 | 42 | 0.020 | 5.58  |NA |29| attemtp |
-| NC| Cs_NC_44 | Cs_NC_246 | 43 | 0.019 | 4.44  |NA |29| ?? |
+| NC| Cs_NC_233 | Cs_NC_31 | 30 | 0.019 | 9.50  |NA |29|maybe|
+| NC| Cs_NC_234 | Cs_NC_32 | 31 | 0.018 | 13.3  |NA |29|acceptable|
+| NC| Cs_NC_235 | Cs_NC_33 | 32 | 0.018 | 10.1  |NA |29|acceptable|
+| NC| Cs_NC_236 | Cs_NC_34 | 33 | 0.019 | 0.102 |NA |27| no |
+| NC| Cs_NC_237 | Cs_NC_35 | 34 | 0.018 | 4.82  |NA |29| ?? |
+| NC| Cs_NC_238 | Cs_NC_36 | 35 | 0.019 | 4.92  |NA |29| ?? |
+| NC| Cs_NC_239 | Cs_NC_37 | 36 | 0.020 | 4.94  |NA |29| ?? |
+| NC| Cs_NC_240 | Cs_NC_38 | 37 | 0.019 | 8.50  |NA |29| attempt |
+| NC| Cs_NC_241 | Cs_NC_39 | 38 | 0.019 | 3.22  |NA |29| attempt |
+| NC| Cs_NC_242 | Cs_NC_40 | 39 | 0.018 | 6.36  |NA |29| attempt |
+| NC| Cs_NC_243 | Cs_NC_41 | 40 | 0.018 | 4.54  |NA |29| ?? |
+| NC| Cs_NC_244 | Cs_NC_42 | 41 | 0.019 | 0.864 |NA |29| no |
+| NC| Cs_NC_245 | Cs_NC_43 | 42 | 0.020 | 5.58  |NA |29| attemtp |
+| NC| Cs_NC_246 | Cs_NC_44 | 43 | 0.019 | 4.44  |NA |29| ?? |
 
 > samples from NC are muscle tissue, not fin tissue; sample #38 (exraction tube ID) looked a little slimy, degraded, and had less OGLfix liquid in the tube.
 
@@ -408,29 +408,29 @@ Round 7 sample info and DNA concentration results:
 | ME| Cs_ME_166 | 102016   | 44 | 0.019 | 98.4  | 196.8 | 28 |plenty|
 | ME| Cs_ME_167 | 1027161  | 45 | 0.021 | 106.0 | 212.0 | 29 |plenty|
 | ME| Cs_ME_176 | 630      | 46 | 0.018 | 8.12  | 16.24 | 29 | acceptable |
-| NC| Cs_NC_31 | Cs_NC_233 | 47 | 0.288 | 108.0 |NA     | 29 |plenty|
-| NC| Cs_NC_32 | Cs_NC_234 | 48 | 0.132 | 38.4  |NA     | 29 |plenty|
-| NC| Cs_NC_33 | Cs_NC_235 | 49 | 0.194 | 71.2  |NA     | 29 |plenty|
-| NC| Cs_NC_34 | Cs_NC_236 | 50 | 0.182 | 0.280 |NA     | 27 |**no**|
-| NC| Cs_NC_35 | Cs_NC_237 | 51 | 0.300 | 116.0 |NA     | 29 |plenty|
-| NC| Cs_NC_36 | Cs_NC_238 | 52 | 0.136 | 32.0  |NA     | 29 |plenty|
-| NC| Cs_NC_37 | Cs_NC_239 | 53 | 0.258 | 108.0 |NA     | 29 |plenty|
-| NC| Cs_NC_38 | Cs_NC_240 | 54 | 0.193 | 61.0  |122.0  | 28 |plenty|
-| NC| Cs_NC_39 | Cs_NC_241 | 55 | 0.087 | 30.6  |NA     | 29 |plenty|
-| NC| Cs_NC_40 | Cs_NC_242 | 56 | 0.176 | 89.6  |NA     | 29 |plenty|
-| NC| Cs_NC_41 | Cs_NC_243 | 57 | 0.309 | 106.0 |NA     | 29 |plenty|
-| NC| Cs_NC_42 | Cs_NC_244 | 58 | 0.344 | 50.4  |NA     | 29 |plenty|
-| NC| Cs_NC_43 | Cs_NC_245 | 59 | 0.097 | 95.6  |191.2  | 28 |plenty|
-| NC| Cs_NC_44 | Cs_NC_246 | 60 | 0.140 | 56.2  |NA     | 29 |plenty|
-| NC| Cs_NC_45 | Cs_NC_247 | 61 | 0.041 | 7.94  |NA     | 29 |attempt|
-| MD| Cs_MD_61 | Cs_MD_136 | 62 | 0.094 | 98.4  |NA     | 29 |plenty|
-| MD| Cs_MD_64 | Cs_MD_139 | 63 | 0.177 | 114.0 |NA     | 29 |plenty|
+| NC| Cs_NC_233 | Cs_NC_31 | 47 | 0.288 | 108.0 |NA     | 29 |plenty|
+| NC| Cs_NC_234 | Cs_NC_32 | 48 | 0.132 | 38.4  |NA     | 29 |plenty|
+| NC| Cs_NC_235 | Cs_NC_33 | 49 | 0.194 | 71.2  |NA     | 29 |plenty|
+| NC| Cs_NC_236 | Cs_NC_34 | 50 | 0.182 | 0.280 |NA     | 27 |**no**|
+| NC| Cs_NC_237 | Cs_NC_35 | 51 | 0.300 | 116.0 |NA     | 29 |plenty|
+| NC| Cs_NC_238 | Cs_NC_36 | 52 | 0.136 | 32.0  |NA     | 29 |plenty|
+| NC| Cs_NC_239 | Cs_NC_37 | 53 | 0.258 | 108.0 |NA     | 29 |plenty|
+| NC| Cs_NC_240 | Cs_NC_38 | 54 | 0.193 | 61.0  |122.0  | 28 |plenty|
+| NC| Cs_NC_241 | Cs_NC_39 | 55 | 0.087 | 30.6  |NA     | 29 |plenty|
+| NC| Cs_NC_242 | Cs_NC_40 | 56 | 0.176 | 89.6  |NA     | 29 |plenty|
+| NC| Cs_NC_243 | Cs_NC_41 | 57 | 0.309 | 106.0 |NA     | 29 |plenty|
+| NC| Cs_NC_244 | Cs_NC_42 | 58 | 0.344 | 50.4  |NA     | 29 |plenty|
+| NC| Cs_NC_245 | Cs_NC_43 | 59 | 0.097 | 95.6  |191.2  | 28 |plenty|
+| NC| Cs_NC_246 | Cs_NC_44 | 60 | 0.140 | 56.2  |NA     | 29 |plenty|
+| NC| Cs_NC_247 | Cs_NC_45 | 61 | 0.041 | 7.94  |NA     | 29 |attempt|
+| MD| Cs_MD_136 | Cs_MD_61 | 62 | 0.094 | 98.4  |NA     | 29 |plenty|
+| MD| Cs_MD_139 | Cs_MD_64 | 63 | 0.177 | 114.0 |NA     | 29 |plenty|
 
 2nd and 3rd elution, extraction tube ID #55
 |Elution | Unique ID | Vial ID | Extraction ID | Qubit DNA concentration ug/uL |
 |:--------:|:-----------:|:---------:|:---------------:|:------:|
-| 2nd | Cs_NC_39 | Cs_NC_241 | 55 | 1.82 | 
-| 3rd | Cs_NC_39 | Cs_NC_241 | 55 | 0.170 |
+| 2nd | Cs_NC_241 | Cs_NC_39 | 55 | 1.82 | 
+| 3rd | Cs_NC_241 | Cs_NC_39 | 55 | 0.170 |
 
 > standard 1 (low): 62.31 ; standard 2 (high): 22262.95
 
@@ -464,24 +464,24 @@ Round 8 sample info and DNA concentration results:
 
 | Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in mg)|Qubit (ng/uL)|DNA concentration considering dilution factor 2x (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? |
 |:---------:|:--------:|:---------------:|:----------------:|:---------------:|:-----------:|:----------------:|:--------------:|:-----:|
-| MD| Cs_MD_62 | Cs_MD_137 | 64 | 0.128 | 74.8 |NA| 29 |plenty|
-| MD| Cs_MD_63 | Cs_MD_138 | 65 | 0.135 | 96.8 |NA| 29 |plenty|
-| MD| Cs_MD_65 | Cs_MD_140 | 66 | 0.114 | 24.0 |NA| 29 |acceptable|
-| MD| Cs_MD_66 | Cs_MD_141 | 67 | 0.136 | 82.2 |NA| 29 |plenty|
-| MD| Cs_MD_67 | Cs_MD_142 | 68 | 0.136 | 32.0 |NA| 29 |plenty|
-| MD| Cs_MD_68 | Cs_MD_143 | 69 | 0.121 | 28.4 |NA| 29 |plenty|
-| MD| Cs_MD_71 | Cs_MD_145 | 70 | 0.108 | 30.6 |NA| 29 |plenty|
-| MD| Cs_MD_75 | Cs_MD_149 | 71 | 0.155 | 32.0 |NA| 29 |plenty|
-| MD| Cs_MD_76 | Cs_MD_150 | 72 | 0.097 | 26.2 |NA| 29 |plenty|
-| MD| Cs_MD_77 | Cs_MD_151 | 73 | 0.148 | 33.2 |NA| 29 |plenty|
-| MD| Cs_MD_78 | Cs_MD_152 | 74 | 0.146 | 19.9 |NA| 29 |acceptable|
-| MD| Cs_MD_80 | Cs_MD_154 | 75 | 0.153 | 38.8 |NA| 29 |plenty|
-| MD| Cs_MD_84 | Cs_MD_158 | 76 | 0.153 | 14.8 |NA| 29 |acceptable|
-| MD| Cs_MD_85 | Cs_MD_159 | 77 | 0.142 | 19.5 |NA| 29 |acceptable|
-| MD| Cs_MD_86 | Cs_MD_160 | 78 | 0.132 | 45.8 |NA| 29 |plent|
-| MD| Cs_MD_87 | Cs_MD_161 | 79 | 0.151 | 22.0 |NA| 29 |acceptable|
-| MD| Cs_MD_88 | Cs_MD_162 | 80 | 0.108 | 46.4 |NA| 29 |plenty|
-| MD| Cs_MD_89 | Cs_MD_163 | 81 | 0.125 | 13.8 |NA| 29 |acceptable|
+| MD| Cs_MD_137 | Cs_MD_62 | 64 | 0.128 | 74.8 |NA| 29 |plenty|
+| MD| Cs_MD_138 | Cs_MD_63 | 65 | 0.135 | 96.8 |NA| 29 |plenty|
+| MD| Cs_MD_140 | Cs_MD_65 | 66 | 0.114 | 24.0 |NA| 29 |acceptable|
+| MD| Cs_MD_141 | Cs_MD_66 | 67 | 0.136 | 82.2 |NA| 29 |plenty|
+| MD| Cs_MD_142 | Cs_MD_67 | 68 | 0.136 | 32.0 |NA| 29 |plenty|
+| MD| Cs_MD_143 | Cs_MD_68 | 69 | 0.121 | 28.4 |NA| 29 |plenty|
+| MD| Cs_MD_145 | Cs_MD_71 | 70 | 0.108 | 30.6 |NA| 29 |plenty|
+| MD| Cs_MD_149 | Cs_MD_75 | 71 | 0.155 | 32.0 |NA| 29 |plenty|
+| MD| Cs_MD_150 | Cs_MD_76 | 72 | 0.097 | 26.2 |NA| 29 |plenty|
+| MD| Cs_MD_151 | Cs_MD_77 | 73 | 0.148 | 33.2 |NA| 29 |plenty|
+| MD| Cs_MD_152 | Cs_MD_78 | 74 | 0.146 | 19.9 |NA| 29 |acceptable|
+| MD| Cs_MD_154 | Cs_MD_80 | 75 | 0.153 | 38.8 |NA| 29 |plenty|
+| MD| Cs_MD_158 | Cs_MD_84 | 76 | 0.153 | 14.8 |NA| 29 |acceptable|
+| MD| Cs_MD_159 | Cs_MD_85 | 77 | 0.142 | 19.5 |NA| 29 |acceptable|
+| MD| Cs_MD_160 | Cs_MD_86 | 78 | 0.132 | 45.8 |NA| 29 |plent|
+| MD| Cs_MD_161 | Cs_MD_87 | 79 | 0.151 | 22.0 |NA| 29 |acceptable|
+| MD| Cs_MD_162 | Cs_MD_88 | 80 | 0.108 | 46.4 |NA| 29 |plenty|
+| MD| Cs_MD_163 | Cs_MD_89 | 81 | 0.125 | 13.8 |NA| 29 |acceptable|
 | ME| Cs_ME_176 | 630      | 82 | 0.129 | 51.0 | 510.0 |  49*  | plenty |
 
 2nd and 3rd elution, extraction tube ID #82
