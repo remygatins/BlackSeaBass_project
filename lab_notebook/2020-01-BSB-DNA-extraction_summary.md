@@ -87,7 +87,7 @@ There is no tissue left for samples from NC and NJ. All other locations have som
 | MD| Cs_MD_80  | Cs_MD_154      | 75 | 0.153 | 38.8  |NA| 38.8  | 29 | plenty | YES|
 | MD| Cs_MD_86  | Cs_MD_160      | 78 | 0.132 | 45.8  |NA| 45.8  | 29 | plenty | YES|
 | MD| Cs_MD_88  | Cs_MD_162      | 80 | 0.108 | 46.4  |NA| 46.4  | 29 | plenty | YES|
-| ME| Cs_ME_176 | 630            | 82 | 0.129 | 51.0  |  | 510.0 | 49*| plenty | YES|
+| ME| Cs_ME_176 | 630            | 82 | 0.129 | 51.0  |10x| 510.0 | 49| plenty | YES|
 | MD| Cs_MD_65  | Cs_MD_140      | 66 | 0.114 | 24.0  |NA| 24.0  | 29 | acceptable, could retry | YES|
 | MD| Cs_MD_78  | Cs_MD_152      | 74 | 0.146 | 19.9  |NA| 19.9  | 29 | acceptable, could retry | YES|
 | MD| Cs_MD_84  | Cs_MD_158      | 76 | 0.153 | 14.8  |NA| 14.8  | 29 | acceptable, could retry | YES|
