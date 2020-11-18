@@ -79,7 +79,7 @@ Thais' notebook BSB genomics
         * thais entered vial IDs for RI/MA samples, because she setn to Jon
  
  * Thais: Go through data in this [spreadsheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-01-BSB-DNA-extraction_summary.md) and transfer to the [Black sea bass shared datasheet](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=0). DONE (TB)
-   * Thais will move this data into the [database](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=690341558)
+   * Thais will move this data into the [database](https://docs.google.com/spreadsheets/d/1nsb41ZlVDm029fumGS6wH2rgP8YyBvYq6LbtekpVMCk/edit#gid=690341558) DONE (TB)
    * Thais thinks we can sequence all of them (all 62 listed above, TB)
    * Notes in right column are based on concentration and volume:
      * plenty: for all samples which we have quantity from Sequencing facility
