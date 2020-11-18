@@ -73,8 +73,8 @@ There is no tissue left for samples from NC and NJ. All other locations have som
 | NC| Cs_NC_42  | Cs_NC_244      | 58 | 0.344 | 50.4  |NA| 50.4  | 29 | plenty | NO |
 | NC| Cs_NC_43  | Cs_NC_245      | 59 | 0.097 | 95.6  |2x| 191.2 | 28 | plenty | NO |
 | NC| Cs_NC_44  | Cs_NC_246      | 60 | 0.140 | 56.2  |NA| 56.2  | 29 | plenty | NO |
-| MD| Cs_NC_61  | Cs_NC_136      | 62 | 0.094 | 98.4  |NA| 98.4  | 29 | plenty | NO |
-| MD| Cs_NC_64  | Cs_NC_139      | 63 | 0.177 | 114.0 |NA| 114.0 | 29 | plenty | NO |
+| MD| Cs_MD_61  | Cs_MD_136      | 62 | 0.094 | 98.4  |NA| 98.4  | 29 | plenty | NO |
+| MD| Cs_MD_64  | Cs_MD_139      | 63 | 0.177 | 114.0 |NA| 114.0 | 29 | plenty | NO |
 | MD| Cs_MD_62  | Cs_MD_137      | 64 | 0.128 | 74.8  |NA| 74.8  | 29 | plenty | YES|
 | MD| Cs_MD_63  | Cs_MD_138      | 65 | 0.135 | 96.8  |NA| 96.8  | 29 | plenty | YES|
 | MD| Cs_MD_66  | Cs_MD_141      | 67 | 0.136 | 82.2  |NA| 82.2  | 29 | plenty | YES|
