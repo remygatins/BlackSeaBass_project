@@ -28,6 +28,40 @@
 
 There is no tissue left for samples from NC and NJ. All other locations have some tissue left, stored at -80oC.
 
+## 2020_11_20
+
+**DNA extracts are storred in the -80oC freezer in location 4111-4144 (3 boxes total labelled):**
+
+Black Seabass DNA extractions Thais April 2020 BOX 1
+  - contains samples extracted on 14-15 April 2020 and 28-29 April 2020;
+  - vials in this box are labelled 1-43 (corresponding to the Extraction tube ID in the table below). There are 2 tubes per sample, corresponding to the 2 elutions:
+    - first elution = 30uL
+    - second elution = 70uL
+
+Black Seabass DNA extractions Thais May 2020 BOX 2
+  - contains samples extracted on 19-20 May 2020
+  - vials in this box are labelled 44-63 (correspoinding to the Extraction tube ID in the table below). There are 3 tubes per sample, corresponding to 3 elutions:
+    - first elution = 30uL
+    - second elution = 70uL
+    - third elution = 100uL
+    
+      
+Black Seabass DNA extractions Thais May 2020 BOX 3
+  - contains samples extracted on 25-26 May 2020
+   - vials in this box are labelled 64-82 (correspoinding to the Extraction tube ID in the table below). There are 3 tubes per sample, corresponding to 3 elutions:
+    - first elution = 30uL
+    - second elution = 70uL
+    - third elution = 100uL
+
+Here are photos of the boxes labels and their contents:
+
+![Thais_BSB_DNAextracts_Box1_label]
+![Thais_BSB_DNAextracts_Box1_content]
+![Thais_BSB_DNAextracts_Box2_label]
+![Thais_BSB_DNAextracts_Box2_content]
+![Thais_BSB_DNAextracts_Box3_label]
+![Thais_BSB_DNAextracts_Box3_content]
+
 **Table 1. This table lists all 62 samples that Thais extracted in Spring 2020 and are ready to be sent out to library prep and sequencing.**
 
 |Extraction date| Location | UniqueID | Fin_clip vial_ID|extraction tube ID|initial amount (fin clip in g)|Qubit reading|Dilution factor|Qubit DNA concentration (ng/uL)| vol. left in 1st elution (uL)| enough for ddRAD? | leftover tissue?|
