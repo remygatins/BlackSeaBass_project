@@ -1,6 +1,6 @@
 ## 2020_11_20
 
-**DNA extracts are stored in the -80oC freezer in location 4111-4144 (3 boxes total labelled):**
+**DNA extracts are stored in the -80oC freezer in location 4111-4144 (3 boxes total) labelled:**
 
 Black Seabass DNA extractions Thais April 2020 BOX 1
   - contains samples extracted on 14-15 April 2020 and 28-29 April 2020;
