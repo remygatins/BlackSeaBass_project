@@ -28,14 +28,9 @@ Black Seabass DNA extractions Thais May 2020 BOX 3
 
 Here are photos of the boxes labels and their contents:
 
-![Thais_BSB_DNAextracts_Box1_label](../img/Box1-label-April2020.JPG)
+![Thais_BSB_DNAextracts_Box1](../img/BSB-DNAextracts-Box1.png)
 
-![Thais_BSB_DNAextracts_Box1_content](../img/Box1-vials-April2020.JPG)
+![Thais_BSB_DNAextracts_Box2](../img/BSB-DNAextracts-Box2.png)
 
-![Thais_BSB_DNAextracts_Box2_label](../img/Box2_label_May2020.jpg)
+![Thais_BSB_DNAextracts_Box3](../img/BSB-DNAextracts-Box3.png)
 
-![Thais_BSB_DNAextracts_Box2_content](../img/Box2_vials_May2020.jpg)
-
-![Thais_BSB_DNAextracts_Box3_label](../img/Box3_label_May2020.jpg)
-
-![Thais_BSB_DNAextracts_Box3_content](../img/Box3_vials_May2020.jpg)
