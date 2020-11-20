@@ -2,6 +2,8 @@
 
 **DNA extracts are stored in the -80oC freezer in location 4111-4144; there are 3 boxes total, labelled:**
 
+  - NOTE THAT THESE BOXES CONTAIN ALL EXTRACTS, INCLUDING LOW YIELD EXTRACTS: SAMPLE/TUBE IDs = 7, 19-20, 30 THROUGH 43, 46, 50, 61, SOME OF WHICH WERE SUCCESSFULLY RE-EXTRACTED. REFER TO THE DATABASE COLUMN ENOUGH FOR DDRAD TO FIND THE LIST OF 62 SAMPLES THAT ARE GOOD FOR DDDRA.
+
 Black Seabass DNA extractions Thais April 2020 BOX 1
   - contains samples extracted on 14-15 April 2020 and 28-29 April 2020;
   - vials in this box are labelled 1-43 (corresponding to the Extraction tube ID in Table 1 in notebook entry "2020-BSB-DNA-extraction_summary.md" https://github.com/thais-neu/BlackSeaBass_project/blob/master/lab_notebook/2020-BSB-DNA-extraction_summary.md). 
