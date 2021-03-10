@@ -509,6 +509,7 @@ I extracted the 67 samples collected from MA,ME, and RI in 2020 using standard e
 | ME | 15 |
 | MA | 30 |
 | RI | 22 |
+| Total | 67 |
 
 **Extraction Notes**
 
@@ -519,6 +520,7 @@ I extracted the 67 samples collected from MA,ME, and RI in 2020 using standard e
 * I quantified samples and then froze at -20C.
 * I requantified samples that were less than <20ng/ul on March 10th 2021. 
 * The estimated amount and threshold criteria for >20ng/ul are based on these requants where available.
+* Samples in omega elution plate labeled ```Black seabass DNA Extractions Feb 11th 2021 ADW``` in the -20C freezer.
 
 **Sample Information**
 
