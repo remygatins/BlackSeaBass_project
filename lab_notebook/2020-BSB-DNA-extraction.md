@@ -497,3 +497,92 @@ Round 8 sample info and DNA concentration results:
 **Notes on Round 8 reagents**
 
 HBC buffer from another kit was used for all samples.
+
+## Extraction of 2020-Feb-11th - Mass, Maine, Rhode Island (ADW)
+
+I extracted the 67 samples collected from MA,ME, and RI in 2020 using standard extraction protocols. I used an omega plate DNA Tissue Kit. I eluted samples in 200uL of extraction buffer.
+
+**Break down of samples by location**
+
+| Location | Number of samples |
+|:--------:|:-----------------:|
+| ME | 15 |
+| MA | 30 |
+| RI | 22 |
+
+**Extraction Notes**
+
+* Performed overnight digestion using plates and centrifuge in Hugher lab.
+* I used silicon plates to cover plate for overnight digestion. I notice some preciptation on the top of plate in morning, which I tried to carefully wipe away as i pull off silicon mat.
+* I realized that sample that a peice of ```Cs_MA_150``` fell into well ```H3``` so I decided to just extract the sample twice (wells ```G3``` and ```H3```)
+* Samples were eluted into 200uL of elution buffer heated to 57C. 
+* I quantified samples and then froze at -20C.
+* I requantified samples that were less than <20ng/ul on March 10th 2021. 
+* The estimated amount and threshold criteria for >20ng/ul are based on these requants where available.
+
+**Sample Information**
+
+| UniqueID | Fin_Clip_Vial_ID | Location | Plate_row | Plate_column | Qubit (ng/uL) | Re-Quant (ng_ul) | Amount (ug, based on 190uL elution) | > 20ng/ul | 
+ | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | 
+ | Cs_ME_248 | Cs_ME_91 | ME | A | 1 | 20 | NA | 3.8 | GOOD | 
+ | Cs_ME_249 | Cs_ME_92 | ME | B | 1 | 29.2 | NA | 5.548 | GOOD | 
+ | Cs_ME_250 | Cs_ME_93 | ME | C | 1 | 21.4 | NA | 4.066 | GOOD | 
+ | Cs_ME_251 | Cs_ME_94 | ME | D | 1 | 42.4 | NA | 8.056 | GOOD | 
+ | Cs_ME_252 | Cs_ME_95 | ME | E | 1 | 39.6 | NA | 7.524 | GOOD | 
+ | Cs_ME_253 | Cs_ME_96 | ME | F | 1 | 14.4 | 22.2 | 4.218 | GOOD | 
+ | Cs_ME_254 | Cs_ME_97 | ME | G | 1 | 5.7 | 6.08 | 1.1552 | RE-EXTRACT | 
+ | Cs_ME_255 | Cs_ME_98 | ME | H | 1 | 25.2 | NA | 4.788 | GOOD | 
+ | Cs_ME_256 | Cs_ME_99 | ME | A | 2 | 37.2 | NA | 7.068 | GOOD | 
+ | Cs_ME_257 | Cs_ME_100 | ME | B | 2 | 40.6 | NA | 7.714 | GOOD | 
+ | Cs_ME_258 | Cs_ME_101 | ME | C | 2 | 0.3 | 69.04 | 13.1176 | GOOD | 
+ | Cs_ME_259 | Cs_ME_102 | ME | D | 2 | 17.9 | 10.4 | 1.976 | RE-EXTRACT | 
+ | Cs_ME_260 | Cs_ME_103 | ME | E | 2 | 15.2 | 14.4 | 2.736 | RE-EXTRACT | 
+ | Cs_ME_261 | Cs_ME_104 | ME | F | 2 | 36.6 | NA | 6.954 | GOOD | 
+ | Cs_ME_262 | Cs_ME_105 | ME | G | 2 | 46.6 | NA | 8.854 | GOOD | 
+ | Cs_MA_298 | Cs_MA_141 | MA | H | 2 | 14.6 | 19.3 | 3.667 | GOOD | 
+ | Cs_MA_299 | Cs_MA_142 | MA | A | 3 | 9.18 | 27.4 | 5.206 | GOOD | 
+ | Cs_MA_300 | Cs_MA_143 | MA | B | 3 | 28.6 | NA | 5.434 | GOOD | 
+ | Cs_MA_302 | Cs_MA_145 | MA | C | 3 | 27.2 | NA | 5.168 | GOOD | 
+ | Cs_MA_303 | Cs_MA_146 | MA | D | 3 | 27.4 | NA | 5.206 | GOOD | 
+ | Cs_MA_304 | Cs_MA_147 | MA | E | 3 | 40.8 | NA | 7.752 | GOOD | 
+ | Cs_MA_306 | Cs_MA_149 | MA | F | 3 | 29.3 | NA | 5.567 | GOOD | 
+ | Cs_MA_307 | Cs_MA_150 | MA | G | 3 | 32.6 | NA | 6.194 | GOOD | 
+ | Cs_MA_307 | Cs_MA_150 | MA | H | 3 | 17.4 | NA | 3.306 | GOOD | 
+ | Cs_MA_309 | Cs_MA_152 | MA | A | 4 | 22.6 | NA | 4.294 | GOOD | 
+ | Cs_MA_310 | Cs_MA_153 | MA | B | 4 | 38 | NA | 7.22 | GOOD | 
+ | Cs_MA_311 | Cs_MA_154 | MA | C | 4 | 19.9 | 24 | 4.56 | GOOD | 
+ | Cs_MA_313 | Cs_MA_156 | MA | D | 4 | 48.8 | NA | 9.272 | GOOD | 
+ | Cs_MA_314 | Cs_MA_157 | MA | E | 4 | 39 | NA | 7.41 | GOOD | 
+ | Cs_MA_315 | Cs_MA_158 | MA | F | 4 | 40.4 | NA | 7.676 | GOOD | 
+ | Cs_MA_316 | Cs_MA_159 | MA | G | 4 | 39.4 | NA | 7.486 | GOOD | 
+ | Cs_MA_317 | Cs_MA_160 | MA | H | 4 | 3.64 | 4.22 | 0.8018 | RE-EXTRACT | 
+ | Cs_MA_318 | Cs_MA_161 | MA | A | 5 | 36.3 | NA | 6.897 | GOOD | 
+ | Cs_MA_319 | Cs_MA_162 | MA | B | 5 | 18.2 | 23 | 4.37 | GOOD | 
+ | Cs_MA_320 | Cs_MA_163 | MA | C | 5 | 41.2 | NA | 7.828 | GOOD | 
+ | Cs_MA_321 | Cs_MA_164 | MA | D | 5 | 57.8 | NA | 10.982 | GOOD | 
+ | Cs_MA_323 | Cs_MA_166 | MA | E | 5 | 52.6 | NA | 9.994 | GOOD | 
+ | Cs_MA_324 | Cs_MA_167 | MA | F | 5 | 38.6 | NA | 7.334 | GOOD | 
+ | Cs_MA_325 | Cs_MA_168 | MA | G | 5 | 42 | NA | 7.98 | GOOD | 
+ | Cs_MA_327 | Cs_MA_170 | MA | H | 5 | 37.6 | NA | 7.144 | GOOD | 
+ | Cs_RI_328 | Cs_RI_171 | RI | A | 6 | 50 | NA | 9.5 | GOOD | 
+ | Cs_RI_329 | Cs_RI_172 | RI | B | 6 | 45.4 | NA | 8.626 | GOOD | 
+ | Cs_RI_330 | Cs_RI_173 | RI | C | 6 | 61.4 | NA | 11.666 | GOOD | 
+ | Cs_RI_331 | Cs_RI_174 | RI | D | 6 | 12.4 | 12 | 2.28 | RE-EXTRACT | 
+ | Cs_RI_332 | Cs_RI_175 | RI | E | 6 | 91.2 | NA | 17.328 | GOOD | 
+ | Cs_RI_333 | Cs_RI_176 | RI | F | 6 | 114 | NA | 21.66 | GOOD | 
+ | Cs_RI_334 | Cs_RI_177 | RI | G | 6 | 47 | NA | 8.93 | GOOD | 
+ | Cs_RI_335 | Cs_RI_178 | RI | H | 6 | 17.3 | 18.4 | 3.496 | RE-EXTRACT | 
+ | Cs_RI_336 | Cs_RI_179 | RI | A | 7 | 15.8 | 25.4 | 4.826 | GOOD | 
+ | Cs_RI_337 | Cs_RI_180 | RI | B | 7 | 88.2 | NA | 16.758 | GOOD | 
+ | Cs_RI_338 | Cs_RI_181 | RI | C | 7 | 83.6 | NA | 15.884 | GOOD | 
+ | Cs_RI_339 | Cs_RI_182 | RI | D | 7 | 98.2 | NA | 18.658 | GOOD | 
+ | Cs_RI_340 | Cs_RI_183 | RI | E | 7 | 90.4 | NA | 17.176 | GOOD | 
+ | Cs_RI_341 | Cs_RI_184 | RI | F | 7 | 98.8 | NA | 18.772 | GOOD | 
+ | Cs_RI_342 | Cs_RI_185 | RI | G | 7 | 88.2 | NA | 16.758 | GOOD | 
+ | Cs_RI_343 | Cs_RI_186 | RI | H | 7 | 19.3 | 31.8 | 6.042 | GOOD | 
+ | Cs_RI_344 | Cs_RI_187 | RI | A | 8 | 62.4 | NA | 11.856 | GOOD | 
+ | Cs_RI_345 | Cs_RI_188 | RI | B | 8 | 15.1 | 17.2 | 3.268 | RE-EXTRACT | 
+ | Cs_RI_346 | Cs_RI_189 | RI | C | 8 | 78 | NA | 14.82 | GOOD | 
+ | Cs_RI_347 | Cs_RI_190 | RI | D | 8 | 61.4 | NA | 11.666 | GOOD | 
+ | Cs_RI_348 | Cs_RI_191 | RI | E | 8 | 3.1 | 3.1 | 0.589 | RE-EXTRACT | 
+ | Cs_RI_349 | Cs_RI_192 | RI | F | 8 | 21 | NA | 3.99 | GOOD | 
