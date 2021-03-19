@@ -588,3 +588,24 @@ I extracted the 67 samples collected from MA,ME, and RI in 2020 using standard e
  | Cs_RI_347 | Cs_RI_190 | RI | D | 8 | 61.4 | NA | 11.666 | GOOD | 
  | Cs_RI_348 | Cs_RI_191 | RI | E | 8 | 3.1 | 3.1 | 0.589 | RE-EXTRACT | 
  | Cs_RI_349 | Cs_RI_192 | RI | F | 8 | 21 | NA | 3.99 | GOOD | 
+
+## Re-extraction of previous samples - 2020-Mar-12th - Mass, Maine, Rhode Island (ADW)
+
+I re-extracted samples that failed during the Feb-2021 extraction. Standard protocols from the omega kit were used.
+
+I eluted into 100uL of molecular grade water. Samples were stored in the 9th row of the Feb-2021 extraction plate.
+
+| UniqueID | Fin_Clip_Vial_ID | Location | Plate_row | Plate_column | Qubit (ng/uL) | Re-Quant (ng_ul) | Amount (ng, based on 100uL elution) | > 20ng/ul | 
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | 
+| Cs_ME_254 | Cs_ME_97 | ME | A | 9 | 46.2 | NA | 4620 | GOOD | 
+| Cs_ME_259 | Cs_ME_102 | ME | B | 9 | 1.76 | NA | 176 | RE-EXTRACT | 
+| Cs_ME_260 | Cs_ME_103 | ME | C | 9 | 15.4 | NA | 1540 | RE-EXTRACT | 
+| Cs_MA_317 | Cs_MA_160 | MA | D | 9 | 6.88 | NA | 688 | RE-EXTRACT | 
+| Cs_RI_331 | Cs_RI_174 | RI | E | 9 | 80.6 | NA | 8060 | GOOD | 
+| Cs_RI_335 | Cs_RI_178 | RI | F | 9 | 90.0 | NA | 9000 | GOOD | 
+| Cs_RI_345 | Cs_RI_188 | RI | G | 9 | TOO HIGH | NA | NA | GOOD | 
+| Cs_RI_348 | Cs_RI_191 | RI | H | 9 | 25.6 | NA | 2560 | GOOD | 
+
+There were still three samples that could be re-extracted. I believe there is enough sample to do this. We may want to look into either borrowing a couple of individual extraction preps from another lab or buying a new kit if we want to extract these samples.
+
+Alternatively, there should be enough material among the two extracts if we want to try and concentrate it with a bead wash.
