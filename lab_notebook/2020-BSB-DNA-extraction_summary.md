@@ -1,14 +1,13 @@
 ## The final list of samples submitted to University of Minessota Genomic Center can be found in 
 
-![final_list] https://github.com/thais-neu/BlackSeaBass_project/blob/master/TBittar_GBS_Ext_Plate_Subm_2019_v1.xlsx
+![UMN_samplesheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/TBittar_GBS_Ext_Plate_Subm_2019_v1.xlsx)
 
 
 ## The list below does NOT include samples extracted by ADW in 2021. The lab notebook entry does. 
 
 
 
-
-## This is a summary of all Black Sea Bass samples extracted for ddRAD library prep and sequencing (April-May 2020).
+## This is a summary of Black Sea Bass samples extracted by Thais for ddRAD library prep and sequencing (April-May 2020).
 
 
 **From the sequencing facility:**
