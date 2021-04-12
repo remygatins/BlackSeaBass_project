@@ -620,6 +620,7 @@ The samples below are distributed in two 96-well plates ID 20201_Centropristis_s
 ![UMN_samplesheet](https://github.com/thais-neu/BSBproject.md/blob/master/img/20210412_UMNsamplesheet)
 
 | Location | Number of samples |
+|:--------:|:-----------------:|
 |       MA |        23         |
 |       MD |        20         |
 |       ME |        20         |
