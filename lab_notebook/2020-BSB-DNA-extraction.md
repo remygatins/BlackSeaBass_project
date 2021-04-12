@@ -611,9 +611,9 @@ There were still three samples that could be re-extracted. I believe there is en
 Alternatively, there should be enough material among the two extracts if we want to try and concentrate it with a bead wash.
 
 
-## List of samples submitted to University of Minessota Genomics Center for ddRAD library prep and sequencing. 
+## 2021 April 12 List of samples submitted to University of Minessota Genomics Center for ddRAD library prep and sequencing. 
 
-The samples below are distributed in two 96-well plates ID 20201_Centropristis_striata_BlaSeaBass_ddRADSeq_Plate1 and Plate2.
+The samples below are distributed in two 96-well plates ID 2021_Centropristis_striata_BlaSeaBass_ddRADSeq_Plate1 and Plate2.
 
 28 ul of each sample was sent to library prep and sequencing; concentration of each sample (based on Qubit) and plate layout can be found in 
 
