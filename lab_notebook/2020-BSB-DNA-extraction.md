@@ -617,6 +617,8 @@ Alternatively, there should be enough material among the two extracts if we want
 
 The samples below are distributed in two 96-well plates ID 2021_Centropristis_striata_BlaSeaBass_ddRADSeq_Plate1 and Plate2.
 
+Each plate also has 2 blanks (2 completely empty wells).
+
 28 ul of each sample was sent to library prep and sequencing; concentration of each sample (based on Qubit) and plate layout can be found in 
 
 ![UMN_samplesheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/TBittar_GBS_Ext_Plate_Subm_2019_v1.xlsx)
