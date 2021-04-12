@@ -498,7 +498,7 @@ Round 8 sample info and DNA concentration results:
 
 HBC buffer from another kit was used for all samples.
 
-## Extraction of 2020-Feb-11th - Mass, Maine, Rhode Island (ADW)
+## Extraction of 2021-Feb-11th - Mass, Maine, Rhode Island (ADW)
 
 I extracted the 67 samples collected from MA,ME, and RI in 2020 using standard extraction protocols. I used an omega plate DNA Tissue Kit. I eluted samples in 200uL of extraction buffer.
 
@@ -589,7 +589,7 @@ I extracted the 67 samples collected from MA,ME, and RI in 2020 using standard e
  | Cs_RI_348 | Cs_RI_191 | RI | E | 8 | 3.1 | 3.1 | 0.589 | RE-EXTRACT | 
  | Cs_RI_349 | Cs_RI_192 | RI | F | 8 | 21 | NA | 3.99 | GOOD | 
 
-## Re-extraction of previous samples - 2020-Mar-12th - Mass, Maine, Rhode Island (ADW)
+## Re-extraction of previous samples - 2021-Mar-12th - Mass, Maine, Rhode Island (ADW)
 
 I re-extracted samples that failed during the Feb-2021 extraction. Standard protocols from the omega kit were used.
 
