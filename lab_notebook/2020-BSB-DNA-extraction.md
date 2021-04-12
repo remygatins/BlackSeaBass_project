@@ -609,3 +609,23 @@ I eluted into 100uL of molecular grade water. Samples were stored in the 9th row
 There were still three samples that could be re-extracted. I believe there is enough sample to do this. We may want to look into either borrowing a couple of individual extraction preps from another lab or buying a new kit if we want to extract these samples.
 
 Alternatively, there should be enough material among the two extracts if we want to try and concentrate it with a bead wash.
+
+
+## List of samples submitted to University of Minessota Genomics Center for ddRAD library prep and sequencing. 
+
+The samples below are distributed in two 96-well plates ID 20201_Centropristis_striata_BlaSeaBass_ddRADSeq_Plate1 and Plate2.
+
+28 ul of each sample was sent to library prep and sequencing; concentration of each sample (based on Qubit) and plate layout can be found in 
+
+![UMN_samplesheet](https://github.com/thais-neu/BSBproject.md/blob/master/img/20210412_UMNsamplesheet)
+
+| Location | Number of samples |
+|       MA |        23         |
+|       MD |        20         |
+|       ME |        20         |
+|       NC |        13         |
+|       NJ |        17         |
+|       RI |         7         |
+|       SN |        22         |
+|    Total |       122         |
+
