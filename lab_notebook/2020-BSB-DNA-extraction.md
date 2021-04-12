@@ -619,7 +619,7 @@ The samples below are distributed in two 96-well plates ID 2021_Centropristis_st
 
 28 ul of each sample was sent to library prep and sequencing; concentration of each sample (based on Qubit) and plate layout can be found in 
 
-![UMN_samplesheet](https://github.com/thais-neu/BSBproject.md/blob/master/img/20210412_UMNsamplesheet)
+![UMN_samplesheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/TBittar_GBS_Ext_Plate_Subm_2019_v1.xlsx)
 
 | Location | Number of samples |
 |:--------:|:-----------------:|
