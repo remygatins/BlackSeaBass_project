@@ -1,5 +1,14 @@
 ## Samples shipped to University of Minessota Genomic Center; 
 
+| Location | #samples  |
+|:--------:|:---------:|
+|       MA |    23     |
+|       MD |    20     |
+|       ME |    20     |
+|       NC |    13     |
+|       NJ |    17     |
+|       RI |    21     |
+|       SN |    13     |
 
 
 
