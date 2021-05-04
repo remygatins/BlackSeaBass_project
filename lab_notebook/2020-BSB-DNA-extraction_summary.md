@@ -1,6 +1,9 @@
-## The final list of samples submitted to University of Minessota Genomic Center can be found in 
+## Samples shipped to University of Minessota Genomic Center; 
 
-![UMN_samplesheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/TBittar_GBS_Ext_Plate_Subm_2019_v1.xlsx)
+
+
+
+- the final list of samples can be found in ![UMN_samplesheet](https://github.com/thais-neu/BlackSeaBass_project/blob/master/TBittar_GBS_Ext_Plate_Subm_2019_v1.xlsx)
 
 
 ## The list below does NOT include samples extracted by ADW in 2021. The lab notebook entry does. 
