@@ -9,7 +9,7 @@ Samples were shipped to University of Minesotta Genomics Center and received on 
 
 
 | Location | #samples extracted | #excluded due to low yield |     #low DNA     | #library prep|
-|:--------:|:------------------:|:--------------------------:|:----------------:|:-------------|
+|:--------:|:------------------:|:--------------------------:|:----------------:|:------------:|
 |       MA |         23         | 2         Cs_MA_309, 319   | 2 Cs_MA_310, 311 |      21      |
 |       MD |         20         |                NA          |         NA       |      20      |
 |       ME |         20         | 2         Cs_ME_259, 260   | 1  Cs_ME_255     |      18      |
