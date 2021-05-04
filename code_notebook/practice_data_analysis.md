@@ -76,7 +76,7 @@ then enter your password
 
 Open your browser and go to Globus.org, then login or authenticate:
 
-Tbittar
+tbittar
 
 Password
 
