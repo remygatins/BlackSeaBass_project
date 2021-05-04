@@ -19,4 +19,6 @@ Samples were shipped to University of Minesotta Genomics Center and received on 
 |       SN |         13         |                NA          |         NA       |      13      |
 
 
+## The full sample sheet from UMNGC including the QC report (re-quantification of all samples using PicoGreen) is here https://github.com/thais-neu/BlackSeaBass_project/blob/master/Lotterhos_Project_001_GBS_QC_Report.xlsx
+
 
