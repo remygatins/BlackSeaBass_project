@@ -37,6 +37,8 @@ Data Analysis
 You will find the following analysis results in the project release directory:
 illumina-basicQC report
 
+file:///C:/Users/arons/OneDrive%20-%20Northeastern%20University(1)/1.NEU/SeaBass/BSB_ddRAD/Lotterhos_Project_001_BasicQC_Report.html
+
 Data analysis help
 
 Please let us know if you have any problems accessing the data.
