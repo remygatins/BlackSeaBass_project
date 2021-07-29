@@ -5,7 +5,7 @@
 - [ ] ethanol for rinsing tools and molec-grade for extra in the vials,
 - [x] kimwipes
 - [ ] ruler
-- [ ] zipties labels for each fish
+- [x] zipties labels for each fish
 - [ ] waterproof data paper and pencils - how to organize for data collection? not sure if Grabowski lab has a standard format
 - [ ] scapels, blades, and scissors for tissue collection
 - [ ] autoclaved backup vials with RNAlater for 3 tissues from 15 fish
@@ -16,8 +16,8 @@
 - [ ] I need to get info on the euthanization protocol for this grant. I haven’t fished with them under this protocol before.
 
 - [ ] grabowski lab truck keys and stuff - what is license plate?
-
-- [ ] Cs_RI_251 to Cs_RI_420
+- [ ] garbage bags
+- [ ] Individual labels Cs_RI_251 to Cs_RI_420
 - [ ] 
 
 Katie home:
