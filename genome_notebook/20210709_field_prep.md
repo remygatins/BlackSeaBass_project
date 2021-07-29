@@ -18,13 +18,13 @@
 - [ ] grabowski lab truck keys and stuff - what is license plate?
 - [ ] garbage bags
 - [ ] Individual labels Cs_RI_251 to Cs_RI_420
-- [ ] small dipper net
+
 
 Katie home:
 - [ ] straps for dewar in truck
 - [ ] life jackets
 - [ ] waterproof camera
-- [ ] 
+- [ ] small dipper net
 
 Directions: https://www.google.com/maps/place/Galilee+Boat+Launch/@41.3819457,-71.5090315,17.47z/data=!4m5!3m4!1s0x89e5be5b5dc327cb:0x10376596758ae218!8m2!3d41.3823051!4d-71.5088577?shorturl=1
 
