@@ -12,18 +12,19 @@
 - [x] zipties labels for each fish
 - [x] waterproof data paper and pencils - how to organize for data collection? not sure if Grabowski lab has a standard format
 - [x] scapels, blades, and scissors for tissue collection
-- [ ] autoclaved backup vials with RNAlater for 3 tissues from 15 fish
+- [x] autoclaved backup vials with RNAlater for 3 tissues from 15 fish
 - [ ] large cooler in case we need to transport live fish to the car for processing
 - [x] Liquid N2 gloves
 - [x] Gloves for RNA sampling
-- [ ] 50-100 Ziplock bags to freeze whole fish? Not sure how Jon wants these stored
-- [ ] I need to get info on the euthanization protocol for this grant. I haven’t fished with them under this protocol before.
+- [x] 50-100 Ziplock bags to freeze whole fish? Not sure how Jon wants these stored
+- [x] I need to get info on the euthanization protocol for this grant. I haven’t fished with them under this protocol before.
 - [ ] RNAase away
 - [ ] bleach solution
 
-- [ ] grabowski lab truck keys and stuff - what is license plate?
+- [x] grabowski lab truck keys and stuff - what is license plate?
 - [ ] garbage bags
-- [ ] Individual labels Cs_RI_251 to Cs_RI_420
+- [ ] Individual labels Cs_RI_251 to Cs_RI_420 ?
+- [x] color tops of RNA-later - red dot
 
 
 Katie home:
@@ -39,12 +40,10 @@ Directions: https://www.google.com/maps/place/Galilee+Boat+Launch/@41.3819457,-7
 KATIE:
 - [ ] cryo training on Bioraft
 
-thais:
-- barcode labels
-- data collection
-- bleach soluation
+**thais:**
+- make some 10% bleach solution
 - test if barcodes fall off in liquid N2
-- print barcodes after we get spreadsheets
+- print barcodes after we get the number and send her the spreadsheets
 
 Jon:
 - fish board with measuring tape
@@ -66,6 +65,7 @@ Jon:
   - Date
   - Time
   - photo (yes/no) with the date/time/location/tagID in the photo
+  - unique_fish_ID
 - Take Photo for length on fish board
 - If fish is greater than 30 cm, put it on ice and bring back for Jon - up to 50 fish
 - If fish is less than 30 cm put in live well
@@ -79,27 +79,32 @@ Jon:
 - clean tools with ethanol and RNAase away
 - prepare vials for brain, liver, and muscle, heart
   - if it is a larger fish, prepare :
-    - cryovials for each tissue (label for vialID, label for indID, label for tissue and buffer)
-    - RNAlater for each tissue (label for vialID, label for indID, label for tissue and buffer)
+    - cryovials for each tissue (label for vialID, label for indID)
+    - RNAlater for each tissue (label for vialID, label for indID)
   - if it is a smaller fish, prepare:
-    - cryovials for each tissue (label for vialID, label for indID, label for tissue and buffer)
+    - cryovials for each tissue (label for vialID, label for indID)
   - also prepare a vial for finclip in ethanol
 - prepare dataset
-  - tag_ID, 
+  - vial_ID, unique_fish_ID, tag_ID, date, buffer (etoh, rnalater, cryo), tissue, photo(y/no), 
 - catch fish from live well
-- 
+- take a photo for length with the date/time/location/tagID in the photo
+- dissect tissues and store as fast as possible
 
 
-RNA_later
+**RNA_later**
 - cut large tissue samples to ≤0.5 cm in any single dimension
 - Place the fresh tissue in 5–10 volumes of RNAlater® Solution
 - store at 4°C overnight (to allow the solution to thoroughly penetrate the tissue), remove supernatant, then move to –20°C or –80°C for long-term storage
 
 
-Labels we need:
+**Labels we need:**
 - for the first 24 small fish, we need 
   - 5 copies of each unique_fish_ID
-- 
-- 24 of each of:
-  -  
+  - 24 "heart"
+  - 24 "liver"
+  - 24 "brain"
+  - 24 "muscle"
+
+- next 130 unique_fish_ID
+- 270 unique vial IDs
 
