@@ -18,7 +18,7 @@
 - [ ] grabowski lab truck keys and stuff - what is license plate?
 - [ ] garbage bags
 - [ ] Individual labels Cs_RI_251 to Cs_RI_420
-- [ ] 
+- [ ] small dipper net
 
 Katie home:
 - [ ] straps for dewar in truck
