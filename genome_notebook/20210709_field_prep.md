@@ -18,7 +18,7 @@
 - [x] Gloves for RNA sampling
 - [x] 50-100 Ziplock bags to freeze whole fish? Not sure how Jon wants these stored
 - [x] I need to get info on the euthanization protocol for this grant. I haven’t fished with them under this protocol before.
-- [ ] RNAase away
+- [x] RNAase away
 - [ ] bleach solution
 
 - [x] grabowski lab truck keys and stuff - what is license plate?
