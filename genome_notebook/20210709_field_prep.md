@@ -35,7 +35,9 @@ Katie home:
 Remy
 - [ ] small dipper net
 
-Directions: https://www.google.com/maps/place/Galilee+Boat+Launch/@41.3819457,-71.5090315,17.47z/data=!4m5!3m4!1s0x89e5be5b5dc327cb:0x10376596758ae218!8m2!3d41.3823051!4d-71.5088577?shorturl=1
+**Directions:** https://www.google.com/maps/place/Galilee+Boat+Launch/@41.3819457,-71.5090315,17.47z/data=!4m5!3m4!1s0x89e5be5b5dc327cb:0x10376596758ae218!8m2!3d41.3823051!4d-71.5088577?shorturl=1
+
+(the parking lot has a sign that says no parking without a permit, but we are fine to park there).
 
 KATIE:
 - [ ] cryo training on Bioraft
@@ -107,4 +109,9 @@ Jon:
 
 - next 130 unique_fish_ID
 - 270 unique vial IDs
+
+**Contact info:**
+- Hannah Verkamp: 479-965-5018
+- Jonathon Auguste 516-491-8678
+- Jon Grabowski 207 841-1408
 
