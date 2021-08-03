@@ -1,19 +1,19 @@
 - [x] autoclaved cryovials for 15 fish, 3 tissues from each - ask thais to label this week
 - [x] autoclaved molecular grade ethanol vials for 50?100? fish - ask thais to label this week
 - [ ] liquid N2 in the dewar - we’ll need help from someone to get this on Wed.
-- [ ] cutting board
+- [x] cutting board
 - [ ] vial labels
   - [ ] label for vial ID
   - [ ] label for unique_fish_ID (to get from Thais)
   - [ ] label for buffer_tissue
 - [x] ethanol for rinsing tools and molec-grade for extra in the vials,
 - [x] kimwipes
-- [ ] ruler
+- [x] ruler
 - [x] zipties labels for each fish
 - [x] waterproof data paper and pencils - how to organize for data collection? not sure if Grabowski lab has a standard format
 - [x] scapels, blades, and scissors for tissue collection
 - [x] autoclaved backup vials with RNAlater for 3 tissues from 15 fish
-- [ ] large cooler in case we need to transport live fish to the car for processing
+- [x] large cooler in case we need to transport live fish to the car for processing
 - [x] Liquid N2 gloves
 - [x] Gloves for RNA sampling
 - [x] 50-100 Ziplock bags to freeze whole fish? Not sure how Jon wants these stored
@@ -28,12 +28,12 @@
 
 
 Katie home:
-- [ ] straps for dewar in truck
-- [ ] life jackets
+- [x] straps for dewar in truck
+- [x] life jackets
 - [ ] waterproof camera
 
 Remy
-- [ ] small dipper net
+- [x] small dipper net
 
 **Directions:** https://www.google.com/maps/place/Galilee+Boat+Launch/@41.3819457,-71.5090315,17.47z/data=!4m5!3m4!1s0x89e5be5b5dc327cb:0x10376596758ae218!8m2!3d41.3823051!4d-71.5088577?shorturl=1
 
@@ -48,9 +48,9 @@ KATIE:
 - print barcodes after we get the number and send her the spreadsheets
 
 Jon:
-- fish board with measuring tape
-- another cooler
-- datasheets
+- [ ] fish board with measuring tape
+- [ ] another cooler
+- [ ] datasheets
 **- euthanization protocol**
   - put them on ice. 
   - bring back 50 big fish. add a tag number and collect lat/long. fish board and picture. add a waterproof piece of paper in the bag for the unique IDs to label the fish.
@@ -112,8 +112,10 @@ Jon:
 
 **Contact info:**
 - Hannah Verkamp: 479-965-5018
-- Jonathon Auguste 516-491-8678
+- Jonathan Auguste 516-491-8678
 - Jon Grabowski 207 841-1408
+- Remy Gatins 805 704 8877
+- Katie Lotterhos 850 210 2514
 
 Input Sampling [Metadata](https://docs.google.com/spreadsheets/d/11ojCUODnEmdPHhzJduSwby2rfJYdWVf0OWe-LjeAIYQ/edit?usp=sharing)
 
