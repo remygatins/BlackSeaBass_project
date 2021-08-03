@@ -59,7 +59,7 @@ Jon:
   - gas on P-card and charge to Jon's overhead  
 
 
-### Catch a fish: PRINT DATASHEET [datasheet](https://docs.google.com/spreadsheets/d/1PW2tj-jqgD1TFj1iNInHl_X235EKpyXBowSbLMbdkrk/edit?usp=sharing)
+### Catch a fish: PRINT DATASHEET [fieldsheet](https://docs.google.com/spreadsheets/d/1PW2tj-jqgD1TFj1iNInHl_X235EKpyXBowSbLMbdkrk/edit?usp=sharing)
 - Add a Tag_ID and take data on the:
   - Tag_Id
   - Lat 
@@ -86,7 +86,7 @@ Jon:
   - if it is a smaller fish, prepare:
     - cryovials for each tissue (label for vialID, label for indID)
   - also prepare a vial for finclip in ethanol
-- prepare dataset [datasheet](https://docs.google.com/spreadsheets/d/1PW2tj-jqgD1TFj1iNInHl_X235EKpyXBowSbLMbdkrk/edit?usp=sharing)
+- prepare dataset [fieldsheet](https://docs.google.com/spreadsheets/d/1PW2tj-jqgD1TFj1iNInHl_X235EKpyXBowSbLMbdkrk/edit?usp=sharing)
   - vial_ID, unique_fish_ID, tag_ID, date, buffer (etoh, rnalater, cryo), tissue, photo(y/no), 
 - catch fish from live well
 - take a photo for length with the date/time/location/tagID in the photo
