@@ -5,7 +5,7 @@
 - [ ] vial labels
   - [ ] label for vial ID
   - [ ] label for unique_fish_ID (to get from Thais)
-  - [ ] label for buffer_tissue
+  - [x] label for buffer_tissue
 - [x] ethanol for rinsing tools and molec-grade for extra in the vials,
 - [x] kimwipes
 - [x] ruler
@@ -34,6 +34,7 @@ Katie home:
 
 Remy
 - [x] small dipper net
+- [ ] clip board
 
 **Directions:** https://www.google.com/maps/place/Galilee+Boat+Launch/@41.3819457,-71.5090315,17.47z/data=!4m5!3m4!1s0x89e5be5b5dc327cb:0x10376596758ae218!8m2!3d41.3823051!4d-71.5088577?shorturl=1
 
