@@ -59,7 +59,7 @@ Jon:
   - gas on P-card and charge to Jon's overhead  
 
 
-### Catch a fish: PRINT DATASHEET
+### Catch a fish: PRINT DATASHEET [datasheet](https://docs.google.com/spreadsheets/d/1PW2tj-jqgD1TFj1iNInHl_X235EKpyXBowSbLMbdkrk/edit?usp=sharing)
 - Add a Tag_ID and take data on the:
   - Tag_Id
   - Lat 
@@ -86,7 +86,7 @@ Jon:
   - if it is a smaller fish, prepare:
     - cryovials for each tissue (label for vialID, label for indID)
   - also prepare a vial for finclip in ethanol
-- prepare dataset
+- prepare dataset [datasheet](https://docs.google.com/spreadsheets/d/1PW2tj-jqgD1TFj1iNInHl_X235EKpyXBowSbLMbdkrk/edit?usp=sharing)
   - vial_ID, unique_fish_ID, tag_ID, date, buffer (etoh, rnalater, cryo), tissue, photo(y/no), 
 - catch fish from live well
 - take a photo for length with the date/time/location/tagID in the photo
@@ -114,4 +114,6 @@ Jon:
 - Hannah Verkamp: 479-965-5018
 - Jonathon Auguste 516-491-8678
 - Jon Grabowski 207 841-1408
+
+Input Sampling [Metadata](https://docs.google.com/spreadsheets/d/11ojCUODnEmdPHhzJduSwby2rfJYdWVf0OWe-LjeAIYQ/edit?usp=sharing)
 
