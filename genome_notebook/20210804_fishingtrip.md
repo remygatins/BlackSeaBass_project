@@ -29,6 +29,6 @@
 - plastic clipboards for field x 5
 - drain strainer for molecular lab sink
 - scalpel blade remover boxes x 3
-
+- lab research notebooks (National Brand with numbered pages - do we want the carbon copy?) - some 20-30 pages, some 200 pages?
 - 
 
