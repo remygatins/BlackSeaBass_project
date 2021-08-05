@@ -1,10 +1,10 @@
 - [x] autoclaved cryovials for 15 fish, 3 tissues from each - ask thais to label this week
 - [x] autoclaved molecular grade ethanol vials for 50?100? fish - ask thais to label this week
-- [ ] liquid N2 in the dewar - we’ll need help from someone to get this on Wed.
+- [x] liquid N2 in the dewar - we’ll need help from someone to get this on Wed.
 - [x] cutting board
-- [ ] vial labels
-  - [ ] label for vial ID
-  - [ ] label for unique_fish_ID (to get from Thais)
+- [x] vial labels
+  - [x] label for vial ID
+  - [x] label for unique_fish_ID (to get from Thais)
   - [x] label for buffer_tissue
 - [x] ethanol for rinsing tools and molec-grade for extra in the vials,
 - [x] kimwipes
@@ -19,7 +19,7 @@
 - [x] 50-100 Ziplock bags to freeze whole fish? Not sure how Jon wants these stored
 - [x] I need to get info on the euthanization protocol for this grant. I haven’t fished with them under this protocol before.
 - [x] RNAase away
-- [ ] bleach solution
+- [x] bleach solution
 
 - [x] grabowski lab truck keys and stuff - what is license plate?
 - [ ] garbage bags
@@ -49,8 +49,8 @@ KATIE:
 - print barcodes after we get the number and send her the spreadsheets
 
 Jon:
-- [ ] fish board with measuring tape
-- [ ] another cooler
+- [x] fish board with measuring tape
+- [x] another cooler
 - [ ] datasheets
 **- euthanization protocol**
   - put them on ice. 
