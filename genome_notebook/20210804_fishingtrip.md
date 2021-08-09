@@ -16,7 +16,7 @@
 
 ## To order for lab:
 - 3 pair [dissecting scissors](https://www.fishersci.com/shop/products/blunt-tipped-scissors/12000172#?keyword=)
-- the list of stuff I asked Remy to write down in the car
+- the list of stuff I asked Remy to write down in the car- DONE
 - different cryo labels that we can print on (either with normal printer or barcode printer) and test
 - gloves for fishing: small (2 pair), med (3 pair), large (2 pair) e.g. [Atlas vinyl gloves M](https://www.amazon.com/C620M-Medium-Orange-Vinylove-Gloves/dp/B000VZQ5R6/ref=asc_df_B000VZQ5R6/?tag=hyprod-20&linkCode=df0&hvadid=507599139567&hvpos=&hvnetw=g&hvrand=4152733478573438249&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1018127&hvtargid=pla-1355076595644&psc=1) 
 - set of screwdrivers for lab
@@ -31,5 +31,11 @@
 - drain strainer for molecular lab sink
 - scalpel blade remover boxes x 3
 - lab research notebooks (National Brand with numbered pages - do we want the carbon copy?) - some 20-30 pages, some 200 pages?
-- 
+- fish measuring board (grabowski)
+- Cutting board for the field
+
+
+## Field notes
+- Took 5.5 min to sample the 5 tissues (fin, muscle, liver, heart, brain) + 2.5 min to clean > 8min total (Cryo/RNAlater)
+- Tissues stored in RNAlater need to be stored in the fridge for 1 night then transfer to -80 C
 
