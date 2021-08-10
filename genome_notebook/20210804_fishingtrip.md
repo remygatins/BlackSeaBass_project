@@ -8,6 +8,7 @@
 ## To do:
 - set up a shared google drive for photos
   -  [Hannah's photos](https://drive.google.com/drive/folders/1nw-__nNcbRfYoGq01Oz23Z_n_wxBctTr)  
+  -  [CS_RI_2021_08_04](https://drive.google.com/drive/folders/1H5r9f8TeAGZksYCJlp6TGz79Alb3Kv7_?usp=sharing)
 - add to Black Sea Bass README locations of Remy's datasheets and historical datasheets and field sheets
 - add metadata to Remy's datasheets
 - label ethanol and cryo samples according to Lotterhos Lab Box sampling protocol and update freezer database
