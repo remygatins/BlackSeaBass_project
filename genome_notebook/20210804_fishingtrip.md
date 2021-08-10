@@ -38,5 +38,5 @@
 
 ## Field notes
 - Took 5.5 min to sample the 5 tissues (fin, muscle, liver, heart, brain) + 2.5 min to clean > 8min total (Cryo/RNAlater)
-- Tissues stored in RNAlater need to be stored in the fridge for 1 night then transfer to -80 C
+- Tissues stored in RNAlater need to be stored in the fridge for 1 night then transfer to -20 C (RNAlater tissues were at room temp until 9pm, then they were placed at 4C for ~3.5 days, then they were stored at -20C).
 
