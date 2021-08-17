@@ -8,3 +8,14 @@ md5sum Cs* > md5sum_new.txt # takes a few minutes
 awk '{gsub("/panfs/roc/umgc/illumina_analysis/210713_A00223_0599_BH7YTHDRXY-analysis/demultiplex_20210720-12-02-46/demultiplex/Lotterhos_Project_001/","",$2)}1' md5.txt > md5_edit.txt # remove file path from original file
 comm -3 md5_edit.txt md5sum_new.txt # this didn't work because the files weren't in the same order
 ```
+
+Thais sorted the files by file name and checked with comm
+
+```
+
+(base) [tbittar@d3037 ddRAD]$ comm -3 20210817_md5_edit.txt 20210817_md5sum_new.txt
+(base) [tbittar@d3037 ddRAD]$ 
+```
+No error messages.
+
+Sorted files are \_TBcheck
