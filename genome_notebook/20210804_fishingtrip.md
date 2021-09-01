@@ -31,7 +31,7 @@
 - [x] ordered
 - [ ] delivered
 - ethanol markers
-- [x] ordered from Marketplace
+- [x] ordered
 - [ ] delivered
 - tupperware bins for field - 12 quart and 19 quart e.g. [6 x 12 qt bins](https://www.amazon.com/IRIS-USA-Inc-588244-Stack/dp/B00CQGTGZQ/ref=asc_df_B07C84844P/?tag=hyprod-20&linkCode=df0&hvadid=242028025825&hvpos=&hvnetw=g&hvrand=12220325088210545619&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2840&hvtargid=pla-446968372953&th=1)
 - [x] ordered
