@@ -23,19 +23,19 @@
 - different cryo labels that we can print on (either with normal printer or barcode printer) and test
 - gloves for fishing: small (2 pair), med (3 pair), large (2 pair) e.g. [Atlas vinyl gloves M](https://www.amazon.com/C620M-Medium-Orange-Vinylove-Gloves/dp/B000VZQ5R6/ref=asc_df_B000VZQ5R6/?tag=hyprod-20&linkCode=df0&hvadid=507599139567&hvpos=&hvnetw=g&hvrand=4152733478573438249&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1018127&hvtargid=pla-1355076595644&psc=1) 
 - [x] ordered (need to order another Small and 2 Large)
-- [ ] delivered
+- [x] delivered
 - set of screwdrivers for lab 
 - [x] ordered
-- [ ] delivered
+- [x] delivered
 - field pencils 
 - [x] ordered
-- [ ] delivered
+- [x] delivered
 - ethanol markers
 - [x] ordered
 - [ ] delivered
 - tupperware bins for field - 12 quart and 19 quart e.g. [6 x 12 qt bins](https://www.amazon.com/IRIS-USA-Inc-588244-Stack/dp/B00CQGTGZQ/ref=asc_df_B07C84844P/?tag=hyprod-20&linkCode=df0&hvadid=242028025825&hvpos=&hvnetw=g&hvrand=12220325088210545619&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2840&hvtargid=pla-446968372953&th=1)
 - [x] ordered
-- [ ] delivered
+- [x] delivered
 - dishwashing soap
 - [x] ordered
 - [ ] delivered
@@ -52,16 +52,16 @@
 - [ ] delivered
 - scalpel blade remover boxes x 3
 - [x] ordered
-- [ ] delivered
+- [x] delivered
 - lab research notebooks (National Brand with numbered pages - do we want the carbon copy?) - some 20-30 pages, some 200 pages? 
 - [x] ordered (want 20-30 pages?)
-- [ ] delivered
+- [x] delivered
 - fish measuring board (grabowski)
 - [ ] ordered
 - [ ] delivered
 - Cutting board for the field
 - [x] ordered
-- [ ] delivered
+- [x] delivered
 
 
 ## Field notes
