@@ -10,6 +10,10 @@
 
 <img width="1232" alt="Screen Shot 2021-09-09 at 3 04 40 PM" src="https://user-images.githubusercontent.com/6870125/132751118-7b952f3e-f71f-4b3c-9f42-02d2e0fd45b3.png">
 
+Summary: They recommend a break at the Hudson Canyon, based on higher movement of northern fish and lower movement of southern fish
+
+He thinks it's published somewhere
+
 ## Resources:
 
 [Seasonal Distribution and Movement of Black Sea Bass
@@ -38,3 +42,4 @@ Determined from a Mark-Recapture Experiment](http://sedarweb.org/docs/wsupp/SEDA
 
 <img width="1053" alt="Screen Shot 2021-09-09 at 3 42 35 PM" src="https://user-images.githubusercontent.com/6870125/132753332-f95b5859-33a6-48b0-bd1c-2557fe529f4f.png">
 
+Summary: Mass Bay fish have similar natal otolits to southern new england
