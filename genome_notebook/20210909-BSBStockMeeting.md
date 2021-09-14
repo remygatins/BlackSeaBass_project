@@ -4,6 +4,8 @@
 
 [Link to their agenda](https://docs.google.com/document/d/1uZwf2UUrpwkbjavMm7pLDBpqyPvqMkvSssOwtn1UD-E/edit)
 
+[Their google drive](https://drive.google.com/drive/folders/1XGEmLI9tQ40V8o03cM3-Lf3va9znXA9q)
+
 ### Images from Jay McNamee presentation (2016 tagging study, will send references)
 
 <img width="1052" alt="Screen Shot 2021-09-09 at 3 01 25 PM" src="https://user-images.githubusercontent.com/6870125/132751100-0c76ee71-d493-4f8a-bd54-57645490757e.png">
