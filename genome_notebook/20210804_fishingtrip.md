@@ -46,7 +46,7 @@
 - [ ] delivered
 - plastic clipboards for field x 5
 - [x] ordered
-- [ ] delivered
+- [x] delivered
 - drain strainer for molecular lab sink
 - [x] ordered
 - [ ] delivered
@@ -57,7 +57,7 @@
 - [x] ordered (want 20-30 pages?)
 - [x] delivered
 - fish measuring board (grabowski)
-- [ ] ordered
+- [x] ordered
 - [ ] delivered
 - Cutting board for the field
 - [x] ordered
