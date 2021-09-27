@@ -39,7 +39,7 @@
 - dishwashing soap
 - [x] ordered
 - [x] delivered
-- Duksback- notebooks and paper - DECIDED not to order??
+- Duksback- notebooks and paper - **DECIDED not to order??**
   - "level" sheets http://www.rdpenhall.com/duksbakstock.html
   - loose leaf binder to match sheet size http://www.rdpenhall.com/binders.html 
 - [ ] ordered
@@ -56,7 +56,7 @@
 - lab research notebooks (National Brand with numbered pages - do we want the carbon copy?) - some 20-30 pages, some 200 pages? 
 - [x] ordered (want 20-30 pages?)
 - [x] delivered
-- fish measuring board (grabowski) - this is on backorder with an expected shipping date of Jan 3rd, 2022 (!!)
+- fish measuring board (grabowski) - **this is on backorder with an expected shipping date of Jan 3rd, 2022 (!!)**
 - [x] ordered
 - [ ] delivered
 - Cutting board for the field
