@@ -56,7 +56,7 @@
 - lab research notebooks (National Brand with numbered pages - do we want the carbon copy?) - some 20-30 pages, some 200 pages? 
 - [x] ordered (want 20-30 pages?)
 - [x] delivered
-- fish measuring board (grabowski)
+- fish measuring board (grabowski) - this is on backorder with an expected shipping date of Jan 3rd, 2022 (!!)
 - [x] ordered
 - [ ] delivered
 - Cutting board for the field
