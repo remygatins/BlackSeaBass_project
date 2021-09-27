@@ -32,14 +32,14 @@
 - [x] delivered
 - ethanol markers
 - [x] ordered
-- [ ] delivered
+- [x] delivered
 - tupperware bins for field - 12 quart and 19 quart e.g. [6 x 12 qt bins](https://www.amazon.com/IRIS-USA-Inc-588244-Stack/dp/B00CQGTGZQ/ref=asc_df_B07C84844P/?tag=hyprod-20&linkCode=df0&hvadid=242028025825&hvpos=&hvnetw=g&hvrand=12220325088210545619&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2840&hvtargid=pla-446968372953&th=1)
 - [x] ordered
 - [x] delivered
 - dishwashing soap
 - [x] ordered
-- [ ] delivered
-- Duksback- notebooks and paper
+- [x] delivered
+- Duksback- notebooks and paper - DECIDED not to order??
   - "level" sheets http://www.rdpenhall.com/duksbakstock.html
   - loose leaf binder to match sheet size http://www.rdpenhall.com/binders.html 
 - [ ] ordered
@@ -49,7 +49,7 @@
 - [x] delivered
 - drain strainer for molecular lab sink
 - [x] ordered
-- [ ] delivered
+- [x] delivered
 - scalpel blade remover boxes x 3
 - [x] ordered
 - [x] delivered
