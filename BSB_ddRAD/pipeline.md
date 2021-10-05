@@ -57,7 +57,7 @@ Assuming we have the trimmed sequences, we need to do the following to comply wi
   - output: PopMA_CsMA298S1.R1.fq.gz
 
 
-
+Meeting with Katie: file names should be MA_298.R1.fq.gz
 
 
 
