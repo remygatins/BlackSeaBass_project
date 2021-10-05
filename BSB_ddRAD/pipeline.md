@@ -2,7 +2,7 @@
 
 - download FASTQ files from sequencing facility using:
 
-`wget -nH -np -N -r --cut-dirs 2 --no-check-certificate --user lotterhos --password Ride-Stir-Secretary-Size-7 https://umgcdownload.msi.umn.edu/lotterhos/210713_A00223_0599_BH7YTHDRXY/Lotterhos_Project_001
+```wget -nH -np -N -r --cut-dirs 2 --no-check-certificate --user lotterhos --password Ride-Stir-Secretary-Size-7 https://umgcdownload.msi.umn.edu/lotterhos/210713_A00223_0599_BH7YTHDRXY/Lotterhos_Project_001```
 
 - check download was sucessfull using md5sum according to https://drk-lo.github.io/lotterhoslabprotocols/code_checksums/ - PASS
 
@@ -36,21 +36,28 @@ dDocent requires the following name convention:
 
 Assuming we have the trimmed sequences, we need to do the following to comply with dDocent name convention:
 
-1) replace R1_001.fastq.gz  with .R1.fq.gz
-    - ```for f in *_R1_001.fastq.gz ; do mv $f `echo "$f" | sed 's/_R1_001.fastq.gz/.R1.fq.gz/g'` ; done```
-    - output: Cs_MA_298_S1.R1.fq.gz
-2) eliminate all underscores
-    - ```for f in *.* ; do mv $f `echo "$f" | sed 's/_//g'` ; done```
-    - output: CsMA298S1.R1.fq.gz
+1) replace **R1_001.fastq.gz** with **.R1.fq.gz** ```sed 's/_R1_001.fastq.gz/.R1.fq.gz/g'```
+2) eliminate the underscores ```sed 's/_//g'```
+      - the following line does both:
+
+```for f in *_R1_001.fastq.gz ; do mv $f `echo "$f" | sed 's/_R1_001.fastq.gz/.R1.fq.gz/g' | sed 's/_//g'` ; done```
+
+      
+   - input: Cs_MA_298_S1_R1_001.fastq.gz
+   - output: CsMA298S1.R1.fq.gz
+      
 3) add the prefix PopXX_ (where XX is the region or pop ID; this is the only underscore allowed in the file name, between popID and sampleID)
+      - use the following two lines:
+      
+```prefix=PopXX_```
+
+```for filename in *.fq.gz; do mv "$filename" "$prefix$filename" ; done```
+    
+  - input: CsMA298S1.R1.fq.gz
+  - output: PopMA_CsMA298S1.R1.fq.gz
 
 
-so we should go from: Cs_MA_298_S1_R1_001.fastq.gz to PopMA_CsMA298S1.R1.fq.gz
 
-
-
-
-try this: ```for f in *_R1_001.fastq.gz ; do mv $f `echo "$f" | sed 's/_R1_001.fastq.gz/.R1.fq.gz/g'` ; done```
 
 
 
