@@ -14,7 +14,7 @@ Mspl cut: sticky ends with 5' end overhangs of C/CGG and palindromic complementa
 
 Barcode sequences: see project summary file.
 
-## name convention for dDocent
+## 3. name convention for dDocent
 
 file names provided by sequencing facility are in the following format (example: Cs_MA_298_S1_R1_001.fastq.gz): 
       - Cs_XX_YYY_S1_R1_001.fastq.gz (forward)
@@ -60,5 +60,20 @@ Assuming we have the trimmed sequences, we need to do the following to comply wi
 Meeting with Katie: file names should be MA_298.R1.fq.gz
 
 
+## 4. Trim padding sequences using cutadapt
 
+Emailed the facility and learned that our data still have the padding sequences and overhangs. Use their code to trim the data, the following steps:
+
+- Installation with conda
+https://cutadapt.readthedocs.io/en/stable/installation.html
+
+on OOD Discovery:
+
+- logged in to home, where I had Miniconda3-latest-Linux-x86_64.sh already installed.
+- ran `conda update conda` since I hadn't used it in a while
+- then followed the steps in the link above:
+           -- conda create -n cutadaptenv cutadapt (environment location: /home/tbittar/miniconda3/envs/cutadaptenv)
+           -- conda activate cutadaptenv (activating the newly crated env)
+           -- cutadapt --version (just to check it worked)
+           
 
