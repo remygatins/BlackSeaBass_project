@@ -32,7 +32,7 @@ dDocent requires the following name convention:
     - Pop1_001.R2.fq.gz (trimmed, reverse)
 
 
-*I believe our sequences are already trimmed - I see the barcode assigned to each sequence, but I don't see the overhang or the padding sequence; additionally, the sequence files are named ...R1... and ...R2... which makes me think they are trimmed.*
+~~I believe our sequences are already trimmed - I see the barcode assigned to each sequence, but I don't see the overhang or the padding sequence; additionally, the sequence files are named ...R1... and ...R2... which makes me think they are trimmed~~
 
 Assuming we have the trimmed sequences, we need to do the following to comply with dDocent name convention:
 
@@ -72,8 +72,8 @@ on OOD Discovery:
 - logged in to home, where I had Miniconda3-latest-Linux-x86_64.sh already installed.
 - ran `conda update conda` since I hadn't used it in a while
 - then followed the steps in the link above:
-           -- conda create -n cutadaptenv cutadapt (environment location: /home/tbittar/miniconda3/envs/cutadaptenv)
-           -- conda activate cutadaptenv (activating the newly crated env)
-           -- cutadapt --version (just to check it worked)
+     - conda create -n cutadaptenv cutadapt (environment location: /home/tbittar/miniconda3/envs/cutadaptenv)
+     - conda activate cutadaptenv (activating the newly crated env)
+     - cutadapt --version (just to check it worked)
            
 
