@@ -32,9 +32,9 @@ dDocent requires the following name convention:
     - Pop1_001.R2.fq.gz (trimmed, reverse)
 
 
-~~I believe our sequences are already trimmed - I see the barcode assigned to each sequence, but I don't see the overhang or the padding sequence; additionally, the sequence files are named ...R1... and ...R2... which makes me think they are trimmed~~
+~~I believe our sequences are already trimmed - I see the barcode assigned to each sequence, but I don't see the overhang or the padding sequence; additionally, the sequence files are named ...R1... and ...R2... which makes me think they are trimmed~~ SEQUENCES ARE NOT TRIMMED, they contain both the padding sequences and the overhangs. See 4.
 
-Assuming we have the trimmed sequences, we need to do the following to comply with dDocent name convention:
+~~Assuming we have the trimmed sequences,~~ we need to do the following to comply with dDocent name convention:
 
 1) replace **R1_001.fastq.gz** with **.R1.fq.gz** ```sed 's/_R1_001.fastq.gz/.R1.fq.gz/g'```
 2) eliminate the underscores ```sed 's/_//g'```
@@ -64,7 +64,7 @@ Meeting with Katie: file names should be MA_298.R1.fq.gz
 
 Emailed the facility and learned that our data still have the padding sequences and overhangs. Use their code to trim the data, the following steps:
 
-- Installation with conda
+i) Instal cutadapter with conda (Python 3.6 or up is a dependency, already installed).
 https://cutadapt.readthedocs.io/en/stable/installation.html
 
 on OOD Discovery:
@@ -75,5 +75,17 @@ on OOD Discovery:
      - conda create -n cutadaptenv cutadapt (environment location: /home/tbittar/miniconda3/envs/cutadaptenv)
      - conda activate cutadaptenv (activating the newly crated env)
      - cutadapt --version (just to check it worked)
+
+ii) Download the repository from https://bitbucket.org/jgarbe/gbstrim/src/master/ 
+
+- used Globus to transfer the repo to my working folder on Discovery (working folder = /work/lotterhos/NOAA...)
+
+iii) use their command: 
+
+`perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile sample1_R1.fastq.gz --read R1 --outputfile sample1.trim.fastq --verbose --threads 24 --minlength 50`
+
+NOTES on this line: add `perl` before the command; change the enzymes to what we used (mspi & bamhi); change input and output file names to match ours.
+
+
            
 
