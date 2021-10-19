@@ -64,7 +64,7 @@ Meeting with Katie: file names should be MA_298.R1.fq.gz
 
 Emailed the facility and learned that our data still have the padding sequences and overhangs. Use their code to trim the data, the following steps:
 
-i) Instal cutadapter with conda (Python 3.6 or up is a dependency, already installed).
+i) Install cutadapter with conda (Python 3.6 or up is a dependency, already installed).
 https://cutadapt.readthedocs.io/en/stable/installation.html
 
 on OOD Discovery:
