@@ -86,9 +86,13 @@ iii) use their command:
 
 NOTES on this line: add `perl` before the command; change the enzymes to what we used (mspi & bamhi); change input and output file names to match ours.
 
-iv) batch trim all 118 files:
+iv) batch trim all 118 **R1** files:
 
 `for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R1 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
+
+and 118 **R2** files:
+
+`for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 
 
