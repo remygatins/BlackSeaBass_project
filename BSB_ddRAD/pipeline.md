@@ -72,11 +72,11 @@ on OOD Discovery:
 - logged in to home, where I had Miniconda3-latest-Linux-x86_64.sh already installed.
 - ran `conda update conda` since I hadn't used it in a while
 - then followed the steps in the link above:
-     - conda create -n cutadaptenv cutadapt (environment location: /home/tbittar/miniconda3/envs/cutadaptenv)
-     - conda activate cutadaptenv (activating the newly crated env)
+     - conda create -n cutadaptenv cutadapt (environment location: /home/tbittar/miniconda3/envs/cutadaptenv) - this only needs to be done once.
+     - conda activate cutadaptenv (activating the newly crated env) - this needs to be done each time we want to use the environment.
      - cutadapt --version (just to check it worked)
 
-ii) Download the repository from https://bitbucket.org/jgarbe/gbstrim/src/master/ 
+ii) Download the repository from https://bitbucket.org/jgarbe/gbstrim/src/master/ - only done once, must be inside the working folder.
 
 - used Globus to transfer the repo to my working folder on Discovery (working folder = /work/lotterhos/NOAA...)
 
@@ -98,6 +98,10 @@ and 118 **R2** files:
 check number of removed sequences from each R1 file:
 
 `for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
+
+> 20211020:
+
+> An average of 41% of my sequences in R1 files are being discarded. Too high, but still leaving a lot to work with. However, ~99% of sequences in R2 files are being discarded - althought didn't run all of the files yet. Emailed facility for help.
 
 
 
