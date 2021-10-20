@@ -95,6 +95,10 @@ and 118 **R2** files:
 `for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 
+check number of removed sequences from each R1 file:
+
+`for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
+
 
 
            
