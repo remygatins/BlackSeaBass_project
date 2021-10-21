@@ -99,9 +99,37 @@ check number of removed sequences from each R1 file:
 
 `for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
 
-> 20211020:
+-----------------------------------------------
 
-> An average of 41% of my sequences in R1 files are being discarded. Too high, but still leaving a lot to work with. However, ~99% of sequences in R2 files are being discarded - althought didn't run all of the files yet. Emailed facility for help.
+**20211020 - hurdle**
+
+  - An average of 41% of my sequences in R1 files are being discarded. Too high, but still leaving a lot to work with. 
+  - However, ~99% of sequences in R2 files are being discarded, althought didn't run all of the files yet. Emailed facility for help. 
+  - In the meantime, I looked into some of the raw sequences. I found that most sequences do have the padding sequence but they also have A SINGLE extra base before the padding sequence begins; here's what I'm looking at ('extra' base is in bold; middle sequence is the padding; crossed out is the overhang for BamHI -GATCC):
+            
+**C** ACTCTG ~~GATCC~~  
+**G** TTCGACAT ~~GATCC~~  
+**T** AG ~~GATCC~~  
+**C** AAGT ~~GATCC~~  
+**T** ACGAA ~~GATCC~~  
+**C** ACTCTG ~~GATCC~~  
+**C** ~~GATCC~~  
+**T** CGATGTGCT ~~GATCC~~  
+**T** CGATGTGCT ~~GATCC~~  
+**T** AG ~~GATCC~~  
+**T** CGATGTGCT ~~GATCC~~  
+**C** ~~GATCC~~  
+**G** TCA ~~GATCC~~  
+**G** TCA ~~GATCC~~  
+**C** ~~GATCC~~  
+**T** ACGAA ~~GATCC~~  
+**C** ~~GATCC~~  
+**G** TTCGACAT ~~GATCC~~  
+**T** AG ~~GATCC~~  
+**C** ~~GATCC~~  
+**T** ACGAA ~~GATCC~~  
+**G** TTCGACAT ~~GATCC~~  
+**A** GTACGGT ~~GATCC~~  
 
 
 
