@@ -80,7 +80,7 @@ ii) Download the repository from https://bitbucket.org/jgarbe/gbstrim/src/master
 
 - used Globus to transfer the repo to my working folder on Discovery (working folder = /work/lotterhos/NOAA...)
 
-iii) use their command: 
+iii) use their script: 
 
 `perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile sample1_R1.fastq.gz --read R1 --outputfile sample1.trim.fastq --verbose --threads 24 --minlength 50`
 
@@ -90,14 +90,21 @@ iv) batch trim all 118 **R1** files:
 
 `for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R1 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
-and 118 **R2** files:
+Padding sequences (green, variable lengths), R1 overhang (yellow, CGG):
+![ddRAD_R1_padding_example](https://user-images.githubusercontent.com/52291277/138742166-121f016b-6cb7-402e-9182-d77c39dbd8db.png)
 
-`for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
+After padding trimmed out, R1 overhangs remain:
+![ddRAD_R1_padding_cut](https://user-images.githubusercontent.com/52291277/138744664-ecaf076b-573d-4d08-8982-b47d613381b1.png)
+
 
 
 check number of removed sequences from each R1 file:
 
 `for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
+
+and 118 **R2** files:
+
+`for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 -----------------------------------------------
 
@@ -131,7 +138,12 @@ check number of removed sequences from each R1 file:
 **G** TTCGACAT ~~GATCC~~  
 **A** GTACGGT ~~GATCC~~  
 
+- So, I edited gbstrim.pl to include all combinations of each base A, C, T, G followed by each of the padding sequences corresponding to BamHI R2 (gatc_r2 in the script). All possible padding sequences in the edited script are: $gatc_r2 = ",G,AG,TCA,AAGT,ACGAA,ACTCTG,GTACGGT,TTCGACAT,CGATGTGCT,A,C,T,AAG,CAG,GAG,TAG,ATCA,CTCA,GTCA,TTCA,AAAGT,CAAGT,GAAGT,TAAGT,AACGAA,CACGAA,GACGAA,TACGAA,AACTCTG,CACTCTG,GACTCTG,TACTCTG,AGTACGGT,CGTACGGT,GGTACGGT,TGTACGGT,ATTCGACAT,CTTCGACAT,GTTCGACAT,TTTCGACAT,ACGATGTGCT,CCGATGTGCT,GCGATGTGCT,TCGATGTGCT";
+- After running the edited script, I'm getting ~17-19% discarded sequences, so will move on with the edited script.
+------------------------------------------------------
 
+
+  
 
            
 
