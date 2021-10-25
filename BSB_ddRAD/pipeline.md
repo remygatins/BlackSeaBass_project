@@ -98,11 +98,7 @@ After padding trimmed out, R1 overhangs remain:
 
 
 
-check number of removed sequences from each R1 file:
-
-`for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
-
-and 118 **R2** files:
+and 118 **R2** files - DO NOT USE THE SCRIPT/LINE BELOW, see next hurdle.
 
 `for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
@@ -110,7 +106,7 @@ and 118 **R2** files:
 
 **20211020 - hurdle**
 
-  - An average of 41% of my sequences in R1 files are being discarded. Too high, but still leaving a lot to work with. 
+  - An average of 42% of my sequences in R1 files are being discarded. Too high, but still leaving a lot to work with. 
   - However, ~99% of sequences in R2 files are being discarded, althought didn't run all of the files yet. Emailed facility for help. 
   - In the meantime, I looked into some of the raw sequences. I found that most sequences do have the padding sequence but they also have A SINGLE extra base before the padding sequence begins; here's what I'm looking at ('extra' base is in bold; middle sequence is the padding; crossed out is the overhang for BamHI -GATCC):
             
@@ -139,11 +135,26 @@ and 118 **R2** files:
 **A** GTACGGT ~~GATCC~~  
 
 - So, I edited gbstrim.pl to include all combinations of each base A, C, T, G followed by each of the padding sequences corresponding to BamHI R2 (gatc_r2 in the script). All possible padding sequences in the edited script are: $gatc_r2 = ",G,AG,TCA,AAGT,ACGAA,ACTCTG,GTACGGT,TTCGACAT,CGATGTGCT,A,C,T,AAG,CAG,GAG,TAG,ATCA,CTCA,GTCA,TTCA,AAAGT,CAAGT,GAAGT,TAAGT,AACGAA,CACGAA,GACGAA,TACGAA,AACTCTG,CACTCTG,GACTCTG,TACTCTG,AGTACGGT,CGTACGGT,GGTACGGT,TGTACGGT,ATTCGACAT,CTTCGACAT,GTTCGACAT,TTTCGACAT,ACGATGTGCT,CCGATGTGCT,GCGATGTGCT,TCGATGTGCT";
-- After running the edited script, I'm getting ~17-19% discarded sequences, so will move on with the edited script.
+- After running the edited script, I'm getting ~17-19% discarded sequences on a few files ran manually, so will move on with the edited script.
 ------------------------------------------------------
 
+So for the 118 **R2** files we are using the edited script (edited in my local computer and tranferred to the working folder through Globus).
 
+`for i in *.fastq.gz; do perl gbstrimedited.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
+
+
+v) Next, we check number of kept sequences from each R1 file:
+
+`for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
+
+and each R2 file:
+
+`for i in *trim.fastq; do grep '^GATCC' "$i" | wc -l; done > kept_seqsR2.txt`
   
 
-           
+Number of kept sequences was used to calculate the number and percentage of discarded sequences.
+  - R1 files: on average 42% were discarded; percentage of discarded sequences correlates well with percentage of adapter metrics. 
+  - R2 files: on average 16% were discarded - this is low enough, I don't think we need to investigate.
+      
+![pct_discarded_R1_correl](https://user-images.githubusercontent.com/52291277/138770061-be2864b5-eb15-400e-9cab-8a9fa74c0579.png)
 
