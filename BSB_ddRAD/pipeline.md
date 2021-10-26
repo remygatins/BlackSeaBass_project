@@ -138,12 +138,12 @@ and 118 **R2** files - DO NOT USE THE SCRIPT/LINE BELOW, see next hurdle.
 - After running the edited script, I'm getting ~17-19% discarded sequences on a few files ran manually, so will move on with the edited script.
 ------------------------------------------------------
 
-So for the 118 **R2** files we are using the edited script (edited in my local computer and tranferred to the working folder through Globus).
+So for the 118 **R2** files we are using the edited script (edited in my local computer and transferred to the working folder on Discovery through Globus).
 
 `for i in *.fastq.gz; do perl gbstrimedited.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 
-v) Next, we check number of kept sequences from each R1 file:
+v) Next, we count the number of kept sequences from each R1 file:
 
 `for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
 
@@ -153,8 +153,9 @@ and each R2 file:
   
 
 Number of kept sequences was used to calculate the number and percentage of discarded sequences.
-  - R1 files: on average 42% were discarded; percentage of discarded sequences correlates well with percentage of adapter metrics. 
+  - R1 files: on average 42% were discarded; percentage of discarded sequences a little too high; it correlates well with "percentage of adapter" metrics. Percentage of adapter is defined as "The cumulative proportion of each sample in which sequencing adapter sequences have been seen at each position. Once an adapter sequence has been seen in a read it is counted as being present right through to the end of the read so the percentages only increase as the read length goes on. It is common to see significant adapter sequence content at the ends of reads in short insert libraries (16s/18s, small RNA, amplicon). This metric is calculated by FastQC." (see plot below).
   - R2 files: on average 16% were discarded - this is low enough, I don't think we need to investigate.
       
-![pct_discarded_R1_correl](https://user-images.githubusercontent.com/52291277/138770061-be2864b5-eb15-400e-9cab-8a9fa74c0579.png)
+![pct_discarded_R1_correl](https://user-images.githubusercontent.com/52291277/138901755-3611d40e-64e0-4ddb-9567-22cf66522749.png)
+
 
