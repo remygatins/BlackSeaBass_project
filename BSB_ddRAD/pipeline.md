@@ -156,6 +156,7 @@ Number of kept sequences was used to calculate the number and percentage of disc
   - R1 files: on average 42% were discarded; percentage of discarded sequences a little too high; it correlates well with "percentage of adapter" metrics. Percentage of adapter is defined as "The cumulative proportion of each sample in which sequencing adapter sequences have been seen at each position. Once an adapter sequence has been seen in a read it is counted as being present right through to the end of the read so the percentages only increase as the read length goes on. It is common to see significant adapter sequence content at the ends of reads in short insert libraries (16s/18s, small RNA, amplicon). This metric is calculated by FastQC." (see plot below).
   - R2 files: on average 16% were discarded - this is low enough, I don't think we need to investigate.
       
-![pct_discarded_R1_correl](https://user-images.githubusercontent.com/52291277/138901755-3611d40e-64e0-4ddb-9567-22cf66522749.png)
+![pct_discarded_R1_correl](https://user-images.githubusercontent.com/52291277/138901965-43be50ec-0e8f-4439-8a19-134c03294808.png)
+
 
 
