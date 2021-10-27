@@ -80,15 +80,13 @@ ii) Download the repository from https://bitbucket.org/jgarbe/gbstrim/src/master
 
 - used Globus to transfer the repo to my working folder on Discovery (working folder = /work/lotterhos/NOAA...)
 
-iii) use their script: 
+iii) ~~use their script:~~ DON'T - keep reading.
+
+R1 reads:
 
 `perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile sample1_R1.fastq.gz --read R1 --outputfile sample1.trim.fastq --verbose --threads 24 --minlength 50`
 
 NOTES on this line: add `perl` before the command; change the enzymes to what we used (mspi & bamhi); change input and output file names to match ours.
-
-iv) batch trim all 118 **R1** files:
-
-`for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R1 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 Padding sequences (green, variable lengths), R1 overhang (yellow, CGG):
 ![ddRAD_R1_padding_example](https://user-images.githubusercontent.com/52291277/138742166-121f016b-6cb7-402e-9182-d77c39dbd8db.png)
@@ -96,11 +94,12 @@ Padding sequences (green, variable lengths), R1 overhang (yellow, CGG):
 After padding trimmed out, R1 overhangs remain:
 ![ddRAD_R1_padding_cut](https://user-images.githubusercontent.com/52291277/138744664-ecaf076b-573d-4d08-8982-b47d613381b1.png)
 
+Approx. 40% of the sequences from R1 were discarded.
 
+R2 reads:
 
-and 118 **R2** files - DO NOT USE THE SCRIPT/LINE BELOW, see next hurdle.
+Approx. 99% of the sequences from R2 were discarded- see next hurdle.
 
-`for i in *.fastq.gz; do perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 -----------------------------------------------
 
@@ -135,15 +134,17 @@ and 118 **R2** files - DO NOT USE THE SCRIPT/LINE BELOW, see next hurdle.
 **A** GTACGGT ~~GATCC~~  
 
 - So, I edited gbstrim.pl to include all combinations of each base A, C, T, G followed by each of the padding sequences corresponding to BamHI R2 (gatc_r2 in the script). All possible padding sequences in the edited script are: $gatc_r2 = ",G,AG,TCA,AAGT,ACGAA,ACTCTG,GTACGGT,TTCGACAT,CGATGTGCT,A,C,T,AAG,CAG,GAG,TAG,ATCA,CTCA,GTCA,TTCA,AAAGT,CAAGT,GAAGT,TAAGT,AACGAA,CACGAA,GACGAA,TACGAA,AACTCTG,CACTCTG,GACTCTG,TACTCTG,AGTACGGT,CGTACGGT,GGTACGGT,TGTACGGT,ATTCGACAT,CTTCGACAT,GTTCGACAT,TTTCGACAT,ACGATGTGCT,CCGATGTGCT,GCGATGTGCT,TCGATGTGCT";
+- These edits were saved as gbstrimedited.pl
 - After running the edited script, I'm getting ~17-19% discarded sequences on a few files ran manually, so will move on with the edited script.
 ------------------------------------------------------
 
-So for the 118 **R2** files we are using the edited script (edited in my local computer and transferred to the working folder on Discovery through Globus).
+So re-run both R1 and R2 files using the edited script (edited in my local computer and transferred to the working folder on Discovery through Globus); the lines of code below work to run in batch **assuming raw (.fastq.gz) R1 and R2 files are in separate folders** (all R1 files plus the gbstrimedited.pl script file are in the R1_trimmed folder and the code is run out of that folder and all R2 files plus the gbstrimedited.pl script file are in the R2_trimmed folder and the code is run a second time out of that folder).
+
+`for i in *.fastq.gz; do perl gbstrimedited.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R1 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 `for i in *.fastq.gz; do perl gbstrimedited.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
-
-v) Next, we count the number of kept sequences from each R1 file:
+iv) Next, we count the number of kept sequences from each R1 file:
 
 `for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
 
@@ -153,10 +154,12 @@ and each R2 file:
   
 
 Number of kept sequences was used to calculate the number and percentage of discarded sequences.
-  - R1 files: on average 42% were discarded; percentage of discarded sequences a little too high; it correlates well with "percentage of adapter" metrics. Percentage of adapter is defined as "The cumulative proportion of each sample in which sequencing adapter sequences have been seen at each position. Once an adapter sequence has been seen in a read it is counted as being present right through to the end of the read so the percentages only increase as the read length goes on. It is common to see significant adapter sequence content at the ends of reads in short insert libraries (16s/18s, small RNA, amplicon). This metric is calculated by FastQC." (see plot below).
-  - R2 files: on average 16% were discarded - this is low enough, I don't think we need to investigate.
+  - R1 files: on average 42% were discarded when running the UNedited script; dropped to 13.5% (9%-46%) once the edited/corrected script was used. 
+  - R2 files: on average 16% (8%-49%) were discarded once the edited/corrected script was used.
+  - see plots below (% discarded vs # total raw reads); most samples had <20% removed samples, which is considered 'good'.
       
-![pct_discarded_R1_correl](https://user-images.githubusercontent.com/52291277/138901965-43be50ec-0e8f-4439-8a19-134c03294808.png)
+
+![pct_removed_after_trim](https://user-images.githubusercontent.com/52291277/139146836-1ab68222-1b61-40cd-8346-6298cb1c1356.png)
 
 
 
