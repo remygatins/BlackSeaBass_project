@@ -84,9 +84,17 @@ iii) ~~use their script:~~ DON'T - keep reading.
 
 R1 reads:
 
-`perl gbstrim.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile sample1_R1.fastq.gz --read R1 --outputfile sample1.trim.fastq --verbose --threads 24 --minlength 50`
+`gbstrim.pl --enzyme1 ApeKI --enzyme2 ApeKI --fastqfile sample1_R1.fastq.gz --read R1 --outputfile sample1.trim.fastq --verbose --threads 24 --minlength 50`
 
-NOTES on this line: add `perl` before the command; change the enzymes to what we used (mspi & bamhi); change input and output file names to match ours.
+NOTES on this line of code: 
+  - add `perl` before the command; 
+  - change the enzymes to what we used (mspi & bamhi); 
+  - change input and output file names to match ours.
+
+The script 'worked' as the padding sequences were removed and all retained sequences start with the overhang (see screen shots below), HOWEVER:
+  - Approx. 40% of the sequences from R1 were discarded.
+  - Approx. 99% of the sequences from R2 were discarded- see hurdle.
+
 
 Padding sequences (green, variable lengths), R1 overhang (yellow, CGG):
 ![ddRAD_R1_padding_example](https://user-images.githubusercontent.com/52291277/138742166-121f016b-6cb7-402e-9182-d77c39dbd8db.png)
@@ -94,11 +102,7 @@ Padding sequences (green, variable lengths), R1 overhang (yellow, CGG):
 After padding trimmed out, R1 overhangs remain:
 ![ddRAD_R1_padding_cut](https://user-images.githubusercontent.com/52291277/138744664-ecaf076b-573d-4d08-8982-b47d613381b1.png)
 
-Approx. 40% of the sequences from R1 were discarded.
 
-R2 reads:
-
-Approx. 99% of the sequences from R2 were discarded- see next hurdle.
 
 
 -----------------------------------------------
@@ -138,13 +142,13 @@ Approx. 99% of the sequences from R2 were discarded- see next hurdle.
 - After running the edited script, I'm getting ~17-19% discarded sequences on a few files ran manually, so will move on with the edited script.
 ------------------------------------------------------
 
-So re-run both R1 and R2 files using the edited script (edited in my local computer and transferred to the working folder on Discovery through Globus); the lines of code below work to run in batch **assuming raw (.fastq.gz) R1 and R2 files are in separate folders** (all R1 files plus the gbstrimedited.pl script file are in the R1_trimmed folder and the code is run out of that folder and all R2 files plus the gbstrimedited.pl script file are in the R2_trimmed folder and the code is run a second time out of that folder).
+iv) So re-run both R1 and R2 files using the edited script (edited in my local computer and transferred to the working folder on Discovery through Globus); the lines of code below work to run in batch **assuming raw (.fastq.gz) R1 and R2 files are in separate folders** (all R1 files plus the gbstrimedited.pl script file are in the R1_trimmed folder and the code is run out of that folder and all R2 files plus the gbstrimedited.pl script file are in the R2_trimmed folder and the code is run a second time out of that folder).
 
 `for i in *.fastq.gz; do perl gbstrimedited.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R1 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 `for i in *.fastq.gz; do perl gbstrimedited.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
-iv) Next, we count the number of kept sequences from each R1 file:
+v) Next, we count the number of kept sequences from each R1 file:
 
 `for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1.txt`
 
@@ -156,10 +160,12 @@ and each R2 file:
 Number of kept sequences was used to calculate the number and percentage of discarded sequences.
   - R1 files: on average 42% were discarded when running the UNedited script; dropped to 13.5% (9%-46%) once the edited/corrected script was used. 
   - R2 files: on average 16% (8%-49%) were discarded once the edited/corrected script was used.
-  - see plots below (% discarded vs # total raw reads); most samples had <20% removed samples, which is considered 'good'.
+  - see plots below (% discarded vs # total raw reads); most samples had <20% removed samples, which is considered 'OK' ('higher than 20% is unusual').
       
 
 ![pct_removed_after_trim](https://user-images.githubusercontent.com/52291277/139146836-1ab68222-1b61-40cd-8346-6298cb1c1356.png)
 
+
+5) Resync trimmed sequences
 
 
