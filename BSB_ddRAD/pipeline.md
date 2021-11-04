@@ -14,7 +14,7 @@ Mspl cut: sticky ends with 5' end overhangs of C/CGG and palindromic complementa
 
 Barcode sequences: see project summary file.
 
-## 3. name convention for dDocent
+## 3. name convention for dDocent (this works but we're not using those; renaming to convention was integrated into step 5).
 
 file names provided by sequencing facility are in the following format (example: Cs_MA_298_S1_R1_001.fastq.gz): 
       - Cs_XX_YYY_S1_R1_001.fastq.gz (forward)
@@ -166,6 +166,46 @@ Number of kept sequences was used to calculate the number and percentage of disc
 ![pct_removed_after_trim](https://user-images.githubusercontent.com/52291277/139146836-1ab68222-1b61-40cd-8346-6298cb1c1356.png)
 
 
-5) Resync trimmed sequences
+### 5) Resync trimmed sequences & rename to comply with ddocent naming convension
+
+using the script resync.pl fromthe facility to 're-pair' the pair-end files (R1 and R2) after trimming off the padding sequences.
+
+
+usage for a single pair of files:
+
+`resync.pl sample1_R1.trim.fastq sample1_R2.trim.fastq sample1_R1.trim.sync.fastq sample1_R2.trim.sync.fastq`
+
+for loop to batch process all 118 pairs (written by Katie):
+
+```
+for i in *_R1_001.*; 
+do echo "$i"; 
+j=`echo "$i" | sed -r 's/'R1'/'R2'/g'`
+i2=`echo "$i" | sed -r 's/'Cs_'/''/g'`
+i3=`echo "$i2" | sed -r 's/'_S[0-9]+_R1_001'/'.R1'/g'`
+j3=`echo "$i3" | sed -r 's/'R1'/'R2'/g'`
+perl resync.pl "$i" "$j" "$i3" "$j3"
+done
+```
+
+ - input: Cs_MA_298_S1_R1_001.trim.fastq
+ - output: MA_298.R1.trim.fastq
+
+realized these files are not trimmed for the overhang so the extension we want is .F.fg.gz (forward reads, R1 files) and .R.fg.gz (reverse reads, R2 files), so:
+
+R1 files:
+
+`for f in *R1.trim.fastq; do mv "$f" "${f%.R1.trim.fastq}.F.fq"; done`
+
+R2 files:
+
+`for f in *.R2.trim.fastq; do mv "$f" "${f%.R2.trim.fastq}.R.fq"; done` 
+
+then zip all files in the folder:
+
+`gzip -r folderID`
+
+- input: MA_298.R1.trim.fastq and MA_298.R2.trim.fastq
+- output: MA_298.F.fq.gz and MA_298.R.fq.gz
 
 
