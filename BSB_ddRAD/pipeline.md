@@ -207,5 +207,6 @@ then zip all files in the folder:
 
 - input: MA_298.R1.trim.fastq and MA_298.R2.trim.fastq
 - output: MA_298.F.fq.gz and MA_298.R.fq.gz
+- 
 
 
