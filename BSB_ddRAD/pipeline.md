@@ -232,7 +232,10 @@ Use FreeBayes to call SNPs? yes
 Enter email address to get a message when done - will this work on Discovery?
 
 Interactive takes about 20min. 
-Whole run takes about ~6h (for only 21 ind!!!) see summary below:
+datacutoff01 =4
+datacutoff02 =3
+
+Whole run took about ~6h (for only 21 ind!!!) see summary below:
 
 > (base) [tbittar@d3037 trim_padding]$ seff 21857509  
 Job ID: 21857509  
