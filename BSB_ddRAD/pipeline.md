@@ -207,6 +207,44 @@ then zip all files in the folder:
 
 - input: MA_298.R1.trim.fastq and MA_298.R2.trim.fastq
 - output: MA_298.F.fq.gz and MA_298.R.fq.gz
-- 
+
+### 6) dDocent
+
+Using a small subset of individuals, **21 MA individuals** in a folder 'ddocent subset' I will run ddocent (using module load method).  
+      
+cd to working folder `cd /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/ddocent_subset`  
+load module `module load lotterhos/2020-08-24`  
+activate dDocent `source activate ddocent2`  
+start running dDocent, type `dDocent` - this initiates the interactive version of dDocent
+      
+**2021-01-08 - interactive settings:**
+
+Confirm # of individuals - yes  
+Choose # of processors - 3  
+Limit memory use - 10  
+Quality trim? yes  
+Perform assembly? yes  
+What type of assembly? PE  
+New c-parameter? no  
+Map reads? yes  
+Adjust -A -B -O; new parameters? no  
+Use FreeBayes to call SNPs? yes  
+Enter email address to get a message when done - will this work on Discovery?
+
+Interactive takes about 20min. 
+Whole run takes about ~6h (for only 21 ind!!!) see summary below:
+
+> (base) [tbittar@d3037 trim_padding]$ seff 21857509  
+Job ID: 21857509  
+Cluster: discovery  
+User/Group: tbittar/users  
+State: TIMEOUT (exit code 0)  
+Cores: 1  
+CPU Utilized: 05:41:24  
+CPU Efficiency: 94.74% of 06:00:22 core-walltime  
+Job Wall-clock time: 06:00:22  
+Memory Utilized: 3.68 GB  
+Memory Efficiency: 188.64% of 1.95 GB
+
 
 
