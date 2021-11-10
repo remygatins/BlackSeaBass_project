@@ -166,7 +166,7 @@ Number of kept sequences was used to calculate the number and percentage of disc
 ![pct_removed_after_trim](https://user-images.githubusercontent.com/52291277/139146836-1ab68222-1b61-40cd-8346-6298cb1c1356.png)
 
 
-### 5) Resync trimmed sequences & rename to comply with ddocent naming convension
+## 5) Resync trimmed sequences & rename to comply with ddocent naming convension
 
 using the script resync.pl fromthe facility to 're-pair' the pair-end files (R1 and R2) after trimming off the padding sequences.
 
@@ -208,9 +208,9 @@ then zip all files in the folder:
 - input: MA_298.R1.trim.fastq and MA_298.R2.trim.fastq
 - output: MA_298.F.fq.gz and MA_298.R.fq.gz
 
-### 6) dDocent
+## 6) dDocent
 
-Using a small subset of individuals, **21 MA individuals** in a folder 'ddocent subset' I will run ddocent (using module load method).  
+Using a small subset of individuals, **21 MA individuals**, in the folder 'ddocent_subset', I will run ddocent (using module load method).  
       
 cd to working folder `cd /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/ddocent_subset`  
 load module `module load lotterhos/2020-08-24`  
@@ -235,14 +235,17 @@ Interactive takes about 20min.
 datacutoff01 =4
 datacutoff02 =3
 
-## Run took about ~6h (for only 21 ind!!!) but there was some kind of error - here is a screenshot of the whole run with the error message at the very bottom:
+### Run took about ~6h (for only 21 ind!!!) but there was some kind of error - here is a screenshot of the whole run with the error message at the very bottom:
 
-  ![ddocent_error](https://user-images.githubusercontent.com/52291277/141153402-c13aad18-b4c6-48e3-9b85-146fc1853504.png)
+
+![ddocent_error](https://user-images.githubusercontent.com/52291277/141155240-a4e421a8-b3ba-4f32-a400-3af4526a32f0.png)
                                                                                                                                                                              !
                                                                                                               
 vcfcombine: /shared/centos7/salmon/1.1.0/lib/libm.so.6: version `GLIBC_2.15' not found (required by vcfcombine)
 
-## seff to see time and memory usage:
+All output files are created, but they are empty.
+
+### seff to see time and memory usage:
 
 > (base) [tbittar@d3037 trim_padding]$ seff 21857509  
 Job ID: 21857509  
