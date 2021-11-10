@@ -235,7 +235,14 @@ Interactive takes about 20min.
 datacutoff01 =4
 datacutoff02 =3
 
-Whole run took about ~6h (for only 21 ind!!!) see summary below:
+## Run took about ~6h (for only 21 ind!!!) but there was some kind of error - here is a screenshot of the whole run with the error message at the very bottom:
+
+  ![ddocent_error](https://user-images.githubusercontent.com/52291277/141153402-c13aad18-b4c6-48e3-9b85-146fc1853504.png)
+                                                                                                                                                                             !
+                                                                                                              
+vcfcombine: /shared/centos7/salmon/1.1.0/lib/libm.so.6: version `GLIBC_2.15' not found (required by vcfcombine)
+
+## seff to see time and memory usage:
 
 > (base) [tbittar@d3037 trim_padding]$ seff 21857509  
 Job ID: 21857509  
@@ -248,6 +255,8 @@ CPU Efficiency: 94.74% of 06:00:22 core-walltime
 Job Wall-clock time: 06:00:22  
 Memory Utilized: 3.68 GB  
 Memory Efficiency: 188.64% of 1.95 GB
+
+
 
 
 
