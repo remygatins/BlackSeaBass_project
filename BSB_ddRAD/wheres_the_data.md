@@ -6,7 +6,7 @@
 - other metrics from the sequencing facility: 
 
 2.
-/lotterhos/work/2020_NOAA_BlackSeaBass_ddRADb/dDocent_pipeline has:
+/lotterhos/work/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001 has:
 
 Thais is working with the fastq files and developing the pipeline using dDocent out of that folder.
 
