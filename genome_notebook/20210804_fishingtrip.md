@@ -63,6 +63,9 @@
 - [x] ordered
 - [x] delivered
 
+Fish measuring board order info:
+![fish_measuring_board](https://user-images.githubusercontent.com/52291277/141823938-5dc8d34b-85e9-469d-961d-2cb18a3f6aab.png)
+
 
 ## Field notes
 - Took 5.5 min to sample the 5 tissues (fin, muscle, liver, heart, brain) + 2.5 min to clean > 8min total (Cryo/RNAlater)
