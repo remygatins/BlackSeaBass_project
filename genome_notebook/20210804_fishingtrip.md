@@ -65,7 +65,9 @@
 
 Fish measuring board order info:
 
-![fish_measuring_board](https://user-images.githubusercontent.com/52291277/141823938-5dc8d34b-85e9-469d-961d-2cb18a3f6aab.png)
+[Neobits.com - Order Details.pdf](https://github.com/thais-neu/BlackSeaBass_project/files/7540387/Neobits.com.-.Order.Details.pdf)
+
+
 
 
 ## Field notes
