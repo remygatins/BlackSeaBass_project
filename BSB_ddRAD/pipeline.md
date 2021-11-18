@@ -260,6 +260,7 @@ Memory Utilized: 3.68 GB
 Memory Efficiency: 188.64% of 1.95 GB
 
 
-
+notes from Remy:
+run a fastqc 
 
 
