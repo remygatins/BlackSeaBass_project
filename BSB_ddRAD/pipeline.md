@@ -261,6 +261,7 @@ Memory Efficiency: 188.64% of 1.95 GB
 
 
 notes from Remy:
-run a fastqc 
+run a fastqc - we found out adapters are gone.
+will try to remove overhang sites with gbstrim.pl & run ddocent with trimmed files .R1 & .R2 
 
 
