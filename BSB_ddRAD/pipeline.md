@@ -264,4 +264,95 @@ notes from Remy:
 run a fastqc - we found out adapters are gone.
 will try to remove overhang sites with gbstrim.pl & run ddocent with trimmed files .R1 & .R2 
 
+---------------------------------------------------
+
+**20211122 - hurdle**
+
+- Ddocent run did complete but: 
+  * an error occurred at the end (vcfcombine: /shared/centos7/salmon/1.1.0/lib/libm.so.6: version `GLIBC_2.15' not found (required by vcfcombine)) and   
+  * output files were created but were empty.   
+- Going back to dDocent documentation, I see that *"If performing de novo assembly, it’s essential that no read trimming or adapter removal has taken place before the dDocent pipeline. If a reference is being supplied, then trimmed reads may be used."* Turns out that gbstrimedited.pl, the script provided by the sequencing facility to trim off padding sequences **also trims off the adapter, so maybe that's the problem**.
+- I ran a fastqc on one of the files to confirm adapters were removed (Remy).
+- new plan is to tweak the facility's script one more time to keep the adapters and try ddocent again (**will try this first**); or trim all files and supply a reference genome for assembly.  
+
+#### I edited gbstrimedited.pl to replace the real Illumina adapters with 'dummy' adapters as follows (saved as gbstrimeditedkeepadapter.pl):
+
+
+**Original script:** 
+
+```
+##################### Initialize ###############################
+
+use Getopt::Long;
+use Pod::Usage;
+use FindBin;
+use lib "$FindBin::RealBin";
+
+# set defaults
+$r1adapter = "CTGTCTCTTATACACATCTCCGAG";
+$r2adapter = "CTGTCTCTTATACACATCTGACGC";
+$minlength = 20;
+$uniformlength = 0;
+GetOptions("help" => \$help,
+...
+```
+
+**EDITED SCRIPT:**
+
+```
+##################### Initialize ###############################
+
+use Getopt::Long;
+use Pod::Usage;
+use FindBin;
+use lib "$FindBin::RealBin";
+
+# set defaults
+$r1adapter = "CCCCCCCCCCCCCCCCCCCCCCCC";
+$r2adapter = "CCCCCCCCCCCCCCCCCCCCCCCC";
+$minlength = 20;
+$uniformlength = 0;
+GetOptions("help" => \$help,
+...
+```
+
+
+i) Using a subset of our files (all MA samples), I ran gbstrimeditedkeepadapter.pl on R1 and R2 files & counted sequences kept:
+
+`for i in *.fastq.gz; do perl gbstrimeditedkeepadapter.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R1 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
+
+`for i in *.trim.fastq; do grep '^CGG' "$i" | wc -l; done > kept_seqsR1_keepadapter.txt`
+
+`for i in *.fastq.gz; do perl gbstrimeditedkeepadapter.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
+
+`for i in *trim.fastq; do grep '^GATCC' "$i" | wc -l; done > kept_seqsR2_keepadapter.txt`
+
+ii) then, run the forloop to rename & the resync.pl script to resync R1 & R2 files and rename output files to .F.trim.fastq & .R.trim.fastq:
+
+```
+for i in *_R1_001.*; 
+do echo "$i"; 
+j=`echo "$i" | sed -r 's/'R1'/'R2'/g'`
+i2=`echo "$i" | sed -r 's/'Cs_'/''/g'`
+i3=`echo "$i2" | sed -r 's/'_S[0-9]+_R1_001'/'.R1'/g'`
+j3=`echo "$i3" | sed -r 's/'R1'/'R2'/g'`
+perl resync.pl "$i" "$j" "$i3" "$j3"
+done
+```
+
+iii) Output files need to be renamed one more time to R1.fq.gz and R2.fq.gz to match ddocent naming convention; used the following forloops to rename:
+
+`for f in *.R1.trim.fastq; do mv "$f" "${f%.R1.trim.fastq}.F.fq"; done`  
+`for f in *.R2.trim.fastq; do mv "$f" "${f%.R2.trim.fastq}.R.fq"; done` 
+
+and zip all files in the folder using:
+
+```gzip -r folderID```
+
+iii) run Ddocent from this folder.
+
+
+
+
+
 
