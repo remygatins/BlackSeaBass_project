@@ -273,6 +273,8 @@ will try to remove overhang sites with gbstrim.pl & run ddocent with trimmed fil
   * output files were created but were empty.   
 - Going back to dDocent documentation, I see that *"If performing de novo assembly, it’s essential that no read trimming or adapter removal has taken place before the dDocent pipeline. If a reference is being supplied, then trimmed reads may be used."* Turns out that gbstrimedited.pl, the script provided by the sequencing facility to trim off padding sequences **also trims off the adapter, so maybe that's the problem**.
 - I ran a fastqc on one of the files to confirm adapters were removed (Remy).
+![fastqc_noadapter](https://user-images.githubusercontent.com/52291277/142939422-558f3d07-3570-490e-a668-df62dcec1c66.png)
+
 - new plan is to tweak the facility's script one more time to keep the adapters and try ddocent again (**will try this first**); or trim all files and supply a reference genome for assembly.  
 
 #### I edited gbstrimedited.pl to replace the real Illumina adapters with 'dummy' adapters as follows (saved as gbstrimeditedkeepadapter.pl):
