@@ -322,7 +322,7 @@ GetOptions("help" => \$help,
 ![fastqc_withadapter](https://user-images.githubusercontent.com/52291277/143900475-13e5754c-6027-4e91-aafc-e9dabbbc6418.png)
 
 
-i) Using a subset of our files (all MA samples), I ran gbstrimeditedkeepadapter.pl on R1 and R2 files & counted sequences kept:
+i) All R1 and R2 files were trimmed for padding sequences but NOT for adapters, using gbstrimeditedkeepadapter.pl & counted sequences kept:
 
 `for i in *.fastq.gz; do perl gbstrimeditedkeepadapter.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R1 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
@@ -338,7 +338,7 @@ i) Using a subset of our files (all MA samples), I ran gbstrimeditedkeepadapter.
 ![pct_removed_after_trim_keeping_adapter](https://user-images.githubusercontent.com/52291277/144117296-ea6a4c5b-13ec-4a74-9989-0f5e48955086.png)
 
 
-ii) then, run the forloop to rename & the resync.pl script to resync R1 & R2 files and rename output files to .F.trim.fastq & .R.trim.fastq:
+ii) then, place R1.trim.fastq & R2.trim.fastq together in a folder along with the script resync.pl, and run the following forloop to rename & resync R1 & R2 files; output files will be .F.trim.fastq & .R.trim.fastq:
 
 ```
 for i in *_R1_001.*; 
