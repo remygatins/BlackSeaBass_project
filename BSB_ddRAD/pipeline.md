@@ -360,7 +360,7 @@ and zip all files in the folder using:
 
 ```gzip -r folderID```
 
-iii) run Ddocent from this folder.
+iii) Copy files for 10 individuals to a 'ddocent_subset01' folder and run dDocent out of this folder.
 
 
 
