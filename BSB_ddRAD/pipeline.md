@@ -317,6 +317,9 @@ $uniformlength = 0;
 GetOptions("help" => \$help,
 ...
 ```
+#### then ran fastqc again
+ 
+![fastqc_withadapter](https://user-images.githubusercontent.com/52291277/143900475-13e5754c-6027-4e91-aafc-e9dabbbc6418.png)
 
 
 i) Using a subset of our files (all MA samples), I ran gbstrimeditedkeepadapter.pl on R1 and R2 files & counted sequences kept:
@@ -328,6 +331,12 @@ i) Using a subset of our files (all MA samples), I ran gbstrimeditedkeepadapter.
 `for i in *.fastq.gz; do perl gbstrimeditedkeepadapter.pl --enzyme1 mspi --enzyme2 bamhi --fastqfile "$i" --read R2 --outputfile "${i%%.*}".trim.fastq --verbose --threads 24 --minlength 50; done`
 
 `for i in *trim.fastq; do grep '^GATCC' "$i" | wc -l; done > kept_seqsR2_keepadapter.txt`
+
+
+## Percentage of sequences kept after padding sequences trimmed & adapter is kept (light orange, light blue) compared to padding sequences trimmed & adapter removed (dark orange, dark blue): less sequences are discarded when we keep the adapter.
+
+![pct_removed_after_trim_keeping_adapter](https://user-images.githubusercontent.com/52291277/144117296-ea6a4c5b-13ec-4a74-9989-0f5e48955086.png)
+
 
 ii) then, run the forloop to rename & the resync.pl script to resync R1 & R2 files and rename output files to .F.trim.fastq & .R.trim.fastq:
 
@@ -352,6 +361,7 @@ and zip all files in the folder using:
 ```gzip -r folderID```
 
 iii) run Ddocent from this folder.
+
 
 
 
