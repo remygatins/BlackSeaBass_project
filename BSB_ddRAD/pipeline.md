@@ -195,11 +195,11 @@ realized these files are not trimmed for the overhang so the extension we want i
 
 R1 files:
 
-`for f in *R1.trim.fastq; do mv "$f" "${f%.R1.trim.fastq}.F.fq"; done`
+`for f in *R1.trim.fastq; do mv "$f" "${f%.R1.trim.fastq}.F.fq.gz"; done`
 
 R2 files:
 
-`for f in *.R2.trim.fastq; do mv "$f" "${f%.R2.trim.fastq}.R.fq"; done` 
+`for f in *.R2.trim.fastq; do mv "$f" "${f%.R2.trim.fastq}.R.fq.gz"; done` 
 
 then zip all files in the folder:
 
