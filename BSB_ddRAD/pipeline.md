@@ -353,12 +353,12 @@ done
 
 iii) Output files need to be renamed one more time to R1.fq.gz and R2.fq.gz to match ddocent naming convention; used the following forloops to rename:
 
-`for f in *.R1.trim.fastq; do mv "$f" "${f%.R1.trim.fastq}.F.fq"; done`  
-`for f in *.R2.trim.fastq; do mv "$f" "${f%.R2.trim.fastq}.R.fq"; done` 
+`for f in *.R1.trim.fastq; do mv "$f" "${f%.R1.trim.fastq}.F.fq.gz"; done`  
+`for f in *.R2.trim.fastq; do mv "$f" "${f%.R2.trim.fastq}.R.fq.gz"; done` 
 
-and zip all files in the folder using:
+~~and zip all files in the folder using:
 
-```gzip -r folderID```
+~~```gzip -r folderID```
 
 iii) Copy files for 10 individuals to a 'ddocent_subset01' folder and run dDocent out of this folder.
 
