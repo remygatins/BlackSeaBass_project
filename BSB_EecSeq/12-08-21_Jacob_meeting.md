@@ -1,4 +1,4 @@
-# EecSeq library notes
+# EecSeq  notes
 Meeting with Jacob Green and Amy from the Puritz lab
 12/08/2021
 
