@@ -13,7 +13,7 @@ Zymo kit to extract DNA/RNA instead of Qiagen and TriReagent
 mRNA Roche Hyperprep 
 
 #**Links**
-[EecSeq Master](https://github.com/MarineEvoEcoLab/Lab_Resources/blob/master/Protocols/EecSeq.md)
+[EecSeq Master](https://github.com/MarineEvoEcoLab/EecSeq/blob/master/Protocol.md)
 
 [Pinsky Lab EecSeq](https://pinskylab.github.io/laboratory/protocols/anneal.nb.html)
   - timed steps broken into chunks
