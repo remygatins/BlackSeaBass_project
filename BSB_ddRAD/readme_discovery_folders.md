@@ -1,7 +1,7 @@
 ## /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/
 
 ### Files
-- all raw FASTQ files from sequencing facility  
+- all raw FASTQ files from sequencing facility  (moved to folder `raw`)
 - both original PERL scripts from sequencing facility:
   - gbstrim.pl - trims off padding sequences & Illumina adapter  
   - resync.pl - resync R1 and R2 files post-trimming
@@ -11,6 +11,7 @@
   
 
 ### Folders
+- raw: all raw FASTQ files from sequencing facility 
 - trim_padding: files trimmed using gbstrimedited.pl, i.e., padding sequences are cut off, and Illumina adapters are cut off.
 - trim_padding_keepadapter: files trimmed using gbstrimeditedkeepadapter.pl, i.e., padding sequences are cut off and Illumina adapters are retained.
 
