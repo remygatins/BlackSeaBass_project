@@ -8,7 +8,7 @@ I have installed `multiqc` using conda from within the lotterhos module
 ```bash
 module load lotterhos/2020-08-24
 conda create -n multiqc
-source activate mutliqc
+source activate multiqc
 conda install -c bioconda multiqc
 ```
 I ran `multiqc` on trimmed and synced files from `/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed`
@@ -26,4 +26,29 @@ lotterhos - 2 nodes - 36 cores
 OR For 20 minutes on the debug partition:
 
 `srun -p debug -N 1 --pty /bin/bash`
+
+We first need to run fastqc on all files and then we use multiqc to view all reports in one. 
+
+
+```bash
+srun -p lotterhos -N 1 --pty /bin/bash
+module load oracle_java
+module load fastqc
+```
+now run fastqc for all files
+
+    fastqc /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/*fq.gz -o .
+
+now load multiqc
+
+      module load lotterhos
+      source activate multiqc
+run
+
+      mulitqc .
+
+```bash
+multiqc -d /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/*.fq.gz -l ../multiqc/BSB_synced_trimmed_list -i BSB_synced_trimmed -o .
+```
+
 
