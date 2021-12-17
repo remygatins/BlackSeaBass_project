@@ -47,8 +47,8 @@ run
 
       mulitqc .
 
-```bash
-multiqc -d /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/*.fq.gz -l ../multiqc/BSB_synced_trimmed_list -i BSB_synced_trimmed -o .
-```
+now download the html file to your computer to open. I am interested in sequence length to be able to trim them all equal
+
+![sequence length summmary](BlackSeaBass_project/img/multiqc_synced_trimmed_sequence_length.png)
 
 
