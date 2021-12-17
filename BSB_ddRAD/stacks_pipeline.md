@@ -49,6 +49,8 @@ run
 
 now download the html file to your computer to open. I am interested in sequence length to be able to trim them all equal
 
+<img src="BlackSeaBass_project/img/multiqc_synced_trimmed_sequence_length.png" width=100 height=100>
+
 ![sequence length summmary](BlackSeaBass_project/img/multiqc_synced_trimmed_sequence_length.png)
 
 
