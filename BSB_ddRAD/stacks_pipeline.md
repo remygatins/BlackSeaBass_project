@@ -52,4 +52,84 @@ now download the html file to your computer to open. I am interested in sequence
 ![sequence length summmary](/img/multiqc_synced_trimmed_sequence_length.jpg)
 ![adapter presence](/img/multiqc_synced_trimmed_adapter.png)
 
+The shortest sequence is 138 so I will trim to 138 and remove any leftover nexterra adapters.
+
+## trimgalore test
+```bash
+module load lotterhos
+source activate trimgalore
+
+trim_galore --phred33 --fastqc --nextera -o ../samples --paired --cores 2 /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.F.fq.gz /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.R.fq.gz
+```
+this gave me an error that may be due to overlapping programs between trimgalore and salmon
+*I also re-installed trim-galore as a conda environment because trimgalore from the lotterhos module could not find cutadapt*
+
+The following worked:
+```bash
+module load miniconda3
+source activate trimgalore
+
+trim_galore --phred33 --fastqc --nextera -o ../samples/130bp --paired --cores 2 --length 100 --hardtrim5 130 --basename trim130 /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.F.fq.gz /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.R.fq.gz
+```
+when I use `--hardtrim` this takes precedence over everything else and only trims all sequences. So, I will need to run hardtrim first and then filter out any smaller sequences 
+
+hardtrim to 135
+```bash
+trim_galore --phred33 -o . --paired --cores 2 --hardtrim5 135 /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.F.fq.gz /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.R.fq.gz
+```
+Then filter smaller fragements out (min length 135)
+```bash
+trim_galore --phred33 --fastqc -o . --paired --cores 2 --length 135 --basename ME_156_trim135 /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/130bp/ME_165.F.135bp_5prime.fq.gz /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/130bp/ME_165.R.135bp_5prime.fq.gz
+```
+
+
+I plan to use an array so I first made a list of the unique sample names
+```bash
+head BSB_sample_list_uniq 
+MA_298
+MA_299
+MA_300
+MA_302
+MA_303
+MA_304
+MA_306
+MA_307
+MA_310
+...
+```
+
+## trim galore array
+
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=trim_galore              # Name your job something useful for easy tracking
+#SBATCH --output=out/trim_galore.out
+#SBATCH --error=out/trim_galore.err
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=5000                        # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=2-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
+#SBATCH --array=0-117%10		#there are 118 samples and it will run a maximum of 10 jobs at a time
+
+#--------------MODULES---------------
+
+module load miniconda3
+source activate trimgalore
+
+#--------------COMMAND----------------
+
+sample=($(<../samples/BSB_sample_list_uniq))
+
+echo "My input file is ${sample}"
+
+trim_galore --phred33 -o ../samples/hardtrim --paired --cores 2 --hardtrim5 135 \
+/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${sample}.F.fq.gz \
+/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${sample}.R.fq.gz
+```
+This did not work. It kept repeating th first file over and over....
+
+
 
