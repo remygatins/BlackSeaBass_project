@@ -49,8 +49,7 @@ run
 
 now download the html file to your computer to open. I am interested in sequence length to be able to trim them all equal
 
-<img src="/img/multiqc_synced_trimmed_sequence_length.jpg" width=100 height=100>
-
 ![sequence length summmary](/img/multiqc_synced_trimmed_sequence_length.jpg)
+![adapter presence](/img/multiqc_synced_trimmed_adapter.png)
 
 
