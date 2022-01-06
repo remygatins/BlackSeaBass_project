@@ -131,5 +131,58 @@ trim_galore --phred33 -o ../samples/hardtrim --paired --cores 2 --hardtrim5 135 
 ```
 This did not work. It kept repeating th first file over and over....
 
+## trim galore forloop
+
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=trimgal              # Name your job something useful for easy tracking
+#SBATCH --output=out/trimgal.out
+#SBATCH --error=out/trim_gal.err
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=5000                        # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=2-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
+
+#--------------MODULES---------------
+
+module load miniconda3
+source activate trimgalore
+
+#--------------COMMAND----------------
+
+for file in `cat BSB_sample_list_uniq`;
+do
+    trim_galore --phred33 -o ../samples/hardtrim --paired --cores 2 --hardtrim5 135 \
+    /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${file}.F.fq.gz \
+    /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${file}.R.fq.gz
+done
+```
+or
+
+```bash
+samples=("MA_298
+    MA_299
+    MA_300
+    MA_302
+    MA_303
+    MA_304
+    MA_306
+    MA_307
+    MA_310
+    MA_311")
+     
+for file in $samples;
+do
+    trim_galore --phred33 -o ../samples/hardtrim --paired --cores 2 --hardtrim5 135 \
+    /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${file}.F.fq.gz \
+    /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${file}.R.fq.gz
+done
+```
+
+
+
 
 
