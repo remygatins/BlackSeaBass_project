@@ -214,7 +214,7 @@ run
 
 now download the html file to your computer to open. I am interested in sequence length to be able to trim them all equal
 
-
+![multiqc_hardtrim](/img/multiqc_hardtrim_135bp.png)
 
 samples still had adapters and some sequence lengths varied so we will first need to remove the adapter sequences and drop sequences under 130 bp. Then I will hardtrim all sequences.
 
