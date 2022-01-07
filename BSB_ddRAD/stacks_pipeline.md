@@ -71,7 +71,14 @@ source activate trimgalore
 
 trim_galore --phred33 --fastqc --nextera -o ../samples/130bp --paired --cores 2 --length 100 --hardtrim5 130 --basename trim130 /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.F.fq.gz /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.R.fq.gz
 ```
-when I use `--hardtrim` this takes precedence over everything else and only trims all sequences. So, I will need to run hardtrim first and then filter out any smaller sequences 
+when I use `--hardtrim` this takes precedence over everything else and only trims all sequences. So, I will need to remove the nexterra adapter and then run hardtrim first and filter out any smaller sequences 
+
+```bash
+module load miniconda3
+source activate trimgalore
+
+trim_galore --phred33 --fastqc --nextera -o ../samples/130bp --paired --cores 2 --length 100 /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.F.fq.gz /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/ME_165.R.fq.gz
+```
 
 hardtrim to 135
 ```bash
@@ -181,8 +188,39 @@ do
     /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${file}.R.fq.gz
 done
 ```
+# Check fastqc stats
 
-## trim galore for loop
+```bash
+module load oracle_java
+module load fastqc
+```
+now run fastqc for all files
+
+    fastqc ../samples/hardtrim/*fq.gz -o ../samples/hardtrim/fastqc
+
+now load multiqc
+
+fist open an interactive node
+
+       srun -p lotterhos -N 1 --pty /bin/bash
+
+load multiqc
+
+      module load lotterhos
+      source activate multiqc
+run
+
+      mulitqc .
+
+now download the html file to your computer to open. I am interested in sequence length to be able to trim them all equal
+
+
+
+samples still had adapters and some sequence lengths varied so we will first need to remove the adapter sequences and drop sequences under 130 bp. Then I will hardtrim all sequences.
+
+
+
+## remove nexterra adapter and sequences smaller than 120bp for loop
 
 ```bash
 #!/bin/bash
@@ -204,9 +242,9 @@ source activate trimgalore
 
 #--------------COMMAND----------------
 
-for file in `cat BSB_sample_list_uniq`;
+for file in `cat ../samples/BSB_sample_list_uniq`;
 do
-    trim_galore --phred33 -o ../samples/hardtrim --paired --cores 2 --hardtrim5 135 \
+    trim_galore --phred33 --fastqc --nextera -o ../samples/no_adapter --paired --cores 2 --length 130  \
     /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${file}.F.fq.gz \
     /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${file}.R.fq.gz
 done
