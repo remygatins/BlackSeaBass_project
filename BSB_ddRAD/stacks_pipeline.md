@@ -250,6 +250,11 @@ do
 done
 ```
 
+Output notes:
+The `*_trimmed.fq.gz` are produced as intermediate output (as R1 and R2 are trimmed individually in the first instance). Once the trimming has completed, Trim Galore will launch a round of 'validation' (which is is where the files get the val in their names from), which primarily performs length-cutoff filtering (and a few more optional things I believe). Once the validation is complete, the trimmed files will be deleted, and you are left with only the files `N1_1_val_1.fq.gz` and `N1_2_val_2.fq.gz`.
+
+
+
 
 
 
