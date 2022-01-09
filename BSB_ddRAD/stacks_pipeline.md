@@ -249,12 +249,53 @@ do
     /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/trim_padding/synced_renamed/${file}.R.fq.gz
 done
 ```
+Run time 05:48:11 (118 individuals)
 
 Output notes:
 The `*_trimmed.fq.gz` are produced as intermediate output (as R1 and R2 are trimmed individually in the first instance). Once the trimming has completed, Trim Galore will launch a round of 'validation' (which is is where the files get the val in their names from), which primarily performs length-cutoff filtering (and a few more optional things I believe). Once the validation is complete, the trimmed files will be deleted, and you are left with only the files `N1_1_val_1.fq.gz` and `N1_2_val_2.fq.gz`.
 
+now load multiqc
+
+fist open an interactive node
+
+       srun -p lotterhos -N 1 --pty /bin/bash
+
+load multiqc
+
+      module load lotterhos
+      source activate multiqc
+run
+
+      mulitqc .
 
 
+## trim galore for loop to trim to 135bp
 
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=trimgal              # Name your job something useful for easy tracking
+#SBATCH --output=out/trimgal.out
+#SBATCH --error=out/trim_gal.err
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=5000                        # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=2-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
 
+#--------------MODULES---------------
+
+module load miniconda3
+source activate trimgalore
+
+#--------------COMMAND----------------
+
+for file in `cat ../samples/BSB_sample_list_uniq`;
+do
+    trim_galore --phred33 -o ../samples/no_adapter/hardtrim --paired --cores 2 --hardtrim5 130 \
+    ../samples/no_adapter/${file}.F_val_1.fq.gz \
+    ../samples/no_adapter/${file}.R_val_2.fq.gz
+done
+```
 
