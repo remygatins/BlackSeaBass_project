@@ -298,4 +298,6 @@ do
     ../samples/no_adapter/${file}.R_val_2.fq.gz
 done
 ```
+fastqc
 
+    fastqc ../samples/no_adapter/hardtrim/*fq.gz -o ../samples/no_adapter/hardtrim/fastqc
