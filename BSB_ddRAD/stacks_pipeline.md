@@ -301,3 +301,95 @@ done
 fastqc
 
     fastqc ../samples/no_adapter/hardtrim/*fq.gz -o ../samples/no_adapter/hardtrim/fastqc
+    
+multiqc
+
+     srun -p lotterhos -N 1 --pty /bin/bash
+
+load multiqc
+
+      module load lotterhos
+      source activate multiqc
+run
+
+      mulitqc .
+      
+All sequences are trimmed to a total length of 130bp starting from 5' end and have no adapter. (There may be a possibility that these may no longer be paired perfectly since the 3' end may have been cut and the reciprocal end may not. will check this.
+
+# STACKS
+
+## Process radtags
+
+```bash
+module load lotterhos
+module load stacks
+
+process_radtags -p ../samples/no_adapter --paired -o ../samples/no_adapter/process_radtags --renz-1 bamHI --renz-2 mspI -c -q -t 130 
+
+```
+error
+
+```bash
+
+process_radtags -1 MA_299.F_val_1.fq.gz -2 MA_299.R_val_2.fq.gz \
+-o /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags \
+--renz-1 bamHI --renz-2 mspI -c -q -t 130
+```
+
+output
+```bash
+3670680 total sequences
+      0 barcode not found drops (0.0%)
+      0 low quality read drops (0.0%)
+3670680 RAD cutsite not found drops (100.0%)
+      0 retained reads (0.0%)
+ ```
+ Corresponding enzyme and read are flipped.  
+ 
+ Read 1 has cutsite mspI while R2 has cutsite bamHI
+
+```bash
+ process_radtags -1 MA_299.F_val_1.fq.gz -2 MA_299.R_val_2.fq.gz \
+ -o ./process_radtags \
+ --renz-1 mspI --renz-2 bamHI \
+ -c -q -t 130
+ ```
+ 
+ output
+ ```bash
+3670680 total sequences
+      0 barcode not found drops (0.0%)
+   1042 low quality read drops (0.0%)
+      0 RAD cutsite not found drops (0.0%)
+3669638 retained reads (100.0%)
+ ```
+ 
+ 
+ ```bash
+#!/bin/bash
+#SBATCH --job-name=stacks              # Name your job something useful for easy tracking
+#SBATCH --output=out/stacks.out
+#SBATCH --error=out/stacks.err
+#SBATCH --cpus-per-task=14
+#SBATCH --mem=5000                        # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=2-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu	   # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
+#--------------MODULES---------------
+
+module load lotterhos
+module load stacks
+
+#--------------COMMAND----------------
+
+for file in `cat ../samples/BSB_sample_list`;
+do
+    process_radtags -1 ../samples/no_adapter/${file}.F_val_1.fq.gz \
+    -2 ../samples/no_adapter/${file}.R_val_2.fq.gz \
+    -o ../samples/no_adapter/process_radtags \
+    --renz-1 mspI --renz-2 bamHI -c -q -t 130
+done
+```
+
+
