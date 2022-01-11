@@ -391,5 +391,19 @@ do
     --renz-1 mspI --renz-2 bamHI -c -q -t 130
 done
 ```
+output 
+```bash
+SN_191.F_val_1.1.fq.gz
+SN_191.F_val_1.rem.1.fq.gz
+SN_191.R_val_2.2.fq.gz
+SN_191.R_val_2.rem.2.fq.gz
+```
+`*.rem.1.fq` and `*.rem.2.fq` are remaining sequences that do not have a pair due to being discaded due to quality.
+
+I want to rename my sequences to make them more straightforward. 
+
+
+
+
 
 
