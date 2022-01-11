@@ -403,6 +403,27 @@ SN_191.R_val_2.rem.2.fq.gz
 I want to rename my sequences to make them more straightforward. 
 
 
+`for f in *.F_val_1.1.fq.gz; do mv "$f" "${f%.F_val_1.1.fq.gz}.1.fq.gz"; done`
+`for f in *.R_val_2.2.fq.gz; do mv "$f" "${f%.R_val_2.2.fq.gz}.2.fq.gz"; done`
+`for f in *.F_val_1.rem.1.fq.gz; do mv "$f" "${f%.F_val_1.rem.1.fq.gz}.rem.1.fq.gz"; done`
+`for f in *.R_val_2.rem.2.fq.gz; do mv "$f" "${f%.R_val_2.rem.2.fq.gz}.rem.2.fq.gz"; done`
+
+```bash
+...
+SN_191.1.fq.gz
+SN_191.2.fq.gz
+SN_191.rem.1.fq.gz
+SN_191.rem.2.fq.gz
+```
+## Denovo map
+
+```bash
+denovo_map.pl -m 4 -M 3 -n 2 -T 12 -d \
+-o ../stacks/ \
+--samples ../samples/no_adapter/process_radtags \
+--popmap ../popmap/BSB_all --paired \
+-X "populations:-r 0.8 --genepop --vcf --write_single_snp"
+```
 
 
 
