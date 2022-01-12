@@ -424,7 +424,272 @@ denovo_map.pl -m 4 -M 3 -n 2 -T 12 -d \
 --popmap ../popmap/BSB_all --paired \
 -X "populations:-r 0.8 --genepop --vcf --write_single_snp"
 ```
+I removed MA_300 due to low number of sequences. 
+
+denovo_map.log
+```bash
+#cstacks
+MA_298	MA	42.60x
+MA_299	MA	43.40x
+MA_302	MA	34.98x
+MA_303	MA	21.75x
+MA_304	MA	29.09x
+MA_306	MA	42.18x
+MA_307	MA	36.14x
+MA_310	MA	38.08x
+MA_311	MA	39.84x
+MA_313	MA	33.30x
+MA_314	MA	14.56x
+MA_315	MA	37.25x
+MA_316	MA	23.57x
+MA_318	MA	25.48x
+MA_320	MA	37.66x
+MA_321	MA	42.68x
+MA_323	MA	35.42x
+MA_324	MA	8.62x
+MA_325	MA	23.77x
+MA_327	MA	17.87x
+MD_136	MD	39.44x
+MD_137	MD	44.32x
+MD_138	MD	50.90x
+MD_139	MD	43.49x
+MD_140	MD	35.03x
+MD_141	MD	43.29x
+MD_142	MD	40.80x
+MD_143	MD	37.12x
+MD_145	MD	45.55x
+MD_149	MD	43.84x
+MD_150	MD	47.33x
+MD_151	MD	43.61x
+MD_152	MD	40.37x
+MD_154	MD	37.23x
+MD_158	MD	33.72x
+MD_159	MD	32.40x
+MD_160	MD	38.00x
+MD_161	MD	42.58x
+MD_162	MD	44.66x
+MD_163	MD	31.44x
+ME_164	ME	35.45x
+ME_165	ME	39.00x
+ME_166	ME	39.43x
+ME_167	ME	37.77x
+ME_176	ME	40.33x
+ME_248	ME	45.17x
+ME_249	ME	47.66x
+ME_250	ME	25.59x
+ME_251	ME	30.39x
+ME_252	ME	36.61x
+ME_253	ME	40.50x
+ME_254	ME	42.78x
+ME_255	ME	47.88x
+ME_256	ME	44.72x
+ME_257	ME	51.40x
+ME_258	ME	44.83x
+ME_261	ME	43.97x
+ME_262	ME	44.23x
+NC_233	NC	42.17x
+NC_234	NC	43.52x
+NC_235	NC	46.29x
+NC_237	NC	44.17x
+NC_238	NC	36.86x
+NC_239	NC	31.68x
+NC_240	NC	28.49x
+NC_241	NC	46.20x
+NC_242	NC	33.47x
+NC_243	NC	30.66x
+NC_244	NC	28.01x
+NC_245	NC	31.70x
+NC_246	NC	21.07x
+NJ_106	NJ	28.75x
+NJ_108	NJ	25.45x
+NJ_109	NJ	31.31x
+NJ_112	NJ	27.14x
+NJ_113	NJ	38.94x
+NJ_114	NJ	42.53x
+NJ_118	NJ	40.87x
+NJ_119	NJ	25.85x
+NJ_121	NJ	25.47x
+NJ_122	NJ	34.16x
+NJ_124	NJ	34.01x
+NJ_128	NJ	36.18x
+NJ_129	NJ	43.95x
+NJ_130	NJ	43.80x
+NJ_131	NJ	43.46x
+NJ_132	NJ	37.54x
+NJ_133	NJ	37.62x
+RI_328	RI	37.00x
+RI_329	RI	36.30x
+RI_330	RI	28.80x
+RI_331	RI	45.57x
+RI_332	RI	47.19x
+RI_333	RI	43.55x
+RI_334	RI	37.46x
+RI_335	RI	30.51x
+RI_336	RI	38.68x
+RI_337	RI	38.39x
+RI_338	RI	34.62x
+RI_339	RI	43.61x
+RI_340	RI	46.72x
+RI_341	RI	49.04x
+RI_342	RI	42.16x
+RI_343	RI	33.73x
+RI_344	RI	41.30x
+RI_345	RI	41.89x
+RI_346	RI	46.02x
+RI_347	RI	43.36x
+RI_348	RI	46.99x
+RI_349	RI	36.99x
+SN_009	SN	43.00x
+SN_179	SN	37.80x
+SN_182	SN	39.38x
+SN_185	SN	40.53x
+SN_189	SN	31.60x
+SN_190	SN	45.76x
+SN_191	SN	46.75x
+
+#gstacks
+Genotyped 243815 loci:
+  effective per-sample coverage: mean=44.6x, stdev=11.0x, min=8.1x, max=66.1x
+  mean number of sites per locus: 229.0
+  a consistent phasing was found for 411986 of out 478031 (86.2%) diploid loci needing phasing
+
+#populations
+Removed 224945 loci that did not pass sample/population constraints from 243815 loci.
+Kept 18870 loci, composed of 4428444 sites; 7984 of those sites were filtered, 18067 variant sites remained.
+Number of loci with PE contig: 18870.00 (100.0%);
+  Mean length of loci: 224.68bp (stderr 0.36);
+Number of loci with SE/PE overlap: 10390.00 (55.1%);
+  Mean length of overlapping loci: 200.42bp (stderr 0.30); mean overlap: 28.52bp (stderr 0.05);
+Mean genotyped sites per locus: 230.25bp (stderr 0.34).
+```
+adegenet summary:
+```r
+ /// GENLIGHT OBJECT /////////
+
+ // 117 genotypes,  18,067 binary SNPs, size: 7.3 Mb
+ 1087754 (51.46 %) missing data
+
+ // Basic content
+   @gen: list of 117 SNPbin
+
+ // Optional content
+   @ind.names:  117 individual labels
+   @loc.names:  18067 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @pop: population of each individual (group size range: 7-22)
+   @other: a list containing: elements without names 
+```
 
 
+```bash
+populations -P ../stacks/ -M ../popmap/BSB_all -r 0.80 -p 7 --min-maf 0.05 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30
+```
+Adegenet summary:
+```bash
+/// GENLIGHT OBJECT /////////
+
+ // 117 genotypes,  1,008 binary SNPs, size: 382.6 Kb
+ 8533 (7.24 %) missing data
+
+ // Basic content
+   @gen: list of 117 SNPbin
+   @ploidy: ploidy of each individual  (range: 2-2)
+
+ // Optional content
+   @ind.names:  117 individual labels
+   @loc.names:  1008 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @pop: population of each individual (group size range: 7-22)
+   @other: a list containing: elements without names 
+
+```
+
+## Optimmize parameters
+
+`mkdir opt`
+
+```bash
+## Denovo map
+
+```bash
+src=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks
+params="
+2
+3
+4
+5
+6
+7"
+
+for p in $params
+do
+    denovo_map.pl -m 4 -M ${p} -n ${p} -T 12 -o $src/opt/M${p} --samples $src/samples/no_adapter/process_radtags --popmap $src/popmap/BSB_15x --paired -X "populations:-r 0.8 --write_single_snp"
+done
+
+```
+
+**Options:**
+`-m` — Minimum depth of coverage required to create a stack (default 3).  
+`-M` — number of mismatches allowed between stacks within individuals (for ustacks).  
+`-n` — number of mismatches allowed between stacks between individuals (for cstacks).  
+`-samples [path]` — specify a path to the directory of samples (samples will be read from population map).  
+`--popmap [path]` — path to a population map file (format is "[name] TAB [pop]", one sample per line).  
+`-o [path]` — path to write pipeline output files.  
+`-p`,`--min-populations` — minimum number of populations a locus must be present in to process a locus (for populations; default: 1). 
+`-r`,`--min-samples-per-pop` — minimum percentage of individuals in a population required to process a locus for that population (for populations; default: 0). 
+
+
+```bash
+#!/bin/bash
+
+src=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/
+
+#
+# Build loci de novo in each sample for the single-end reads only. If paired-end reads are available, 
+# they will be integrated in a later stage (tsv2bam stage).
+# This loop will run ustacks on each sample, e.g.
+#   ustacks -f ./samples/sample_01.1.fq.gz -o ./stacks -i 1 --name sample_01 -M 4 -p 8
+#
+id=1
+for sample in $files
+do
+    ustacks -f $src/samples/${sample}.1.fq.gz -o $src/stacks -i $id --name $sample -M 4 -p 8
+    let "id+=1"
+done
+
+# 
+# Build the catalog of loci available in the metapopulation from the samples contained
+# in the population map. To build the catalog from a subset of individuals, supply
+# a separate population map only containing those samples.
+#
+cstacks -n 6 -P $src/stacks/ -M $src/popmap/BSB_all -p 8
+
+#
+# Run sstacks. Match all samples supplied in the population map against the catalog.
+#
+sstacks -P $src/stacks/ -M $src/popmaps/popmap -p 8
+
+#
+# Run tsv2bam to transpose the data so it is stored by locus, instead of by sample. We will include
+# paired-end reads using tsv2bam. tsv2bam expects the paired read files to be in the samples
+# directory and they should be named consistently with the single-end reads,
+# e.g. sample_01.1.fq.gz and sample_01.2.fq.gz, which is how process_radtags will output them.
+#
+tsv2bam -P $src/stacks/ -M $src/popmaps/popmap --pe-reads-dir $src/samples -t 8
+
+#
+# Run gstacks: build a paired-end contig from the metapopulation data (if paired-reads provided),
+# align reads per sample, call variant sites in the population, genotypes in each individual.
+#
+gstacks -P $src/stacks/ -M $src/popmaps/popmap -t 8
+
+#
+# Run populations. Calculate Hardy-Weinberg deviation, population statistics, f-statistics
+# export several output files.
+#
+populations -P $src/stacks/ -M $src/popmaps/popmap -r 0.65 --vcf --genepop --structure --fstats --hwe -t 8
+```
 
 
