@@ -647,10 +647,13 @@ Summary table
 |Opt    | Loci  |
 |:------|------:|
 |M2 	|18824  |
-|M3     |		|
-|M4		|       |
-|M5		|       |
-|M6     |       |
+|**M3**    |**19018**	|
+|M4		|18948  |
+|M5		|18898  |
+|M6     |18686  |
+|M7     |18503  |
+
+M3 obtained the most loci and is the optimum parameter.
 
 
 
