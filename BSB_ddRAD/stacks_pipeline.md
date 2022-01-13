@@ -729,3 +729,4 @@ vcftools: --minDP 10 --max-missing 0.8 --remove remove_ind_0.40
    @pop: population of each individual (group size range: 7-22)
    @other: a list containing: elements without names 
 ```
+![PCA](/img/PCA.pdf)
