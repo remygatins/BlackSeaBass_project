@@ -655,57 +655,77 @@ Summary table
 
 M3 obtained the most loci and is the optimum parameter.
 
+Copy catalog and stacks from `opt/M3` to `stacks`
 
+`cp ../opt/M3/* .`
 
 ```bash
-#!/bin/bash
-
-src=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/
-
-#
-# Build loci de novo in each sample for the single-end reads only. If paired-end reads are available, 
-# they will be integrated in a later stage (tsv2bam stage).
-# This loop will run ustacks on each sample, e.g.
-#   ustacks -f ./samples/sample_01.1.fq.gz -o ./stacks -i 1 --name sample_01 -M 4 -p 8
-#
-id=1
-for sample in $files
-do
-    ustacks -f $src/samples/${sample}.1.fq.gz -o $src/stacks -i $id --name $sample -M 4 -p 8
-    let "id+=1"
-done
-
-# 
-# Build the catalog of loci available in the metapopulation from the samples contained
-# in the population map. To build the catalog from a subset of individuals, supply
-# a separate population map only containing those samples.
-#
-cstacks -n 6 -P $src/stacks/ -M $src/popmap/BSB_all -p 8
-
-#
-# Run sstacks. Match all samples supplied in the population map against the catalog.
-#
-sstacks -P $src/stacks/ -M $src/popmaps/popmap -p 8
-
-#
-# Run tsv2bam to transpose the data so it is stored by locus, instead of by sample. We will include
-# paired-end reads using tsv2bam. tsv2bam expects the paired read files to be in the samples
-# directory and they should be named consistently with the single-end reads,
-# e.g. sample_01.1.fq.gz and sample_01.2.fq.gz, which is how process_radtags will output them.
-#
-tsv2bam -P $src/stacks/ -M $src/popmaps/popmap --pe-reads-dir $src/samples -t 8
-
-#
-# Run gstacks: build a paired-end contig from the metapopulation data (if paired-reads provided),
-# align reads per sample, call variant sites in the population, genotypes in each individual.
-#
-gstacks -P $src/stacks/ -M $src/popmaps/popmap -t 8
-
-#
-# Run populations. Calculate Hardy-Weinberg deviation, population statistics, f-statistics
-# export several output files.
-#
-populations -P $src/stacks/ -M $src/popmaps/popmap -r 0.65 --vcf --genepop --structure --fstats --hwe -t 8
+populations -P ../stacks/ -M ../popmap/BSB_15x -r 0.80 -p 7 --min-maf 0.05 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30
+populations -P ../stacks/ -M ../popmap/BSB_15x -r 0.80 -p 7 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30
+populations -P ../stacks/ -M ../popmap/BSB_15x -r 0.80 -p 6 --min-maf 0.05 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30
+populations -P ../stacks/ -M ../popmap/BSB_15x -r 0.80 -p 6 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30
 ```
 
+|populations        | Loci   |% missing data|
+|:------------------|:------:|-------------:|
+|r0.8 	            |18559   |   |*not sure why I obtained less loci after running populations again on original catalog that from denovo
+|r0.8_p7 	        |1703    | |
+|r0.8_p7_minmaf0.05 |1703    | |
+|r0.8_p6 	        |5063    | |
+|r0.8_p6_minmaf0.05 |5063    | |
 
+From Longo *et al* 2021:  
+
+"We then used populations to remove loci that failed to meet the following criteria: present in ≥80% of individuals, minor allele frequency ≥1%, and maximum observed heterozygosity of 70%... We exported the resulting SNP dataset from Stacks and further filtered using VCFtools v.0.1.13 (Danecek et al.,   2011). We then dropped all but the first SNP from each RADseq locus (--thin 5000), removed loci in individuals that were below 10x depth of coverage (--minDP 10), refiltered for loci found in ≥80% of individuals (--max-missing 0.8), and then removed individuals with >30% missing loci from the final dataset (--remove), which was exported for downstream analyses"
+
+In order to keep more loci I will use the r0.8 output that has the most loci and filter with vcftools
+
+vcftools --vcf ../stacks/BSB_pop_r0.8/populations.snps.vcf --out ../stacks/BSB_pop_r0.8/vcftools/BSB_min10x_maxmiss0.8 --minDP 10 --max-missing 0.8 --recode --recode-INFO-all
+
+vcftools --vcf populations.snps.vcf --minDP 10 --max-missing 0.8 --recode --recode-INFO-all
+
+vcftools --vcf populations.snps.vcf --missing-indv
+
+`cat remove_ind_0.40`
+
+```bash
+ME_253
+ME_254
+MA_303
+MA_314
+MA_318
+MA_316
+```
+
+vcftools --vcf populations.snps.vcf --minDP 10 --max-missing 0.8 --remove remove_ind_0.40 --recode --recode-INFO-all --out filtered_ind
+
+vcftools --vcf filtered_ind.recode.vcf --missing-indv --out filtered_ind
+
+vcftools --vcf out.recode.vcf --remove remove_ind_0.40 --recode --recode-INFO-all --out filtered_ind_2
+
+vcftools --vcf filtered_ind_2.recode.vcf --missing-indv --out filtered_ind_2
+
+
+### Filtered_ind_2
+Stacks: r0.8
+vcftools: --minDP 10 --max-missing 0.8 --remove remove_ind_0.40
+*removed individuals with more than 40% missing data
+
+```bash
+/// GENLIGHT OBJECT /////////
+
+ // 110 genotypes,  27,125 binary SNPs, size: 3.9 Mb
+ 213457 (7.15 %) missing data
+
+ // Basic content
+   @gen: list of 110 SNPbin
+   @ploidy: ploidy of each individual  (range: 2-2)
+
+ // Optional content
+   @ind.names:  110 individual labels
+   @loc.names:  27125 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @pop: population of each individual (group size range: 7-22)
+   @other: a list containing: elements without names 
+```
