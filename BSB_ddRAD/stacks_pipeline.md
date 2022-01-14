@@ -7,8 +7,8 @@
     - [Denovo_map test run](#denovo-map)
     - [optimize parameters](#optimize-parameters)
     - [Populations](#populations)
-        - [BSB_r0.8_R0.8_Filt](#BSB-r0.8-R0.8-Filt) 
-        - [BSB_r0.8_R0.8_Filt_noNC](#BSB-r0.8-R0.8-Filt-noNC)   
+        - [BSB_r0.8_R0.8_Filt](#bsb-r0.8-r0.8-filt) 
+        - [BSB_r0.8_R0.8_Filt_noNC](#bsb-r0.8-r0.8-filt-nonc)   
 
 
 
