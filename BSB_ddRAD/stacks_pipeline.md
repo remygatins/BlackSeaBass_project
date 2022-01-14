@@ -732,3 +732,33 @@ vcftools: --minDP 10 --max-missing 0.8 --remove remove_ind_0.40
 ![PCA](/img/PCA.png)
 ![dapc](/img/dapc_60pc.png)
 ![compoplot](/img/compoplot_60pc.png)
+
+COnvert vcf to structure using radiator in R
+
+```r
+#--------------------------------
+# COnvert vcf file to structure
+#--------------------------------
+#if (!require("devtools")) install.packages("devtools")
+#devtools::install_github("thierrygosselin/radiator")
+library(radiator)
+
+#To verify your file is detected by radiator as the correct format:
+radiator::detect_genomic_format(
+  data="filtered_ind_2.recode.vcf")
+
+strata <- radiator::read_strata(strata = "BSB.strata.filt.txt")
+
+tidy.vcf.data <-  tidy_vcf(data="filtered_ind_2.recode.vcf",
+                       strata = "BSB.strata.filt.txt")
+
+#rename colummn GT_BIN to GT
+library(dplyr)
+tidy.vcf.data_2<- tidy.vcf.data %>% 
+                      rename(GT= GT_BIN)
+
+write_structure(tidy.vcf.data_2, filename = "str_r0.8_filtered")
+```
+
+
+
