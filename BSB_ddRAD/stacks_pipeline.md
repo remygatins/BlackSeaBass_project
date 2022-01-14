@@ -1,11 +1,12 @@
 # BSB RADseq STACKS pipeline
 
 - [check sequences](#file-sequence-check)
-- [Filter adapters](#Trim-adapters)
-- [STACKS](#STACKS)
-    -[Process_radtags](#Process-radtags)
-    -[Denovo_map test run](#Denovo-map)
-    -[optimize parameters](#Optimize-parameters)
+- [Filter adapters](#trim-adapters)
+- [STACKS](#stacks)
+    - [Process_radtags](#process-radtags) 
+    - [Denovo_map test run](#denovo-map)
+    - [optimize parameters](#optimize-parameters)
+    - [Populations](#populations)
 
 
 
