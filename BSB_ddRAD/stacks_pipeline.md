@@ -7,8 +7,8 @@
     - [Denovo_map test run](#denovo-map)
     - [optimize parameters](#optimize-parameters)
     - [Populations](#populations)
-        - [BSB_r0.8_R0.8_Filt](#BSB_r0.8_R0.8_Filt) 
-        - [BSB_r0.8_R0.8_Filt_noNC](#BSB_r0.8_R0.8_Filt_noNC)   
+        - [BSB_r0.8_R0.8_Filt](#BSB-r0.8-R0.8-Filt) 
+        - [BSB_r0.8_R0.8_Filt_noNC](#BSB-r0.8-R0.8-Filt-noNC)   
 
 
 
@@ -807,7 +807,7 @@ error
 when converting from vcf to structure loci got dropped... ?
 
 
-## BSB_r0.8_R0.8_Filt
+## BSB r0.8 R0.8 Filt
 Re-run populations
 use filtered popmap `BSB_15x_filt`
 keep loci found in 80% of all individuals `-R 0.80`
@@ -861,7 +861,7 @@ done
 
 
 
-## _BSB_r0.8_R0.8_Filt_noNC_
+## BSB r0.8 R0.8 Filt noNC
 remove NC samples
 use filtered popmap `BSB_15x_filt`
 keep loci found in 80% of all individuals `-R 0.80`
