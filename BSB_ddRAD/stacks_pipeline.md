@@ -683,6 +683,8 @@ populations -P ../stacks/ -M ../popmap/BSB_15x -r 0.80 -p 6 --min-maf 0.05 --wri
 populations -P ../stacks/ -M ../popmap/BSB_15x -r 0.80 -p 6 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30
 ```
 
+`cat populations.hapstats.tsv | grep -v "^#" | cut -f 1 | uniq | wc -l`
+
 |populations        | Loci   |% missing data|
 |:------------------|:------:|-------------:|
 |r0.8 	            |18559   |   |*not sure why I obtained less loci after running populations again on original catalog that from denovo
@@ -690,6 +692,7 @@ populations -P ../stacks/ -M ../popmap/BSB_15x -r 0.80 -p 6 --write-single-snp -
 |r0.8_p7_minmaf0.05 |1703    | |
 |r0.8_p6 	        |5063    | |
 |r0.8_p6_minmaf0.05 |5063    | |
+|r0.8_R0.8_filt     |6167    | |
 
 From Longo *et al* 2021:  
 
@@ -811,5 +814,29 @@ keep loci found in 80% of all individuals `-R 0.80`
 
 `populations -P ../stacks/ -M ../popmap/BSB_15x_filt -r 0.80 -R 0.80 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30`
 
+```bash
+/// GENLIGHT OBJECT /////////
 
+ // 110 genotypes,  6,116 binary SNPs, size: 1.3 Mb
+ 48092 (7.15 %) missing data
+
+ // Basic content
+   @gen: list of 110 SNPbin
+
+ // Optional content
+   @ind.names:  110 individual labels
+   @loc.names:  6116 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @other: a list containing: elements without names 
+```
+
+`structure -K 4 -L 6116 -N 110 -i $src/stacks/BSB_r0.8_R0.8_filt/populations_str.gdv -o $src/structure/results/BSB_r0.8_R0.8_filt_K4_1`
+
+## BSB_r0.8_R0.8_Filt_noNC
+remove NC samples
+use filtered popmap `BSB_15x_filt`
+keep loci found in 80% of all individuals `-R 0.80`
+
+`populations -P ../stacks/ -M ../popmap/BSB_15x_filt_noNC -r 0.80 -R 0.80 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30`
 
