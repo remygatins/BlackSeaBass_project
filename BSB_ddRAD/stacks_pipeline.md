@@ -1,4 +1,14 @@
-# STACKS
+# BSB RADseq STACKS pipeline
+
+- [check sequences](#file-sequence-check)
+- [Filter adapters](#Trim-adapters)
+- [STACKS](#STACKS)
+    -[Process_radtags](#Process-radtags)
+    -[Denovo_map test run](#Denovo-map)
+    -[optimize parameters](#Optimize-parameters)
+
+
+
 
 ## file sequence check
 Samples have already been demultiplexed previously (see Thais' [pipeline.md](https://github.com/thais-neu/BlackSeaBass_project/blob/master/BSB_ddRAD/pipeline.md)) so I am going to go ahead and check `.fq.gz` files first
@@ -54,7 +64,8 @@ now download the html file to your computer to open. I am interested in sequence
 
 The shortest sequence is 138 so I will trim to 138 and remove any leftover nexterra adapters.
 
-## trimgalore test
+## Trim adapters
+### trimgalore test
 ```bash
 module load lotterhos
 source activate trimgalore
@@ -606,7 +617,7 @@ Adegenet summary:
 
 ```
 
-## Optimmize parameters
+## Optimize parameters
 
 `mkdir opt`
 
@@ -658,6 +669,8 @@ M3 obtained the most loci and is the optimum parameter.
 Copy catalog and stacks from `opt/M3` to `stacks`
 
 `cp ../opt/M3/* .`
+
+## Populations
 
 ```bash
 populations -P ../stacks/ -M ../popmap/BSB_15x -r 0.80 -p 7 --min-maf 0.05 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30
