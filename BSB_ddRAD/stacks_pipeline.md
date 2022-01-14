@@ -786,9 +786,7 @@ src=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks
 iteration="
 1
 2
-3
-4
-5"
+3"
 
 for i in $iteration
 do
@@ -831,7 +829,31 @@ keep loci found in 80% of all individuals `-R 0.80`
    @other: a list containing: elements without names 
 ```
 
+
+## Structure
+
 `structure -K 4 -L 6116 -N 110 -i $src/stacks/BSB_r0.8_R0.8_filt/populations_str.gdv -o $src/structure/results/BSB_r0.8_R0.8_filt_K4_1`
+
+
+```bash
+#--------------MODULES---------------
+module load lotterhos
+source activate structure
+
+#--------------COMMAND----------------
+src=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks
+iteration="
+1
+2
+3"
+
+for i in $iteration
+do
+    structure -K 1 -L 6116 -N 110 -i $src/stacks/BSB_r0.8_R0.8_filt/populations_str.gdv -o $src/structure/results/BSB_r0.8_R0.8_filt_K1_${i}
+done
+
+
+
 
 ## BSB_r0.8_R0.8_Filt_noNC
 remove NC samples
