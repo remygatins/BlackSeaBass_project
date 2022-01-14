@@ -416,8 +416,11 @@ I want to rename my sequences to make them more straightforward.
 
 
 `for f in *.F_val_1.1.fq.gz; do mv "$f" "${f%.F_val_1.1.fq.gz}.1.fq.gz"; done`
+
 `for f in *.R_val_2.2.fq.gz; do mv "$f" "${f%.R_val_2.2.fq.gz}.2.fq.gz"; done`
+
 `for f in *.F_val_1.rem.1.fq.gz; do mv "$f" "${f%.F_val_1.rem.1.fq.gz}.rem.1.fq.gz"; done`
+
 `for f in *.R_val_2.rem.2.fq.gz; do mv "$f" "${f%.R_val_2.rem.2.fq.gz}.rem.2.fq.gz"; done`
 
 ```bash
