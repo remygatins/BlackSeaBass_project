@@ -774,5 +774,39 @@ tidy.vcf.data_2<- tidy.vcf.data %>%
 write_structure(tidy.vcf.data_2, filename = "str_r0.8_filtered")
 ```
 
+## Structure
+
+src=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks
+iteration="
+1
+2
+3
+4
+5"
+
+for i in $iteration
+do
+    structure -K 1 -L 1 -N 110 -i $src/stacks/BSB_pop_r0.8/str_r0.8_filtered.str -o $src/structure/results/BSB_r0.8_filt_K1_${i}
+done
+
+structure -K 4 -L 27125 -N 110 -i $src/stacks/BSB_pop_r0.8/str_r0.8_filtered.str -o $src/structure/results/BSB_r0.8_filt_K4_1
+
+error
+```bash
+# Entries:   Line numbers
+     17430:   1
+     34862:   2--111
+----------------------------------
+```
+when converting from vcf to structure loci got dropped... ?
+
+
+## BSB_r0.8_R0.8_Filt
+Re-run populations
+use filtered popmap `BSB_15x_filt`
+keep loci found in 80% of all individuals `-R 0.80`
+
+`populations -P ../stacks/ -M ../popmap/BSB_15x_filt -r 0.80 -R 0.80 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30`
+
 
 
