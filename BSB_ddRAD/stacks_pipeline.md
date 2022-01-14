@@ -852,8 +852,10 @@ do
     structure -K 1 -L 6116 -N 110 -i $src/stacks/BSB_r0.8_R0.8_filt/populations_str.gdv -o $src/structure/results/BSB_r0.8_R0.8_filt_K1_${i}
 done
 ```
-![structure](/BSB_ddRAD/img/K2_K3_K4.png)
 ![pca](/BSB_ddRAD/img/pca.png)
+
+![structure](/BSB_ddRAD/img/K2_K3_K4.png)
+
 
 
 
@@ -881,3 +883,5 @@ keep loci found in 80% of all individuals `-R 0.80`
    @other: a list containing: elements without names
 ```
 
+![pca_noNC](/BSB_ddRAD/img/pca_noNC.png)
+![dapc_noNC](/BSB_ddRAD/img/dapc_noNC.png)
