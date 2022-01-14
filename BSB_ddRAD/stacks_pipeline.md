@@ -852,6 +852,8 @@ do
     structure -K 1 -L 6116 -N 110 -i $src/stacks/BSB_r0.8_R0.8_filt/populations_str.gdv -o $src/structure/results/BSB_r0.8_R0.8_filt_K1_${i}
 done
 
+![structure](/BSB_ddRAD/img/K2_K3_K4.png)
+![pca](/BSB_ddRAD/img/pca.png)
 
 
 
