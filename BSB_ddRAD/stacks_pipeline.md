@@ -857,10 +857,27 @@ done
 
 
 
-## BSB_r0.8_R0.8_Filt_noNC
+## _BSB_r0.8_R0.8_Filt_noNC_
 remove NC samples
 use filtered popmap `BSB_15x_filt`
 keep loci found in 80% of all individuals `-R 0.80`
 
 `populations -P ../stacks/ -M ../popmap/BSB_15x_filt_noNC -r 0.80 -R 0.80 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30`
+
+```r
+ /// GENLIGHT OBJECT /////////
+
+ // 97 genotypes,  5,639 binary SNPs, size: 1.1 Mb
+ 30828 (5.64 %) missing data
+
+ // Basic content
+   @gen: list of 97 SNPbin
+
+ // Optional content
+   @ind.names:  97 individual labels
+   @loc.names:  5639 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @other: a list containing: elements without names
+```
 
