@@ -642,7 +642,7 @@ params="
 
 for p in $params
 do
-    denovo_map.pl -m 4 -M ${p} -n ${p} -T 12 -o $src/opt/M${p} --samples $src/samples/no_adapter/process_radtags --popmap $src/popmap/BSB_15x --paired -X "populations:-r 0.8 --write_single_snp"
+    denovo_map.pl -m 4 -M ${p} -n ${p} -T 12 -o $src/opt/M${p} --samples $src/samples/no_adapter/process_radtags --popmap $src/popmap/BSB_15x --paired -X "populations: -r 0.8 --write_single_snp"
 done
 
 ```
@@ -887,3 +887,10 @@ keep loci found in 80% of all individuals `-R 0.80`
 
 ![pca_noNC](/BSB_ddRAD/img/pca_noNC.png)
 ![dapc_noNC](/BSB_ddRAD/img/dapc_noNC.png)
+
+## BSB r0.8  Filt
+remove NC samples
+use filtered popmap `BSB_15x_filt`
+keep loci found in 80% of all individuals `-R 0.80`
+
+`populations -P ../stacks/ -M ../popmap/BSB_15x_filt_noNC -r 0.80 -R 0.80 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30`
