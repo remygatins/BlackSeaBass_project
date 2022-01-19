@@ -888,9 +888,16 @@ keep loci found in 80% of all individuals `-R 0.80`
 ![pca_noNC](/BSB_ddRAD/img/pca_noNC.png)
 ![dapc_noNC](/BSB_ddRAD/img/dapc_noNC.png)
 
-## BSB r0.8  Filt
-remove NC samples
+## BSB r0.8 min-maf 0.01 Filt
+keep all snps
+miin allele freq 0.01
 use filtered popmap `BSB_15x_filt`
-keep loci found in 80% of all individuals `-R 0.80`
 
-`populations -P ../stacks/ -M ../popmap/BSB_15x_filt_noNC -r 0.80 -R 0.80 --write-single-snp --vcf --genepop --structure --fstats --hwe -t 30`
+`populations -P ../stacks/ -M ../popmap/BSB_15x_filt -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 30`
+
+## BSB r0.8 min-maf 0.05 Filt
+keep all snps
+min allele freq 0.05
+use filtered popmap `BSB_15x_filt`
+
+`populations -P ../stacks/ -M ../popmap/BSB_15x_filt -r 0.80 --min-maf 0.05 --vcf --genepop --structure --fstats --hwe -t 30`
