@@ -895,6 +895,10 @@ use filtered popmap `BSB_15x_filt`
 
 `populations -P ../stacks/ -M ../popmap/BSB_15x_filt -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 30`
 
+`cat populations.hapstats.tsv | grep -v "^#" | cut -f 1 | uniq | wc -l`
+
+18957
+
 ## BSB r0.8 min-maf 0.05 Filt
 keep all snps
 min allele freq 0.05
