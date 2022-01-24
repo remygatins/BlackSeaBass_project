@@ -904,9 +904,13 @@ keep all snps
 min allele freq 0.05
 use filtered popmap `BSB_15x_filt`
 
-`populations -P ../stacks/ -M ../popmap/BSB_15x_filt -r 0.80 --min-maf 0.05 --vcf --genepop --structure --fstats --hwe -t 30`
+`populations -P ../stacks/ -M ../popmap/BSB_15x_filt -r 0.80 --min-maf 0.05 --vcf --plink --genepop --structure --fstats --hwe -t 30`
 
 `cat populations.hapstats.tsv | grep -v "^#" | cut -f 1 | uniq | wc -l`
 
 19077
+
+#plink
+
+dowloaded 
 
