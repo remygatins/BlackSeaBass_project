@@ -9,6 +9,7 @@ In STACKS- Keep all SNPs
 For Structure use LEA program	sNMF package vcf input in R. (http://membres-timc.imag.fr/Olivier.Francois/LEA/tutorial.htm)
 
 Demographic history
+  - Ne by population or range expansion vs northern range
   - PSMC
   - MSMC
   - Convice Katie the program I want to apply is relevant to the study question
@@ -19,6 +20,5 @@ Genetic diversity statistics with Latitude
   - Nucleotide diversity
   - FST Global and pairwise
   - If the RADseq data shows good coverage accross the genome then we will look for outliers
-  - 
 
 
