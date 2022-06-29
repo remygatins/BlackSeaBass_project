@@ -40,13 +40,12 @@ last edited: June 27, 2022
 
 #--------------MODULES---------------
 
-srun -p lotterhos -N 1 --pty /bin/bash
 module load oracle_java/jdk1.8.0_181
 module load fastqc/0.11.8
 
 #--------------COMMAND----------------
 
-fastqc DTG-DNA-1126.r64296e173242G01.subreads_ccs.fastq.gz -o fastqc_DTG-DNA-1126
+fastqc /work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/PacBio_Denovo/raw_sequences/DTG-DNA-1126.r64296e173242G01.subreads_ccs.fastq.gz -o fastqc
 
 ```
 
