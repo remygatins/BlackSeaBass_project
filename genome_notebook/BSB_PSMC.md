@@ -66,14 +66,14 @@ size from sequencing reads using a kmer-based statistical approach
 <!-- end list -->
 
 ``` bash
-jellyfish count -C -m 21 -s 60000000000 -t 12 HPA_HiSeq_R1.fq HPA_HiSeq_R2.fq.gz -o HPA_HiSeq.jf
+jellyfish count -C -m 21 -s 60000000000 -t 12 /work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/PacBio_Denovo/raw_sequences/DTG-DNA-1126.r64296e173242G01.subreads_ccs.fastq.gz -o BSB_PacBio.jf
 ```
 
 Jellyfish can’t read gzipped files so if you have fq.gz files use the
 following command:
 
 ``` bash
-jellyfish count -C -m 21 -s 60000000000 -t 12 <(zcat HPA_HiSeq_R1.fq.gz) <(zcat HPA_HiSeq_R2.fq.gz) -o HPA_HiSeq.jf
+jellyfish count -C -m 21 -s 60000000000 -t 12 <(zcat /work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/PacBio_Denovo/raw_sequences/DTG-DNA-1126.r64296e173242G01.subreads_ccs.fastq.gz) -o BSB_PacBio.jf
 ```
 
 *Parameter key:*  
