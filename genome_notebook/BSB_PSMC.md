@@ -81,6 +81,7 @@ following command:
 ``` bash
 jellyfish count -C -m 21 -s 60000000000 -t 12 <(zcat /work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/PacBio_Denovo/raw_sequences/DTG-DNA-1126.r64296e173242G01.subreads_ccs.fastq.gz) -o BSB_PacBio.jf
 ```
+  Run time 07:34:07
 
 *Parameter key:*  
 `-C` indicates to count canonical kmers (**don’t change this**) 
@@ -96,6 +97,7 @@ jellyfish count -C -m 21 -s 60000000000 -t 12 <(zcat /work/lotterhos/2021_BlackS
 ``` bash
 jellyfish histo -t 12 BSB_PacBio.jf > BSB_PacBio.histo
 ```
+  Run time 00:00:59
 
 4.  Upload reads.histo to GenomeScope: <http://qb.cshl.edu/genomescope/>
 
@@ -120,35 +122,48 @@ Specific details and information on this package can be found:
 
 First we need to index our genome assembly (should be a fasta file)
 
+
 ``` bash
-bwa index C_striata_01.fasta 
+#load programs
+module load bwa
+
+#set the working directory
+DIR=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome
+
+#run bwa
+bwa index $DIR/final_genome/C_striata_01.fasta 
 ```
+  Run time 00:16:41
 
 Now map adapter trimmed Illumina reads to your genome:
 
 ``` bash
-DIR=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome
-
 bwa mem -t32 $DIR/final_genome/C_striata_01.fasta $DIR/PacBio_Denovo/raw_sequences/DTG-DNA-1126.r64296e173242G01.subreads_ccs.fastq.gz > $DIR/PSMC/C_striata_01.sam
 ```
+  Run time 06:26:02
 
 Use samtools to convert your sam file to a bam file:
 
 ``` bash
-samtools view -Sb -@ 30 -O BAM -o HPA_bwa_aligned.bam HPA_bwa_aligned.sam 
+module load samtools
+
+samtools view -Sb -@ 30 -O BAM -o $DIR/PSMC/C_striata_01.bam $DIR/PSMC/C_striata_01.sam 
 ```
+  Run time 00:06:15
 
 Sort your bam file:
 
 ``` bash
-samtools sort -o HPA_bwa_aligned_sorted.bam -O BAM -@ 20 HPA_bwa_aligned.bam 
+samtools sort -o $DIR/PSMC/C_striata_01_sorted.bam -O BAM -@ 20 $DIR/PSMC/C_striata_01.bam 
 ```
+  Run time 00:07:51
 
 Finally, index your sorted bam file:
 
 ``` bash
-samtools index -b -@ 20 HPA_bwa_aligned_sorted.bam  
+samtools index -b -@ 20 $DIR/PSMC/C_striata_01_sorted.bam  
 ```
+  Run time 00:00:40
 
 #### 2\. Call diploid genome and covert to psmc file
 
@@ -157,11 +172,13 @@ diploid genome and convert it to the required format to input into the
 PSMC analysis.
 
 So, first we call a diploid genome using our reference genome and mapped
-reads using bcftools. \*DeLeonLab– NOTE: I installed bcftools within the
-samtools conda environment on the chimera server
+reads using bcftools. 
+
+NOTE: I installed bcftools and PSMC within the PSMC conda environment. To activate:
+ `conda activate /work/lotterhos/programs/PSMC`
 
 ``` bash
-bcftools mpileup -C50 -Ou --threads 12 -f HPA_pilon.fasta HPA_bwa_aligned_sorted.bam | bcftools call -c --threads 10 | vcfutils.pl vcf2fq -d 35 -D 220 | gzip> diploid_HPA_35_220.fq.gz
+bcftools mpileup -C50 -Ou --threads 12 -f $DIR/final_genome/C_striata_01.fasta $DIR/PSMC/C_striata_01_sorted.bam | bcftools call -c --threads 12 | vcfutils.pl vcf2fq -d 8 -D 50 | gzip> $DIR/PSMC/diploid_C_striata_01_8_50.fq.gz
 ```
 
 *Parameters:*  
@@ -186,7 +203,7 @@ have.
 First, convert your diploid.fastq file into a psmcfa file
 
 ``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/utils/fq2psmcfa -q20 diploid_HPA_35_220.fq.gz > diploid_HPA_35_220.psmcfa
+fq2psmcfa -q20 diploid_HPA_35_220.fq.gz > diploid_HPA_35_220.psmcfa
 ```
 
 Now run the PSMC
