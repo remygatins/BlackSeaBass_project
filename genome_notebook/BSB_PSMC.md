@@ -65,6 +65,12 @@ size from sequencing reads using a kmer-based statistical approach
 
 <!-- end list -->
 
+Run an intereactive node and load modules
+```bash
+srun -p lotterhos -N 1 --pty /bin/bash
+module load jellyfish
+```
+
 ``` bash
 jellyfish count -C -m 21 -s 60000000000 -t 12 /work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/PacBio_Denovo/raw_sequences/DTG-DNA-1126.r64296e173242G01.subreads_ccs.fastq.gz -o BSB_PacBio.jf
 ```
@@ -88,16 +94,18 @@ jellyfish count -C -m 21 -s 60000000000 -t 12 <(zcat /work/lotterhos/2021_BlackS
 <!-- end list -->
 
 ``` bash
-jellyfish histo -t 12 HPA_HiSeq.jf > HPA_HiSeq.histo
+jellyfish histo -t 12 BSB_PacBio.jf > BSB_PacBio.histo
 ```
 
 4.  Upload reads.histo to GenomeScope: <http://qb.cshl.edu/genomescope/>
-<p align="center">
-<img src="images/GenomeScope_profile.png" width="500"/>
-</p>
+
+<img width="1221" alt="image" src="https://user-images.githubusercontent.com/26288352/177917337-76494f83-6b99-4eca-9e0e-d1b41ff4f03d.png">
+
+[GenomeScope analysis](http://genomescope.org/analysis.php?code=FJQq5xxcIAPcCIvhw0dz)
 
 After looking at your GenomeScope results and have a good idea of your
 average coverage, continue on to the PSMC analysis.
+
 
 ## PSMC
 
@@ -113,13 +121,15 @@ Specific details and information on this package can be found:
 First we need to index our genome assembly (should be a fasta file)
 
 ``` bash
-bwa index HPA_assembly.fa 
+bwa index C_striata_01.fasta 
 ```
 
 Now map adapter trimmed Illumina reads to your genome:
 
 ``` bash
-bwa mem -t32 HPA_assembly.fasta HPA_HiSeq_R1.fq.gz HPA_HiSeq_R2.fq.gz > HPA_bwa_aligned.sam
+DIR=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome
+
+bwa mem -t32 $DIR/final_genome/C_striata_01.fasta $DIR/PacBio_Denovo/raw_sequences/DTG-DNA-1126.r64296e173242G01.subreads_ccs.fastq.gz > $DIR/PSMC/C_striata_01.sam
 ```
 
 Use samtools to convert your sam file to a bam file:
