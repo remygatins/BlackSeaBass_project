@@ -256,10 +256,12 @@ years. This is because the PSMC analysis is better to look at population
 size at older time scales. If you want to look at more recent time
 scales you might consider running a MSMC analysis instead.
 
-mutation rate = 1x10<sup>-8</sup>
+**mutation rate = 1x10<sup>-8</sup>**
+
 <img width="635" alt="image" src="https://user-images.githubusercontent.com/26288352/178328690-e536c78e-dde9-4ea3-bb80-1129c7f00789.png">
 
-mutation rate = 1x10<sup>-9</sup>
+**mutation rate = 1x10<sup>-9</sup>**
+
 <img width="640" alt="image" src="https://user-images.githubusercontent.com/26288352/178328177-22d71a1b-b805-4d37-ac05-d3b310b18fcc.png">
 
 
