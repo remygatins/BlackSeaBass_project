@@ -213,7 +213,7 @@ Now run the PSMC
 ``` bash
 psmc -N30 -t30 -r5 -p "4+30*2+4+6+10" -o $DIR/PSMC/diploid_C_striata_01_8_50.psmc $DIR/PSMC/diploid_C_striata_01_8_50.psmcfa 
 ```
-Run time
+Run time 01:33:26
 
 *PSMC parameters:*  
 `-p` STR pattern of parameters \[4+5\*3+4\]  
@@ -236,7 +236,7 @@ predict, thus we decided it would be best to show a range between
 1x10<sup>-8</sup> and 1x10<sup>-9</sup>. Which is why we went ahead and
 plotted both scenarios.
 
-considering a mutation rate`-u` of 1x10<sup>-8</sup>:
+considering a mutation rate`-u` of 1x10<sup>-9</sup>:
 
 ``` bash
 psmc_plot.pl -u 1e-09 -g 5 C_striata_01_8_50_t30r5_plot_u1-9g5 $DIR/PSMC/diploid_C_striata_01_8_50.psmc  
@@ -245,7 +245,7 @@ psmc_plot.pl -u 1e-09 -g 5 C_striata_01_8_50_t30r5_plot_u1-9g5 $DIR/PSMC/diploid
 considering a mutation rate`-u` of 1x10<sup>-9</sup>:
 
 ``` bash
-psmc_plot.pl -u 1e-09 -g 5 C_striata_01_8_50_t30r5_plot_u1-9g5 $DIR/PSMC/diploid_C_striata_01_8_50.psmc  
+psmc_plot.pl -u 1e-08 -g 5 C_striata_01_8_50_t30r5_plot_u1-8g5 $DIR/PSMC/diploid_C_striata_01_8_50.psmc  
 ```
 
 This last command will output two files .eps and .par. Copy both files
@@ -257,14 +257,10 @@ size at older time scales. If you want to look at more recent time
 scales you might consider running a MSMC analysis instead.
 
 mutation rate = 1x10<sup>-8</sup>
-<p align="center">
-<img src="images/HPA_35_220_t30r5_plot_u1-8g5.png" width="600"/>
-</p>
+<img width="759" alt="image" src="https://user-images.githubusercontent.com/26288352/178328276-e2ee4384-8c1d-4c36-a7b6-8df6aeebc136.png">
 
 mutation rate = 1x10<sup>-9</sup>
-<p align="center">
-<img src="images/HPA_35_220_t30r5_plot_u1-9g5.png" width="600"/>
-</p>
+<img width="640" alt="image" src="https://user-images.githubusercontent.com/26288352/178328177-22d71a1b-b805-4d37-ac05-d3b310b18fcc.png">
 
 
 ## PSMC with Bootstrap
