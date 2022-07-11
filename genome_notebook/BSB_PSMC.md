@@ -180,6 +180,7 @@ NOTE: I installed bcftools and PSMC within the PSMC conda environment. To activa
 ``` bash
 bcftools mpileup -C50 -Ou --threads 12 -f $DIR/final_genome/C_striata_01.fasta $DIR/PSMC/C_striata_01_sorted.bam | bcftools call -c --threads 12 | vcfutils.pl vcf2fq -d 8 -D 50 | gzip> $DIR/PSMC/diploid_C_striata_01_8_50.fq.gz
 ```
+Run time 2-08:28:18
 
 *Parameters:*  
 `mpileup` multi-way pileup producing genotype likelihoods  
@@ -203,14 +204,16 @@ have.
 First, convert your diploid.fastq file into a psmcfa file
 
 ``` bash
-fq2psmcfa -q20 diploid_HPA_35_220.fq.gz > diploid_HPA_35_220.psmcfa
+fq2psmcfa -q20 $DIR/PSMC/diploid_C_striata_01_8_50.fq.gz > $DIR/PSMC/diploid_C_striata_01_8_50.psmcfa
 ```
+Run time 00:00:16
 
 Now run the PSMC
 
 ``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/psmc -N30 -t30 -r5 -p "4+30*2+4+6+10" -o diploid_HPA_35_220_t30r5.psmca.psmc diploid_HPA_35_220.psmcfa 
+psmc -N30 -t30 -r5 -p "4+30*2+4+6+10" -o $DIR/PSMC/diploid_C_striata_01_8_50.psmc $DIR/PSMC/diploid_C_striata_01_8_50.psmcfa 
 ```
+Run time
 
 *PSMC parameters:*  
 `-p` STR pattern of parameters \[4+5\*3+4\]  
@@ -224,7 +227,7 @@ Now run the PSMC
 Before plotting your results you will need to know the mutation rate
 `-u` and generation time `-g` for your specific species.  
 Generation time is defined as the age at which 50% of the population has
-reproduced. *Holacanthus passer* is a protogynous species that has been
+reproduced. *Centropristis striata* is a protogynous species that has been
 estimated to reproduce as a female around 4 years of age while males
 tend to reproduce when they are 6 years old. Therefore we chose to set
 generation time `g` at 5 years old.  
@@ -236,13 +239,13 @@ plotted both scenarios.
 considering a mutation rate`-u` of 1x10<sup>-8</sup>:
 
 ``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/utils/psmc_plot.pl -u 1e-09 -g 5 HPA_35_220_t30r5_plot_u1-9g5 diploid_HPA_35_220_t30r5.psmcfa.psmc  
+psmc_plot.pl -u 1e-09 -g 5 C_striata_01_8_50_t30r5_plot_u1-9g5 $DIR/PSMC/diploid_C_striata_01_8_50.psmc  
 ```
 
 considering a mutation rate`-u` of 1x10<sup>-9</sup>:
 
 ``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/utils/psmc_plot.pl -u 1e-09 -g 5 HPA_35_220_t30r5_plot_u1-9g5 diploid_HPA_35_220_t30r5.psmcfa.psmc  
+psmc_plot.pl -u 1e-09 -g 5 C_striata_01_8_50_t30r5_plot_u1-9g5 $DIR/PSMC/diploid_C_striata_01_8_50.psmc  
 ```
 
 This last command will output two files .eps and .par. Copy both files
