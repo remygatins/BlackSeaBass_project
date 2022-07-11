@@ -241,12 +241,14 @@ considering a mutation rate`-u` of 1x10<sup>-9</sup>:
 ``` bash
 psmc_plot.pl -u 1e-09 -g 5 C_striata_01_8_50_t30r5_plot_u1-9g5 $DIR/PSMC/diploid_C_striata_01_8_50.psmc  
 ```
+Run time 00:00:01
 
 considering a mutation rate`-u` of 1x10<sup>-9</sup>:
 
 ``` bash
 psmc_plot.pl -u 1e-08 -g 5 C_striata_01_8_50_t30r5_plot_u1-8g5 $DIR/PSMC/diploid_C_striata_01_8_50.psmc  
 ```
+Run time 00:00:01
 
 This last command will output two files .eps and .par. Copy both files
 to your local computer. Open the .eps file to view your PSMC plot I like
