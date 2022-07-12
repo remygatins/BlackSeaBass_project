@@ -212,6 +212,7 @@ Now run the PSMC
 
 ``` bash
 psmc -N30 -t30 -r5 -p "4+30*2+4+6+10" -o $DIR/PSMC/diploid_C_striata_01_8_50.psmc $DIR/PSMC/diploid_C_striata_01_8_50.psmcfa 
+psmc -N30 -t30 -r5 -p "4*4+13*2+4*4+6" -o $DIR/PSMC/diploid_C_striata_01_8_50.psmc $DIR/PSMC/diploid_C_striata_01_8_50.psmcfa
 ```
 Run time 01:33:26
 
@@ -265,6 +266,61 @@ scales you might consider running a MSMC analysis instead.
 **mutation rate = 1x10<sup>-9</sup>**
 
 <img width="640" alt="image" src="https://user-images.githubusercontent.com/26288352/178328177-22d71a1b-b805-4d37-ac05-d3b310b18fcc.png">
+
+
+## Run PSMC with using Barth et al 2017 parameters
+#### 3\. Run PSMC analysis
+
+Convert your diploid.fastq file into a psmcfa file
+
+``` bash
+fq2psmcfa -q20 -g10000 -s20 $DIR/PSMC/diploid_C_striata_01_8_50.fq.gz > $DIR/PSMC/diploid_C_striata_01_8_50_v2.psmcfa
+```
+
+`-q` minimum quality threshold
+`-g` scaffold-good-size
+`-s` window size
+
+Run time 00:00:16
+
+Now run the PSMC
+
+``` bash
+psmc -N25 -t30 -r5 -p "4*4+13*2+4*4+6" -o $DIR/PSMC/diploid_C_striata_01_8_50_v2.psmc $DIR/PSMC/diploid_C_striata_01_8_50_v2.psmcfa
+```
+Run time 01:33:26
+
+*PSMC parameters:*  
+`-p` STR pattern of parameters \[4+5\*3+4\]  
+`-t` FLOAT maximum 2N0 coalescent time \[15\]  
+`-N` INT maximum number of iterations \[30\]  
+`-r` FLOAT initial theta/rho ratio \[4\]  
+`-o` FILE output file \[stdout\]
+
+#### 4\. Plot PSMC results
+
+considering a mutation rate`-u` of 1x10<sup>-9</sup>:
+
+``` bash
+psmc_plot.pl -u 1e-09 -g 5 C_striata_01_8_50_t30r5_plot_u1-9g5_v2 $DIR/PSMC/diploid_C_striata_01_8_50_v2.psmc  
+```
+Run time 00:00:01
+
+considering a mutation rate`-u` of 1x10<sup>-9</sup>:
+
+``` bash
+psmc_plot.pl -u 1e-08 -g 5 C_striata_01_8_50_t30r5_plot_u1-8g5_v2 $DIR/PSMC/diploid_C_striata_01_8_50_v2.psmc 
+```
+Run time 00:00:01
+
+**mutation rate = 1x10<sup>-8</sup>**
+
+![image](https://user-images.githubusercontent.com/26288352/178598810-c6e4d180-02c5-4bc1-a1a5-3d2ae7da1e6e.png)
+
+
+**mutation rate = 1x10<sup>-9</sup>**
+
+![image](https://user-images.githubusercontent.com/26288352/178598863-f685b1d8-2f93-45f3-a0a0-2564dbd7515a.png)
 
 
 ## PSMC with Bootstrap
