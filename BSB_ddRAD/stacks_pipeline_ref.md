@@ -146,18 +146,17 @@ echo “start time is `date`”
 module load samtools
 
 #--------------COMMAND----------------
+#Set variables/paths
+REF=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_01.fasta
+SEQ_DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags
+SAMPLE_LIST=($(</work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref/samples/BSB_sample_list_uniq))
+FILENAME=${SAMPLE_LIST[${SLURM_ARRAY_TASK_ID}]}
+
 
 echo "This job in the array has:"
 echo "- SLURM_JOB_ID=${SLURM_JOB_ID}"
 echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
 echo "My input file is ${FILENAME}"
-
-#Set variables/paths
-REF=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_01.fasta
-SEQ_DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags
-SAMPLE_LIST=($(</work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/BSB_sample_list_uniq))
-FILENAME=${SAMPLE_LIST[${SLURM_ARRAY_TASK_ID}]}
-
 
 # convert .sam to .bam 
 samtools view -Sb -@ 16 -O BAM -o $SEQ_DIR/${FILENAME}_aligned.bam $SEQ_DIR/${FILENAME}_aligned.sam
@@ -179,4 +178,55 @@ echo `date`
 `-O` 		output format (SAM, BAM, CRAM)\
 `-b` 		output BAM\
 
+`.sam` files are much larger than `.bam` files. 
+Once we have converted sam to bam files we can delete the sam files to save space
+
+`rm *sam`
+
+#calculate percentage of reads mapped to reference 
+
+```bash
+module load samtools
+
+samtools flagstat SN_191_aligned_sorted.bam > SN_191_aligned_sorted_stats.out
+```
+
+```
+3966250 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+108834 + 0 supplementary
+0 + 0 duplicates
+3948393 + 0 mapped (99.55% : N/A)
+3857416 + 0 paired in sequencing
+1928708 + 0 read1
+1928708 + 0 read2
+3616750 + 0 properly paired (93.76% : N/A)
+3830346 + 0 with itself and mate mapped
+9213 + 0 singletons (0.24% : N/A)
+189774 + 0 with mate mapped to a different chr
+92016 + 0 with mate mapped to a different chr (mapQ>=5)
+```
+
+run interactive mode
+
+    srun -p lotterhos -N 1 --pty /bin/bash
+    
+run stats for all samples using a for loop
+
+```bash
+module load samtools
+
+for file in `cat BSB_sample_list_uniq`;
+do
+    samtools flagstat ${file}_aligned_sorted.bam > ${file}_aligned_sorted_stats.ou
+done
+```
+
+print line 13 from all output files into a summary file
+
+    awk "FNR==13" *.out > flagstat_summary.txt
+
+
+
+    
 
