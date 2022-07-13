@@ -238,14 +238,23 @@ Make a popmap file with all your sample `.bam` file names
 
 
 ```bash
-ref_map.pl --samples path --popmap path [-s spacer] --out-path path [--rm-pcr-duplicates] [-X prog:"opts" ...]
-
+module load lotterhos
+module load stacks
 
 DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref
 
-ref_map.pl -T 4 -o $DIR/stacks --popmap $DIR/popmap/BSB_all --samples $DIR/samples --rm-pcr-duplicates -X "populations: --fstats --vcf --genepop"
+ref_map.pl -T 10 -o $DIR/stacks --popmap $DIR/popmap/BSB_all --samples $DIR/samples --rm-pcr-duplicates -X "populations: --fstats --vcf --genepo$
 ```
 
+**Error** 
+
+`ref_map.pl: Aborted because the last command failed (1).`
+
+I'm going to run it manually
+
+Run gstacks to build loci from the aligned single-end data.
+
+gstacks -I $src/aligned/ -M $src/popmaps/popmap --rm-pcr-duplicates -O $src/stacks/ -t 8
 
 
 
