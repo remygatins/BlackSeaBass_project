@@ -218,13 +218,36 @@ module load samtools
 
 for file in `cat BSB_sample_list_uniq`;
 do
-    samtools flagstat ${file}_aligned_sorted.bam > ${file}_aligned_sorted_stats.ou
+    samtools flagstat ${file}_aligned_sorted.bam > ${file}_aligned_sorted_stats.out
 done
 ```
 
-print line 13 from all output files into a summary file
+print line 5 from all output files into a summary file
 
-    awk "FNR==13" *.out > flagstat_summary.txt
+    awk "FNR==5" *.out > flagstat_summary.txt
+
+## Run Stacks
+
+I'm going to move all bam files from my `stacks` directory to my `stacks_ref` directory
+
+        mv *.bam /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref/samples/
+
+### Reference map
+
+Make a popmap file with all your sample `.bam` file names
+
+
+```bash
+ref_map.pl --samples path --popmap path [-s spacer] --out-path path [--rm-pcr-duplicates] [-X prog:"opts" ...]
+
+
+DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref
+
+ref_map.pl -T 4 -o $DIR/stacks --popmap $DIR/popmap/BSB_all --samples $DIR/samples --rm-pcr-duplicates -X "populations: --fstats --vcf --genepop"
+```
+
+
+
 
 
 
