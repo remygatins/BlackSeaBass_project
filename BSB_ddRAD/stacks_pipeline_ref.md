@@ -1,11 +1,18 @@
 # BSB RADseq STACKS pipeline with a Reference Genome
 
-  - 
+
+
+
+Lotterhos lab partitions
+
+There are 2 nodes each with 36 cores, so we can run parallel programs with up to 36 cores, and serial on up to 72 cores.
+
+There is 5GB of memory on each core, with 36 cores/node and 72 cores total across both. So it should be possible to submit an array with 140 jobs at a time, each with 2.5 GB
 
 Paths:
 
 Working directory: /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref
-Reference genome:   
+Reference genome:   /work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_01.fasta
 Trimmed sequences: /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags 
 
 ## Demultiplex, trim, and quality check
@@ -13,5 +20,163 @@ Samples have already been demultiplexed previously (see Thais'[pipeline.md](http
 
 For trimming and quality check see [stacks_pipeline.md](https://github.com/remygatins/BlackSeaBass_project/edit/master/BSB_ddRAD/stacks_pipeline.md)
 
+## Map files to the genome
+
+
+### BWA  v 0.7.17
+
+map trimmed Illumina reads to our draft genome
+
+We first create an index assembly file of the draft genome C_striata_01.fasta
+
+
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=bwa              # Name your job something useful for easy tracking
+#SBATCH --output=out/bwa.out
+#SBATCH --error=out/bwa.err
+#SBATCH --cpus-per-task=5
+#SBATCH --mem=5G                        # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=2-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
+##SBATCH --array=0-117%10		#there are 118 samples and it will run a maximum of 10 jobs at a time
+
+#--------------MODULES---------------
+
+module load bwa
+
+#--------------COMMAND----------------
+
+DIR=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome
+
+#index genome
+bwa index $DIR/C_striata_01.fasta
+```
+
+bwa index will create new files (.amb, .ann, .bwt, .pac, .sa) that will need to be within the directory to map sequences using bwa
+
+
+
+### Create bwa job array ###
+Now, we will create a bwa job with tasks, or a job array. 
+
+Let's work from the `../stacks_ref/jobs` folder
+
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=bwa              # Name your job something useful for easy tracking
+#SBATCH --output=out/bwa_%A_%a.out
+#SBATCH --error=out/bwa_%A_%a.err
+#SBATCH --partition=lotterhos
+#SBATCH --nodes=1
+#SBATCH --ntasks=5
+#SBATCH --mem=25G                        # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=2-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --array=0-117%50		#there are 118 samples and it will run a maximum of 10 jobs at a time
+
+echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+
+echo “using $SLURM_CPUS_ON_NODE CPUs”
+echo “Start Run”
+echo “start time is `date`”
+
+#--------------MODULES---------------
+
+module load bwa
+
+#--------------COMMAND----------------
+
+echo "This job in the array has:"
+echo "- SLURM_JOB_ID=${SLURM_JOB_ID}"
+echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
+
+REF=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_01.fasta
+SEQ_DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags
+SAMPLE_LIST=($(</work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/BSB_sample_list_uniq))
+FILENAME=${SAMPLE_LIST[${SLURM_ARRAY_TASK_ID}]}
+
+echo "My input file is ${FILENAME}"
+
+bwa mem -t16 $REF $SEQ_DIR/${FILENAME}.1.fq.gz $SEQ_DIR/${FILENAME}.2.fq.gz > $SEQ_DIR/${FILENAME}_aligned.sam
+
+
+echo = `date` job $JOB_NAME done
+
+
+
+#--------- Diagnostic/Logging Information---------------
+
+echo “using $NSLOTS CPUs”
+echo `date`
+
+```
+
+convert  `.sam` file to `.bam` and sort using samtools 
+
+```
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=samtools             # Name your job something useful for easy tracking
+#SBATCH --output=out/samtools_%A_%a.out
+#SBATCH --error=out/samtools_%A_%a.err
+#SBATCH --partition=lotterhos
+#SBATCH --nodes=1
+#SBATCH --ntasks=5
+#SBATCH --mem=25G                          # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=1-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
+#SBATCH --array=0-117%10		#there are 118 samples and it will run a maximum of 10 jobs at a time
+
+echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+
+echo “using $SLURM_CPUS_ON_NODE CPUs”
+echo “Start Run”
+echo “start time is `date`”
+
+#--------------MODULES---------------
+
+module load samtools
+
+#--------------COMMAND----------------
+
+echo "This job in the array has:"
+echo "- SLURM_JOB_ID=${SLURM_JOB_ID}"
+echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
+echo "My input file is ${FILENAME}"
+
+#Set variables/paths
+REF=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_01.fasta
+SEQ_DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags
+SAMPLE_LIST=($(</work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/BSB_sample_list_uniq))
+FILENAME=${SAMPLE_LIST[${SLURM_ARRAY_TASK_ID}]}
+
+
+# convert .sam to .bam 
+samtools view -Sb -@ 16 -O BAM -o $SEQ_DIR/${FILENAME}_aligned.bam $SEQ_DIR/${FILENAME}_aligned.sam
+
+#sort output
+samtools sort -o $SEQ_DIR/${FILENAME}_aligned_sorted.bam -O BAM -@ 16 $SEQ_DIR/${FILENAME}_aligned.bam
+
+
+#--------- Diagnostic/Logging Information---------------
+echo = `date` job $JOB_NAME done
+echo `date`
+
+```
+
+
+`-Sb`		input format bam\
+`-@`		threads\
+`-o` 		FILE  output file name\
+`-O` 		output format (SAM, BAM, CRAM)\
+`-b` 		output BAM\
 
 
