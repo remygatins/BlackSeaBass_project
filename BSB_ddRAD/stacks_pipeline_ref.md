@@ -243,15 +243,28 @@ module load stacks
 
 DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref
 
-ref_map.pl -T 10 -o $DIR/stacks --popmap $DIR/popmap/BSB_all --samples $DIR/samples --rm-pcr-duplicates -X "populations: --fstats --vcf --genepo$
+ref_map.pl -T 10 -o $DIR/stacks --popmap $DIR/popmap/BSB_all --samples $DIR/samples --rm-pcr-duplicates -X "populations: --fstats --vcf --genepop
 ```
 
 <img width="472" alt="image" src="https://user-images.githubusercontent.com/26288352/178889797-cd5e9522-9934-4f5a-9146-986732716cdc.png">
 
 
+### Populations r 0.80
+
+```bash
+populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --vcf --genepop --structure --fstats --hwe -t 10
+
+populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 30
+```
 
 
+Loci
 
+        cat populations.hapstats.tsv | grep -v "^#" | cut -f 1 | uniq | wc -l
 
-    
+|popmap |populations        | Loci   |% missing data|
+|:------|:-----------------:|:------:|-------------:|
+|BSB_all| none          |213,852  | 47.3%  |
+|BSB_all|	        |    | |
+
 
