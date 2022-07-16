@@ -253,10 +253,59 @@ ref_map.pl -T 10 -o $DIR/stacks --popmap $DIR/popmap/BSB_all --samples $DIR/samp
 
 ```bash
 populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --vcf --genepop --structure --fstats --hwe -t 10
+```
+/// GENLIGHT OBJECT /////////
 
+ // 117 genotypes,  101,818 binary SNPs, size: 24.5 Mb
+ 3590324 (30.14 %) missing data
+
+ // Basic content
+   @gen: list of 117 SNPbin
+
+ // Optional content
+   @ind.names:  117 individual labels
+   @loc.names:  101818 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @other: a list containing: elements without names 
+
+```bash
 populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 30
 ```
 
+/// GENLIGHT OBJECT /////////
+
+ // 117 genotypes,  90,571 binary SNPs, size: 22.5 Mb
+ 3390094 (31.99 %) missing data
+
+ // Basic content
+   @gen: list of 117 SNPbin
+
+ // Optional content
+   @ind.names:  117 individual labels
+   @loc.names:  90571 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @other: a list containing: elements without names 
+
+```bash
+populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.05 --vcf --genepop --structure --fstats --hwe -t 30
+```
+
+ /// GENLIGHT OBJECT /////////
+
+ // 117 genotypes,  61,135 binary SNPs, size: 15.7 Mb
+ 2398624 (33.53 %) missing data
+
+ // Basic content
+   @gen: list of 117 SNPbin
+
+ // Optional content
+   @ind.names:  117 individual labels
+   @loc.names:  61135 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @other: a list containing: elements without names 
 
 Loci
 
@@ -265,6 +314,9 @@ Loci
 |popmap |populations        | Loci   |% missing data|
 |:------|:-----------------:|:------:|-------------:|
 |BSB_all| none          |213,852  | 47.3%  |
-|BSB_all|	        |    | |
+|BSB_all|-r 0.80        |101,818    |30.14% |
+|BSB_all|-r 0.80 --min-maf 0.01 | 90,571  | 31.99%|
+|BSB_all|-r 0.80 --min-maf 0.05 | 61,135  | 33.53%|
+
 
 
