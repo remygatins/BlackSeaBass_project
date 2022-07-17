@@ -23,6 +23,17 @@ install all the other packages needed within your packrat environment.
 BiocManager::install("vcfR")
 ```
 
-In R to call on all the packages you need to initialize the environment where the R packages have been written to:
+In R, to call on all the packages you need to initialize the environment where the R packages have been written to:
   `packrat::init("/home/r.gatins/R")`
+Now just call on each package as you would normally `library("<package>")`
 
+or 
+
+```R
+libraries_needed <- c("vcfR", "ape","adegenet", "RColorBrewer", "poppr", "radiator", "dplyr", "igraph",
+                      "ggplot2", "reshape2")
+
+for (i in 1:length(libraries_needed)){
+  library( libraries_needed[i], character.only = TRUE)
+}
+```
