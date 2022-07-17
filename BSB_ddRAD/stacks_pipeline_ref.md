@@ -276,5 +276,31 @@ populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.05 --vcf 
 |BSB_all|-r 0.80 --min-maf 0.01 | 90,571  | 31.99%|
 |BSB_all|-r 0.80 --min-maf 0.05 | 61,135  | 33.53%|
 
+I'm going to use the vcf file where I filtered loci to show up in 80% of individuals per population `-r 0.80` and had a minimum allele frequecy of 0.01 `--min-maf 0.01`
+
+We first need to convert our VCF file (.vcf) into a PLINK format (.bed/.bim/.fam)
+
+```bash
+module load miniconda3
+conda activate plink
+
+plink --vcf populations.snps.vcf --out BSB_plink --double-id --allow-extra-chr
+```
+
+`--double-id` My ind ID's had a "_" 
+`--allow-extra-chr` chromosome name was too long and needs this to accept
+
+This should have created 3 files:
+```bash
+BSB_plink.bed
+BSB_plink.bim
+BSB_plink.fam
+```
+
+Now open OpenOnDemand to work with R interactively
+
+Open `bigsnpr.R`
+
+
 
 
