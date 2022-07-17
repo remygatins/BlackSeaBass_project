@@ -1,5 +1,8 @@
 See [R Discovery tutorial](https://rc-docs.northeastern.edu/en/latest/software/r.html)
 
+# Install R packages and dependencies using [Packrat](https://rstudio.github.io/packrat/)
+
+
 1. Through terminal or iTerm connect to Discovery
 2. Load the R version you need `module load R/4.0.3`
 3. Create a new directory for your R project by typing, `mkdir /home/r.gatins/R`
@@ -12,13 +15,13 @@ See [R Discovery tutorial](https://rc-docs.northeastern.edu/en/latest/software/r
 ```bash
 if (!requireNamespace("BiocManager", quietly = TRUE))
 install.packages("BiocManager")
+
 BiocManager::install("adegenet")
 ```
-
+install all the other packages needed within your packrat environment.
 ```bash
 BiocManager::install("vcfR")
 ```
-install all the other packages needed within your packrat environment.
 
 In R to call on all the packages you need to initialize the environment where the R packages have been written to:
   `packrat::init("/home/r.gatins/R")`
