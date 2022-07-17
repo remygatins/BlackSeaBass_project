@@ -702,11 +702,13 @@ From Longo *et al* 2021:
 
 In order to keep more loci I will use the r0.8 output that has the most loci and filter with vcftools
 
+```bash
 vcftools --vcf ../stacks/BSB_pop_r0.8/populations.snps.vcf --out ../stacks/BSB_pop_r0.8/vcftools/BSB_min10x_maxmiss0.8 --minDP 10 --max-missing 0.8 --recode --recode-INFO-all
 
 vcftools --vcf populations.snps.vcf --minDP 10 --max-missing 0.8 --recode --recode-INFO-all
 
 vcftools --vcf populations.snps.vcf --missing-indv
+```
 
 `cat remove_ind_0.40`
 
@@ -718,7 +720,7 @@ MA_314
 MA_318
 MA_316
 ```
-
+```bash
 vcftools --vcf populations.snps.vcf --minDP 10 --max-missing 0.8 --remove remove_ind_0.40 --recode --recode-INFO-all --out filtered_ind
 
 vcftools --vcf filtered_ind.recode.vcf --missing-indv --out filtered_ind
@@ -726,7 +728,7 @@ vcftools --vcf filtered_ind.recode.vcf --missing-indv --out filtered_ind
 vcftools --vcf out.recode.vcf --remove remove_ind_0.40 --recode --recode-INFO-all --out filtered_ind_2
 
 vcftools --vcf filtered_ind_2.recode.vcf --missing-indv --out filtered_ind_2
-
+```
 
 ### Filtered_ind_2
 Stacks: r0.8
@@ -783,7 +785,7 @@ write_structure(tidy.vcf.data_2, filename = "str_r0.8_filtered")
 ```
 
 ## Structure
-
+```bash
 src=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks
 iteration="
 1
@@ -796,7 +798,7 @@ do
 done
 
 structure -K 4 -L 27125 -N 110 -i $src/stacks/BSB_pop_r0.8/str_r0.8_filtered.str -o $src/structure/results/BSB_r0.8_filt_K4_1
-
+```
 error
 ```bash
 # Entries:   Line numbers
