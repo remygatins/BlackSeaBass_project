@@ -266,6 +266,12 @@ populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.01 --vcf 
 populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.05 --vcf --genepop --structure --fstats --hwe -t 30
 ```
 
+### Populations r 0.60 min-maf 0.01
+
+```bash
+populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.60 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
+```
+
 
 ## Summary table
 
@@ -275,6 +281,7 @@ populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.05 --vcf 
 |BSB_all|-r 0.80        |101,818    |30.14% |
 |BSB_all|-r 0.80 --min-maf 0.01 | 90,571  | 31.99%|
 |BSB_all|-r 0.80 --min-maf 0.05 | 61,135  | 33.53%|
+|BSB_all|-r 0.60 --min-maf 0.01 |   | |
 
 I'm going to use the vcf file where I filtered loci to show up in 80% of individuals per population `-r 0.80` and had a minimum allele frequecy of 0.01 `--min-maf 0.01`
 
