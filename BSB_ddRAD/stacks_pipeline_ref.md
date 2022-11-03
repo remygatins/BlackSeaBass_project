@@ -332,5 +332,13 @@ module load vcftools
 
 vcftools --vcf populations.snps.vcf --out BSB_r0.6_maf0.01_v2 --plink --chrom-map filename.chrom-map.txt
 ```
+Now open OpenOnDemand to work with R interactively
+
+https://ood.discovery.neu.edu/pun/sys/dashboard
+
+An R course has already been created by Katie with most packages already installed. So go to `Courses` > `EEMB3465_RStudio`
+
+Select the time and memory you need
+
 
 
