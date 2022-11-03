@@ -309,5 +309,28 @@ Now open OpenOnDemand to work with R interactively
 Open `bigsnpr.R`
 
 
+------------------- [11/03/2022] -----------
+
+run interactive mode
+
+    srun -p lotterhos -N 1 --pty /bin/bash
+
+1. Create chromosome map
+
+```bash
+module load miniconda3
+conda activate plink
+conda activate bcftools
+
+bcftools view -H filename.vcf | cut -f 1 | uniq | awk '{print $0"\t"$0}' > filename.chrom-map.txt
+```
+
+2. Make ped file using this chromosome map
+
+```bash
+module load vcftools
+
+vcftools --vcf populations.snps.vcf --out BSB_r0.6_maf0.01_v2 --plink --chrom-map filename.chrom-map.txt
+```
 
 
