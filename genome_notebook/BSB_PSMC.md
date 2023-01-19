@@ -501,11 +501,11 @@ input files.
 #SBATCH --nodes=1
 #SBATCH --ntasks=2
 #SBATCH --mem=6000MB
-#SBATCH --time=03-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --time=00-04:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
 #SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
 #SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
-#SBATCH --partition=lotterhos
-#SBATCH --array=1-101%10		#there are 118 samples and it will run a maximum of 10 jobs at a time
+#SBATCH --partition=short
+#SBATCH --array=1-101%20		#run a maximum of 20 jobs at a time
 
 
 # ----------------Modules------------------------- #
@@ -521,8 +521,8 @@ echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
 # select our filename
 N=${SLURM_ARRAY_TASK_ID}
 # Comment one of the following two lines, depending on if the file names have leading zeros
-#FILENAME=run-${N}.inp # without leading zeros
- FILENAME=split_CST_$(printf "%03d" ${N}).psmcfa # with leading zeros
+#FILENAME=run-${N} # without leading zeros
+ FILENAME=split_CST_$(printf "%03d" ${N}) # with leading zeros
       # adjust "%03d" to as many digits as are in the numeric part of the file name
 
 echo "My input file is ${FILENAME}"
