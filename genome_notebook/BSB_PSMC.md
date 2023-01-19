@@ -332,8 +332,8 @@ simultaneously run the bootstrap PSMC analyses. Running a job array can
 be different depending on your server’s task management. The steps below
 illustrate the steps to run a job array on SLURM.
 
-Steps 1, 2, and 3 are exactly the same as the steps explained above. If
-you have already done these, skip to step 4.
+**Steps 1, 2, and 3 are exactly the same as the steps explained above. If
+you have already done these, skip to step 4.**
 
 #### 1\. Prepare your genome assembly data
 
@@ -427,7 +427,7 @@ We sill use the splitfa command to split long chromosome sequences found
 in your diploid.psmcfa file to shorter segments for bootstrapping.
 
 ``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/utils/splitfa diploid_HPA_35_220.psmcfa > diploid_HPA_35_220_split.psmcfa
+splitfa diploid_C_striata_01_8_50.psmcfa > diploid_C_striata_01_8_50_split.psmcfa
 ```
 
 Once you have your diploid\_split.psmcfa file you will need to copy this
@@ -443,8 +443,8 @@ outfile into your new bootstrap directory. The psmc file will be used
 after you run the bootstrap to concatenate with the other output files.
 
 ``` bash
-cp diploid_HPA_35_220_split.psmcfa bootstrap
-cp diploid_HPA_35_220_t30r5.psmca.psmc bootstrap
+cp diploid_C_striata_01_8_50_split.psmcfa bootstrap
+cp diploid_C_striata_01_8_50.psmc bootstrap
 ```
 
 Now move into your bootstrap directory
@@ -460,14 +460,14 @@ To run an interactive session in a SLURM environment (e.g. Chimera
 server):
 
 ``` bash
-srun -N 1 -n 12 -p AMD6128 --mem=50000MB -t 04:00:00 --pty bash
+srun -p short -N 1 --pty /bin/bash
 ```
 
 Once in the interactive session, copy your diploid\_split.psmcfa file
 into 100 different fileas labelled from 001-100.
 
 ``` bash
-echo split_HPA_{001..100}.psmcfa| xargs -n 1 cp diploid_HPA_35_220_split.psmcfa
+echo split_CST_{001..100}.psmcfa| xargs -n 1 cp diploid_C_striata_01_8_50_split.psmcfa
 ```
 
 Exit interactive mode
@@ -494,28 +494,24 @@ input files.
 
 ``` bash
 #!/bin/bash
-#
-#
-#SBATCH -p AMD6276   # Partition name
-#SBATCH -J psmc_array  # Job name
-#SBATCH --mail-user=user_email@umb.edu  #change this to your email
-#SBATCH --mail-type=ALL
-#SBATCH -o array_%A_%a.out    # Name of stdout output file
-#SBATCH -e array_%A_%a.err    # Name of stdout output file
-#SBATCH --array=1-100
-#SBATCH -N 1        # Total number of nodes requested
-#SBATCH -n 2        # Total number of mpi tasks requested per node
-#SBATCH -t 03-24:00:00  # Run Time (DD-HH:MM:SS) - 1.5 hours (optional)
-#SBATCH --mem=6000MB  # Memory to be allocated PER NODE (default: 1gb)
-
-
-echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=psmc_array              # Name your job something useful for easy tracking
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=out/array_%A_%a.err
+#SBATCH --nodes=1
+#SBATCH --ntasks=2
+#SBATCH --mem=6000MB
+#SBATCH --time=03-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
+#SBATCH --array=1-101%10		#there are 118 samples and it will run a maximum of 10 jobs at a time
 
 
 # ----------------Modules------------------------- #
-source ~/.bashrc
-conda activate samtools
-#
+module load miniconda3
+source activate /work/lotterhos/programs/PSMC
+
 # ----------------Your Commands------------------- #
 #
 echo "This job in the array has:"
@@ -526,14 +522,15 @@ echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
 N=${SLURM_ARRAY_TASK_ID}
 # Comment one of the following two lines, depending on if the file names have leading zeros
 #FILENAME=run-${N}.inp # without leading zeros
- FILENAME=split_HPA_$(printf "%03d" ${N}).psmcfa # with leading zeros
-# adjust "%03d" to as many digits as are in the numeric part of the file name
+ FILENAME=split_CST_$(printf "%03d" ${N}).psmcfa # with leading zeros
+      # adjust "%03d" to as many digits as are in the numeric part of the file name
+
 echo "My input file is ${FILENAME}"
 
 #
 echo $P
 #
-/hpcstor4/data01/DeLeonLab/apps/psmc/psmc -N30 -t30 -r5 -b -p "4+30*2+4+6+10" -o /hpcstor4/data01/DeLeonLab/remy/HPA_genome/PSMC/bootstrap_35_220/${FILENAME}.psmc /hpcstor4/data01/DeLeonLab/remy/HPA_genome/PSMC/bootstrap_35_220/${FILENAME}
+psmc -N30 -t30 -r5 -b -p "4+30*2+4+6+10" -o ${FILENAME}.psmc ${FILENAME}.psmcfa
 #
 
 echo "Job finished" `date`
