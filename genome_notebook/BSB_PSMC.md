@@ -336,90 +336,8 @@ illustrate the steps to run a job array on SLURM.
 you have already done these, skip to step 4.**
 
 #### 1\. Prepare your genome assembly data
-
-this step you might already have from your first PSMC analysis howe
-
-First we need to index our genome assembly (should be a fasta file)
-
-``` bash
-bwa index HPA_assembly.fa 
-```
-
-Now map adapter trimmed Illumina reads to your genome:
-
-``` bash
-bwa mem -t32 HPA_assembly.fasta HPA_HiSeq_R1.fq.gz HPA_HiSeq_R2.fq.gz > HPA_bwa_aligned.sam
-```
-
-Use samtools to convert your sam file to a bam file:
-
-``` bash
-samtools view -Sb -@ 30 -O BAM -o HPA_bwa_aligned.bam HPA_bwa_aligned.sam 
-```
-
-Sort your bam file:
-
-``` bash
-samtools sort -o HPA_bwa_aligned_sorted.bam -O BAM -@ 20 HPA_bwa_aligned.bam 
-```
-
-Finally, index your sorted bam file:
-
-``` bash
-samtools index -b -@ 20 HPA_bwa_aligned_sorted.bam  
-```
-
 #### 2\. Call diploid genome
-
-Once you have mapped and sorted your genome the next step is to call a
-diploid genome and convert it to the required format to input into the
-PSMC analysis.
-
-So, first we call a diploid genome using our reference genome and mapped
-reads using bcftools. \*DeLeonLab– NOTE: I installed bcftools within the
-samtools conda environment on the chimera server
-
-``` bash
-bcftools mpileup -C50 -Ou --threads 12 -f HPA_pilon.fasta HPA_bwa_aligned_sorted.bam | bcftools call -c --threads 10 | vcfutils.pl vcf2fq -d 35 -D 220 | gzip> diploid_HPA_35_220.fq.gz
-```
-
-*Parameters:*  
-`mpileup` multi-way pileup producing genotype likelihoods  
-`-C50` One may consider to add -C50 to mpileup if mapping quality is
-overestimated for reads containing excessive mismatches. Applying this
-option usually helps for BWA-backtrack alignments, but may not other
-aligners.  
-`-f`, `--fasta-ref` FILE  
-`-c`, `--consensus-caller`  
-`-d` sets and minimum read depth  
-`-D` sets the maximum read depth  
-\*It is recommended to set `-d` to a third of your average depth and
-`-D` to twice the average depth (which can be seen from the GenomeScope
-results)
-
-#### 3\. Run PSMC analysis
-
-Here we are running our PSMC analysis on the original diploid genome you
-have.
-
-First, convert your diploid.fastq file into a psmcfa file
-
-``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/utils/fq2psmcfa -q20 diploid_HPA_35_220.fq.gz > diploid_HPA_35_220.psmcfa
-```
-
-Now run the PSMC
-
-``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/psmc -N30 -t30 -r5 -p "4+30*2+4+6+10" -o diploid_HPA_35_220_t30r5.psmca.psmc diploid_HPA_35_220.psmcfa 
-```
-
-*PSMC options:*  
-`-p` STR pattern of parameters \[4+5\*3+4\]  
-`-t` FLOAT maximum 2N0 coalescent time \[15\]  
-`-N` INT maximum number of iterations \[30\]  
-`-r` FLOAT initial theta/rho ratio \[4\]  
-`-o` FILE output file \[stdout\]
+#### 3\. Convert diploid.fastq file into a psmcfa file
 
 #### 4\. Generate split file for bootstrap
 
@@ -539,6 +457,13 @@ echo "My input file is ${FILENAME}"
 
 The `-b` found in your psmc command indicates it is in bootstrap mode.
 
+*PSMC options:*  
+`-p` STR pattern of parameters \[4+5\*3+4\]  
+`-t` FLOAT maximum 2N0 coalescent time \[15\]  
+`-N` INT maximum number of iterations \[30\]  
+`-r` FLOAT initial theta/rho ratio \[4\]  
+`-o` FILE output file \[stdout\]
+
 Now submit your job array as you would submit any other job.
 
 ``` bash
@@ -551,7 +476,7 @@ files in addition to your original psmc analysis you ran in step 3.
 We need to concatenate all .psmc files:
 
 ``` bash
-cat *.psmc > HPA_35_220_combined.psmc
+cat *.psmc > CST_combined.psmc
 ```
 
 #### 6\. Plot PSMC results
@@ -560,23 +485,22 @@ The final step is to plot your combined results. Remember you will need
 to change the mutation rate and generation time accordingly to your
 species.
 
-For *Holacanthus passer* I used a generation time `-g` of 5 and plotted
-using a mutation rate `-u` for 1x10<sup>-8</sup> and 1x10<sup>-9</sup>
+I used a generation time `-g` of 5 and plotted using a mutation rate `-u` for 1x10<sup>-8</sup> and 1x10<sup>-9</sup>
 
 ``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/utils/psmc_plot.pl -u 1e-08 -g 5 HPA_35_220_t30r5_plot_u1-8g5 diploid_HPA_35_220_t30r5.psmc  
+psmc_plot.pl -u 1e-08 -g 5 CST_boot_8_50_t30r5_plot_u1-8g5 CST_combined.psmc
 ```
 
 ``` bash
-/hpcstor4/data01/DeLeonLab/apps/psmc/utils/psmc_plot.pl -u 1e-09 -g 5 HPA_35_220_t30r5_plot_u1-9g5 diploid_HPA_35_220_t30r5.psmc  
+psmc_plot.pl -u 1e-09 -g 5 CST_boot_8_50_t30r5_plot_u1-9g5 CST_combined.psmc   
 ```
 
-mutation rate = 1x10<sup>-8</sup>
-<p align="center">
-<img src="images/HPA_35_220_t30r5_plot_u1-8g5_boot.png" width="600"/>
-</p>
+**mutation rate = 1x10<sup>-8</sup>**
 
-mutation rate = 1x10<sup>-9</sup>
-<p align="center">
-<img src="images/HPA_35_220_t30r5_plot_u1-9g5_boot.png" width="600"/>
-</p>
+<img width="634" alt="image" src="https://user-images.githubusercontent.com/26288352/213773813-0810084f-76ba-47be-b70a-2ab2ced57bab.png">
+
+
+**mutation rate = 1x10<sup>-9</sup>**
+
+<img width="632" alt="image" src="https://user-images.githubusercontent.com/26288352/213773880-aa0b260e-d4b1-489e-b5c7-8451a3817a1e.png">
+
