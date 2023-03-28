@@ -341,4 +341,60 @@ An R course has already been created by Katie with most packages already install
 Select the time and memory you need
 
 
+# March 28, 2023
+
+Adegenet_BSB_ref.R
+
+```r
+rm(list = ls())
+#install.packages("adegenet", dep=TRUE)
+
+library("adegenet")
+library("ape") 
+library("RColorBrewer")
+library("poppr") # create trees and treat missing data
+
+#show Adegenet version
+packageDescription("adegenet", fields = "Version") 
+
+#set working directory
+setwd("/Users/remygatins/GoogleDrive_gmail/Work/Projects/2021_Black\ Sea\ Bass/RADs/popmap_ref/BSB_all_r0.8_maf0.01")
+
+#Load .vcf data output from populations (STACKS)
+#install.packages("vcfR")
+library(vcfR)
+vcf <- read.vcfR(file = "populations.snps.vcf")
+#vcf <- read.vcfR(file = "filtered_ind_2.recode.vcf")
+#vcf <- read.vcfR(file = "filtered.recode.vcf")
+data <- vcfR2genlight(vcf)
+data
+```
+<img width="436" alt="image" src="https://user-images.githubusercontent.com/26288352/228348369-8e2892b2-67ac-485f-bebf-77b5dc3de066.png">
+
+
+```r
+#__________________
+#Label populations 
+#------------------
+
+#popmap1
+pop(data)<- c(rep("NM",20), rep("MD",20), rep("ME",18), rep("NC",13), rep("NJ",17), rep("SN",29)) 
+
+
+Dgen <- dist.gene(data)
+Dgeo <- dist(data)
+ploidy(data) <- 2
+
+##############
+# Check data #
+##############
+#plot missing data
+glPlot(data, posi="topleft")
+glPlot(data, col=bluepal(6))
+```
+
+<img width="543" alt="image" src="https://user-images.githubusercontent.com/26288352/228347855-aaae9e91-e96d-4b93-a5fb-138e0a98b444.png">
+
+
+
 
