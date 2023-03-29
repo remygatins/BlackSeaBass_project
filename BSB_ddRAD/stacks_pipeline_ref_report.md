@@ -137,3 +137,108 @@ populations -P $DIR/stacks/ -M $DIR/popmap/BSB_noNC --write-single-snp -r 0.80 -
 
 <img width="687" alt="image" src="https://user-images.githubusercontent.com/26288352/228420092-94a4e9ba-44cc-4f2c-8cef-5f864eb725f4.png">
 
+
+# SNMF on LEA to get structure plot
+
+run interactive mode
+
+            srun -p lotterhos -N 1 --pty /bin/bash
+
+1. Create chromosome map
+
+```bash
+module load miniconda3
+conda activate plink
+conda activate bcftools
+
+bcftools view -H populations.snps.vcf | cut -f 1 | uniq | awk '{print $0"\t"$0}' > populations.snps.vcf.chrom-map.txt
+```
+
+2. Make ped file using this chromosome map
+
+```bash
+module load vcftools
+
+vcftools --vcf populations.snps.vcf --out BSB_r0.8_maf0.01 --plink --chrom-map populations.snps.vcf.chrom-map.txt
+```
+
+```bash
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf populations.snps.vcf
+	--chrom-map populations.snps.vcf.chrom-map.txt
+	--out BSB_r0.8_maf0.01
+	--plink
+
+After filtering, kept 117 out of 117 Individuals
+Writing PLINK PED and MAP files ...
+	Read 39 chromosome mapping file entries.
+Done.
+After filtering, kept 24896 out of a possible 24896 Sites
+Run Time = 1.00 seconds
+```
+This should have created a .ped and .map file. Now download this to your local computer or wherever you will run R from
+
+In R, install LEA and convert from a .ped file to a geno file to run SNMF (We will first need to convert to a lfmm file and then to a geno file)
+
+http://membres-timc.imag.fr/Olivier.Francois/LEA/tutorial.htm
+
+```r
+############
+## SNMF ####
+############
+rm(list = ls())
+
+#===== BSB =========
+# 6 source populations
+# 117 individuals
+# 24,896 diploid loci
+# ? env variables (none for now)
+
+setwd("/Users/remygatins/GoogleDrive_gmail/Work/Projects/2021_Black\ Sea\ Bass/RADs/popmap_ref/BSB_all_r0.8_maf0.01_wsnp")
+
+###################
+##### LEA #########
+###################
+
+#Install LEA
+#if (!require("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
+#BiocManager::install("LEA")
+library(LEA)
+
+
+#Convert ped to lfmm and lfmm to geno
+output = ped2lfmm("BSB_r0.8_maf0.01.ped")
+#output = BSB_r0.8_maf0.01.lfmm (writen to the working directory)
+# Create file:	"genotypes.geno".
+output = lfmm2geno("BSB_r0.8_maf0.01.lfmm", "genotypes.geno")
+```
+
+Now choose the most likely number of clusters
+
+```r
+# Choose the number of clusters
+obj.snmf = snmf("genotypes.geno", K = 1:6, ploidy = 2, entropy = T, alpha = 100, project = "new")
+plot(obj.snmf, col = "blue4", cex = 1.4, pch = 19)
+```
+<img width="941" alt="image" src="https://user-images.githubusercontent.com/26288352/228557667-ebffd7b5-10fa-45be-b5f6-90313a663098.png">
+
+K=1 seems to be the most likely number of cluster. 
+
+I will run K=3 to see the plot 
+
+```r
+obj.snmf = snmf("genotypes.geno", K = 3, alpha = 100, project = "new") 
+qmatrix = Q(obj.snmf, K = 3)
+barplot(t(qmatrix), col = c("orange","violet","lightgreen"), border = NA, space = 0, xlab = "Individuals", ylab = "Admixture coefficients")
+```
+![image](https://user-images.githubusercontent.com/26288352/228557976-bc1b753a-2310-4a57-bdfa-d130e56677f0.png)
+
+
+
+
+
+
