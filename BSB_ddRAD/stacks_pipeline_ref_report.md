@@ -1,3 +1,10 @@
+Run reference pipeline using BSB_all_r0.8_maf0.01 and `--write-single-snp`
+
+```
+#write-single-snp
+#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all --write-single-snp -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
+```
+
 
 ```r
 ###################
@@ -115,3 +122,18 @@ ggplot(data.pca.scores, aes(x=PC1, y=PC2, colour=pop)) +
 ```
 
 <img width="685" alt="image" src="https://user-images.githubusercontent.com/26288352/228410934-7df51af5-dd1e-49ad-9746-9f4a5ec2529b.png">
+
+
+
+Now filter out individuals from NC and re-run the analyses
+
+```bash
+#filter out NC samples
+populations -P $DIR/stacks/ -M $DIR/popmap/BSB_noNC --write-single-snp -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
+
+```
+<img width="546" alt="image" src="https://user-images.githubusercontent.com/26288352/228420542-72654c3c-fe97-4df5-9a85-f6f86fcac641.png">
+
+
+<img width="687" alt="image" src="https://user-images.githubusercontent.com/26288352/228420092-94a4e9ba-44cc-4f2c-8cef-5f864eb725f4.png">
+
