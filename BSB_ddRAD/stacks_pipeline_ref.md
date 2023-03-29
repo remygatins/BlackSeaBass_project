@@ -282,6 +282,8 @@ populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.60 --min-maf 0.01 --vcf 
 |BSB_all|-r 0.80 --min-maf 0.01 | 90,571  | 31.99%|
 |BSB_all|-r 0.80 --min-maf 0.05 | 61,135  | 33.53%|
 |BSB_all|-r 0.60 --min-maf 0.01 |   | |
+|BSB_all|-r 0.80 --min-maf 0.01 --write-single-snp|24,896|21.22 |
+
 
 I'm going to use the vcf file where I filtered loci to show up in 80% of individuals per population `-r 0.80` and had a minimum allele frequecy of 0.01 `--min-maf 0.01`
 
