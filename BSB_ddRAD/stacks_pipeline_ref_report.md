@@ -94,9 +94,11 @@ ggplot(data.pca.scores, aes(x=PC1, y=PC2, colour=pop)) +
 vPC1 <- data.pca$eig[1]/sum(data.pca$eig)*100
 vPC2 <- data.pca$eig[2]/sum(data.pca$eig)*100
 ```
+<img width="565" alt="image" src="https://user-images.githubusercontent.com/26288352/228411896-b4beb7d2-d72c-411e-b2da-6dd7f7cbf7fb.png">
+
 
 ```r
-#rearrange populations
+#rearrange populations from North to South
 data.pca.scores$pop <- factor(data.pca.scores$pop, levels = c("ME","NM","SN","NJ","MD","NC"))
 
 ggplot(data.pca.scores, aes(x=PC1, y=PC2, colour=pop)) +
