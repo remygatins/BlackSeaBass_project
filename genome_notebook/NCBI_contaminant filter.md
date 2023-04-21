@@ -60,6 +60,21 @@ ScOpHrR_5;HRSCAF=79	43113489	1836749..1836833	adaptor:NGB00972.1-not_cleaned
 
 Downloaded the [Centropristis striata mitochondrial genome](https://www.ncbi.nlm.nih.gov/nuccore/MH645336.1/) from NCBI and stored as `C_striata_mito.fasta` in `/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome`
 
+run interactive node
+  `srun -p lotterhos -N 1 --pty /bin/bash`
+  
+load minimap
+```{}
+module load minimap2/2.17
+
+minimap2 [options] <target.fa>|<target.idx> [query.fa] [...]
+
+minimap2 -a C_striata_mito.fasta C_striata_01.fasta > C_striata_mito_map.sam
+```
+
+get a summary text 
+
+    cat C_striata_mito_map.sam | grep ^@* | less -S > C_striata_mito_map_summary.txt
 
 
 
