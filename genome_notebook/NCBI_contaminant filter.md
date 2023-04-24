@@ -56,7 +56,7 @@ ScOpHrR_5;HRSCAF=79	43113489	1836749..1836833	adaptor:NGB00972.1-not_cleaned
 ```
 
 
-# Remove contaminants and Mitochondrial genome
+# Remove Mitochondrial genome from assembly
 
 Downloaded the [Centropristis striata mitochondrial genome](https://www.ncbi.nlm.nih.gov/nuccore/MH645336.1/) from NCBI and stored as `C_striata_mito.fasta` in `/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome`
 
@@ -75,6 +75,55 @@ minimap2 -a C_striata_mito.fasta C_striata_01.fasta > C_striata_mito_map.sam
 get a summary text 
 
     cat C_striata_mito_map.sam | grep ^@* | less -S > C_striata_mito_map_summary.txt
+
+
+
+# Remove adapter contaminants 
+
+|Sequence name| length| span(s)| apparent source| bp's to remove|
+|-------------|-------|--------|----------------|---------------|
+|ScOpHrR_19;HRSCAF=179|	38455635	|29300242..29300329|	adaptor:NGB00972.1-not_cleaned|87 |
+|ScOpHrR_1;HRSCAF=3|	37471414	|1820840..1820927|	adaptor:NGB00972.1-not_cleaned|87|
+|ScOpHrR_20;HRSCAF=182|	41338807	|16160790..16160872,31829880..31829924|	adaptor:NGB00972.1-not_cleaned|82,44|
+|ScOpHrR_26;HRSCAF=235|	35856960	|29908858..29908891|	adaptor:NGB00972.1-not_cleaned|33|
+|ScOpHrR_3;HRSCAF=56|	38835999	|30900595..30900682	|adaptor:NGB00972.1-not_cleaned|87|
+|ScOpHrR_5;HRSCAF=79|	43113489	|1836749..1836833	|adaptor:NGB00972.1-not_cleaned|84|
+
+
+`cat C_striata_01.fasta | grep ScOpHrR_1 -n`
+
+1:>ScOpHrR_1;HRSCAF=3
+
+cat C_striata_01.fasta | sed -n '1p'
+
+Produce a file with sequence length
+
+```
+cat C_striata_01.fasta | awk '$0 ~ ">" {if (NR > 1) {print c;} c=0;printf substr($0,2,100) "\t"; } $0 !~ ">" {c+=length($0);} END { print c; }' > C_striata_seq_length.txt
+```
+output
+```
+ScOpHrR_1;HRSCAF=3      37471414
+ScOpHrR_2;HRSCAF=47     309108
+ScOpHrR_3;HRSCAF=56     38835999
+ScOpHrR_4;HRSCAF=74     660109
+ScOpHrR_5;HRSCAF=79     43113489
+ScOpHrR_6;HRSCAF=101    32175207
+ScOpHrR_7;HRSCAF=104    32032266
+ScOpHrR_8;HRSCAF=108    431186
+ScOpHrR_9;HRSCAF=120    43614
+ScOpHrR_10;HRSCAF=121   36376519
+ScOpHrR_11;HRSCAF=135   1084579
+ScOpHrR_12;HRSCAF=138   30413
+ScOpHrR_13;HRSCAF=141   42410642
+ScOpHrR_14;HRSCAF=148   129042
+ScOpHrR_15;HRSCAF=151   46365755
+ScOpHrR_16;HRSCAF=162   19756
+ScOpHrR_17;HRSCAF=164   36354236
+ScOpHrR_18;HRSCAF=168   45437359
+...
+```
+length's match those reported from ncbi 
 
 
 
