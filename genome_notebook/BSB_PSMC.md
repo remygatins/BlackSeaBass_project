@@ -393,6 +393,8 @@ Exit interactive mode
 ``` bash
 exit
 ```
+My initial parameters seem to give much better resolution than those from Berth et al so I will still to my initial parameters.
+
 
 #### 5\. Run PSMC in bootstrap mode using a job array
 
