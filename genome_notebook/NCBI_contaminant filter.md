@@ -203,5 +203,10 @@ bedtools getfasta -fi C_striata_01.fasta -bed contaminants_extra.bed -fo contami
 ```
 ![image](https://user-images.githubusercontent.com/26288352/234101304-6fa03e6a-e70f-49b4-a3ae-95cad5e71c35.png)
 
+In red are bases identified as contaminants. Marked in green are differences between the sequences.
 
+
+I will use `sed` to find and replace the contaminant sequences. 
+
+cat C_striata_01.fasta | sed -E  > C_striata__
 
