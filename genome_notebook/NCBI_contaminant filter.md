@@ -256,3 +256,33 @@ NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 
 I saved and exported the contaminant free assembly as `C_striata_v1.2.fasta`
 
+
+    stats for C_striata_01.fasta
+    
+```
+sum = 926021963, n = 92, ave = 10065456.12, largest = 46365755
+N50 = 39023748, n = 11
+N60 = 37471414, n = 14
+N70 = 36432694, n = 16
+N80 = 35856960, n = 19
+N90 = 34200995, n = 21
+N100 = 8430, n = 92
+N_count = 32476
+Gaps = 334
+```
+
+    assembly-stats C_striata_v1.2.fasta
+    
+```
+stats for C_striata_v1.2.fasta
+sum = 926021963, n = 92, ave = 10065456.12, largest = 46365755
+N50 = 39023748, n = 11
+N60 = 37471414, n = 14
+N70 = 36432694, n = 16
+N80 = 35856960, n = 19
+N90 = 34200995, n = 21
+N100 = 8430, n = 92
+N_count = 32980
+Gaps = 341
+```
+
