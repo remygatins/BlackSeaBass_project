@@ -1,5 +1,7 @@
 # SNMF on LEA to get structure plot
 
+
+## Convert VCF to Ped file
 run interactive mode
 
             srun -p lotterhos -N 1 --pty /bin/bash
@@ -40,6 +42,8 @@ After filtering, kept 24896 out of a possible 24896 Sites
 Run Time = 1.00 seconds
 ```
 This should have created a .ped and .map file. Now download this to your local computer or wherever you will run R from
+
+## Run SNMF on LEA (input file = .ped)
 
 In R, install LEA and convert from a .ped file to a geno file to run SNMF (We will first need to convert to a lfmm file and then to a geno file)
 
