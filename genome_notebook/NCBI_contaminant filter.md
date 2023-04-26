@@ -375,3 +375,21 @@ The final genome assembly `C_striata_v1.3_ordered_renamed.fasta` will be renamed
 
 `cp C_striata_v1.3_ordered_renamed.fasta C_striata_v2.fasta`
 
+Check assembly stats
+
+    conda activate assembly-stats
+    
+    assembly-stats C_striata_v2.fasta
+
+```bash
+stats for C_striata_v2.fasta
+sum = 926021963, n = 92, ave = 10065456.12, largest = 46365755
+N50 = 39023748, n = 11
+N60 = 37471414, n = 14
+N70 = 36432694, n = 16
+N80 = 35856960, n = 19
+N90 = 34200995, n = 21
+N100 = 8430, n = 92
+N_count = 33027
+Gaps = 341
+```
