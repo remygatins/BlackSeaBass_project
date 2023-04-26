@@ -217,7 +217,6 @@ run interactive node
     
     minimap2 -a C_striata_01.fasta contaminants.fasta > contaminants_C_striata_01.sam
     
-```
 
 In Geneious I manually replaced contaminants with N's
 
@@ -285,4 +284,94 @@ N100 = 8430, n = 92
 N_count = 32980
 Gaps = 341
 ```
+
+Uploaded to genbank but it detedcted another contaminant
+
+```bash
+Skipped 436 same as before; no new sequences to screen.
+Note: 26 sequences with runs of Ns 10 bp or longer (or those longer that 20 MB) were split before comparing.
+1 sequence with locations to mask/trim
+(1 split span with locations to mask/trim)
+
+Trim:
+Sequence name, length, span(s), apparent source
+ScOpHrR_20;HRSCAF=182	41338807	31829834..31829880	adaptor:NGB00972.1-not_cleaned
+```
+I converted those to N's with Geneious and saved as file C_striata_v1.3.fasta
+
+
+
+
+## Order Scaffolds by length and rename 
+
+I would now like to order my contigs from largest to smallest and rename contigs to a sequential order.
+
+Right now my fasta file looks like this:
+
+`cat C_striata_v1.3.fasta | grep ^">"| head`
+
+```bash
+>ScOpHrR_1;HRSCAF=3
+>ScOpHrR_2;HRSCAF=47
+>ScOpHrR_3;HRSCAF=56
+>ScOpHrR_4;HRSCAF=74
+>ScOpHrR_5;HRSCAF=79
+>ScOpHrR_6;HRSCAF=101
+>ScOpHrR_7;HRSCAF=104
+>ScOpHrR_8;HRSCAF=108
+>ScOpHrR_9;HRSCAF=120
+>ScOpHrR_10;HRSCAF=121
+```
+
+I will use `seqkit` to order contigs by length and rename
+
+```bash
+conda activate seqkit
+
+#order contigs by length
+seqkit sort --by-length --reverse C_striata_v1.3.fasta > C_striata_v1.3_ordered.fasta
+
+#rename contigs
+seqkit replace --pattern '.+' --replacement 'Scaffold_{nr}' C_striata_v1.3_ordered.fasta > C_striata_v1.3_ordered_renamed.fasta
+```
+
+
+- where `{nr}` is the contig of record
+- `.+` means any character and more than one instance
+
+After ordering
+`cat C_striata_v1.3_ordered.fasta | grep ^">"| head`
+
+```bash
+>ScOpHrR_15;HRSCAF=151
+>ScOpHrR_37;HRSCAF=290
+>ScOpHrR_18;HRSCAF=168
+>ScOpHrR_5;HRSCAF=79
+>ScOpHrR_13;HRSCAF=141
+>ScOpHrR_33;HRSCAF=273
+>ScOpHrR_20;HRSCAF=182
+>ScOpHrR_35;HRSCAF=285
+>ScOpHrR_23;HRSCAF=205
+>ScOpHrR_56;HRSCAF=349
+```
+
+Final output
+`cat C_striata_v1.3_ordered_renamed.fasta | grep ^">"| head`
+
+```bash
+>Scaffold_1
+>Scaffold_2
+>Scaffold_3
+>Scaffold_4
+>Scaffold_5
+>Scaffold_6
+>Scaffold_7
+>Scaffold_8
+>Scaffold_9
+>Scaffold_10
+```
+
+The final genome assembly `C_striata_v1.3_ordered_renamed.fasta` will be renamed to `C_striata_v2.fasta`
+
+`cp C_striata_v1.3_ordered_renamed.fasta C_striata_v2.fasta`
 
