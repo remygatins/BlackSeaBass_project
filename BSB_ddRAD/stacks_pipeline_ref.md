@@ -11,9 +11,9 @@ There is 5GB of memory on each core, with 36 cores/node and 72 cores total acros
 
 Paths:
 
-Working directory: /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref
-Reference genome:   /work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_01.fasta
-Trimmed sequences: /work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags 
+Working directory: `/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref`
+Reference genome:   `/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_01.fasta`
+Trimmed sequences: `/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags` 
 
 ## Demultiplex, trim, and quality check
 Samples have already been demultiplexed previously (see Thais'[pipeline.md](https://github.com/thais-neu/BlackSeaBass_project/blob/master/BSB_ddRAD/pipeline.md))
