@@ -3,6 +3,8 @@
 Paths:
 
 Working directory: `/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2`
+or using the shortcut: `/home/r.gatins/BSB_ddRAD/stacks_ref_v2/`
+
 Reference genome:   `/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_v2.fasta`
 Trimmed sequences: `/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags` 
 
@@ -13,7 +15,8 @@ For trimming and quality check see [stacks_pipeline.md](https://github.com/remyg
 
 ## Map files to the genome
 
-### BWA  v 0.7.17
+### Index Assembly
+***BWA  v 0.7.17***
 
 map trimmed Illumina reads to our draft genome
 
@@ -44,8 +47,177 @@ DIR=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome
 #index genome
 bwa index $DIR/C_striata_v2.fasta
 ```
-
 bwa index will create new files (.amb, .ann, .bwt, .pac, .sa) that will need to be within the directory to map sequences using bwa
+
+```bash
+(base) [r.gatins@login-00 final_genome]$ ls C_striata_v2.fasta*
+
+C_striata_v2.fasta      C_striata_v2.fasta.ann  C_striata_v2.fasta.pac
+C_striata_v2.fasta.amb  C_striata_v2.fasta.bwt  C_striata_v2.fasta.sa
+```
+### Run BWA array
+
+Now, we will create a bwa job with tasks, or a job array. 
+
+Let's work from the `/home/r.gatins/BSB_ddRAD/stacks_ref_v2/jobs` folder
+
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=bwa              # Name your job something useful for easy tracking
+#SBATCH --output=out/bwa_%A_%a.out
+#SBATCH --error=out/bwa_%A_%a.err
+#SBATCH --partition=lotterhos
+#SBATCH --nodes=1
+#SBATCH --ntasks=5
+#SBATCH --mem=25G                        # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=2-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --array=0-117%50		            #there are 118 samples and it will run a maximum of 10 jobs at a time
+
+echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+
+echo “using $SLURM_CPUS_ON_NODE CPUs”
+echo “Start Run”
+echo “start time is `date`”
+
+#--------------MODULES---------------
+
+module load bwa
+
+#--------------COMMAND----------------
+
+echo "This job in the array has:"
+echo "- SLURM_JOB_ID=${SLURM_JOB_ID}"
+echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
+
+WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
+REF=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_v2.fasta
+SEQ_DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags
+SAMPLE_LIST=($(</work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/BSB_sample_list_uniq))
+FILENAME=${SAMPLE_LIST[${SLURM_ARRAY_TASK_ID}]}
+
+echo "My input file is ${FILENAME}"
+
+bwa mem -t16 $REF $SEQ_DIR/${FILENAME}.1.fq.gz $SEQ_DIR/${FILENAME}.2.fq.gz > $WOR_DIR/samples/${FILENAME}_aligned.sam
+
+
+echo = `date` job $JOB_NAME done
+
+#--------- Diagnostic/Logging Information---------------
+
+echo “using $NSLOTS CPUs”
+echo `date`
+
+```
+
+### convert  `.sam` file to `.bam` and sort using samtools 
+
+```
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=samtools             # Name your job something useful for easy tracking
+#SBATCH --output=out/samtools_%A_%a.out
+#SBATCH --error=out/samtools_%A_%a.err
+#SBATCH --partition=lotterhos
+#SBATCH --nodes=1
+#SBATCH --ntasks=5
+#SBATCH --mem=25G                          # Allocate 5GB of RAM.  You must declare --mem in all scripts
+#SBATCH --time=1-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
+#SBATCH --array=0-117%10		#there are 118 samples and it will run a maximum of 10 jobs at a time
+
+echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+
+echo “using $SLURM_CPUS_ON_NODE CPUs”
+echo “Start Run”
+echo “start time is `date`”
+
+#--------------MODULES---------------
+
+module load samtools
+
+#--------------VARIABLES----------------
+#Set variables/paths
+WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
+REF=/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_v2.fasta
+SEQ_DIR=/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags
+SAMPLE_LIST=($(</work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/BSB_sample_list_uniq))
+FILENAME=${SAMPLE_LIST[${SLURM_ARRAY_TASK_ID}]}
+
+#--------------COMMAND----------------
+echo "This job in the array has:"
+echo "- SLURM_JOB_ID=${SLURM_JOB_ID}"
+echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
+echo "My input file is ${FILENAME}"
+
+# convert .sam to .bam 
+samtools view -Sb -@ 16 -O BAM -o $WOR_DIR/samples/${FILENAME}_aligned.bam $WOR_DIR/samples/${FILENAME}_aligned.sam
+
+#sort output
+samtools sort -o $WOR_DIR/samples/${FILENAME}_aligned_sorted.bam -O BAM -@ 16 $WOR_DIR/samples/${FILENAME}_aligned.bam
+
+#--------- Diagnostic/Logging Information---------------
+echo = `date` job $JOB_NAME done
+echo `date`
+
+```
+PARAMETERS:
+`-Sb`		input format bam\
+`-@`		threads\
+`-o` 		FILE  output file name\
+`-O` 		output format (SAM, BAM, CRAM)\
+`-b` 		output BAM\
+
+`.sam` files are much larger than `.bam` files. So, once we have converted sam to bam files we can delete the sam files to save space
+
+`rm *sam`
+
+### calculate percentage of reads mapped to reference 
+
+```bash
+module load samtools
+
+samtools flagstat SN_191_aligned_sorted.bam > SN_191_aligned_sorted_stats.out
+```
+
+```
+3966250 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+108834 + 0 supplementary
+0 + 0 duplicates
+3948393 + 0 mapped (99.55% : N/A)
+3857416 + 0 paired in sequencing
+1928708 + 0 read1
+1928708 + 0 read2
+3616750 + 0 properly paired (93.76% : N/A)
+3830346 + 0 with itself and mate mapped
+9213 + 0 singletons (0.24% : N/A)
+189774 + 0 with mate mapped to a different chr
+92016 + 0 with mate mapped to a different chr (mapQ>=5)
+```
+
+run interactive mode
+
+    srun -p lotterhos -N 1 --pty /bin/bash
+    
+run stats for all samples using a for-loop
+
+```bash
+module load samtools
+
+for file in `cat BSB_sample_list_uniq`;
+do
+    samtools flagstat ${file}_aligned_sorted.bam > ${file}_aligned_sorted_stats.out
+done
+```
+
+print line 5 from all output files into a summary file
+
+    awk "FNR==5" *.out > flagstat_summary.txt
 
 
 
