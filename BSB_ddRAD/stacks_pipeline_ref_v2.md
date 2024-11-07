@@ -13,9 +13,9 @@ Samples have already been demultiplexed previously (see Thais'[pipeline.md](http
 
 For trimming and quality check see [stacks_pipeline.md](https://github.com/remygatins/BlackSeaBass_project/edit/master/BSB_ddRAD/stacks_pipeline.md)
 
-## Map files to the genome
+## 1. Map files to the genome
 
-### Index Assembly
+### 1.1 Index Assembly
 ***BWA  v 0.7.17***
 
 map trimmed Illumina reads to our draft genome
@@ -109,10 +109,36 @@ echo = `date` job $JOB_NAME done
 
 echo “using $NSLOTS CPUs”
 echo `date`
-
 ```
 
-### convert  `.sam` file to `.bam` and sort using samtools 
+<details>
+<summary>Optimize your code</summary>
+<br>
+Use `seff job_ID` to get a summary of your run and adjust your parameters in your job script accordingly
+
+```bash
+(base) [r.gatins@login-01 samples]$ seff 45016272_23
+
+Job ID: 45016357
+Array Job ID: 45016272_23
+Cluster: discovery
+User/Group: r.gatins/users
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 5
+CPU Utilized: 00:27:10
+CPU Efficiency: 84.90% of 00:32:00 core-walltime
+Job Wall-clock time: 00:06:24
+Memory Utilized: 4.62 GB
+Memory Efficiency: 18.47% of 25.00 GB
+```
+</details>
+
+
+
+
+### 1.2 convert  `.sam` file to `.bam` and sort using samtools 
+***samtools v 1.9***
 
 ```
 #!/bin/bash
