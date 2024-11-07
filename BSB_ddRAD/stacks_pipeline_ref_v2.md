@@ -114,6 +114,7 @@ echo `date`
 <details>
 <summary>Optimize your code</summary>
 <br>
+
 Use `seff job_ID` to get a summary of your run and adjust your parameters in your job script accordingly
 
 ```bash
