@@ -255,6 +255,10 @@ print line 5 from all output files into a summary file to show percent mapped se
 
     awk "FNR==5" *.out > flagstat_summary.txt
 
+<details>
+<summary>see flagstat_summary.txt</summary>
+<br>
+
 ```bash
 (base) [r.gatins@d3037 samples]$ cat flagstat_summary.txt
 
@@ -378,6 +382,8 @@ print line 5 from all output files into a summary file to show percent mapped se
 3948427 + 0 mapped (99.55% : N/A)
 
 ```
+</details>
+
 The third sample seems to have failed, from MA_300. 
 
 `samtools flagstat MA_300_aligned_sorted.bam > MA_300_aligned_sorted_stats.out`
@@ -514,6 +520,74 @@ SN_185_aligned_sorted	SN
 SN_189_aligned_sorted	SN
 SN_190_aligned_sorted	SN
 SN_191_aligned_sorted	SN
+```
+</details>
+
+### run stacks
+
+ref_map.pl --samples [path] --popmap [path] -o [path] [--rm-pcr-duplicates] [-X prog:"opts" ...]
+
+ref_map.pl -T 10 -o $WOR_DIR/stacks --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples --rm-pcr-duplicates -X "populations: -r 0.80 --min-maf 0.01 --fstats --vcf --genepop --hwe --structure"
+
+<details>
+<summary>See Stacks job script</summary>
+<br>
+    
+```bash
+(base) [r.gatins@d3037 jobs]$ cat stacks.sh
+
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=stacks              # Name your job something useful for easy tracking
+#SBATCH --output=out/stacks_%A.out
+#SBATCH --error=out/stacks_%A.err
+#SBATCH --nodes=1
+#SBATCH --ntasks=10
+#SBATCH --mem=20G
+#SBATCH --time=2-24:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=ALL                   # Only send emails when jobs end or fail
+#SBATCH --partition=lotterhos
+##SBATCH --array=0-117%50		#there are 118 samples and it will run a maximum of 10 jobs at a time
+
+echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+
+echo “using $SLURM_CPUS_ON_NODE CPUs”
+echo “Start Run”
+echo “start time is `date`”
+
+#--------------MODULES---------------
+
+module load lotterhos
+module load stacks
+
+#--------------START diagnostics----------------
+
+echo "This job in the array has:"
+echo "- SLURM_JOB_ID=${SLURM_JOB_ID}"
+echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
+
+#--------------VARIABLES----------------
+
+WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
+
+#--------------COMMAND----------------
+
+ref_map.pl -T 10 -o $WOR_DIR/stacks --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples --rm-pcr-duplicates -X "populations: -r 0.80 --min-maf 0.01 --fstats --vcf --genepop --hwe --structure"
+
+#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --vcf --genepop --structure --fstats --hwe -t 10
+#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
+#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.05 --vcf --genepop --structure --fstats --hwe -t 10
+#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.60 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
+
+#write-single-snp
+#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all --write-single-snp -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
+#filter out NC samples
+#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_noNC --write-single-snp -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
+
+#--------- END Diagnostics/Logging Information---------------
+echo = `date` job $JOB_NAME done
+echo “using $NSLOTS CPUs”
 ```
 </details>
 
