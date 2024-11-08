@@ -575,23 +575,469 @@ WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
 
 ref_map.pl -T 10 -o $WOR_DIR/stacks --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples --rm-pcr-duplicates -X "populations: -r 0.80 --min-maf 0.01 --fstats --vcf --genepop --hwe --structure"
 
-#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --vcf --genepop --structure --fstats --hwe -t 10
-#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
-#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.80 --min-maf 0.05 --vcf --genepop --structure --fstats --hwe -t 10
-#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all -r 0.60 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
-
-#write-single-snp
-#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_all --write-single-snp -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
-#filter out NC samples
-#populations -P $DIR/stacks/ -M $DIR/popmap/BSB_noNC --write-single-snp -r 0.80 --min-maf 0.01 --vcf --genepop --structure --fstats --hwe -t 10
-
 #--------- END Diagnostics/Logging Information---------------
 echo = `date` job $JOB_NAME done
 echo “using $NSLOTS CPUs”
 ```
 </details>
 
- 
+Job statistics
+
+(base) [r.gatins@login-00 out]$ seff 45020667
+Job ID: 45020667
+Cluster: discovery
+User/Group: r.gatins/users
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 10
+CPU Utilized: 03:44:04
+CPU Efficiency: 77.35% of 04:49:40 core-walltime
+Job Wall-clock time: 00:28:58
+Memory Utilized: 1010.54 MB
+Memory Efficiency: 4.93% of 20.00 GB
+
+## Filter VCF file
+***vcftools v0.1.17***
+
+from our stacks directory lets now make a new filtering directory
+
+```bash
+mkdir filtering
+cd filtering
+```
+Run interactive mode
+```bash
+srun -p lotterhos -N 1 --pty /bin/bash
+module load vcftools
+```
+
+To make this file more manageable, let’s start by applying three step filter. We are going to only keep variants that have been successfully genotyped in 50% of individuals, a minimum quality score of 30, and a minor allele count of 3.
+
+`vcftools --gzvcf ../populations.snps.vcf --max-missing 0.5 --mac 1 --minQ 30 --recode --recode-INFO-all --out snps.g5mac3`
+
+In this code, we call vcftools, feed it a vcf file after the `--vcf` flag, `--max-missing 0.5` tells it to filter genotypes called below 50% (across all individuals) the `--mac 3` flag tells it to filter SNPs that have a minor allele count less than 1.
+
+The --recode flag tells the program to write a new vcf file with the filters, `--recode-INFO-all` keeps all the INFO flags from the old vcf file in the new one. Lastly, `--out` designates the name of the output. The output will scroll through a lot of lines, but should end like:
+
+```bash
+After filtering, kept 40 out of 40 Individuals
+After filtering, kept 78434 out of a possible 147540 Sites
+Outputting VCF file... Done
+Run Time = 40.00 seconds 
+Those two simple filters got rid of 50% of the data and will make the next filtering steps run much faster.
+```
+Missing 
+vcftools --vcf ../populations.snps.vcf --max-missing 0.5 --recode --recode-INFO-all --out snps.g5
+
+```bash
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 64570 out of a possible 90578 Sites
+Run Time = 10.00 seconds
+```
+check missing data per ind
+vcftools --vcf snps.g5dp10.recode.vcf --missing-indv
+
+```bash 
+(base) [r.gatins@d3037 filtering]$ cat out.imiss.g5
+INDV	N_DATA	N_GENOTYPES_FILTERED	N_MISS	F_MISS
+MA_298_aligned_sorted	64570	0	17250	0.267152
+MA_299_aligned_sorted	64570	0	16799	0.260167
+MA_302_aligned_sorted	64570	0	19123	0.296159
+MA_303_aligned_sorted	64570	0	34830	0.539415
+MA_304_aligned_sorted	64570	0	19639	0.304151
+MA_306_aligned_sorted	64570	0	17206	0.26647
+MA_307_aligned_sorted	64570	0	17078	0.264488
+MA_310_aligned_sorted	64570	0	17975	0.27838
+MA_311_aligned_sorted	64570	0	17659	0.273486
+MA_313_aligned_sorted	64570	0	17364	0.268917
+MA_314_aligned_sorted	64570	0	24860	0.385009
+MA_315_aligned_sorted	64570	0	17435	0.270017
+MA_316_aligned_sorted	64570	0	27116	0.419947
+MA_318_aligned_sorted	64570	0	36102	0.559114
+MA_320_aligned_sorted	64570	0	17244	0.267059
+MA_321_aligned_sorted	64570	0	16925	0.262119
+MA_323_aligned_sorted	64570	0	16995	0.263203
+MA_324_aligned_sorted	64570	0	29137	0.451247
+MA_325_aligned_sorted	64570	0	17158	0.265727
+MA_327_aligned_sorted	64570	0	17630	0.273037
+MD_136_aligned_sorted	64570	0	15308	0.237076
+MD_137_aligned_sorted	64570	0	16321	0.252764
+MD_138_aligned_sorted	64570	0	17560	0.271953
+MD_139_aligned_sorted	64570	0	15312	0.237138
+MD_140_aligned_sorted	64570	0	15804	0.244758
+MD_141_aligned_sorted	64570	0	15308	0.237076
+MD_142_aligned_sorted	64570	0	16724	0.259006
+MD_143_aligned_sorted	64570	0	19190	0.297197
+MD_145_aligned_sorted	64570	0	15100	0.233855
+MD_149_aligned_sorted	64570	0	15429	0.23895
+MD_150_aligned_sorted	64570	0	15228	0.235837
+MD_151_aligned_sorted	64570	0	14888	0.230571
+MD_152_aligned_sorted	64570	0	15153	0.234676
+MD_154_aligned_sorted	64570	0	18784	0.290909
+MD_158_aligned_sorted	64570	0	18033	0.279278
+MD_159_aligned_sorted	64570	0	18085	0.280084
+MD_160_aligned_sorted	64570	0	17006	0.263373
+MD_161_aligned_sorted	64570	0	15491	0.23991
+MD_162_aligned_sorted	64570	0	15493	0.239941
+MD_163_aligned_sorted	64570	0	18277	0.283057
+ME_164_aligned_sorted	64570	0	8094	0.125352
+ME_165_aligned_sorted	64570	0	9423	0.145935
+ME_166_aligned_sorted	64570	0	7921	0.122673
+ME_167_aligned_sorted	64570	0	7934	0.122874
+ME_176_aligned_sorted	64570	0	8117	0.125709
+ME_248_aligned_sorted	64570	0	7834	0.121326
+ME_249_aligned_sorted	64570	0	7771	0.12035
+ME_250_aligned_sorted	64570	0	9029	0.139833
+ME_251_aligned_sorted	64570	0	8451	0.130881
+ME_252_aligned_sorted	64570	0	7958	0.123246
+ME_253_aligned_sorted	64570	0	59148	0.916029
+ME_254_aligned_sorted	64570	0	55543	0.860198
+ME_255_aligned_sorted	64570	0	7731	0.119731
+ME_256_aligned_sorted	64570	0	7905	0.122425
+ME_257_aligned_sorted	64570	0	7634	0.118228
+ME_258_aligned_sorted	64570	0	7870	0.121883
+ME_261_aligned_sorted	64570	0	7785	0.120567
+ME_262_aligned_sorted	64570	0	7825	0.121186
+NC_233_aligned_sorted	64570	0	4823	0.0746941
+NC_234_aligned_sorted	64570	0	5115	0.0792164
+NC_235_aligned_sorted	64570	0	5119	0.0792783
+NC_237_aligned_sorted	64570	0	5294	0.0819885
+NC_238_aligned_sorted	64570	0	5302	0.0821124
+NC_239_aligned_sorted	64570	0	5953	0.0921945
+NC_240_aligned_sorted	64570	0	4818	0.0746167
+NC_241_aligned_sorted	64570	0	4751	0.0735791
+NC_242_aligned_sorted	64570	0	5343	0.0827474
+NC_243_aligned_sorted	64570	0	5810	0.0899799
+NC_244_aligned_sorted	64570	0	5153	0.0798049
+NC_245_aligned_sorted	64570	0	5363	0.0830571
+NC_246_aligned_sorted	64570	0	5208	0.0806567
+NJ_106_aligned_sorted	64570	0	5034	0.0779619
+NJ_108_aligned_sorted	64570	0	4535	0.0702339
+NJ_109_aligned_sorted	64570	0	4721	0.0731144
+NJ_112_aligned_sorted	64570	0	5398	0.0835992
+NJ_113_aligned_sorted	64570	0	4475	0.0693046
+NJ_114_aligned_sorted	64570	0	4430	0.0686077
+NJ_118_aligned_sorted	64570	0	4194	0.0649528
+NJ_119_aligned_sorted	64570	0	4783	0.0740746
+NJ_121_aligned_sorted	64570	0	4506	0.0697847
+NJ_122_aligned_sorted	64570	0	4368	0.0676475
+NJ_124_aligned_sorted	64570	0	4561	0.0706365
+NJ_128_aligned_sorted	64570	0	4424	0.0685148
+NJ_129_aligned_sorted	64570	0	4550	0.0704662
+NJ_130_aligned_sorted	64570	0	4176	0.064674
+NJ_131_aligned_sorted	64570	0	4435	0.0686851
+NJ_132_aligned_sorted	64570	0	4043	0.0626142
+NJ_133_aligned_sorted	64570	0	4580	0.0709308
+RI_328_aligned_sorted	64570	0	2538	0.0393062
+RI_329_aligned_sorted	64570	0	2354	0.0364566
+RI_330_aligned_sorted	64570	0	2522	0.0390584
+RI_331_aligned_sorted	64570	0	2610	0.0404212
+RI_332_aligned_sorted	64570	0	2338	0.0362088
+RI_333_aligned_sorted	64570	0	2914	0.0451293
+RI_334_aligned_sorted	64570	0	3491	0.0540654
+RI_335_aligned_sorted	64570	0	3063	0.0474369
+RI_336_aligned_sorted	64570	0	3091	0.0478705
+RI_337_aligned_sorted	64570	0	2754	0.0426514
+RI_338_aligned_sorted	64570	0	2800	0.0433638
+RI_339_aligned_sorted	64570	0	2512	0.0389035
+RI_340_aligned_sorted	64570	0	2211	0.0342419
+RI_341_aligned_sorted	64570	0	2395	0.0370915
+RI_342_aligned_sorted	64570	0	2346	0.0363327
+RI_343_aligned_sorted	64570	0	2557	0.0396004
+RI_344_aligned_sorted	64570	0	2691	0.0416757
+RI_345_aligned_sorted	64570	0	3000	0.0464612
+RI_346_aligned_sorted	64570	0	2446	0.0378814
+RI_347_aligned_sorted	64570	0	2716	0.0420629
+RI_348_aligned_sorted	64570	0	2861	0.0443085
+RI_349_aligned_sorted	64570	0	10834	0.167787
+SN_009_aligned_sorted	64570	0	2777	0.0430076
+SN_179_aligned_sorted	64570	0	3365	0.052114
+SN_182_aligned_sorted	64570	0	2780	0.043054
+SN_185_aligned_sorted	64570	0	4778	0.0739972
+SN_189_aligned_sorted	64570	0	2497	0.0386712
+SN_190_aligned_sorted	64570	0	2755	0.0426669
+SN_191_aligned_sorted	64570	0	2813	0.0435651
+```
+
+
+with min depth 10
+
+`vcftools --vcf snps.g5.recode.vcf --minDP 10 --recode --recode-INFO-all --out snps.g5dp10`
+
+```bash
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 64570 out of a possible 64570 Sites
+Run Time = 9.00 seconds
+```
+check missing data per individual
+
+`vcftools --vcf snps.g5dp10.recode.vcf --missing-indv`
+
+```bash
+(base) [r.gatins@d3037 filtering]$ cat out.imiss.g5dp10
+INDV	N_DATA	N_GENOTYPES_FILTERED	N_MISS	F_MISS
+MA_298_aligned_sorted	64570	0	64570	1
+MA_299_aligned_sorted	64570	0	64570	1
+MA_302_aligned_sorted	64570	0	64570	1
+MA_303_aligned_sorted	64570	0	64570	1
+MA_304_aligned_sorted	64570	0	64570	1
+MA_306_aligned_sorted	64570	0	64570	1
+MA_307_aligned_sorted	64570	0	64564	0.999907
+MA_310_aligned_sorted	64570	0	64569	0.999985
+MA_311_aligned_sorted	64570	0	64570	1
+MA_313_aligned_sorted	64570	0	64570	1
+MA_314_aligned_sorted	64570	0	64570	1
+MA_315_aligned_sorted	64570	0	64570	1
+MA_316_aligned_sorted	64570	0	64570	1
+MA_318_aligned_sorted	64570	0	64570	1
+MA_320_aligned_sorted	64570	0	64570	1
+MA_321_aligned_sorted	64570	0	64570	1
+MA_323_aligned_sorted	64570	0	64570	1
+MA_324_aligned_sorted	64570	0	64570	1
+MA_325_aligned_sorted	64570	0	64570	1
+MA_327_aligned_sorted	64570	0	64570	1
+MD_136_aligned_sorted	64570	0	64565	0.999923
+MD_137_aligned_sorted	64570	0	64570	1
+MD_138_aligned_sorted	64570	0	64570	1
+MD_139_aligned_sorted	64570	0	64570	1
+MD_140_aligned_sorted	64570	0	64570	1
+MD_141_aligned_sorted	64570	0	64570	1
+MD_142_aligned_sorted	64570	0	64570	1
+MD_143_aligned_sorted	64570	0	64570	1
+MD_145_aligned_sorted	64570	0	64570	1
+MD_149_aligned_sorted	64570	0	64570	1
+MD_150_aligned_sorted	64570	0	64567	0.999954
+MD_151_aligned_sorted	64570	0	64570	1
+MD_152_aligned_sorted	64570	0	64570	1
+MD_154_aligned_sorted	64570	0	64570	1
+MD_158_aligned_sorted	64570	0	64570	1
+MD_159_aligned_sorted	64570	0	64570	1
+MD_160_aligned_sorted	64570	0	64570	1
+MD_161_aligned_sorted	64570	0	64566	0.999938
+MD_162_aligned_sorted	64570	0	64570	1
+MD_163_aligned_sorted	64570	0	64566	0.999938
+ME_164_aligned_sorted	64570	0	64570	1
+ME_165_aligned_sorted	64570	0	64570	1
+ME_166_aligned_sorted	64570	0	64568	0.999969
+ME_167_aligned_sorted	64570	0	64570	1
+ME_176_aligned_sorted	64570	0	64570	1
+ME_248_aligned_sorted	64570	0	64570	1
+ME_249_aligned_sorted	64570	0	64570	1
+ME_250_aligned_sorted	64570	0	64570	1
+ME_251_aligned_sorted	64570	0	64570	1
+ME_252_aligned_sorted	64570	0	64570	1
+ME_253_aligned_sorted	64570	0	64570	1
+ME_254_aligned_sorted	64570	0	64570	1
+ME_255_aligned_sorted	64570	0	64570	1
+ME_256_aligned_sorted	64570	0	64570	1
+ME_257_aligned_sorted	64570	0	64570	1
+ME_258_aligned_sorted	64570	0	64570	1
+ME_261_aligned_sorted	64570	0	64570	1
+ME_262_aligned_sorted	64570	0	64570	1
+NC_233_aligned_sorted	64570	0	64570	1
+NC_234_aligned_sorted	64570	0	64570	1
+NC_235_aligned_sorted	64570	0	64570	1
+NC_237_aligned_sorted	64570	0	64570	1
+NC_238_aligned_sorted	64570	0	64570	1
+NC_239_aligned_sorted	64570	0	64570	1
+NC_240_aligned_sorted	64570	0	64570	1
+NC_241_aligned_sorted	64570	0	64570	1
+NC_242_aligned_sorted	64570	0	64570	1
+NC_243_aligned_sorted	64570	0	64570	1
+NC_244_aligned_sorted	64570	0	64570	1
+NC_245_aligned_sorted	64570	0	64570	1
+NC_246_aligned_sorted	64570	0	64570	1
+NJ_106_aligned_sorted	64570	0	64570	1
+NJ_108_aligned_sorted	64570	0	64570	1
+NJ_109_aligned_sorted	64570	0	64570	1
+NJ_112_aligned_sorted	64570	0	64570	1
+NJ_113_aligned_sorted	64570	0	64570	1
+NJ_114_aligned_sorted	64570	0	64570	1
+NJ_118_aligned_sorted	64570	0	64570	1
+NJ_119_aligned_sorted	64570	0	64570	1
+NJ_121_aligned_sorted	64570	0	64570	1
+NJ_122_aligned_sorted	64570	0	64570	1
+NJ_124_aligned_sorted	64570	0	64570	1
+NJ_128_aligned_sorted	64570	0	64570	1
+NJ_129_aligned_sorted	64570	0	64570	1
+NJ_130_aligned_sorted	64570	0	64570	1
+NJ_131_aligned_sorted	64570	0	64570	1
+NJ_132_aligned_sorted	64570	0	64570	1
+NJ_133_aligned_sorted	64570	0	64570	1
+RI_328_aligned_sorted	64570	0	64570	1
+RI_329_aligned_sorted	64570	0	64570	1
+RI_330_aligned_sorted	64570	0	64570	1
+RI_331_aligned_sorted	64570	0	64570	1
+RI_332_aligned_sorted	64570	0	64563	0.999892
+RI_333_aligned_sorted	64570	0	64570	1
+RI_334_aligned_sorted	64570	0	64570	1
+RI_335_aligned_sorted	64570	0	64570	1
+RI_336_aligned_sorted	64570	0	64570	1
+RI_337_aligned_sorted	64570	0	64570	1
+RI_338_aligned_sorted	64570	0	64570	1
+RI_339_aligned_sorted	64570	0	64570	1
+RI_340_aligned_sorted	64570	0	64570	1
+RI_341_aligned_sorted	64570	0	64570	1
+RI_342_aligned_sorted	64570	0	64570	1
+RI_343_aligned_sorted	64570	0	64570	1
+RI_344_aligned_sorted	64570	0	64570	1
+RI_345_aligned_sorted	64570	0	64570	1
+RI_346_aligned_sorted	64570	0	64570	1
+RI_347_aligned_sorted	64570	0	64570	1
+RI_348_aligned_sorted	64570	0	64570	1
+RI_349_aligned_sorted	64570	0	64570	1
+SN_009_aligned_sorted	64570	0	64570	1
+SN_179_aligned_sorted	64570	0	64570	1
+SN_182_aligned_sorted	64570	0	64570	1
+SN_185_aligned_sorted	64570	0	64568	0.999969
+SN_189_aligned_sorted	64570	0	64570	1
+SN_190_aligned_sorted	64570	0	64570	1
+SN_191_aligned_sorted	64570	0	64570	1
+```
+
+Why do we have more missing data after removing? In the manual:
+```bash
+--minDP <float>
+--maxDP <float>
+           Includes only genotypes greater than or equal to the "--minDP" value and less than or equal to the "--maxDP" value. This option requires that the "DP" FORMAT tag is specified for all sites.
+```
+
+so maybe because some sites don't seem to have a DP value it is not doing a good job?
+
+calculate Depth per individual after removing 0.5 missing data
+
+`vcftools --vcf snps.g5.recode.vcf --depth`
+
+```bash
+(base) [r.gatins@d3037 filtering]$ cat out.idepth
+INDV	N_SITES	MEAN_DEPTH
+MA_298_aligned_sorted	47320	1.06989
+MA_299_aligned_sorted	47771	1.10452
+MA_302_aligned_sorted	45447	1.04801
+MA_303_aligned_sorted	29740	1.01258
+MA_304_aligned_sorted	44931	1.03659
+MA_306_aligned_sorted	47364	1.06338
+MA_307_aligned_sorted	47492	1.07397
+MA_310_aligned_sorted	46595	1.07303
+MA_311_aligned_sorted	46911	1.0767
+MA_313_aligned_sorted	47206	1.06933
+MA_314_aligned_sorted	39710	1.02339
+MA_315_aligned_sorted	47135	1.08809
+MA_316_aligned_sorted	37454	1.02819
+MA_318_aligned_sorted	28468	1.03576
+MA_320_aligned_sorted	47326	1.08374
+MA_321_aligned_sorted	47645	1.09394
+MA_323_aligned_sorted	47575	1.0684
+...
+```
+
+Now calculate mean depth per site
+
+`vcftools --vcf snps.g5.recode.vcf --site-mean-depth`
+
+```bash
+CHROM   POS     MEAN_DEPTH      VAR_DEPTH
+Scaffold_1      22453   1.02778 0.0273865
+Scaffold_1      22350   1.02817 0.0277666
+Scaffold_1      22233   1.02778 0.0273865
+Scaffold_1      244873  2.03896 1.59057
+Scaffold_1      244847  2.09836 1.75683
+Scaffold_1      244776  1.96154 1.49201
+Scaffold_1      300317  1.01887 0.0186882
+Scaffold_1      308317  1.07792 0.0727956
+Scaffold_1      308491  1.06897 0.0647676
+Scaffold_1      308470  1.06034 0.0571964
+Scaffold_1      308470  1       0
+Scaffold_1      310050  1       0
+Scaffold_1      310274  1.03509 0.0341562
+Scaffold_1      310279  1.02609 0.0256293
+Scaffold_1      310287  1.03448 0.0335832
+Scaffold_1      310339  1.03419 0.0333039
+Scaffold_1      351152  1.08696 0.0800915
+Scaffold_1      351227  1.08036 0.0745656
+Scaffold_1      351321  1.08696 0.0800915
+Scaffold_1      351330  1.00943 0.00943396
+...
+```
+
+thin 
+
+`vcftools --vcf snps.g5.recode.vcf --thin 5000 --recode --recode-INFO-all --out snps.g5t5000`
+
+```bash
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 15146 out of a possible 64570 Sites
+Run Time = 3.00 seconds
+```
+
+The next step is to get rid of individuals that did not sequence well. We can do this by assessing individual levels of missing data.
+
+vcftools --vcf snps.g5t5000.recode.vcf --missing-indv
+
+
+
+#----------------------------------------------------------------
+running parameters from https://researchdata.gla.ac.uk/1059/2/biogeography_whitefish.Rmd
+
+I created a new directory within samples
+
+```bash
+mkdir q20
+cd 20
+```
+
+comvert sam to bam files but only retained if mapping quality was >20 with samtools v.1.7 (Li et al., 2009)
+```bash
+# convert .sam to .bam
+samtools view -Sbq 20 -@ 16 -O BAM -o $WOR_DIR/samples/q20/${FILENAME}_aligned.bam $WOR_DIR/samples/q20/${FILENAME}_aligned.sam
+
+#sort output
+samtools sort -o $WOR_DIR/samples/q20/${FILENAME}_aligned_sorted.bam -O BAM -@ 16 $WOR_DIR/samples/q20/${FILENAME}_aligned.bam
+```
+## Build Catalog loci
+
+```{bash, eval = FALSE}
+WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
+
+ref_map.pl -T 10 --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples/q20 -o $WOR_DIR/stacks/ref_map_q20 --rm-pcr-duplicates
+```
+
+with a denovo map
+```bash
+WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
+denovo_map.pl --samples $WOR_DIR/samples/ --popmap $WOR_DIR/popmap/BSB_all -o $WOR_DIR/stacks/denovo --paired --rm-pcr-duplicates
+
+```
+
+### Population genomics and phylogenetics analyses 
+
+From this point onward, we are filtering and generating datasets for different analyses.
+
+#### Generate a vcf file using [populations](http://catchenlab.life.illinois.edu/stacks/comp/populations.php)
+
+Here we are telling `populations` to retain loci only if present in at least 80% of individuals per population in at least 9 populations. We are also removing loci with heterozygosity higher than 0.6 and minor allele frequency below 0.05. Only one snp per locus is retained to reduce the effect of linkage.
+re
+```{bash, eval = FALSE}
+#run with same parameters as before to see if anything changes
+populations -P $WOR_DIR/stacks/ref_map_q20 -M $WOR_DIR/popmap/BSB_all -t 10 -r 0.8 --min_maf 0.01 --vcf -O $WOR_DIR/stacks/ref_map_q20/r0.8_maf0.01
+
+populations -P $WOR_DIR/stacks/ref_map_q20 -M $WOR_DIR/popmap/BSB_all -t 4 -p 9 -r 0.8 --max_obs_het 0.6 --min_maf 0.01 --write_single_snp --vcf
+
+```
+
+`‐p 9` (minimum number of populations a locus must be present in to be retained)
+`‐r 0.8` (minimum proportion of samples in a population required to have a locus)
+`‐‐max_obs_het 0.6` (maximum observed heterozygosity for a nucleotide at a locus)
+`‐‐min_maf 0.05` (minor allele frequency across populations required for a SNP to be included in the dataset)
+`‐‐write_single_snp` (retain one SNP per locus)
+
+
+
+
+
 
 
 
