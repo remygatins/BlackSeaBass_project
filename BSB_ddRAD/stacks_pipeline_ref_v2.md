@@ -1004,14 +1004,6 @@ WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
 
 ref_map.pl -T 10 --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples/q20 -o $WOR_DIR/stacks/ref_map_q20 --rm-pcr-duplicates
 ```
-
-with a denovo map
-```bash
-WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
-denovo_map.pl --samples $WOR_DIR/samples/ --popmap $WOR_DIR/popmap/BSB_all -o $WOR_DIR/stacks/denovo --paired --rm-pcr-duplicates
-
-```
-
 ### Population genomics and phylogenetics analyses 
 
 From this point onward, we are filtering and generating datasets for different analyses.
@@ -1035,7 +1027,157 @@ populations -P $WOR_DIR/stacks/ref_map_q20 -M $WOR_DIR/popmap/BSB_all -t 4 -p 9 
 `‐‐write_single_snp` (retain one SNP per locus)
 
 
+```bash
+srun -p lotterhos -N 1 --pty /bin/bash
+module load vcftools
 
+vcftools --vcf populations.snps.vcf --max-missing 0.5 --recode --recode-INFO-all --out snps.g5
+```
+
+```bash
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 63596 out of a possible 88920 Sites
+Run Time = 10.00 seconds
+```
+```bash
+vcftools --vcf populations.snps.vcf --max-missing 0.5 --minDP 5 --recode --recode-INFO-all --out snps.g5dp5
+```
+
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 6 out of a possible 88920 Sites
+Run Time = 2.00 seconds
+
+populations -P $WOR_DIR/stacks/ref_map_q20 -M $WOR_DIR/popmap/BSB_all -t 10 -r 0.8 --min_maf 0.01 --write-single-snp -r 0.7 -R 0.5 --vcf -O $WOR_DIR/stacks/ref_map_q20/r0.8_maf0.01_snp1_r0.7_R0.5
+
+
+# Denovo Map comparison
+with a denovo map
+
+```bash
+WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks_ref_v2/
+
+denovo_map.pl --samples $WOR_DIR/samples/ --popmap $WOR_DIR/popmap/BSB_all -o $WOR_DIR/stacks/denovo --paired --rm-pcr-duplicates -m 4 -M 3 -n 2 -T 12
+
+```
+
+depth from denovo map output
+
+```bash
+(base) [r.gatins@d3037 BSB_pop_r0.8_minmaf0.01]$ cat out.idepth
+INDV	N_SITES	MEAN_DEPTH
+MA_298	62616	54.0363
+MA_299	61749	73.1809
+MA_302	47564	35.1175
+MA_304	34745	28.1168
+MA_306	62226	58.2528
+MA_307	62676	48.8396
+MA_310	60930	42.8115
+MA_311	61439	46.9788
+MA_313	49141	36.1576
+MA_315	62238	47.4712
+MA_320	63071	52.3185
+MA_321	63003	60.8062
+MA_323	62284	53.7729
+MA_325	59572	36.8039
+MA_327	57648	21.134
+MD_136	48918	61.0627
+MD_137	47729	53.8987
+MD_138	47812	60.3542
+MD_139	47772	68.271
+MD_140	40344	38.8521
+MD_141	45828	50.2015
+MD_142	48791	50.5635
+MD_143	42058	37.8581
+MD_145	49044	72.1611
+MD_149	49306	64.0227
+MD_150	49133	73.8174
+MD_151	48888	71.2082
+MD_152	49154	61.558
+MD_154	43581	36.5593
+MD_158	45075	38.4997
+MD_159	46067	36.7049
+MD_160	47589	45.9335
+MD_161	47391	50.5915
+MD_162	49125	63.0058
+MD_163	42479	34.8322
+ME_164	74214	37.4779
+ME_165	71654	37.9465
+ME_166	92126	53.8507
+ME_167	91340	43.3377
+ME_176	90745	45.209
+ME_248	91924	54.7131
+ME_249	91864	64.1217
+ME_250	80392	33.849
+ME_251	59154	30.1621
+ME_252	89897	40.287
+ME_255	92105	60.388
+ME_256	91184	50.6543
+ME_257	92091	69.0608
+ME_258	92311	55.5227
+ME_261	92108	58.2058
+ME_262	92403	55.6806
+NC_233	77945	48.5908
+NC_234	74516	50.6483
+NC_235	78006	60.2312
+NC_237	77658	58.3382
+NC_238	66772	44.5515
+NC_239	67245	25.4385
+NC_240	78624	30.1026
+NC_241	78305	56.8471
+NC_242	76286	35.9531
+NC_243	77329	35.8159
+NC_244	75383	30.9245
+NC_245	78565	39.2575
+NC_246	59876	21.37
+NJ_106	98732	31.0582
+NJ_108	101969	30.7783
+NJ_109	102094	35.7574
+NJ_112	99384	29.5756
+NJ_113	102019	46.2554
+NJ_114	102543	53.5239
+NJ_118	102421	50.0896
+NJ_119	81574	28.1472
+NJ_121	68971	25.7374
+NJ_122	102894	44.5737
+NJ_124	98384	36.2231
+NJ_128	102405	42.5261
+NJ_129	102602	52.4054
+NJ_130	102667	53.1598
+NJ_131	102432	52.5133
+NJ_132	101978	45.9503
+NJ_133	99791	40.8591
+RI_328	105334	49.6823
+RI_329	103405	51.1087
+RI_330	89261	33.6694
+RI_331	105636	55.8545
+RI_332	105496	60.3625
+RI_333	104343	48.6725
+RI_334	82481	37.9824
+RI_335	99900	32.8473
+RI_336	101483	42.9803
+RI_337	104644	44.9268
+RI_338	105042	40.6128
+RI_339	104597	58.2468
+RI_340	105513	62.3818
+RI_341	105654	66.0332
+RI_342	105079	52.7224
+RI_343	99340	37.6658
+RI_344	105468	56.8856
+RI_345	104633	48.5511
+RI_346	105965	56.426
+RI_347	105479	51.378
+RI_348	105625	58.5115
+RI_349	73507	37.7108
+SN_009	99427	49.4208
+SN_179	94002	37.3859
+SN_182	101164	50.6852
+SN_185	93425	40.0842
+SN_189	100626	39.9464
+SN_190	100929	58.3985
+SN_191	100906	58.8745
+```
 
 
 
