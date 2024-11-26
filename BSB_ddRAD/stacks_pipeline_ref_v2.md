@@ -5,13 +5,60 @@ Paths:
 Working directory: `/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2`
 or using the shortcut: `/home/r.gatins/BSB_ddRAD/stacks_ref_v2/`
 
-Reference genome:   `/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_v2.fasta`
+Reference genome:   `/work/lotterhos/2021_BlackSeaBass_genomics/BSB_genome/final_genome/C_striata_v2.fasta`  
 Trimmed sequences: `/work/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks/samples/no_adapter/process_radtags` 
 
 ## Demultiplex, trim, and quality check
 Samples have already been demultiplexed previously (see Thais'[pipeline.md](https://github.com/thais-neu/BlackSeaBass_project/blob/master/BSB_ddRAD/pipeline.md))
 
 For trimming and quality check see [stacks_pipeline.md](https://github.com/remygatins/BlackSeaBass_project/edit/master/BSB_ddRAD/stacks_pipeline.md)
+
+In summary:
+Raw sequences were quality-checked using FastQC v0.12.1 and low-quality bases and adapter sequences were removed with TRIMGALORE. We used STACKS v 2.41 (Catchen et al., 2013; Rochette et al., 2019) to further quality filter, trim sequences to 130 bp, and remove PCR clones using process_radtags and clone_filter.
+
+```bash
+
+module load lotterhos
+module load stacks
+
+#--------------COMMAND----------------
+
+for file in `cat ../samples/BSB_sample_list`;
+do
+   process_radtags -1 ../samples/no_adapter/${file}.F_val_1.fq.gz \
+   -2 ../samples/no_adapter/${file}.R_val_2.fq.gz \
+   -o ../samples/no_adapter/process_radtags \
+   --renz-1 mspI --renz-2 bamHI -c -q -t 130
+done
+
+# Rename sequences
+
+for f in *.F_val_1.1.fq.gz;
+    do mv "$f" "${f%.F_val_1.1.fq.gz}.1.fq.gz";
+    done
+
+for f in *.R_val_2.2.fq.gz; do mv "$f" "${f%.R_val_2.2.fq.gz}.2.fq.gz"; done
+```
+
+Let's clone filter using stacks
+
+```bash
+#--------------MODULES---------------
+module load lotterhos
+module load stacks
+
+#--------------COMMAND----------------
+WOR_DIR=/home/r.gatins/BSB_ddRAD/stacks/
+
+for file in `cat $WOR_DIR/samples/BSB_sample_list`;
+do
+    clone_filter -1 $WOR_DIR/samples/no_adapter/process_radtags/${file}.1.fq.gz \
+    -2 $WOR_DIR/samples/no_adapter/process_radtags/${file}.2.fq.gz \
+    -o $WOR_DIR/samples/no_adapter/process_radtags/clone_filter \
+    -i gzfastq
+done
+```
+
 
 ## 1. Map files to the genome
 
