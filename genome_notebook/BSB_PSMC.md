@@ -212,7 +212,6 @@ Now run the PSMC
 
 ``` bash
 psmc -N30 -t30 -r5 -p "4+30*2+4+6+10" -o $DIR/PSMC/diploid_C_striata_01_8_50.psmc $DIR/PSMC/diploid_C_striata_01_8_50.psmcfa 
-psmc -N30 -t30 -r5 -p "4*4+13*2+4*4+6" -o $DIR/PSMC/diploid_C_striata_01_8_50.psmc $DIR/PSMC/diploid_C_striata_01_8_50.psmcfa
 ```
 Run time 01:33:26
 
