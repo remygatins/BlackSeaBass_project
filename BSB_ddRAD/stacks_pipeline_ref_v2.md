@@ -1095,14 +1095,14 @@ Run Time = 10.00 seconds
 ```bash
 vcftools --vcf populations.snps.vcf --max-missing 0.5 --minDP 5 --recode --recode-INFO-all --out snps.g5dp5
 ```
-
+```bash
 After filtering, kept 117 out of 117 Individuals
 Outputting VCF file...
 After filtering, kept 6 out of a possible 88920 Sites
 Run Time = 2.00 seconds
 
 populations -P $WOR_DIR/stacks/ref_map_q20 -M $WOR_DIR/popmap/BSB_all -t 10 -r 0.8 --min_maf 0.01 --write-single-snp -r 0.7 -R 0.5 --vcf -O $WOR_DIR/stacks/ref_map_q20/r0.8_maf0.01_snp1_r0.7_R0.5
-
+```
 
 # Denovo Map comparison
 with a denovo map
