@@ -572,9 +572,11 @@ SN_191_aligned_sorted	SN
 
 ### run stacks
 
-ref_map.pl --samples [path] --popmap [path] -o [path] [--rm-pcr-duplicates] [-X prog:"opts" ...]
+`ref_map.pl --samples [path] --popmap [path] -o [path] [--rm-pcr-duplicates] [-X prog:"opts" ...]`
 
-ref_map.pl -T 10 -o $WOR_DIR/stacks --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples --rm-pcr-duplicates -X "populations: -r 0.80 --min-maf 0.01 --fstats --vcf --genepop --hwe --structure"
+'''bash
+ref_map.pl -T 10 -o $WOR_DIR/stacks --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples --rm-pcr-duplicates -X "populations: -r 0.80 --min-maf 0.01 --fstats --vcf --genepop --hwe --structure
+'''
 
 <details>
 <summary>See Stacks job script</summary>
@@ -629,7 +631,7 @@ echo “using $NSLOTS CPUs”
 </details>
 
 Job statistics
-
+```bash
 (base) [r.gatins@login-00 out]$ seff 45020667
 Job ID: 45020667
 Cluster: discovery
@@ -642,6 +644,7 @@ CPU Efficiency: 77.35% of 04:49:40 core-walltime
 Job Wall-clock time: 00:28:58
 Memory Utilized: 1010.54 MB
 Memory Efficiency: 4.93% of 20.00 GB
+```
 
 ## Filter VCF file
 ***vcftools v0.1.17***
@@ -674,7 +677,8 @@ Run Time = 40.00 seconds
 Those two simple filters got rid of 50% of the data and will make the next filtering steps run much faster.
 ```
 Missing 
-vcftools --vcf ../populations.snps.vcf --max-missing 0.5 --recode --recode-INFO-all --out snps.g5
+
+`vcftools --vcf ../populations.snps.vcf --max-missing 0.5 --recode --recode-INFO-all --out snps.g5`
 
 ```bash
 After filtering, kept 117 out of 117 Individuals
@@ -683,7 +687,8 @@ After filtering, kept 64570 out of a possible 90578 Sites
 Run Time = 10.00 seconds
 ```
 check missing data per ind
-vcftools --vcf snps.g5dp10.recode.vcf --missing-indv
+
+`vcftools --vcf snps.g5dp10.recode.vcf --missing-indv`
 
 ```bash 
 (base) [r.gatins@d3037 filtering]$ cat out.imiss.g5
