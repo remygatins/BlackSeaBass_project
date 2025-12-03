@@ -574,9 +574,9 @@ SN_191_aligned_sorted	SN
 
 `ref_map.pl --samples [path] --popmap [path] -o [path] [--rm-pcr-duplicates] [-X prog:"opts" ...]`
 
-'''bash
-ref_map.pl -T 10 -o $WOR_DIR/stacks --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples --rm-pcr-duplicates -X "populations: -r 0.80 --min-maf 0.01 --fstats --vcf --genepop --hwe --structure
-'''
+```bash
+ref_map.pl -T 10 -o $WOR_DIR/stacks --popmap $WOR_DIR/popmap/BSB_all --samples $WOR_DIR/samples --rm-pcr-duplicates -X "populations: -r 0.80 --min-maf 0.01 --fstats --vcf --genepop --hwe --structure"
+```
 
 <details>
 <summary>See Stacks job script</summary>
