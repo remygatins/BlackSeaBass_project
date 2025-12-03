@@ -64,12 +64,27 @@ Within the `populations` directory, make the following directories
 Now run the different populations
 
 ```bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=stacks              # Name your job something useful for easy tracking
+#SBATCH --output=out/stacks_%A.out
+#SBATCH --error=out/stacks_%A.err
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=30
+#SBATCH --mem=10G
+#SBATCH --time=48:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=BEGIN,END,FAIL                   # Only send emails when jobs end or fail
+#SBATCH --partition=short
 
 export PATH=/projects/gatins/programs_explorer/stacks_2.68/bin:$PATH
 
+WOR_DIR=/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2
+
+
 populations \
   -P $WOR_DIR/stacks/ref_map_1_stacks2.6 \
-  -M --popmap $WOR_DIR/popmap/BSB_all \
+  --popmap --popmap $WOR_DIR/popmap/BSB_all \
   -r 0.80 \
   -p 1 \
   --min-maf 0.05 \
@@ -86,8 +101,8 @@ populations \
 |populations|No. Loci|
 |-----------|--------|
 |maf 0.01||
-|p1_maf_0.01||
-|p1_maf_0.05||
-|p6_maf_0.01||
-|p6_maf_0.05||
+|p1_maf_0.01|123605|
+|p1_maf_0.05|123573|
+|p6_maf_0.01|76158|
+|p6_maf_0.05|76152|
 
