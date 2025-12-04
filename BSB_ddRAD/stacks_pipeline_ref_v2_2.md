@@ -347,6 +347,34 @@ Outputting VCF file...
 After filtering, kept 65631 out of a possible 65631 Sites
 Run Time = 13.00 seconds
 ```
+removed individuals
+```bash
+cat remove_individuals.txt
+INDV
+MA_303_aligned_sorted
+MA_304_aligned_sorted
+MA_314_aligned_sorted
+MA_316_aligned_sorted
+MA_318_aligned_sorted
+MA_324_aligned_sorted
+ME_253_aligned_sorted
+ME_254_aligned_sorted
+```
+
+Lets run populations with different parameters to see if we can keep more individuals even if we have less loci
+
+cat populations.hapstats.tsv | grep -v "^#" | cut -f 1 | uniq | wc -l
+
+|Parameters|Loci|
+|----------|----|
+|maf 0.01_v2|33203|* this does not add up to the number of sites found in vcftools
+|p_1_maf_0.01_v2|35278|
+|p_1_maf_0.05_v2||
+|p_6_maf_0.01_v2||
+|p_6_maf_0.05_v2||
+
+
+
 
 
 ```bash
