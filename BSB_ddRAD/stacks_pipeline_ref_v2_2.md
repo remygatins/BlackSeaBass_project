@@ -111,6 +111,60 @@ To obtain number of loci from each populations run
 
 I'm going with p1 maf 0.01 since it gives us the most loci and we will be doing more filtering with vcftools which may remove those extra loci anyway
 
+## Filter VCF with VCFTOOLS
 
+
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=vcftools              # Name your job something useful for easy tracking
+#SBATCH --output=out/stacks_%A.out
+#SBATCH --error=out/stacks_%A.err
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --mem=80G
+#SBATCH --time=48:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=BEGIN,END,FAIL                   # Only send emails when jobs end or fail
+#SBATCH --partition=short
+
+#load program
+module load vcftools # this is just globally available on explorer
+
+# paths
+INPUT_VCF="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/populations/p1_maf_0.01/populations.snps.vcf"
+OUTDIR="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/populations/p1_maf_0.01/"
+
+# filter by minimum depth per genotype (minDP = 10)
+vcftools --vcf ${INPUT_VCF} \
+         --minDP 10 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10
+echo "done minimum depth"
+
+# filter for sites present in >= 80% of individuals (refiltered any SNPs found in ≤80% of individuals)
+vcftools --vcf ${OUTDIR}/minDP10.recode.vcf \
+         --max-missing 0.8 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_maxmiss0.8
+echo "done max maxmiss"
+
+# remove individuals with >40% missing data
+# 1: compute missingness per individual
+vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.8.recode.vcf \
+         --missing-indv \
+         --out ${OUTDIR}/missingness
+
+# 2: generate a list of individuals to remove
+awk '$5 > 0.4 {print $1}' ${OUTDIR}/missingness.imiss > ${OUTDIR}/remove_individuals.txt
+
+# now filter out individuals
+vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.8.recode.vcf \
+         --remove ${OUTDIR}/remove_individuals.txt \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_maxmiss0.8_filtInd
+echo "done filtering piepline"
+```
 
 
