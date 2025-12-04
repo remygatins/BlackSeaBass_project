@@ -98,11 +98,19 @@ populations \
   -t 30
 ```
 
+To obtain number of loci from each populations run
+`cat populations.hapstats.tsv | grep -v "^#" | cut -f 1 | uniq | wc -l`
+
 |populations|No. Loci|
 |-----------|--------|
-|maf 0.01||
-|p1_maf_0.01|123605|
-|p1_maf_0.05|123573|
-|p6_maf_0.01|76158|
-|p6_maf_0.05|76152|
+|maf 0.01|27664| 
+|p1_maf_0.01|28707|
+|p1_maf_0.05|28509|
+|p6_maf_0.01|12693|
+|p6_maf_0.05|12692|
+
+I'm going with p1 maf 0.01 since it gives us the most loci and we will be doing more filtering with vcftools which may remove those extra loci anyway
+
+
+
 
