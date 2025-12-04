@@ -323,6 +323,31 @@ After filtering, kept 65631 out of a possible 306227 Sites
 Run Time = 18.00 seconds
 ```
 
+## Now remove individuals with >40% missing data
+
+```bash
+### 1: compute missingness per individual
+vcftools --vcf minDP10_maxmiss0.8.recode.vcf \
+         --missing-indv \
+         --out missingness
+
+### 2: generate a list of individuals to remove
+awk '$5 > 0.4 {print $1}' missingness.imiss > remove_individuals.txt
+
+### now filter out individuals
+vcftools --vcf minDP10_maxmiss0.8.recode.vcf \
+         --remove remove_individuals.txt \
+         --recode --recode-INFO-all \
+         --out minDP10_maxmiss0.8_filtInd
+```
+
+```bash
+After filtering, kept 109 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 65631 out of a possible 65631 Sites
+Run Time = 13.00 seconds
+```
+
 
 ```bash
 #!/bin/bash
