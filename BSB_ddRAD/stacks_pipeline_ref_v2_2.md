@@ -168,3 +168,86 @@ echo "done filtering piepline"
 ```
 
 
+output
+```bash
+
+# filter by minimum depth per genotype (minDP = 10)
+
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 24993 out of a possible 24993 Sites
+Run Time = 4.00 seconds
+
+# filter for sites present in >= 80% of individuals (refiltered any SNPs found in ≤80% of individuals)
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 0 out of a possible 24993 Sites
+No data left for analysis!
+Run Time = 0.00 seconds
+```
+Filtering by 0.8 max missingness seems to stringent, so I tried running it with 0.5 instead and keep having the same issue.
+I believe it has to do with the format of the file that may be missing something from the stacks output. I will filter this directly within the populations command using -R 0.8.
+
+```bash
+export PATH=/projects/gatins/programs_explorer/stacks_2.68/bin:$PATH
+
+WOR_DIR=/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2
+
+populations \
+  -P $WOR_DIR/stacks/ref_map_1_stacks2.6 \
+  --popmap $WOR_DIR/popmap/BSB_all \
+  -r 0.80 \
+  -p 1 \
+  --min-maf 0.01 \
+  --R 0.80 \
+  --write-single-snp \
+  --vcf \
+  --genepop \
+  --structure \
+  --fstats \
+  --hwe \
+  -O $WOR_DIR/populations/p1_maf_0.01_R0.8 \
+  -t 30
+```
+
+`cat populations.hapstats.tsv | grep -v "^#" | cut -f 1 | uniq | wc -l`
+
+|populations|No. Loci|
+|-----------|--------|
+|p1_maf_0.01_R0.8|13692|
+
+ok now I will filter again with vcftools but i'll skip the `max_missingness` as we did this already 
+
+
+```bash
+#load program
+module load vcftools # this is just globally available on explorer
+
+# paths
+INPUT_VCF="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/populations/p1_maf_0.01_R0.8/populations.snps.vcf"
+OUTDIR="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/populations/p1_maf_0.01_R0.8/"
+
+# filter by minimum depth per genotype (minDP = 10)
+vcftools --vcf ${INPUT_VCF} \
+         --minDP 10 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10
+echo "done minimum depth"
+
+# remove individuals with >40% missing data
+# 1: compute missingness per individual
+vcftools --vcf ${OUTDIR}/minDP10.recode.vcf \
+         --missing-indv \
+         --out ${OUTDIR}/missingness
+
+# 2: generate a list of individuals to remove
+awk '$5 > 0.4 {print $1}' ${OUTDIR}/missingness.imiss > ${OUTDIR}/remove_individuals.txt
+
+# now filter out individuals
+vcftools --vcf ${OUTDIR}/minDP10.recode.vcf \
+         --remove ${OUTDIR}/remove_individuals.txt \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_filtInd
+echo "done filtering piepline"
+```
+
