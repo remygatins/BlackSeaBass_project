@@ -926,5 +926,10 @@ as well as the popmap
 
 `scp r.gatins@login.explorer.northeastern.edu:/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/popmap/BSB_all .`
 
+<img width="602" height="573" alt="image" src="https://github.com/user-attachments/assets/3aa14d1e-7f55-4a03-935d-54ee6e71a7df" />
+
+<img width="1398" height="506" alt="image" src="https://github.com/user-attachments/assets/ba1f6a63-2ceb-484f-982d-03058aff4080" />
+
+
 
 
