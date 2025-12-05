@@ -6,3 +6,125 @@ When analysing all samples together, a few individuals in NC seem to be the most
 
 So, let's now rerun the analysis but without the NC population.
 
+First create a new popmap without the NC samples
+
+`cp BSB_all BSB_noNC`
+ I manually went in and just deleted the NC samples but I'm sure there is a fancy way to do this with code =)
+
+now create a new directory 
+
+`mkdir /projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/stacks/final_noNC`
+
+now edit the stacks and vcftools sbatch file to update the directories and make sure to change the `-p` to `5` since we removed a population. 
+
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=stacks              # Name your job something useful for easy tracking
+#SBATCH --output=out/stacks_%A.out
+#SBATCH --error=out/stacks_%A.err
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --mem=10G
+#SBATCH --time=48:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=BEGIN,END,FAIL                   # Only send emails when jobs end or fail
+#SBATCH --partition=short
+
+
+echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+
+echo “using $SLURM_CPUS_ON_NODE CPUs”
+echo “Start Run”
+echo “start time is `date`”
+
+#--------------MODULES---------------
+
+export PATH=/projects/gatins/programs_explorer/stacks_2.68/bin:$PATH
+
+#--------------START diagnostics----------------
+
+echo "This job in the array has:"
+echo "- SLURM_JOB_ID=${SLURM_JOB_ID}"
+echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
+
+#--------------VARIABLES----------------
+
+WOR_DIR=/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2
+
+#--------------COMMAND----------------
+
+ref_map.pl \
+  -T 10 \
+  -o $WOR_DIR/stacks/final_noNC \
+  --popmap $WOR_DIR/popmap/BSB_all \
+  --samples $WOR_DIR/samples \
+  -X "populations: -r 0.80 --min-maf 0.01 -p 5 --write-single-snp --fstats --vcf --genepop --hwe --structure"
+
+#--------- END Diagnostics/Logging Information---------------
+echo = `date` job $JOB_NAME done
+echo “using $NSLOTS CPUs”
+```
+
+output
+```bash
+
+```
+
+Now filter
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=vcftools              # Name your job something useful for easy tracking
+#SBATCH --output=out/vcftools_%A.out
+#SBATCH --error=out/vcftools_%A.err
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=10G
+#SBATCH --time=4:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=BEGIN,END,FAIL                   # Only send emails when jobs end or fail
+#SBATCH --partition=short
+
+#load program
+module load vcftools # this is just globally available on explorer
+
+# paths
+INPUT_VCF="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/stacks/final_noNC/populations.snps.vcf"
+OUTDIR="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/stacks/finalnoNC/"
+
+# filter by minimum depth per genotype (minDP = 10)
+vcftools --vcf ${INPUT_VCF} \
+         --minDP 10 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10
+echo "done minimum depth"
+
+# filter for sites present in >= 70% of individuals (sites need to be present in >=70% of individuals)
+vcftools --vcf ${OUTDIR}/minDP10.recode.vcf \
+         --max-missing 0.7 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_maxmiss0.7
+echo "done maxmiss"
+
+# remove individuals with >40% missing data
+# 1: compute missingness per individual
+vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
+         --missing-indv \
+         --out ${OUTDIR}/missingness
+
+# 2: generate a list of individuals to remove
+awk '$5 > 0.4 {print $1}' ${OUTDIR}/missingness.imiss > ${OUTDIR}/remove_individuals.txt
+
+# now filter out individuals
+vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
+         --remove ${OUTDIR}/remove_individuals.txt \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_maxmiss0.7_filtInd
+echo "done filtering pipeline"
+```
+
+
+
