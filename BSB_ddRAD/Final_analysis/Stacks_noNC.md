@@ -69,10 +69,16 @@ echo “using $NSLOTS CPUs”
 
 output
 ```bash
+Genotyped 509504 loci:
+  effective per-sample coverage: mean=31.0x, stdev=9.5x, min=3.2x, max=48.5x
+  mean number of sites per locus: 170.8
+  a consistent phasing was found for 731471 of out 819475 (89.3%) diploid loci needing phasing
+
 
 ```
 
-Now filter
+Now filter the vcf
+
 ```bash
 #!/bin/bash
 #--------------SLURM COMMANDS--------------
@@ -126,5 +132,12 @@ vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
 echo "done filtering pipeline"
 ```
 
+```bash
+Excluding individuals in 'exclude' list
+After filtering, kept 108 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 12091 out of a possible 12091 Sites
+Run Time = 2.00 seconds
+```
 
 
