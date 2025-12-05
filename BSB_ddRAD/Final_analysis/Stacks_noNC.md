@@ -69,12 +69,10 @@ echo “using $NSLOTS CPUs”
 
 output
 ```bash
-Genotyped 509504 loci:
-  effective per-sample coverage: mean=31.0x, stdev=9.5x, min=3.2x, max=48.5x
-  mean number of sites per locus: 170.8
-  a consistent phasing was found for 731471 of out 819475 (89.3%) diploid loci needing phasing
-
-
+Genotyped 492299 loci:
+  effective per-sample coverage: mean=31.2x, stdev=9.5x, min=3.2x, max=48.5x
+  mean number of sites per locus: 170.5
+  a consistent phasing was found for 649400 of out 725405 (89.5%) diploid loci needing phasing
 ```
 
 Now filter the vcf
@@ -133,11 +131,25 @@ echo "done filtering pipeline"
 ```
 
 ```bash
-Excluding individuals in 'exclude' list
-After filtering, kept 108 out of 117 Individuals
+After filtering, kept 96 out of 104 Individuals
 Outputting VCF file...
-After filtering, kept 12091 out of a possible 12091 Sites
+After filtering, kept 11454 out of a possible 11454 Sites
 Run Time = 2.00 seconds
+```
+
+individuals removed
+
+```bash
+(miniconda3) [r.gatins@explorer-01 final_noNC]$ cat remove_individuals.txt
+INDV
+MA_303_aligned_sorted
+MA_304_aligned_sorted
+MA_314_aligned_sorted
+MA_316_aligned_sorted
+MA_318_aligned_sorted
+MA_324_aligned_sorted
+ME_253_aligned_sorted
+ME_254_aligned_sorted
 ```
 
 
