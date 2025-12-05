@@ -762,7 +762,162 @@ Genotyped 509504 loci:
 
 VCF Filtering 
 ```
+#minDepth 10
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 14386 out of a possible 14386 Sites
+Run Time = 3.00 seconds
 
+# max missing 0.7
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 11658 out of a possible 14386 Sites
+Run Time = 3.00 seconds
+
+#exclude individuals with >40% missing
+Excluding individuals in 'exclude' list
+After filtering, kept 108 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 11658 out of a possible 11658 Sites
+Run Time = 3.00 seconds
 ```
+
+individuals removed
+```bash
+INDV
+MA_303_aligned_sorted
+MA_304_aligned_sorted
+MA_314_aligned_sorted
+MA_316_aligned_sorted
+MA_318_aligned_sorted
+MA_324_aligned_sorted
+MD_163_aligned_sorted
+ME_253_aligned_sorted
+ME_254_aligned_sorted
+```
+
+popmap
+```bash
+(miniconda3) [r.gatins@explorer-01 popmap]$ cat BSB_all
+MA_298_aligned_sorted	NM
+MA_299_aligned_sorted	NM
+MA_302_aligned_sorted	NM
+MA_303_aligned_sorted	NM
+MA_304_aligned_sorted	NM
+MA_306_aligned_sorted	NM
+MA_307_aligned_sorted	NM
+MA_310_aligned_sorted	NM
+MA_311_aligned_sorted	NM
+MA_313_aligned_sorted	NM
+MA_314_aligned_sorted	NM
+MA_315_aligned_sorted	NM
+MA_316_aligned_sorted	NM
+MA_318_aligned_sorted	NM
+MA_320_aligned_sorted	NM
+MA_321_aligned_sorted	NM
+MA_323_aligned_sorted	NM
+MA_324_aligned_sorted	NM
+MA_325_aligned_sorted	NM
+MA_327_aligned_sorted	NM
+MD_136_aligned_sorted	MD
+MD_137_aligned_sorted	MD
+MD_138_aligned_sorted	MD
+MD_139_aligned_sorted	MD
+MD_140_aligned_sorted	MD
+MD_141_aligned_sorted	MD
+MD_142_aligned_sorted	MD
+MD_143_aligned_sorted	MD
+MD_145_aligned_sorted	MD
+MD_149_aligned_sorted	MD
+MD_150_aligned_sorted	MD
+MD_151_aligned_sorted	MD
+MD_152_aligned_sorted	MD
+MD_154_aligned_sorted	MD
+MD_158_aligned_sorted	MD
+MD_159_aligned_sorted	MD
+MD_160_aligned_sorted	MD
+MD_161_aligned_sorted	MD
+MD_162_aligned_sorted	MD
+MD_163_aligned_sorted	MD
+ME_164_aligned_sorted	ME
+ME_165_aligned_sorted	ME
+ME_166_aligned_sorted	ME
+ME_167_aligned_sorted	ME
+ME_176_aligned_sorted	ME
+ME_248_aligned_sorted	ME
+ME_249_aligned_sorted	ME
+ME_250_aligned_sorted	ME
+ME_251_aligned_sorted	ME
+ME_252_aligned_sorted	ME
+ME_253_aligned_sorted	ME
+ME_254_aligned_sorted	ME
+ME_255_aligned_sorted	ME
+ME_256_aligned_sorted	ME
+ME_257_aligned_sorted	ME
+ME_258_aligned_sorted	ME
+ME_261_aligned_sorted	ME
+ME_262_aligned_sorted	ME
+NC_233_aligned_sorted	NC
+NC_234_aligned_sorted	NC
+NC_235_aligned_sorted	NC
+NC_237_aligned_sorted	NC
+NC_238_aligned_sorted	NC
+NC_239_aligned_sorted	NC
+NC_240_aligned_sorted	NC
+NC_241_aligned_sorted	NC
+NC_242_aligned_sorted	NC
+NC_243_aligned_sorted	NC
+NC_244_aligned_sorted	NC
+NC_245_aligned_sorted	NC
+NC_246_aligned_sorted	NC
+NJ_106_aligned_sorted	NJ
+NJ_108_aligned_sorted	NJ
+NJ_109_aligned_sorted	NJ
+NJ_112_aligned_sorted	NJ
+NJ_113_aligned_sorted	NJ
+NJ_114_aligned_sorted	NJ
+NJ_118_aligned_sorted	NJ
+NJ_119_aligned_sorted	NJ
+NJ_121_aligned_sorted	NJ
+NJ_122_aligned_sorted	NJ
+NJ_124_aligned_sorted	NJ
+NJ_128_aligned_sorted	NJ
+NJ_129_aligned_sorted	NJ
+NJ_130_aligned_sorted	NJ
+NJ_131_aligned_sorted	NJ
+NJ_132_aligned_sorted	NJ
+NJ_133_aligned_sorted	NJ
+RI_328_aligned_sorted	SN
+RI_329_aligned_sorted	SN
+RI_330_aligned_sorted	SN
+RI_331_aligned_sorted	SN
+RI_332_aligned_sorted	SN
+RI_333_aligned_sorted	SN
+RI_334_aligned_sorted	SN
+RI_335_aligned_sorted	SN
+RI_336_aligned_sorted	SN
+RI_337_aligned_sorted	SN
+RI_338_aligned_sorted	SN
+RI_339_aligned_sorted	SN
+RI_340_aligned_sorted	SN
+RI_341_aligned_sorted	SN
+RI_342_aligned_sorted	SN
+RI_343_aligned_sorted	SN
+RI_344_aligned_sorted	SN
+RI_345_aligned_sorted	SN
+RI_346_aligned_sorted	SN
+RI_347_aligned_sorted	SN
+RI_348_aligned_sorted	SN
+RI_349_aligned_sorted	SN
+SN_009_aligned_sorted	SN
+SN_179_aligned_sorted	SN
+SN_182_aligned_sorted	SN
+SN_185_aligned_sorted	SN
+SN_189_aligned_sorted	SN
+SN_190_aligned_sorted	SN
+SN_191_aligned_sorted	SN
+```
+
+
 
 
