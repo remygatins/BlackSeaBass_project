@@ -917,7 +917,14 @@ SN_189_aligned_sorted	SN
 SN_190_aligned_sorted	SN
 SN_191_aligned_sorted	SN
 ```
+### Analysis
+Lets download files to my local computer to run the analysis
 
+`scp r.gatins@login.explorer.northeastern.edu:/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/stacks/final/minDP10_maxmiss0.7_filtInd.recode.vcf .`
+
+as well as the popmap
+
+`scp r.gatins@login.explorer.northeastern.edu:/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/popmap/BSB_all .`
 
 
 
