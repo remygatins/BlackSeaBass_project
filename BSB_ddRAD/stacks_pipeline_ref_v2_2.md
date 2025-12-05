@@ -595,7 +595,7 @@ vcftools --vcf minDP10_maxmiss0.8.recode.vcf \
 |p_6_maf_0.01_v2|15438|109|9147|**
 |p_6_maf_0.05_v2|15438|109|6171|
 |p_6_maf_0.01_v2 (max missing 0.7)|15438|108|11658|***
-
+|p_6_maf_0.05_v2 (max missing 0.7)|15438|107|7812|
 
 
 Let's relax the missingness across individuals to 70% (i.e., a site needs to be found in at least 70% of individuals instead of 80% which is pretty high)
@@ -617,7 +617,7 @@ awk '$5 > 0.4 {print $1}' missingness_maxmiss0.7.imiss > remove_individuals_maxm
 
 ### now filter out individuals
 vcftools --vcf minDP10_maxmiss0.7.recode.vcf \
-         --remove remove_individuals_0.7.txt \
+         --remove remove_individuals_maxmiss0.7.txt \
          --recode --recode-INFO-all \
          --out minDP10_maxmiss0.7_filtInd
 
