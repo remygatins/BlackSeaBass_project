@@ -152,4 +152,28 @@ ME_253_aligned_sorted
 ME_254_aligned_sorted
 ```
 
+move vcf file and popmap to my computer and run the analysis in R
+
+```bash
+/// GENLIGHT OBJECT /////////
+
+ // 96 genotypes,  11,454 binary SNPs, size: 1.6 Mb
+ 88818 (8.08 %) missing data
+
+ // Basic content
+   @gen: list of 96 SNPbin
+
+ // Optional content
+   @ind.names:  96 individual labels
+   @loc.names:  11454 locus labels
+   @chromosome: factor storing chromosomes of the SNPs
+   @position: integer storing positions of the SNPs
+   @other: a list containing: elements without names 
+```
+
+<img width="542" height="470" alt="image" src="https://github.com/user-attachments/assets/b619ca3e-4cc0-4f0c-845f-cccb1765c427" />
+
+<img width="1024" height="453" alt="image" src="https://github.com/user-attachments/assets/8f03e5fa-7762-4626-8228-1f253c250a76" />
+
+<img width="678" height="563" alt="image" src="https://github.com/user-attachments/assets/3aef48e3-5fe6-42e5-9159-2ea4c4200de2" />
 
