@@ -369,9 +369,50 @@ cat populations.hapstats.tsv | grep -v "^#" | cut -f 1 | uniq | wc -l
 |----------|----|
 |maf 0.01_v2|33203|* this does not add up to the number of sites found in vcftools
 |p_1_maf_0.01_v2|35278|
-|p_1_maf_0.05_v2||
-|p_6_maf_0.01_v2||
-|p_6_maf_0.05_v2||
+|p_1_maf_0.05_v2|35248|
+|p_2_maf_0.01_v2||
+|p_3_maf_0.01_v2||
+|p_4_maf_0.01_v2||
+|p_5_maf_0.01_v2||
+|p_6_maf_0.01_v2|15438|
+|p_6_maf_0.05_v2|15438|
+
+in `p_6_maf_0.05_v2` let's filter in the same way as above
+
+output
+```bash
+## minDP10
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 9231 out of a possible 9231 Sites
+Run Time = 2.00 seconds
+
+##maxmiss0.8
+After filtering, kept 117 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 6171 out of a possible 9231 Sites
+Run Time = 1.00 seconds
+
+## remove individuals with > 40% missing
+Excluding individuals in 'exclude' list
+After filtering, kept 109 out of 117 Individuals
+Outputting VCF file...
+After filtering, kept 6171 out of a possible 6171 Sites
+Run Time = 1.00 seconds
+
+cat remove_individuals.txt
+INDV
+MA_303_aligned_sorted
+MA_304_aligned_sorted
+MA_314_aligned_sorted
+MA_316_aligned_sorted
+MA_318_aligned_sorted
+MA_324_aligned_sorted
+ME_253_aligned_sorted
+ME_254_aligned_sorted
+```
+
+
 
 
 
