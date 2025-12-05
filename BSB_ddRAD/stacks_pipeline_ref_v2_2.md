@@ -750,7 +750,19 @@ vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
 echo "done filtering pipeline"
 ```
 
+### Output
 
+gstacks
+```bash
+Genotyped 509504 loci:
+  effective per-sample coverage: mean=31.0x, stdev=9.5x, min=3.2x, max=48.5x
+  mean number of sites per locus: 170.8
+  a consistent phasing was found for 731471 of out 819475 (89.3%) diploid loci needing phasing
+```
 
+VCF Filtering 
+```
+
+```
 
 
