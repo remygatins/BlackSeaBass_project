@@ -930,6 +930,16 @@ as well as the popmap
 
 <img width="1398" height="506" alt="image" src="https://github.com/user-attachments/assets/ba1f6a63-2ceb-484f-982d-03058aff4080" />
 
+Relatedness
+
+
+<img width="709" height="714" alt="image" src="https://github.com/user-attachments/assets/b47c8d97-8358-4f86-99da-09a309b59bd2" />
+
+Looks like two sets of individuals were sampled twice. We will need to remove one of the individuals of each and rerun populations
+
+
+
+
 
 
 
