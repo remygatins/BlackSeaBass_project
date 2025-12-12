@@ -991,6 +991,26 @@ vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
          --recode --recode-INFO-all \
          --out ${OUTDIR}/minDP10_maxmiss0.7_filtInd
 ```
+output
+```bash
+
+
+
+removed individuals
+
+```bash
+cat remove_individuals.txt
+INDV
+MA_303_aligned_sorted
+MA_304_aligned_sorted
+MA_314_aligned_sorted
+MA_316_aligned_sorted
+MA_318_aligned_sorted
+MA_324_aligned_sorted
+MD_163_aligned_sorted
+ME_253_aligned_sorted
+ME_254_aligned_sorted
+```
 
 
 
