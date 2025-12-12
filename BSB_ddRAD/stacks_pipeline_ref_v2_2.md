@@ -1011,6 +1011,12 @@ MD_163_aligned_sorted
 ME_253_aligned_sorted
 ME_254_aligned_sorted
 ```
+<img width="891" height="850" alt="image" src="https://github.com/user-attachments/assets/4e8adc91-afba-4f3e-bd2e-96200c644fe4" />
+
+<img width="1270" height="498" alt="image" src="https://github.com/user-attachments/assets/d4e0c5b6-621a-4bce-91dd-0ec56c401235" />
+
+<img width="1273" height="505" alt="image" src="https://github.com/user-attachments/assets/684b39dc-4eaa-436e-b129-56664c9b3035" />
+
 
 
 
