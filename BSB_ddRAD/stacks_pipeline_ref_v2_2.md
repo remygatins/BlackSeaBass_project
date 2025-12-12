@@ -937,8 +937,60 @@ Relatedness
 
 Looks like two sets of individuals were sampled twice. We will need to remove one of the individuals of each and rerun populations
 
+Related samples are
 
+NC_233 and NC_245
+NC_240 and NC_246
 
+I will remove one from each pair. NC_245 and NC_246 were removed due to having less data. The new popmap is saved as `BSB_filt_relate`
+
+Let's re-run the ref_map
+
+```bash
+ref_map.pl \
+  -T 10 \
+  -o $WOR_DIR/stacks/final_filt_relate \
+  --popmap $WOR_DIR/popmap/BSB_filt_relate \
+  --samples $WOR_DIR/samples \
+  -X "populations: -r 0.80 --min-maf 0.01 -p 6 --write-single-snp --fstats --vcf --genepop --hwe --structure"
+```
+
+filter vcf
+
+```bash
+# paths
+INPUT_VCF="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/stacks/final_filt_relate/maf_0.01/populations.snps.vcf"
+OUTDIR="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/stacks/final_filt_relate/maf_0.01/"
+
+# filter by minimum depth per genotype (minDP = 10)
+vcftools --vcf ${INPUT_VCF} \
+         --minDP 10 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10
+echo "done minimum depth"
+
+# filter for sites present in >= 70% of individuals (sites need to be present in >=70% of individuals)
+vcftools --vcf ${OUTDIR}/minDP10.recode.vcf \
+         --max-missing 0.7 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_maxmiss0.7
+echo "done maxmiss"
+
+# remove individuals with >40% missing data
+# 1: compute missingness per individual
+vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
+         --missing-indv \
+         --out ${OUTDIR}/missingness
+
+# 2: generate a list of individuals to remove
+awk '$5 > 0.4 {print $1}' ${OUTDIR}/missingness.imiss > ${OUTDIR}/remove_individuals.txt
+
+# now filter out individuals
+vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
+         --remove ${OUTDIR}/remove_individuals.txt \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_maxmiss0.7_filtInd
+```
 
 
 
