@@ -1017,7 +1017,164 @@ ME_254_aligned_sorted
 
 <img width="1273" height="505" alt="image" src="https://github.com/user-attachments/assets/684b39dc-4eaa-436e-b129-56664c9b3035" />
 
+## final with r 0.7
 
+Since we had relaxed the filter steps during vcftools to only keep sites found in at least 70% of the individuals, I have also relaxed this parameter during the populations scripts in STACKS
+
+Final scripts
+
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=stacks              # Name your job something useful for easy tracking
+#SBATCH --output=out/stacks_%A.out
+#SBATCH --error=out/stacks_%A.err
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=30
+#SBATCH --mem=60G
+#SBATCH --time=48:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=BEGIN,END,FAIL                   # Only send emails when jobs end or fail
+#SBATCH --partition=short
+
+
+echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+
+echo “using $SLURM_CPUS_ON_NODE CPUs”
+echo “Start Run”
+echo “start time is `date`”
+
+#--------------MODULES---------------
+
+export PATH=/projects/gatins/programs_explorer/stacks_2.68/bin:$PATH
+
+#--------------START diagnostics----------------
+
+echo "This job in the array has:"
+echo "- SLURM_JOB_ID=${SLURM_JOB_ID}"
+echo "- SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}"
+
+#--------------VARIABLES----------------
+
+WOR_DIR=/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2
+
+#--------------COMMAND----------------
+
+ref_map.pl \
+  -T 30 \
+  -o $WOR_DIR/stacks/final_filt_relate_r0.7 \
+  --popmap $WOR_DIR/popmap/BSB_filt_relate \
+  --samples $WOR_DIR/samples \
+  -X "populations: -r 0.70 --min-maf 0.01 -p 6 --write-single-snp --fstats --vcf --genepop --hwe --structure"
+
+#--------- END Diagnostics/Logging Information---------------
+echo = `date` job $JOB_NAME done
+echo “using $NSLOTS CPUs”
+```
+
+Filtering script
+```bash
+#!/bin/bash
+#--------------SLURM COMMANDS--------------
+#SBATCH --job-name=vcftools              # Name your job something useful for easy tracking
+#SBATCH --output=out/vcftools_%A.out
+#SBATCH --error=out/vcftools_%A.err
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=10G
+#SBATCH --time=4:00:00                 # Limit run to N hours max (prevent jobs from wedging in the queues)
+#SBATCH --mail-user=r.gatins@northeastern.edu      # replace "cruzid" with your user id
+#SBATCH --mail-type=BEGIN,END,FAIL                   # Only send emails when jobs end or fail
+#SBATCH --partition=short
+
+#load program
+module load vcftools # this is just globally available on explorer
+
+# paths
+INPUT_VCF="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/stacks/final_filt_relate_r0.7/populations.snps.vcf"
+OUTDIR="/projects/lotterhos/2020_NOAA_BlackSeaBass_ddRADb/Lotterhos_Project_001/stacks_ref_v2/stacks/final_filt_relate_r0.7"
+
+# filter by minimum depth per genotype (minDP = 10)
+vcftools --vcf ${INPUT_VCF} \
+         --minDP 10 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10
+echo "done minimum depth"
+
+# filter for sites present in >= 70% of individuals (sites need to be present in >=70% of individuals)
+vcftools --vcf ${OUTDIR}/minDP10.recode.vcf \
+         --max-missing 0.7 \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_maxmiss0.7
+echo "done maxmiss"
+
+# remove individuals with >40% missing data
+# 1: compute missingness per individual
+vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
+         --missing-indv \
+         --out ${OUTDIR}/missingness
+
+# 2: generate a list of individuals to remove
+awk '$5 > 0.4 {print $1}' ${OUTDIR}/missingness.imiss > ${OUTDIR}/remove_individuals.txt
+
+# now filter out individuals
+vcftools --vcf ${OUTDIR}/minDP10_maxmiss0.7.recode.vcf \
+         --remove ${OUTDIR}/remove_individuals.txt \
+         --recode --recode-INFO-all \
+         --out ${OUTDIR}/minDP10_maxmiss0.7_filtInd
+echo "done filtering pipeline"
+```
+
+## Output
+GSTACKS
+```bash
+Built 508147 loci comprising 123507333 forward reads and 117643790 matching paired-end reads; mean insert length was 229.1 (sd: 72.6).
+
+Genotyped 508147 loci:
+  effective per-sample coverage: mean=31.1x, stdev=9.4x, min=3.2x, max=48.5x
+  mean number of sites per locus: 170.8
+  a consistent phasing was found for 718175 of out 805000 (89.2%) diploid loci needing phasing
+```
+
+vcftools filtering
+```bash
+# filter by minimum depth per genotype (minDP = 10)
+After filtering, kept 115 out of 115 Individuals
+Outputting VCF file...
+After filtering, kept 18618 out of a possible 18618 Sites
+Run Time = 3.00 seconds
+
+# missingnes 0.7
+After filtering, kept 115 out of 115 Individuals
+Outputting VCF file...
+After filtering, kept 12723 out of a possible 18618 Sites
+Run Time = 3.00 seconds
+
+# remove individuals with >40% missing data
+Excluding individuals in 'exclude' list
+After filtering, kept 105 out of 115 Individuals
+Outputting VCF file...
+After filtering, kept 12723 out of a possible 12723 Sites
+Run Time = 3.00 seconds
+```
+removed individuals
+
+```bash
+cat remove_individuals.txt
+INDV
+MA_303_aligned_sorted
+MA_304_aligned_sorted
+MA_314_aligned_sorted
+MA_316_aligned_sorted
+MA_318_aligned_sorted
+MA_324_aligned_sorted
+MD_158_aligned_sorted
+MD_163_aligned_sorted
+ME_253_aligned_sorted
+ME_254_aligned_sorted
+```
 
 
 
