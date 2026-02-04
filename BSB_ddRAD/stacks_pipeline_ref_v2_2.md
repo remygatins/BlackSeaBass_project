@@ -583,7 +583,7 @@ vcftools --vcf minDP10_maxmiss0.8.recode.vcf \
 ```
 
 
-|Parameters|Loci|Sites kept after filtering|indiv kept after filtering| 
+|Parameters|Loci|Indiv kept after filtering|Sites kept after filtering| 
 |----------|----|-----|---|
 |maf 0.01_v2|33203|109|65631|* this does not add up to the number of sites found in vcftools
 |p_1_maf_0.01_v2|35278|109|8601|
@@ -596,6 +596,7 @@ vcftools --vcf minDP10_maxmiss0.8.recode.vcf \
 |p_6_maf_0.05_v2|15438|109|6171|
 |p_6_maf_0.01_v2 (max missing 0.7)|15438|108|11658|***
 |p_6_maf_0.05_v2 (max missing 0.7)|15438|107|7812|
+|p_6_maf_0.01_v2_r0.7 (max missing 0.7)|18618|105|12723|***
 
 
 Let's relax the missingness across individuals to 70% (i.e., a site needs to be found in at least 70% of individuals instead of 80% which is pretty high)
@@ -1175,6 +1176,14 @@ MD_163_aligned_sorted
 ME_253_aligned_sorted
 ME_254_aligned_sorted
 ```
+
+|Parameters|Loci|Indiv kept after filtering|Sites kept after filtering| 
+|----------|----|-----|---|
+|p_6_maf_0.05_v2 (max missing 0.7)|9316|||
+|p_6_maf_0.01_v2 (max missing 0.7)|14452|106|11596|
+|p_6_maf_0.01_v2_r0.7 (max missing 0.7)|18618|105|12723|
+
+
 
 
 
