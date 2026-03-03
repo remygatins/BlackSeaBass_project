@@ -1182,6 +1182,9 @@ ME_254_aligned_sorted
 |p_6_maf_0.05_v2 (max missing 0.7)|9316|||
 |p_6_maf_0.01_v2 (max missing 0.7)|14452|106|11596|
 |p_6_maf_0.01_v2_r0.7 (max missing 0.7)|18618|105|12723|
+|p_6_maf_0.01_v2_r0.7_noSC (max missing 0.7)|18629|103|12573|
+
+
 
 
 
