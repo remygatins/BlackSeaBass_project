@@ -127,9 +127,35 @@ ggsave("BSB_pcadapt_outliers.png", manhattan_plot, width = 8, height = 4, dpi = 
 ```
 
 ### BSB_filt_relate_r0.7
+Outlier SNPs: 545 (no FDR)
+q-value: 387
+BH: 387
+Bonferroni: 155
 
-Outlier SNPs: 155 
+Outlier SNPs: 155 (bonferroni corrected)
 <img width="1469" height="722" alt="image" src="https://github.com/user-attachments/assets/fbd0ef5e-058c-4c20-ba19-b9c94a700d64" />
+
+### BSB_filt_relate_r0.7_noSC
+Outlier SNPs: 53 (no FDR)
+q-value: 0
+BH: 0
+BOnferroni: 0
+
+### BSB_filt_relate_r0.7_noNC
+Outlier SNPs: 62 (no FDR)
+q-value: 0
+BH: 0
+Bonferroni: 0
+
+
+
+### Outflank noSC
+
+> outlier_list
+[1] "Scaffold_9_32124351" "Scaffold_22_8382978"
+
+They don't match any of the ones that were detected by pcadapt noSC
+
 
 
 
